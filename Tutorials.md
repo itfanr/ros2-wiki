@@ -5,10 +5,14 @@
 * [building a new ROS 2 package](Building-A-New-ROS-2-Package)
 
 ## ROS 2 Demos
-* [real-time control](Real-Time-Programming)
-* [embedded systems](Embedded-Systems)
-* [intra-process communication](Intra-Process-Communication)
-* [bridging to ROS 1](Bridging-To-ROS-1)
-* [quality of service](Quality-Of-Service)
+* [Use quality-of-service settings to handle lossy
+networks](Quality-Of-Service)
+* [Communicate inter-process or intra-process with the same API (no more
+nodelets)](Intra-Process-Communication)
+* [Write real-time safe code that uses the ROS 2
+APIs](Real-Time-Programming)
+* [Run ROS 2 on "bare-metal" microcontrollers (no operating
+system)](Embedded-Systems)
+* [Bridge communication between ROS 1 and ROS 2](Bridging-To-ROS-1)
 
 
