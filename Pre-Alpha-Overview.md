@@ -3,7 +3,7 @@
 ##### Table of Contents
 [Background](#background)  
 [Status](#status)  
-[Intended audience](#intended-audience)
+[Intended audience](#intended-audience)  
 [Scope](#scope)  
 [Contact us](#contact-us)
 
