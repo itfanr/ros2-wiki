@@ -37,9 +37,8 @@ In August / September 2015, we are releasing a *pre-alpha* release of ROS
 you the opportunity to understand how ROS 2 works, in particular how it
 differs from ROS 1.  To that end, we built a set of [demos](Tutorials) that
 show some of the key features of ROS 2.  We encourage you to try out those
-demos, look at the code that implements them, and provide feedback.  We're
-especially interested to know how well (or poorly) we're addressing use
-cases that are important to you.
+demos, look at the code that implements them, and [#contacting-us](provide
+feedback).  We're especially interested to know how well (or poorly) we're
+addressing use cases that are important to you.
 
-
-
+### Scope
