@@ -55,7 +55,7 @@ nodelets)](Intra-Process-Communication)
 * [Write real-time safe code that uses the ROS 2
 APIs](Real-Time-Programming)
 * [Run ROS 2 on "bare-metal" microcontrollers (no operating
-system)](Embedded-Systems)
+system)](https://github.com/ros2/freertps/wiki)
 * [Bridge communication between ROS 1 and ROS 2](Bridging-To-ROS-1)
 
 Pretty much anything not listed above is not included in this release.
