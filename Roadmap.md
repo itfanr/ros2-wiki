@@ -5,7 +5,7 @@ This document is designed to capture the plans for upcoming ROS 2.0 development 
 For more information on the design of ROS 2.0 please see [design.ros2.org](http://design.ros2.org). 
 The core code for ros2 is on the [ros2 github organization](https://github.com/ros2). The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros)
 
-## Preview +1 release
+## Alpha release
 
 - finalize more design documents (design.ros2.org)
 - add support for FastRTPS
@@ -30,7 +30,7 @@ The core code for ros2 is on the [ros2 github organization](https://github.com/r
 - C client library
 - Python client library
 
-## Preview release
+## Pre Alpha release
 
 - cross platform support
  - Linux, OSX, Windows, (bare metal/RTOS)
