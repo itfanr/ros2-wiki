@@ -13,6 +13,6 @@ nodelets)](Intra-Process-Communication)
 APIs](Real-Time-Programming)
 * [Run ROS 2 on "bare-metal" microcontrollers (no operating
 system)](https://github.com/ros2/freertps/wiki)
-* [Bridge communication between ROS 1 and ROS 2](Bridging-To-ROS-1)
+* [Bridge communication between ROS 1 and ROS 2](https://github.com/ros2/ros1_bridge/blob/master/README.md)
 
 
