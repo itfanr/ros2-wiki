@@ -1,8 +1,8 @@
 # ROS 2 Tutorials
 
 * [installation](Installation)
-* [building ROS 2 from source](Building-ROS-2-From-Source)
-* [building a new ROS 2 package](Building-A-New-ROS-2-Package)
+* [building ROS 2 from source](https://github.com/ros2/examples/wiki)
+* [Using ament to build a custom package](https://github.com/ros2/examples/wiki/Ament-Tutorial)
 
 ## ROS 2 Demos
 * [Use quality-of-service settings to handle lossy
