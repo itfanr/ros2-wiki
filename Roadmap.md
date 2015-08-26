@@ -23,7 +23,7 @@ The core code for ros2 is on the [ros2 github organization](https://github.com/r
   - introspection e.g. rostopic
   - logging e.g. rosconsole
   - data recording/playback
-- multi-robot 
+- multi-robot support and examples
 - build debian packages
 - write up full migration guide
 - develop examples of porting from ROS1 to ROS2
