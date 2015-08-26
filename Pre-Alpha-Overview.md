@@ -58,7 +58,7 @@ APIs](Real-Time-Programming)
 system)](https://github.com/ros2/freertps/wiki)
 * [Bridge communication between ROS 1 and ROS 2](Bridging-To-ROS-1)
 
-Pretty much anything not listed above is not included in this release.
+Pretty much anything not listed above is not included in this release. The next steps are described in the [[Roadmap]].
 
 ## Contact us
 Discussions about ROS 2 development and plans are happening on the
