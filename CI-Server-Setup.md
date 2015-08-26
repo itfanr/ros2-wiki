@@ -136,3 +136,11 @@ For each job you'll want to check the ssh key being used for the git clone (only
 It should be set to the ssh key setup in the previous steps for the jenkins user.
 
 I also updated the slaves which the jobs will run on to make sure they matched the names of the slaves I added for Linux, OS X and Windows.
+
+## Disk space
+Overtime docker images and particularly containers will pile up. To clean up use:
+```
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q -f dangling=true)
+```
+from https://www.calazan.com/docker-cleanup-commands/
