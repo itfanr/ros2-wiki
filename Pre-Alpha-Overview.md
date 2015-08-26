@@ -49,13 +49,11 @@ vendors](http://design.ros2.org/articles/ros_on_dds.html#vendors-and-licensing);
 (request / response), and parameters
 * Support Linux (Ubuntu Trusty), OS X (Yosemite) and Windows (8).
 * [[Use quality-of-service settings to handle lossy networks|Quality-Of-Service]]
-* [Communicate inter-process or intra-process with the same API (no more
-nodelets)](Intra-Process-Communication)
-* [Write real-time safe code that uses the ROS 2
-APIs](Real-Time-Programming)
+* [[Communicate inter-process or intra-process with the same API (no more nodelets)|Intra-Process-Communication]]
+* [[Write real-time safe code that uses the ROS 2 APIs|Real-Time-Programming]]
 * [Run ROS 2 on "bare-metal" microcontrollers (no operating
 system)](https://github.com/ros2/freertps/wiki)
-* [Bridge communication between ROS 1 and ROS 2](Bridging-To-ROS-1)
+* [[Bridge communication between ROS 1 and ROS 2|Bridging-To-ROS-1]]
 
 Pretty much anything not listed above is not included in this release. The next steps are described in the [[Roadmap]].
 
