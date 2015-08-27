@@ -10,8 +10,8 @@ Feel free to add more items here.
       * in review
     * https://github.com/ros2/rmw_opensplice/pull/74
       * pending comments
-    * https://github.com/ros2/rmw_connext/pull/89
-      * ?
+    * ~~https://github.com/ros2/rmw_connext/pull/89~~
+      * not critical for release
     * https://github.com/ros2/rclcpp/pull/98
       * +1, ready to merge
     * ~~https://github.com/ros2/rmw/pull/36~~
