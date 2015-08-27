@@ -1,13 +1,15 @@
 Things to be tested are listed below.  Add your name to claim an item and strike it through / check it off when it's done.  Feel free to add more items here.
 
+* Review pending pull requests (not testing, but we need to get everything merged)
+  * List PRs here
 * From-binary installation (best to start with a clean VM):
- * Windows
- * Linux
- * OSX
+  * Windows
+  * Linux
+  * OSX
 * From-source installation (best to start with a clean VM):
- * Windows
- * Linux
- * OSX
+  * Windows
+  * Linux
+  * OSX
 * Demos:
   * real-time
     * Linux
