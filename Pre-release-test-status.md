@@ -14,8 +14,8 @@ Feel free to add more items here.
       * not critical for release
     * https://github.com/ros2/rclcpp/pull/98
       * +1, ready to merge
-    * ~~https://github.com/ros2/rmw/pull/36~~
-      * not critical for release
+    * https://github.com/ros2/rmw/pull/36
+      * 
     * https://github.com/ros2/system_tests/pull/38
       * +1, ready to merge
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
