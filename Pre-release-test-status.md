@@ -8,7 +8,6 @@ Feel free to add more items here.
     * https://github.com/ros2/rclcpp/pull/97
     * https://github.com/ros2/demos/pull/14
     * https://github.com/ros2/rmw_opensplice/pull/74
-    * https://github.com/ros2/rmw_connext/pull/95
     * https://github.com/ros2/rmw_connext/pull/89
     * https://github.com/ros2/rclcpp/pull/98
     * https://github.com/ros2/rmw/pull/36
