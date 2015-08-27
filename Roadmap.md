@@ -1,54 +1,62 @@
 # ROS 2.0 Roadmap
 
-This document is designed to capture the plans for upcoming ROS 2.0 development milestones. 
-
 For more information on the design of ROS 2.0 please see [design.ros2.org](http://design.ros2.org). 
-The core code for ros2 is on the [ros2 github organization](https://github.com/ros2). The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros)
+The core code for ros2 is on the [ros2 github organization](https://github.com/ros2). The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
 
 ## Alpha release
 
-- finalize more design documents (design.ros2.org)
-- add support for FastRTPS
-- add support for freertps
-- dynamic loading objects(class_loader/pluginlib)
-- static remapping
-- component model
- - orchestration API
- - introspection API
-- type masquarading
-- launch system
-- dynamic remapping
-- graph API
-- develop command line tools
-  - introspection e.g. rostopic
-  - logging e.g. rosconsole
-  - data recording/playback
-- multi-robot support and examples
-- build debian packages
-- write up full migration guide
-- develop examples of porting from ROS1 to ROS2
+- Continue to iterate on design documents: http://design.ros2.org
+- Support and evaluate more DDS/RTPS implementations:
+ - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
+ - freertps: https://github.com/ros2/freertps
+- Dynamic loading of nodes and plugins
+ - a al `class_loader`/`pluginlib`
+- Static remapping
+ - a la ROS Names: http://wiki.ros.org/Names
+- Component life-cycle:
+ - Orchestration API
+ - Introspection API
+- Type masquerading
+ - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
+- Launch system
+- Dynamic remapping
+ - Remapping and aliasing through a Service interface
+- Graph API
+ - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
+- Command line tools:
+  - introspection, a la `rostopic`
+  - console logging, a la `rosconsole`
+  - data recording/playback, a la `rosbag`
+- Multi-robot supporting features and demos
+- Debian packaging
+- ROS 1/ROS 2 Migration Guide
+ - Tutorials and examples of migrating ROS 1 packages
 - C client library
 - Python client library
 
 ## Pre Alpha release
 
-- cross platform support
- - Linux, OSX, Windows, (bare metal/RTOS)
-- build system
-- message generation
-- abstract dds interface
+- Multi-platform support
+ - Linux
+ - OSX
+ - Windows
+ - RTOS or no OS
+- Build system
+- Message generation
+- Abstract middleware interface
  - multiple DDS vendor support
   - OpenSplice
   - Connext
-- executor model
-- publish subscribe support
-- request/response (services) support
- - synchronous + asynchronous
-- dynamic parameter support support
+  - Connext with Dynamic Data support
+- Executor model
+- Publish/subscribe API
+- Request/response (Services) API
+ - Synchronous as well as asynchronous
+- Dynamic parameter API
 
-Demonstrations
-- ros1_bridge
-- quality of service
-- efficient intraprocess communications
-- realtime controller
-- baremetal embedded pub/sub
+Demonstrations:
+- ROS 1 <-> ROS 2 bridge
+- Quality of Service in lossy environments
+- Efficient intra-process communications
+- Real-time controller
+- Publish/Subscribe on an embedded system without an OS
