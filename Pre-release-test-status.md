@@ -38,5 +38,6 @@ Feel free to add more items here.
     * OSX
     * Windows
 * Stuff not covered by the demos:
-  * services; still broken?
-  * parameters (?)
+  * services - **Esteve**
+  * parameters - hopefully fixed by services
+  * documentation entry point - **Brian**
