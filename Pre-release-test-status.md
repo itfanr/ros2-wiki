@@ -2,6 +2,7 @@ Things to be tested are listed below.  Add your name to claim an item and strike
 
 * Review pending pull requests (not testing, but we need to get everything merged)
   * List PRs here that need review
+* Create up-to-date packages from a known strate (e.g. create .repos file with hashed as gist)
 * From-binary installation (best to start with a clean VM):
   * Windows
   * Linux
