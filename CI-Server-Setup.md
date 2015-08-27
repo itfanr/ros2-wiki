@@ -4,7 +4,8 @@ I've pulled the .deb manually from:
 
 http://pkg.jenkins-ci.org/debian/
 
-And installed it using `dpkg -i ...`. This way we don't get unexpected updates with apt-get upgrade.
+And installed it using `dpkg -i ...`.
+This way we don't get unexpected updates with apt-get upgrade.
 
 # Running on port 80
 
@@ -28,7 +29,8 @@ First I updated all the preinstalled  plugins.
 
 ## Authentication
 
-Then I setup authentication with the `github-oauth` plugin. I just installed it and followed their setup instructions:
+Then I setup authentication with the `github-oauth` plugin.
+I just installed it and followed their setup instructions:
 
 https://wiki.jenkins-ci.org/display/JENKINS/Github+OAuth+Plugin
 
@@ -138,7 +140,8 @@ It should be set to the ssh key setup in the previous steps for the jenkins user
 I also updated the slaves which the jobs will run on to make sure they matched the names of the slaves I added for Linux, OS X and Windows.
 
 ## Disk space
-Overtime docker images and particularly containers will pile up. To clean up use:
+Overtime docker images and particularly containers will pile up.
+To clean up use:
 ```
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q -f dangling=true)

@@ -1,21 +1,28 @@
 # Background
-Real-time computing is a key feature of many robotics systems, particularly safety- and mission-critical applications such as autonomous vehicles, spacecrafts, and industrial manufacturing. We are designing and prototyping ROS 2 with real-time performance constraints in mind, since this is a requirement that was not considered in the early stages of ROS 1 and it is now intractable to refactor ROS 1 to be real-time friendly.
+Real-time computing is a key feature of many robotics systems, particularly safety- and mission-critical applications such as autonomous vehicles, spacecrafts, and industrial manufacturing.
+We are designing and prototyping ROS 2 with real-time performance constraints in mind, since this is a requirement that was not considered in the early stages of ROS 1 and it is now intractable to refactor ROS 1 to be real-time friendly.
 
 [This document](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md) outlines the requirements of real-time computing and best practices for software engineers. tl;dr:
 
-To make a real-time computer system, our real-time loop must update periodically to meet deadlines. We can only tolerate a small margin of error on these deadlines (our maximum allowable jitter). To do this, we must avoid nondeterministic operations in the execution path, things like: pagefault events, dynamic memory allocation/deallocation, and synchronization primitives that block indefinitely.
+To make a real-time computer system, our real-time loop must update periodically to meet deadlines.
+We can only tolerate a small margin of error on these deadlines (our maximum allowable jitter).
+To do this, we must avoid nondeterministic operations in the execution path, things like: pagefault events, dynamic memory allocation/deallocation, and synchronization primitives that block indefinitely.
 
-A classic example of a controls problem commonly solved by real-time computing is balancing an [inverted pendulum](https://en.wikipedia.org/wiki/Inverted_pendulum). If the controller blocked for an unexpectedly long amount of time, the pendulum would fall down or go unstable. But if the controller reliably updates at a rate faster than the motor controlling the pendulum can operate, the pendulum will successfully adapt react to sensor data to balance the pendulum.
+A classic example of a controls problem commonly solved by real-time computing is balancing an [inverted pendulum](https://en.wikipedia.org/wiki/Inverted_pendulum).
+If the controller blocked for an unexpectedly long amount of time, the pendulum would fall down or go unstable.
+But if the controller reliably updates at a rate faster than the motor controlling the pendulum can operate, the pendulum will successfully adapt react to sensor data to balance the pendulum.
 
 Now that you know everything about real-time computing, let's try a demo!
 
 # Build and run the demo
-The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions. Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems. So, if you are an OSX or Windows user, don't try this part!
+The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions.
+Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems.
+So, if you are an OSX or Windows user, don't try this part!
 
 ## Pre-built binaries
 Source your ROS 2 setup.bash.
 
-Run the demo binary with Opensplice, and redirect the output:
+Run the demo binary with OpenSplice, and redirect the output:
 `pendulum_demo__rmw_opensplice > output.txt`
 
 ## Building from source:
@@ -29,7 +36,7 @@ If you've already built ROS 2 and you want to rebuild this package after making 
 
 Source your ROS 2 setup.bash.
 
-Run the demo binary with Opensplice, and redirect the output:
+Run the demo binary with OpenSplice, and redirect the output:
 `pendulum_demo__rmw_opensplice > output.txt`
 
 # What the heck just happened?
@@ -42,9 +49,12 @@ Couldn't lock all cached virtual memory.
 Pagefaults from reading pages not yet mapped into RAM will be recorded.
 ```
 
-After the initialization stage of the demo program, it will attempt to lock all cached memory into RAM and prevent future dynamic memory allocations using `mlockall`. This is to prevent pagefaults from loading lots of new memory into RAM. (See [the realtime design article](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md#memory-management) for more information.)
+After the initialization stage of the demo program, it will attempt to lock all cached memory into RAM and prevent future dynamic memory allocations using `mlockall`.
+This is to prevent pagefaults from loading lots of new memory into RAM.
+(See [the realtime design article](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md#memory-management) for more information.)
 
-The demo will continue on as usual when this occurs. But if you scroll down to the bottom of the output.txt file generated by the demo, you'll see the number of pagefaults encountered during execution:
+The demo will continue on as usual when this occurs.
+But if you scroll down to the bottom of the output.txt file generated by the demo, you'll see the number of pagefaults encountered during execution:
 
 ```
 rttest statistics:
@@ -64,9 +74,12 @@ Add to `/etc/security/limits.conf` (as sudo):
 A limit of `-1` is unlimited.
 If you choose this, you may need to accompany it with `ulimit -l unlimited` after editing the file.
 
-After saving the file, log out and log back in. Then rerun the `pendulum_demo` invocation.
+After saving the file, log out and log back in.
+Then rerun the `pendulum_demo` invocation.
 
-You'll either see zero pagefaults in your output file, or an error saying that a bad_alloc exception was caught. If this happened, you didn't have enough free memory available to lock the memory allocated for the process into RAM. You'll need to install more RAM in your computer to see zero pagefaults!
+You'll either see zero pagefaults in your output file, or an error saying that a bad_alloc exception was caught.
+If this happened, you didn't have enough free memory available to lock the memory allocated for the process into RAM.
+You'll need to install more RAM in your computer to see zero pagefaults!
 
 ## Pre-execution mallocs
 
@@ -98,7 +111,10 @@ The first two lines tell us how many pagefaults occurred during the initializati
 
 The next lines give us some information about what the demo is actually doing.
 
-The demo is controlling a very simple inverted pendulum simulation. The pendulum simulation calculates its position in its own thread. A ROS node simulates a motor encoder sensor for the pendulum and publishes its position. Another ROS node acts as a simple PID controller and calculates the next command message.
+The demo is controlling a very simple inverted pendulum simulation.
+The pendulum simulation calculates its position in its own thread.
+A ROS node simulates a motor encoder sensor for the pendulum and publishes its position.
+Another ROS node acts as a simple PID controller and calculates the next command message.
 
 The demo periodically prints out the pendulum's state and the runtime performance statistics of the demo during its execution phase.
 
@@ -122,13 +138,15 @@ PendulumMotor received 985 messages
 PendulumController received 987 messages
 ```
 
-The latency fields show you the minimum, maximum, and average latency of the update loop in nanoseconds. Here, latency means the amount of time after the update was expected to occur.
+The latency fields show you the minimum, maximum, and average latency of the update loop in nanoseconds.
+Here, latency means the amount of time after the update was expected to occur.
 
 The requirements of a real-time system depend on the application, but let's say in this demo we have a 1KHz (1 millisecond) update loop, and we're aiming for a maximum allowable latency of 5% of our update period.
 
 So, our average latency was really good in this run, but the maximum latency was unacceptable because it actually exceeded our update loop! What happened?
 
-We may be suffering from a non-deterministic scheduler. If you're running a vanilla Linux system and you don't have the RT_PREEMPT kernel installed, you probably won't be able to meet the real-time goal we set for ourselves, because the Linux scheduler won't allow you to arbitrarily pre-empt threads at the user level.
+We may be suffering from a non-deterministic scheduler.
+If you're running a vanilla Linux system and you don't have the RT_PREEMPT kernel installed, you probably won't be able to meet the real-time goal we set for ourselves, because the Linux scheduler won't allow you to arbitrarily pre-empt threads at the user level.
 
 See the [realtime design article](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md#multithreaded-programming-and-synchronization) for more information.
 

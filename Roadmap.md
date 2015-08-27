@@ -1,7 +1,8 @@
 # ROS 2.0 Roadmap
 
-For more information on the design of ROS 2.0 please see [design.ros2.org](http://design.ros2.org). 
-The core code for ros2 is on the [ros2 github organization](https://github.com/ros2). The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
+For more information on the design of ROS 2.0 please see [design.ros2.org](http://design.ros2.org).
+The core code for ros2 is on the [ros2 github organization](https://github.com/ros2).
+The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
 
 ## Alpha release
 
