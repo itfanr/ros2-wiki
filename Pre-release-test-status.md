@@ -18,7 +18,7 @@ Feel free to add more items here.
   * OSX
 * From-source installation (best to start with a clean VM):
   * Windows
-  * Linux
+  * Linux (Tully)
   * OSX
 * Demos:
   * real-time
