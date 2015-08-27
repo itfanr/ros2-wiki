@@ -9,22 +9,22 @@ Things to be tested are listed below.  Add your name to claim an item and strike
  * Linux
  * OSX
 * Demos:
- * real-time
-  * Linux
- * intra-process
-  * Linux
-  * OSX
-  * Windows
- * embedded (at least one person should grab hardware from Morgan and try the whole thing)
-  * Linux
-  * no-OS
- * ROS 1 bridge
-  * OSX
-  * Linux
- * QoS
-  * Linux
-  * OSX
-  * Windows
+  * real-time
+    * Linux
+  * intra-process
+    * Linux
+    * OSX
+    * Windows
+  * embedded (at least one person should grab hardware from Morgan and try the whole thing)
+    * Linux
+    * no-OS
+  * ROS 1 bridge
+    * OSX
+    * Linux
+  * QoS
+    * Linux
+    * OSX
+    * Windows
 * Stuff not covered by the demos:
- * services (?)
- * parameters (?)
+  * services (?)
+  * parameters (?)
