@@ -4,7 +4,6 @@ Feel free to add more items here.
 
 * Review pending pull requests (not testing, but we need to get everything merged)
   * List PRs here that need review
-    * https://github.com/ros2/ros1_bridge/pull/9
     * https://github.com/ros2/rclcpp/pull/97
     * https://github.com/ros2/demos/pull/14
     * https://github.com/ros2/rmw_opensplice/pull/74
