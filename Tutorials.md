@@ -7,8 +7,7 @@
 ## ROS 2 Demos
 * [Use quality-of-service settings to handle lossy
 networks](Quality-Of-Service)
-* [Communicate inter-process or intra-process with the same API (no more
-nodelets)](Intra-Process-Communication)
+* [Efficient intra-process communication](Intra-Process-Communication)
 * [Write real-time safe code that uses the ROS 2
 APIs](Real-Time-Programming)
 * [Run ROS 2 on "bare-metal" microcontrollers (no operating
