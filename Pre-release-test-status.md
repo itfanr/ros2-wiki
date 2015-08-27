@@ -28,5 +28,5 @@ Things to be tested are listed below.  Add your name to claim an item and strike
     * OSX
     * Windows
 * Stuff not covered by the demos:
-  * services (?)
+  * services; still broken?
   * parameters (?)
