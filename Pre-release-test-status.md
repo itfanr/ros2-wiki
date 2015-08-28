@@ -16,9 +16,10 @@ Feel free to add more items here.
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
   * Windows
   * Linux
-    * OpenSplice OSRF Debs
+    * OpenSplice OSRF Debs - **Morgan** :heavy_check_mark:
       * **Tully**
-    * OpenSplice binaries - **Morgan** :heavy_check_mark:
+    * OpenSplice binaries 
+      * **Morgan (in process)**
     * RTI OSRF Debs
     * RTI Trial Binaries
       * **Tully**
