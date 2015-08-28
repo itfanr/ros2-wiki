@@ -47,8 +47,7 @@ ROS 2.0 builds on top of DDS.
 It is compatible with multiple vendors.
 You can choose to install one or more of the supported versions of DDS.
 
-By default we will demonstrate installing opensplice from OSRF packaged debian packages.
-Details for installing other DDS vendors is below.
+By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF. Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
 #### PrismTech OpenSplice Debian Packages built by OSRF
 
@@ -81,7 +80,7 @@ Afterwards source the `local_setup.*` from the `install` / `install_isolated` fo
 Now that you have finished building the workspace, you can run talker and listener, they are on your path.
 See the [demos](Tutorials) for other things to try.
 
-## Alternative DDS souces.
+## Alternative DDS sources.
 
 The demos will attempt to build against any detected DDS vendor. If you would like to switch out the vendor below are the instructions. When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment. 
 
