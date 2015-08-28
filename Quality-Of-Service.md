@@ -96,7 +96,7 @@ Next we start the `cam2image` and `showimage`, and we'll soon notice that both p
 
 Let's now try running both programs, but with more suitable settings. First of all, we'll use the `-r 0` option to enable best effort communication. The publisher will now just attempt to deliver the network packets, and don't expect acknowledgement from the consumer. We see now that some of the frame on the `showimage` side were dropped, the frame numbers in the shell running `showimage` won't be consecutive anymore:
 
-TODO add screenshot.
+![Best effort image transfer ](https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png)
 
 When you're done, remember to delete the queueing discipline:
 ```
