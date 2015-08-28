@@ -75,6 +75,7 @@ If you run `cam2image -h`, you'll see the same set of command line options and t
 `-x` and `-y`: Set the size of the camera feed (x sets the width, y sets the height).
 
 The default quality of service settings are tuned for maximum reliability: the reliability policy is reliable, and the history policy is "keep all".
+Always use the same QoS settings for both endpoints.
 
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
