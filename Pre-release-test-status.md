@@ -6,8 +6,8 @@ Feel free to add more items here.
   * List PRs here that need review
     * ~~https://github.com/ros2/rclcpp/pull/97~~
       * merged
-    * https://github.com/ros2/demos/pull/14
-      * in review
+    * ~~https://github.com/ros2/demos/pull/14~~
+      * merge
     * ~~https://github.com/ros2/rmw_opensplice/pull/74~~
       * merged
     * ~~https://github.com/ros2/rmw_connext/pull/89~~
