@@ -162,8 +162,8 @@ But this will break opencv, so you'll also need to update it to continue working
 
 ```
 $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
-$ sudo install_name_tool -change /usr/local/lib/libpng16.16.dylib /usr/local/Cellar/libpng/1.6.17/lib/libpng16.16.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
-$ sudo install_name_tool -change /usr/local/lib/libtiff.5.dylib /usr/local/Cellar/libtiff/4.0.4/lib/libtiff.5.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
+$ sudo install_name_tool -change /usr/local/lib/libpng16.16.dylib /usr/local/opt/libpng/lib/libpng16.16.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
+$ sudo install_name_tool -change /usr/local/lib/libtiff.5.dylib /usr/local/opt/libtiff/lib/libtiff.5.dylib /usr/local/lib/libopencv_highgui.2.4.dylib
 $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/jpeg/lib/libjpeg.8.dylib /usr/local/Cellar/libtiff/4.0.4/lib/libtiff.5.dylib
 ```
 
