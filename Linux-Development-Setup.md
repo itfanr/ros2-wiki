@@ -1,5 +1,4 @@
-For OSX see: https://github.com/ros2/examples/wiki/OSX-Development-Setup
-For Windows see: https://github.com/ros2/examples/wiki/Windows-Development-Setup
+# Building ROS 2 on Linux
 
 ## How to setup the development environment?
 
