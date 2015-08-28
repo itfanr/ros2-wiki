@@ -173,7 +173,12 @@ The others are updating things built by Homebrew so that they can find the versi
 ## Maintainer notes
 To build a binary package for distribution, follow the steps described above, then:
 
-    mv install ros2
+    cd ~/ros2_ws
+    cp -a install ros2
+    # Remove some unneeded executables
+    find ros2 -name "*__rmw_*" -exec rm -rf {} \;
+    find ros2 -name "simple_bridge*" -exec rm -rf {} \;
+    find ros2 -name "static_bridge*" -exec rm -rf {} \;
     tar cvfL ros2-package-osx.tar ros2
     bzip2 ros2-package-osx.tar
 Ship it!
