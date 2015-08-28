@@ -1,7 +1,6 @@
 # ROS 2 Tutorials
 
-* [installation](Installation)
-* [building ROS 2 from source](https://github.com/ros2/examples/wiki)
+* [[Installation from binary and source, all platforms|Installation]]
 * [Using ament to build a custom package](https://github.com/ros2/examples/wiki/Ament-Tutorial)
 
 ## ROS 2 Demos
