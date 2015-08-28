@@ -34,6 +34,11 @@ The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.googl
  - Tutorials and examples of migrating ROS 1 packages
 - C client library
 - Python client library
+- Real-time safety for more features
+  - For services, clients, and parameters
+  - For intra-process communication
+  - Support deterministic ordering of executables in Executor (fair scheduling)
+
 
 ## Pre Alpha release
 
