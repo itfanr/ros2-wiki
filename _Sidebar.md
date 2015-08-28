@@ -1,2 +1,2 @@
-Installation
-Tutorials
+* [[Installation]]
+* [[Tutorials]]
