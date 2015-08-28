@@ -4,20 +4,7 @@ Feel free to add more items here.
 
 * Review pending pull requests (not testing, but we need to get everything merged)
   * List PRs here that need review
-    * ~~https://github.com/ros2/rclcpp/pull/97~~
-      * merged
-    * https://github.com/ros2/demos/pull/14
-      * in review
-    * ~~https://github.com/ros2/rmw_opensplice/pull/74~~
-      * merged
-    * ~~https://github.com/ros2/rmw_connext/pull/89~~
-      * not critical for release
-    * ~~https://github.com/ros2/rclcpp/pull/98~~
-      * merged
-    * ~~https://github.com/ros2/rmw/pull/36~~
-      * merged
-    * ~~https://github.com/ros2/system_tests/pull/38~~
-      * merged
+
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
 * From-binary installation (best to start with a clean VM) using https://github.com/ros2/ros2/releases/tag/pre-alpha-rc1:
   * Windows
