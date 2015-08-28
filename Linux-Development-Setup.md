@@ -89,14 +89,14 @@ The demos will attempt to build against any detected DDS vendor. If you would li
 
 Choose one of the following options for PrismTech OpenSplice.
 
-##### Debian packages built by OSRF
+##### Debian packages built by OSRF (used in the default instruction sequence above)
 
 ```
 sudo apt-get update
 sudo apt-get install libopensplice64  # from packages.osrfoundation.org
 ```
 
-Add this to you `~/.bashrc`
+Add this to your `~/.bashrc`
 ```
 export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 ```
