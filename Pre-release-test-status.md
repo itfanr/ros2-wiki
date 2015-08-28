@@ -53,7 +53,7 @@ Feel free to add more items here.
     * OSX
     * Windows
 * Stuff not covered by the demos:
-  * services - **Esteve**
-  * parameters - hopefully fixed by services
+  * services - **Esteve** :heavy_check_mark: 
+  * parameters - **Esteve** :heavy_check_mark: 
   * documentation entry point
     * **Brian** :heavy_check_mark: 
