@@ -17,7 +17,7 @@ Feel free to add more items here.
   * Windows
   * Linux
     * OpenSplice OSRF Debs - **Morgan** :heavy_check_mark:
-      * **Tully**
+      * **Tully** :heavy_check_mark:
     * OpenSplice binaries 
       * **Morgan (in process)**
     * RTI OSRF Debs
