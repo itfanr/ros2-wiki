@@ -35,4 +35,31 @@ You need the following things installed before installing ROS 2.
         brew install python3 opensplice
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
 
-## 
+## Downloading ROS 2
+* Go the releases page: https://github.com/ros2/ros2/releases
+* Download the latest package for OS X; let's assume that it ends up at `~/Downloads/ros2-package-osx.tar.bz2`.
+* Unpack it:
+
+        mkdir -p ~/ros2_install
+        cd ~/ros2_install
+        tar xf ~/Downloads/ros2-package-osx.tar.bz2
+
+## Try some examples
+In one terminal, source the setup file and then run a `talker`:
+
+    . ~/ros2_install/ros2/setup.bash
+    talker
+In another terminal source the setup file and then run a `listener`:
+
+    . ~/ros2_install/ros2/setup.bash
+    listener
+You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
+Hooray!
+
+### ROS 1 bridge
+If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file (assume that it's `~/ros_catkin_ws/install_isolated/setup.bash`):
+
+    . ~/ros_catkin_ws/install_isolated/setup.bash
+    . ~/ros2_install/setup.bash
+    dynamic_bridge
+For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
