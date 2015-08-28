@@ -2,6 +2,6 @@
 * [[Pre Alpha Release Overview|Pre-Alpha-Overview]]
 * [[Installation]]
 * [[Tutorials]]
-* [[Contributing]]
 * [[Contact]]
+* [[Contributing]]
 * [[Developer Guide|Developer-Guide]]
