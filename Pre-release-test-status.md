@@ -22,7 +22,7 @@ Feel free to add more items here.
       * **Morgan (in process)**
     * RTI OSRF Debs
     * RTI Trial Binaries
-      * **Tully**
+      * **Tully** :heavy_check_mark:
   * OSX
 * Demos:
   * real-time
