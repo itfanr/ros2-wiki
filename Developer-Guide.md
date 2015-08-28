@@ -326,14 +326,16 @@ The filesystem layout of packages should follow the same conventions in order to
 
 ### Prescribed Layout
 
-- `src`: contains all Python, C, and C++ code
+- `src`: contains all C and C++ code
  - Also contains C/C++ headers which are not installed
 - `include`: contains all C and C++ headers which are installed
  - `<package name>`: for all C and C++ installed headers they should be folder namespaced by the package name
-- `tests`: contains all automated tests and test data
-- `docs`: contains all the documentation
+- `<package_name>`: contains all Python code
+- `test`: contains all automated tests and test data
+- `doc`: contains all the documentation
 - `package.xml`: as defined by [REP-0140](http://www.ros.org/reps/rep-0140.html) (may be updated for prototyping)
-- `CMakeLists.txt`: Even ROS packages with only Python code will need a CMakeLists.txt
+- `CMakeLists.txt`: only ROS packages which use CMake
+- `setup.py`: only ROS packages which use Python code only
 - `README.md`: README which can be rendered on Github as a landing page for the project
  - This can be as short or detailed as is convenient, but it should atleast link to project documentation
  - Consider putting a CI or code coverage tag in this readme
