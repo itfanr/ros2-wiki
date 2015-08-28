@@ -19,7 +19,7 @@ Before running the demo, make sure you have a working webcam connected to your c
 Once you've installed ROS 2, source your setup.bash file:
 
 ```
-. <path to ROS 2>/install/setup.bash
+. <path to ROS 2 install space>/setup.bash
 ```
 
 Then run:
