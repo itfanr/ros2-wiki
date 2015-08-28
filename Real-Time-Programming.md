@@ -23,7 +23,7 @@ So, if you are an OSX or Windows user, don't try this part!
 Source your ROS 2 setup.bash.
 
 Run the demo binary with OpenSplice, and redirect the output:
-`pendulum_demo__rmw_opensplice > output.txt`
+`pendulum_demo__rmw_opensplice_cpp > output.txt`
 
 ## Building from source:
 First, follow the instructions to build ROS 2 from source.
