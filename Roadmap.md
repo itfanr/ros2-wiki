@@ -58,11 +58,12 @@ Major Features:
   - OpenSplice
   - Connext
   - Connext with Dynamic Data support
-- Executor model
-- Publish / subscribe API
-- Request / response (Services) API
- - Synchronous as well as asynchronous
-- Dynamic parameter API
+- ROS C++ client library
+ - Executor model
+ - Publish / subscribe API
+ - Request / response (Services) API
+  - Synchronous as well as asynchronous
+ - Dynamic parameter API
 
 Demonstrations:
 - ROS 1 <-> ROS 2 bridge
