@@ -28,6 +28,8 @@ showimage
 ```
 Nothing will happen yet. `showimage` is a subscriber node that is waiting for a publisher on the `image` topic.
 
+Note: you have to close the `showimage` process with `Ctrl-C` later. You can't just close the window.
+
 In a separate terminal, source the install file and run the publisher node:
 ```
 cam2image
