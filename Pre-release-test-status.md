@@ -62,6 +62,7 @@ Feel free to add more items here.
   * QoS
     * Linux
       * **Dirk**
+      * two remaining TODOs in the tutorial
     * OSX
       * **William**
     * Windows
