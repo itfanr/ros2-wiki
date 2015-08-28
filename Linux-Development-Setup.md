@@ -75,8 +75,8 @@ src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --i
 
 Afterwards source the `local_setup.*` from the `install` / `install_isolated` folder.
 
-Now that you have finished building the workspace, try out the demos.
-TODO LINKME
+Now that you have finished building the workspace, you can run talker and listener, they are on your path.
+See the [demos](Tutorials) for other things to try.
 
 ## Alternative DDS souces.
 
