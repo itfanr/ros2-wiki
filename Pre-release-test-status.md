@@ -43,7 +43,9 @@ Feel free to add more items here.
     * Windows
   * embedded (at least one person should grab hardware from Morgan and try the whole thing)
     * Linux
+      * **Esteve**
     * no-OS
+      * **Esteve**
   * ROS 1 bridge
     * OSX
       * **Brian**
