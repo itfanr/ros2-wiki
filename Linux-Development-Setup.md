@@ -117,7 +117,7 @@ If you build OpenSplice from source, be sure to remember to following the INSTAL
 #### RTI Connext
 
 To use RTI Connext you will need to have obtained a license from RTI. 
-Add the following line to your `.bashrc` file:
+Add the following line to your `.bashrc` file pointing to your copy of the license.
 ```
 export RTI_LICENSE_FILE=path/to/rti_license.dat
 ```
@@ -130,18 +130,9 @@ sudo apt-get install openjdk-7-jre
 
 Choose one of the following options for RTI Connext.
 
-##### Debian packages built by OSRF
-
-These packages are not public due to pending license questions.
-Download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
-
-Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
-
-Also add to your .bashrc `export NDDSHOME=/usr`
-
 ##### Official binary packages from RTI
 
-You can install the packages provided by [RTI](http://www.rti.com/downloads/connext-files.html#DOWNLOAD)  - Get the 14.04 version. They are available under a trial license. 
+You can install the packages provided by [RTI](http://www.rti.com/downloads/connext-files.html#DOWNLOAD)  - Get the 14.04 version.  
 
 After downloading `chmod +x` on the .run the executable and execute. (If you're installing to a system directory use `sudo`. 
 
@@ -152,7 +143,12 @@ Source the setup file to set the `NDDSHOME` environment variable.
 source /opt/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
 
+##### Debian packages built by OSRF
 
+These packages are not public due to pending license questions.
+Download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
+
+Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
 
 ## Troubleshooting
 
