@@ -77,4 +77,3 @@ The default quality of service settings are tuned for maximum reliability: the r
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
 ##Add network traffic
-TODO
