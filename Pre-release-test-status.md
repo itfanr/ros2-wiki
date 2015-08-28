@@ -40,11 +40,12 @@ Feel free to add more items here.
     * Linux
       * **Esteve**
         * OpenSplice talker - FreeRTPS listener :heavy_check_mark: 
-        * OpenSplice listener - FreeRTPS talker :cry: 
+        * OpenSplice listener - FreeRTPS talker :cry:
+        * OpenSplice listener (modified to use best effort) - FreeRTPS talker :heavy_check_mark:  
     * no-OS
       * **Esteve**
         * OpenSplice talker - FreeRTPS listener :heavy_check_mark: 
-        * OpenSplice listener - FreeRTPS talker
+        * OpenSplice listener - FreeRTPS talker :cry:
   * ROS 1 bridge
     * OSX
     * Linux
