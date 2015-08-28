@@ -1,4 +1,4 @@
-# Installing ROS 2 from source on OS X
+# Building ROS 2 on OS X
 
 ## System requirements
 We support OS X Yosemite (10.10.x).
