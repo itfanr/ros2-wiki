@@ -44,7 +44,7 @@ Feel free to add more items here.
     * no-OS
       * **Esteve**
         * OpenSplice talker - FreeRTPS listener
-        * OpenSplice listener - FreeRTPS talker :cry: 
+        * OpenSplice listener - FreeRTPS talker
   * ROS 1 bridge
     * OSX
     * Linux
