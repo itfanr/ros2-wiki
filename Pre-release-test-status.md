@@ -58,9 +58,9 @@ Feel free to add more items here.
       * **Tully** :heavy_check_mark: (binary install, except gui)
       * **Steve** :heavy_check_mark: (binary install, except gui)
   * QoS
+    * one remaining TODO in the tutorial: "The code explained"
     * Linux
-      * **Dirk**
-      * two remaining TODOs in the tutorial
+      * **Dirk** :heavy_check_mark: 
     * OSX
       * **William**
     * Windows
