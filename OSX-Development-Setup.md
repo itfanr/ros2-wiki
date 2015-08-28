@@ -171,6 +171,8 @@ The first command is necessary to avoid things built against the system libjpeg 
 The others are updating things built by Homebrew so that they can find the version of libjpeg (etc.) without having them in /usr/local/lib.
 
 ## Maintainer notes
+**TODO: Automate the following steps in Jenkins.**
+
 To build a binary package for distribution, follow the steps described above, then:
 
     cd ~/ros2_ws
