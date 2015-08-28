@@ -50,11 +50,11 @@ You need the following things installed before installing ROS 2.
 ## Try some examples
 In one terminal, source the setup file and then run a `talker`:
 
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-osx/setup.bash
     talker
 In another terminal source the setup file and then run a `listener`:
 
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-osx/setup.bash
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
@@ -70,6 +70,6 @@ If you haven't already, start a roscore:
 In another terminal, start the bridge:
 
     . ~/ros_catkin_ws/install_isolated/setup.bash
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-osx/setup.bash
     dynamic_bridge
 For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
