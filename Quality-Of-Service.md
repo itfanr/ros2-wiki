@@ -77,3 +77,19 @@ The default quality of service settings are tuned for maximum reliability: the r
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
 ##Add network traffic
+This next section is Linux-specific.
+
+We are going to use the Linux network traffic control utility, `tc` (http://linux.die.net/man/8/tc).
+
+```
+sudo tc qdisc add dev lo root netem loss 5%
+```
+
+This magical incantation will simulate 5% packet loss over the local loopback device. 
+
+TODO
+
+When you're done, remember to delete the queueing discipline:
+```
+sudo tc qdisc delete dev lo root netem loss 5%
+```
