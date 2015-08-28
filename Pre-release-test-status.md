@@ -58,6 +58,7 @@ Feel free to add more items here.
     * OSX
     * Linux
       * **Brian**
+      * **Tully** :heavy_check_mark: (binary install, except gui)
   * QoS
     * Linux
       * **Dirk**
