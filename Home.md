@@ -11,5 +11,8 @@ See [[the installation page|Installation]].
 ## Tutorials
 See [[the tutorials page|Tutorials]].
 
+## Reporting problems
+TODO
+
 ## Developing ROS 2
-See [[the developer page|Developer]].
+See [[the contributing page|Contributing]].
