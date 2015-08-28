@@ -11,6 +11,7 @@ Feel free to add more items here.
       * **Esteve**
   * Linux
     * **Tully**
+    * **Steve** tested with docker osrf/ros:indigo-desktop image. Tested talker/listener in non-bridged and bridged mode. I didn't test the camera image generation.
   * OSX
       * **William**
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
