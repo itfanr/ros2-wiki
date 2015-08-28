@@ -15,4 +15,4 @@ See [[the tutorials page|Tutorials]].
 See [[the contact page|Contact]].
 
 ## Contributing
-See [[the contributing page|Contributing]] and [[the development guide|Development-Guide]].
+See [[the contributing page|Contributing]] and [[the developer guide|Developer-Guide]].
