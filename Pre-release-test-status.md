@@ -21,7 +21,6 @@ Feel free to add more items here.
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
 * From-binary installation (best to start with a clean VM) using https://github.com/ros2/ros2/releases/tag/pre-alpha-rc1:
   * Windows
-    * Esteve
   * Linux
     * Brian :heavy_check_mark: (tried on my normal Ubuntu developer machine) 
   * OSX
@@ -48,6 +47,7 @@ Feel free to add more items here.
     * no-OS
   * ROS 1 bridge
     * OSX
+      * **Brian**
     * Linux
   * QoS
     * Linux
