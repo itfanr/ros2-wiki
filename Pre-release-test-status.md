@@ -8,16 +8,16 @@ Feel free to add more items here.
       * in review, but documentation only
     * https://github.com/ros2/demos/pull/14
       * in review
-    * https://github.com/ros2/rmw_opensplice/pull/74
-      * pending comments
+    * ~~https://github.com/ros2/rmw_opensplice/pull/74~~
+      * merged
     * ~~https://github.com/ros2/rmw_connext/pull/89~~
       * not critical for release
-    * https://github.com/ros2/rclcpp/pull/98
-      * pending comments
-    * https://github.com/ros2/rmw/pull/36
-      * +1, ready to merge
-    * https://github.com/ros2/system_tests/pull/38
-      * +1, ready to merge
+    * ~~https://github.com/ros2/rclcpp/pull/98~~
+      * merged
+    * ~~https://github.com/ros2/rmw/pull/36~~
+      * merged
+    * ~~https://github.com/ros2/system_tests/pull/38~~
+      * merged
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
 * From-binary installation (best to start with a clean VM):
   * Windows
