@@ -89,11 +89,12 @@ We are going to use the Linux network traffic control utility, `tc` (http://linu
 sudo tc qdisc add dev lo root netem loss 5%
 ```
 
-This magical incantation will simulate 5% packet loss over the local loopback device. 
+This magical incantation will simulate 5% packet loss over the local loopback device.
+If you use a higher resolution of the images (e.g. `-x 640 -y 480`) you might want to try a lower packet loss rate (e.g. `1%`).
 
 Next we start the `cam2image` and `showimage`, and we'll soon notice that both programs seem to have slowed down the rate at which images are transmitted. This is caused by the behavior of the default QoS settings. Enforcing reliability on a lossy channel means that the publisher (in this case, `cam2image`) will resend the network packets until it receives acknowledgement from the consumer (i.e. `showimage`).
 
-Let's now try running both programs, but with more suitable settings. First of all, we'll use the `-r` option to enable best effort communication. The publisher will now just attempt to deliver the network packets, and don't expect acknowledgement from the consumer. We see now that some of the frame on the `showimage` side were dropped:
+Let's now try running both programs, but with more suitable settings. First of all, we'll use the `-r 0` option to enable best effort communication. The publisher will now just attempt to deliver the network packets, and don't expect acknowledgement from the consumer. We see now that some of the frame on the `showimage` side were dropped, the frame numbers in the shell running `showimage` won't be consecutive anymore:
 
 TODO add screenshot.
 
