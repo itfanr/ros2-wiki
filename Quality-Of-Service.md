@@ -75,7 +75,8 @@ If you run `cam2image -h`, you'll see the same set of command line options and t
 `-x` and `-y`: Set the size of the camera feed (x sets the width, y sets the height).
 
 The default quality of service settings are tuned for maximum reliability: the reliability policy is reliable, and the history policy is "keep all".
-Always use the same QoS settings for both endpoints.
+
+It's worth noting that both ends must have the same reliability settings for this to work. If the consumer requires the publisher to be reliable, DDS will not match them and there won't be any exchange between them.
 
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
@@ -95,8 +96,6 @@ Next we start the `cam2image` and `showimage`, and we'll soon notice that both p
 Let's now try running both programs, but with more suitable settings. First of all, we'll use the `-r` option to enable best effort communication. The publisher will now just attempt to deliver the network packets, and don't expect acknowledgement from the consumer. We see now that some of the frame on the `showimage` side were dropped:
 
 TODO add screenshot.
-
-It's worth noting that both ends must have the same reliability settings for this to work. If the consumer requires the publisher to be reliable, DDS will not match them and there won't be any exchange between them.
 
 When you're done, remember to delete the queueing discipline:
 ```
