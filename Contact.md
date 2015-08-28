@@ -9,4 +9,5 @@ If you identify bugs or feature requests, feel free to open an issue in the appr
 When filling an issue, please make sure to:
 
 * Include enough information for another person to understand the issue.
+* Include information about the exact platform, software, versions, and environment relevant to the problem.
 * In case of a bug consider providing a [short, self contained, correct (compilable), example](http://sscce.org/).
