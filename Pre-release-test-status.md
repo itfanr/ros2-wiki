@@ -25,7 +25,11 @@ Feel free to add more items here.
   * OSX
 * From-source installation (best to start with a clean VM):
   * Windows
-  * Linux **Tully**
+  * Linux
+   * OpenSplice OSRF Debs
+   * OpenSplice binaries
+   * RTI OSRF Debs
+   * RTI Trial Binaries **Tully**
   * OSX
 * Demos:
   * real-time
