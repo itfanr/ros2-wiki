@@ -246,6 +246,8 @@ Finally, the `image_view_node` subscribes to the output of the `watermark_node`,
 
 In each node the address of the message which is being sent, or which has been received, or both is written to the image.
 The watermark and image view nodes are designed to modify the image without copying it and so the addresses imprinted on the image should all be the same as long as the nodes are in the same process and the graph remains organized in a pipeline as sketched above.
+**Note:** On some systems (we've seen it happen on Linux), the address printed to the screen might not change.
+This is because the same unique pointer is being reused.
 
 Let's run the demo by executing the `image_pipeline_all_in_one` executable, and you should see something like this:
 
