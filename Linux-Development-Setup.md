@@ -117,6 +117,7 @@ If you build OpenSplice from source, be sure to remember to following the INSTAL
 
 #### RTI Connext
 
+To use RTI Connext you will need to have obtained a license from RTI. 
 Add the following line to your `.bashrc` file:
 ```
 export RTI_LICENSE_FILE=path/to/rti_license.dat
@@ -141,13 +142,18 @@ Also add to your .bashrc `export NDDSHOME=/usr`
 
 ##### Official binary packages from RTI
 
-Install the packages provided by [RTI](http://www.rti.com/downloads/connext-files.html#DOWNLOAD) - the Ubuntu 12.04 packages seem to work for us with Ubuntu 14.04.
-Source the `rti_set_bash_5.1.0` file to set the `NDDSHOME` environment variable.
+You can install the packages provided by [RTI](http://www.rti.com/downloads/connext-files.html#DOWNLOAD)  - Get the 14.04 version. They are available under a trial license. 
+
+After downloading `chmod +x` on the .run the executable and execute. (If you're installing to a system directory use `sudo`. 
+
+The default location is `/opt/rti_connext_dds-5.2.0`
+
+Source the setup file to set the `NDDSHOME` environment variable.
+```
+source /opt/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
+```
 
 
-## Integration with Sublime Text 3
-
-You might want to use the sublime package to integrate with the ament build system: https://github.com/ament/sublime-ament
 
 ## Troubleshooting
 
