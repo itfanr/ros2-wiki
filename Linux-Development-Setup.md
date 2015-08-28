@@ -1,5 +1,8 @@
 # Building ROS 2 on Linux
 
+## System Requirements
+We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit.
+
 ## How to setup the development environment?
 
 First make sure you have the ROS apt repositories added to your system, if not:
