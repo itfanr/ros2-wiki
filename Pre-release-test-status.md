@@ -54,8 +54,8 @@ Feel free to add more items here.
       * **Esteve**
   * ROS 1 bridge
     * OSX
-      * **Brian**
     * Linux
+      * **Brian**
   * QoS
     * Linux
       * **Dirk**
