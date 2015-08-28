@@ -22,9 +22,7 @@ Feel free to add more items here.
 * From-binary installation (best to start with a clean VM) using https://github.com/ros2/ros2/releases/tag/pre-alpha-rc1:
   * Windows
   * Linux
-    * Brian :heavy_check_mark: (tried on my normal Ubuntu developer machine) 
   * OSX
-    * Brian :heavy_check_mark: (tried on my Mac, which is also where the binaries were built)
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
   * Windows
   * Linux
