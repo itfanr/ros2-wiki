@@ -11,8 +11,8 @@ See [[the installation page|Installation]].
 ## Tutorials
 See [[the tutorials page|Tutorials]].
 
-## Reporting problems
-TODO
+## Reporting problems and asking questions
+Learn how to [[contact us|https://github.com/ros2/ros2/wiki/Pre-Alpha-Overview#contact-us]].
 
 ## Contributing
 See [[the contributing page|Contributing]].
