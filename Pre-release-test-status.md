@@ -54,6 +54,7 @@ Feel free to add more items here.
   * QoS
     * Linux
     * OSX
+      * **William**
     * Windows
 * Stuff not covered by the demos:
   * services - **Esteve** :heavy_check_mark: 
