@@ -1,5 +1,5 @@
 # Contact us
-If you try out ROS 2 and have feedback and or any questions, please get in touch with us.
+If you try out ROS 2 and have feedback or questions, please get in touch with us.
 
 Discussions about ROS 2 development and plans are happening on the [sig-ng-ros (Special Interest Group on Next-Generation ROS) mailing list] (https://groups.google.com/forum/?fromgroups#!forum/ros-sig-ng-ros).
 Join us there and participate in the conversation.
