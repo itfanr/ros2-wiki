@@ -200,7 +200,7 @@ The expectation here is that the nodes pass the message back and forth, once a s
 To test those expectations, let's run it:
 
 ```
-% ./install/bin/cyclic_pipeline
+% cyclic_pipeline
 Published first message with value:  42, and address: 0x7fd2ce0a2bc0
 Received message with value:         42, and address: 0x7fd2ce0a2bc0
   sleeping for 1 second...
