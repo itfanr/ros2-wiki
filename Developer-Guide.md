@@ -42,6 +42,7 @@ When filling an issue please make sure to:
 * All error messages must be directed to `stderr`.
 * Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
 * Declare variables in the narrowest scope possible.
+* Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
 
 ## Language Versions and Code Format
 In order to achieve a consistent looking product we will all follow externally (if possible) defined style guidelines for each language. For other things like package layout or documentation layout we will need to come up with our own guidelines, drawing on current, popular styles in use now.
