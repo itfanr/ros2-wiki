@@ -14,5 +14,5 @@ See [[the tutorials page|Tutorials]].
 ## Reporting problems
 TODO
 
-## Developing ROS 2
+## Contributing
 See [[the contributing page|Contributing]].
