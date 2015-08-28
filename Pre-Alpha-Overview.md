@@ -2,11 +2,11 @@
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
 ##### Table of Contents
-[Background](#background)
-[Status](#status)
-[Intended audience](#intended-audience)
-[Scope](#scope)
-[Contact us](#contact-us)
+- [Background](#background)
+- [Status](#status)
+- [Intended audience](#intended-audience)
+- [Scope](#scope)
+- [Contact us](#contact-us)
 
 ## Background
 As explained in a [design
