@@ -85,10 +85,10 @@ This next section is Linux-specific.
 We are going to use the Linux network traffic control utility, `tc` (http://linux.die.net/man/8/tc).
 
 ```
-sudo tc qdisc add dev lo root netem loss 20%
+sudo tc qdisc add dev lo root netem loss 5%
 ```
 
-This magical incantation will simulate 20% packet loss over the local loopback device. 
+This magical incantation will simulate 5% packet loss over the local loopback device. 
 
 Next we start the `cam2image` and `showimage`, and we'll soon notice that both programs seem to have slowed down the rate at which images are transmitted. This is caused by the behavior of the default QoS settings. Enforcing reliability on a lossy channel means that the publisher (in this case, `cam2image`) will resend the network packets until it receives acknowledgement from the consumer (i.e. `showimage`).
 
@@ -100,5 +100,5 @@ It's worth noting that both ends must have the same reliability settings for thi
 
 When you're done, remember to delete the queueing discipline:
 ```
-sudo tc qdisc delete dev lo root netem loss 20%
+sudo tc qdisc delete dev lo root netem loss 5%
 ```
