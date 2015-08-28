@@ -81,14 +81,10 @@ TODO LINKME
 
 ## Alternative DDS souces.
 
+The demos will attempt to build against any detected DDS vendor. If you would like to switch out the vendor below are the instructions. When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment. 
+
+
 #### PrismTech OpenSplice
-
-If you are using a
-
-Add the following line to you `.bashrc` file:
-```
-export PTECH_LICENSE_FILE=path/to/prismtech.lic
-```
 
 Choose one of the following options for PrismTech OpenSplice.
 
@@ -108,6 +104,12 @@ export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 
 Install the packages provided by [OpenSplice](http://www.prismtech.com/dds-community/software-downloads) (we currently use 6.4.1p2).
 Source the `release.com` file to set the `OSPL_HOME` environment variable.
+
+You may also need to add the following line to you `.bashrc` file:
+```
+export PTECH_LICENSE_FILE=path/to/prismtech.lic
+```
+
 
 ##### Building OpenSplice from source
 
