@@ -45,6 +45,7 @@ Feel free to add more items here.
     * Linux
   * QoS
     * Linux
+      * **Dirk**
     * OSX
       * **William**
     * Windows
