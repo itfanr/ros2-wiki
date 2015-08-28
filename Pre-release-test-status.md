@@ -22,18 +22,22 @@ Feel free to add more items here.
 * From-binary installation (best to start with a clean VM):
   * Windows
   * Linux
+    * Brian :heavy_check_mark: (tried on my normal Ubuntu developer machine) 
   * OSX
+    * Brian :heavy_check_mark: (tried on my Mac, which is also where the binaries were built)
 * From-source installation (best to start with a clean VM):
   * Windows
   * Linux
    * OpenSplice OSRF Debs
    * OpenSplice binaries
    * RTI OSRF Debs
-   * RTI Trial Binaries **Tully**
+   * RTI Trial Binaries
+     * **Tully**
   * OSX
 * Demos:
   * real-time
-    * Linux **Tully**
+    * Linux
+      * **Tully**
   * intra-process
     * Linux
     * OSX
@@ -51,4 +55,5 @@ Feel free to add more items here.
 * Stuff not covered by the demos:
   * services - **Esteve**
   * parameters - hopefully fixed by services
-  * documentation entry point - **Brian** :heavy_check_mark: 
+  * documentation entry point
+    * **Brian** :heavy_check_mark: 
