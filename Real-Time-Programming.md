@@ -150,7 +150,7 @@ If you're running a vanilla Linux system and you don't have the RT_PREEMPT kerne
 
 See the [realtime design article](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md#multithreaded-programming-and-synchronization) for more information.
 
-You can get slightly better performance by following the instructions in the next section:
+The demo attempts to set the scheduler and thread priority of the demo to be suitable for real-time performance. If this operation failed, you'll see an error message: "Couldn't set scheduling priority and policy: Operation not permitted". You can get slightly better performance by following the instructions in the next section:
 
 ## Setting permissions for the scheduler:
 Add to `/etc/security/limits.conf` (as sudo):
@@ -161,3 +161,36 @@ Add to `/etc/security/limits.conf` (as sudo):
 The range of the rtprio (real-time priority) field is 0-99.
 However, do NOT set the limit to 99 because then your processes could interfere with important system processes that run at the top priority (e.g. watchdog).
 This demo will attempt to run the control loop at priority 98.
+
+#Plotting results
+You can plot the latency and pagefault statistics that are collected in this demo after the demo runs.
+
+Because the code has been instrumented with [rttest](https://github.com/ros2/rttest), there are useful command line tools available to us:
+
+-i Specify how many iterations to run the real-time loop. Default is 1000.
+
+-u Specify the update period. Default units are microseconds. Use the suffix "s" for seconds, "ms" for milliseconds, "us" for microseconds, and "ns" for nanoseconds. Default update period is 1ms.
+
+-f Specify the name of the file for writing the collected data.
+
+Run the demo again with the name a file to save results to:
+
+```
+pendulum_demo -f pendulum_demo_results
+```
+
+Then run the `rttest_plot` script on the resulting file:
+
+```
+rttest_plot pendulum_demo_results
+```
+
+This script will produce three files:
+
+```
+pendulum_demo_results_plot_latency.svg
+pendulum_demo_results_plot_majflts.svg
+pendulum_demo_results_plot_minflts.svg
+```
+
+You can view these plots in an image viewer of your choice.
