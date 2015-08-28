@@ -61,7 +61,7 @@ vendors](http://design.ros2.org/articles/ros_on_dds.html#vendors-and-licensing);
 * [[Write real-time safe code that uses the ROS 2 APIs|Real-Time-Programming]]
 * [Run ROS 2 on "bare-metal" microcontrollers (no operating
 system)](https://github.com/ros2/freertps/wiki)
-* [[Bridge communication between ROS 1 and ROS 2|Bridging-To-ROS-1]]
+* [[Bridge communication between ROS 1 and ROS 2|https://github.com/ros2/ros1_bridge/blob/master/README.md]]
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
