@@ -52,8 +52,8 @@ Feel free to add more items here.
         * OpenSplice listener (modified to use best effort) - FreeRTPS talker :heavy_check_mark:  
   * ROS 1 bridge
     * OSX
-    * Linux
       * **Brian**
+    * Linux
       * **Tully** :heavy_check_mark: (binary install, except gui)
       * **Steve** :heavy_check_mark: (binary install, except gui)
   * QoS
