@@ -60,6 +60,8 @@ Hooray!
 If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file (assume that it's `~/ros_catkin_ws/install_isolated/setup.bash`):
 
     . ~/ros_catkin_ws/install_isolated/setup.bash
+    # If you haven't already, start a roscore:
+    roscore &
     . ~/ros2_install/ros2/setup.bash
     dynamic_bridge
 For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
