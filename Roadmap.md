@@ -14,7 +14,7 @@ This is a list of the features targeted for development in the future.
  - freertps: https://github.com/ros2/freertps
 - Component life-cycle:
  - Introspection and orchestration APIs
-- Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib\https://github.com/ros/pluginlib/tree/ros2]]
+- Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - C client library
 - Python client library
 - Static remapping
