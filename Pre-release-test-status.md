@@ -52,6 +52,7 @@ Feel free to add more items here.
     * Linux
       * **Brian**
       * **Tully** :heavy_check_mark: (binary install, except gui)
+      * **Steve** :heavy_check_mark: (binary install, except gui)
   * QoS
     * Linux
       * **Dirk**
