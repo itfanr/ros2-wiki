@@ -23,12 +23,14 @@ Feel free to add more items here.
   * Windows
       * **Esteve**
   * Linux
+   * **Tully**
   * OSX
       * **William**
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
   * Windows
   * Linux
    * OpenSplice OSRF Debs
+    * **Tully**
    * OpenSplice binaries
      * **Morgan**
    * RTI OSRF Debs
