@@ -36,6 +36,8 @@ Feel free to add more items here.
         * From source: :heavy_check_mark: 
     * OSX
       * **Brian**
+        * From binary: :heavy_check_mark: 
+        * From source: :heavy_check_mark: 
     * Windows
   * embedded (at least one person should grab hardware from Morgan and try the whole thing)
     * Linux
