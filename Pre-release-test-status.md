@@ -35,17 +35,6 @@ Feel free to add more items here.
         * From source: :heavy_check_mark: 
     * OSX
       * **Brian**
-        * From binary: works, except for the opencv-dependent demo, which gives this error (**seems to be a config problem with my machine**):
-                
-                $ image_pipeline_all_in_one
-                dyld: Library not loaded: /usr/local/Cellar/libpng/1.6.17/lib/libpng16.16.dylib
-                  Referenced from: /usr/local/lib/libopencv_highgui.2.4.dylib
-                  Reason: image not found
-                Trace/BPT trap: 5
-                Brians-Air:ros2_install gerkey$ ls /usr/local/Cellar/libpng/1.6.17/lib
-                ls: /usr/local/Cellar/libpng/1.6.17/lib: No such file or directory
-                Brians-Air:ros2_install gerkey$ ls /usr/local/Cellar/libpng/1.6.1
-                1.6.10/ 1.6.12/ 1.6.13/ 1.6.15/ 1.6.18/ 
     * Windows
   * embedded (at least one person should grab hardware from Morgan and try the whole thing)
     * Linux
