@@ -21,6 +21,7 @@ Feel free to add more items here.
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
 * From-binary installation (best to start with a clean VM) using https://github.com/ros2/ros2/releases/tag/pre-alpha-rc1:
   * Windows
+      * **Esteve**
   * Linux
   * OSX
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
