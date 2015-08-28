@@ -34,7 +34,7 @@ You need the following things installed before installing ROS 2.
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
-        brew install opencv --without-python
+        brew install homebrew/science/opencv --without-python
         brew install python3 opensplice
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
 
