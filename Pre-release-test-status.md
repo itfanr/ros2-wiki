@@ -51,4 +51,4 @@ Feel free to add more items here.
 * Stuff not covered by the demos:
   * services - **Esteve**
   * parameters - hopefully fixed by services
-  * documentation entry point - **Brian**
+  * documentation entry point - **Brian** :heavy_check_mark: 
