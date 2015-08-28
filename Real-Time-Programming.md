@@ -26,9 +26,9 @@ Run the demo binary with OpenSplice, and redirect the output:
 `pendulum_demo__rmw_opensplice_cpp > output.txt`
 
 ## Building from source:
-First, follow the instructions to build ROS 2 from source.
+First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary). 
 
-If you've already built ROS 2 and you want to rebuild this package after making modifications, you can use:
+If you've already built ROS 2 from source and you want to rebuild this package after making modifications, you can use:
 
 ```
 ./src/ament/ament_tools/scripts/ament.py build --symlink-install --only pendulum_control
