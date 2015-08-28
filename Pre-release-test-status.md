@@ -32,9 +32,10 @@ Feel free to add more items here.
     * Linux
       * **Brian**
         * From binary: :heavy_check_mark: 
+        * From source: :heavy_check_mark: 
     * OSX
       * **Brian**
-        * From binary: works, except for the opencv-dependent demo, which gives this error:
+        * From binary: works, except for the opencv-dependent demo, which gives this error (**seems to be a config problem with my machine**):
                 
                 $ image_pipeline_all_in_one
                 dyld: Library not loaded: /usr/local/Cellar/libpng/1.6.17/lib/libpng16.16.dylib
