@@ -50,6 +50,8 @@ Feel free to add more items here.
   * embedded (at least one person should grab hardware from Morgan and try the whole thing)
     * Linux
       * **Esteve**
+        * OpenSplice talker - FreeRTPS listener :heavy_check_mark: 
+        * OpenSplice talker - FreeRTPS listener :cry: 
     * no-OS
       * **Esteve**
   * ROS 1 bridge
