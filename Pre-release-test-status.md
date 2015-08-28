@@ -31,6 +31,7 @@ Feel free to add more items here.
   * intra-process
     * Linux
       * **Brian**
+        * From binary: :heavy_check_mark: 
     * OSX
       * **Brian**
         * From binary: works, except for the opencv-dependent demo, which gives this error:
