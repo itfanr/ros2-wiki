@@ -31,11 +31,11 @@ We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available y
 ## Try some examples
 In one terminal, source the setup file and then run a `talker`:
 
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-linux/setup.bash
     talker
 In another terminal source the setup file and then run a `listener`:
 
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-linux/setup.bash
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
@@ -51,6 +51,6 @@ If you haven't already, start a roscore:
 In another terminal, start the bridge:
 
     . /opt/ros/indigo/setup.bash
-    . ~/ros2_install/ros2/setup.bash
+    . ~/ros2_install/ros2-linux/setup.bash
     dynamic_bridge
 For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
