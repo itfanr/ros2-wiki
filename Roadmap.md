@@ -4,7 +4,9 @@ For more information on the design of ROS 2.0 please see [design.ros2.org](http:
 The core code for ros2 is on the [ros2 github organization](https://github.com/ros2).
 The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
 
-## Alpha release
+## Upcoming targeted features
+
+This is a list of the features targeted for development in the near future.
 
 - Continue to iterate on design documents: http://design.ros2.org
 - Support and evaluate more DDS/RTPS implementations:
@@ -43,6 +45,9 @@ The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.googl
 
 ## Pre Alpha release
 
+Our first release is expected to contain the following features and support the following demos.
+
+Major Features:
 - Multi-platform support
  - Linux
  - OSX
