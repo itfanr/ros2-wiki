@@ -6,63 +6,60 @@ The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.googl
 
 ## Upcoming targeted features
 
-This is a list of the features targeted for development in the near future.
+This is a list of the features targeted for development in the future.
 
 - Continue to iterate on design documents: http://design.ros2.org
-- Support and evaluate more DDS/RTPS implementations:
+- Evaluate and support more DDS / RTPS implementations:
  - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
  - freertps: https://github.com/ros2/freertps
-- Dynamic loading of nodes and plugins
- - a al `class_loader`/`pluginlib`
+- Component life-cycle:
+ - Introspection and orchestration APIs
+- C client library
+- Python client library
 - Static remapping
  - a la ROS Names: http://wiki.ros.org/Names
-- Component life-cycle:
- - Orchestration API
- - Introspection API
-- Type masquerading
- - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
-- Launch system
 - Dynamic remapping
  - Remapping and aliasing through a Service interface
+- Launch system
+- Type masquerading
+ - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
 - Graph API
  - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Command line tools:
   - introspection, a la `rostopic`
   - console logging, a la `rosconsole`
-  - data recording/playback, a la `rosbag`
-- Multi-robot supporting features and demos
-- Debian packaging
-- ROS 1/ROS 2 Migration Guide
+  - data recording / playback, a la `rosbag`
+- ROS 1 / ROS 2 Migration Guide
  - Tutorials and examples of migrating ROS 1 packages
-- C client library
-- Python client library
+- Debian packaging, Windows packaging
 - Expand on real-time safety
   - For services, clients, and parameters
   - For intra-process communication
   - Support deterministic ordering of executables in Executor (fair scheduling)
   - Expose more quality of service parameters related to real-time performance
+- Multi-robot supporting features and demos
 
 
 ## Pre Alpha release
 
-Our first release is expected to contain the following features and support the following demos.
+Our first release contains the following features and supports the following demos.
 
 Major Features:
 - Multi-platform support
  - Linux
- - OSX
+ - OS X
  - Windows
  - RTOS or no OS
 - Build system
 - Message generation
 - Abstract middleware interface
- - multiple DDS vendor support
+ - Multiple DDS vendor support
   - OpenSplice
   - Connext
   - Connext with Dynamic Data support
 - Executor model
-- Publish/subscribe API
-- Request/response (Services) API
+- Publish / subscribe API
+- Request / response (Services) API
  - Synchronous as well as asynchronous
 - Dynamic parameter API
 
