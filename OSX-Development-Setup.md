@@ -104,16 +104,7 @@ In another terminal source the setup file and then run a `listener`:
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
 
-## Maintainer notes
-To build a binary package for distribution, follow the steps described above, then:
-
-    mv install ros2
-    tar cvfL ros2-package-osx.tar ros2
-    bzip2 ros2-package-osx.tar
-Ship it!
-
-## FAQ
-(TODO @wjwwood review copied from former combined tutorial)
+## Troubleshooting
 
 ### Missing include with CLT 10.10.3
 
@@ -178,3 +169,11 @@ $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/j
 
 The first command is necessary to avoid things built against the system libjpeg (etc.) from getting the version in /usr/local/lib.
 The others are updating things built by Homebrew so that they can find the version of libjpeg (etc.) without having them in /usr/local/lib.
+
+## Maintainer notes
+To build a binary package for distribution, follow the steps described above, then:
+
+    mv install ros2
+    tar cvfL ros2-package-osx.tar ros2
+    bzip2 ros2-package-osx.tar
+Ship it!
