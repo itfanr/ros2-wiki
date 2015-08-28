@@ -1,4 +1,2 @@
-Tutorials:
-
-* foo
-* bar
+Installation
+Tutorials
