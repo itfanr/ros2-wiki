@@ -24,6 +24,7 @@ Feel free to add more items here.
       * **Esteve**
   * Linux
   * OSX
+      * **William**
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
   * Windows
   * Linux
