@@ -32,6 +32,8 @@ Feel free to add more items here.
   * real-time
     * Linux
       * **Tully**
+        * From binary: :heavy_check_mark: (Unable to get zero pagefaults using RC2)
+        * From source: :heavy_check_mark:
   * intra-process
     * Linux
       * **Brian**
