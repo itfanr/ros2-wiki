@@ -10,10 +10,11 @@ This page defines the practices and policies we employ when developing ROS 2.
   - [C++](#c++)
   - [Python](#python)
   - [CMake](#cmake)
-  - [JavaScript](#javascript)
+  - [Markdown](#markdown)
 - [Testing](#testing)
 - [Versioning](#versioning)
 - [Documentation](#documentation)
+  - [Filesystem layout](#filesystem-layout)
 
 
 ## General Practices
@@ -351,40 +352,6 @@ This keeps library and package versions from diverging and shares reasoning with
 If you need libraries to have different versions then consider splitting them into different packages.
 
 
-## Documentation
-
-*(API docs are not yet being automatically generated)*
-
-All packages should have these documentation elements:
-
-- Description and purpose
-- Definition and description of the public API
-- Examples
-- How to build and install (should reference external tools/workflows)
-- How to build and run tests
-- How to build documentation
-- How to develop (useful for describing things like `python setup.py develop`)
-
-Each package should describe itself and its purpose or how it is used in the larger scope.
-The description should be written, as much as possible, assuming that the reader has stumbled onto it without previous knowledge of ROS or other related projects.
-
-Each package should define and describe its public API so that there is a reasonable expectation for users what is covered by the semantic versioning policy.
-Even in C and C++, where the public API can be enforced by API and ABI checking, it is a good opportunity to describe the layout of the code and the function of each part of the code.
-
-It should be easy to take any package and from that package's documentation understand how to build, run, build and run tests, and build the documentation.
-Obviously we should avoid repeating ourselves for common workflows, like build a package in a workspace, but the basic workflows should be either described or referenced.
-
-Finally, it should include any documentation for developers.
-This might include workflows for testing the code using something like `python setup.py develop`, or it might mean describing how to make use of extension points provided by you package.
-
-Examples:
-
-- capabilities: http://docs.ros.org/hydro/api/capabilities/html/
- - This one gives an example of docs which describe the public API
-- catkin_tools: https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html
- - This is an example of describing an extension point for a package
-
-
 ### Filesystem Layout
 
 The filesystem layout of packages and repositories should follow the same conventions in order to provide a consistent experience for users browsing our source code.
@@ -417,6 +384,40 @@ If a repository contains only a single package it can optionally be in the root 
 
 The root of the repository should have a `CONTRIBUTING.md` file describing the contribution guidelines.
 This might include license implication when using e.g. the Apache 2 License.
+
+
+## Documentation
+
+*(API docs are not yet being automatically generated)*
+
+All packages should have these documentation elements:
+
+- Description and purpose
+- Definition and description of the public API
+- Examples
+- How to build and install (should reference external tools/workflows)
+- How to build and run tests
+- How to build documentation
+- How to develop (useful for describing things like `python setup.py develop`)
+
+Each package should describe itself and its purpose or how it is used in the larger scope.
+The description should be written, as much as possible, assuming that the reader has stumbled onto it without previous knowledge of ROS or other related projects.
+
+Each package should define and describe its public API so that there is a reasonable expectation for users what is covered by the semantic versioning policy.
+Even in C and C++, where the public API can be enforced by API and ABI checking, it is a good opportunity to describe the layout of the code and the function of each part of the code.
+
+It should be easy to take any package and from that package's documentation understand how to build, run, build and run tests, and build the documentation.
+Obviously we should avoid repeating ourselves for common workflows, like build a package in a workspace, but the basic workflows should be either described or referenced.
+
+Finally, it should include any documentation for developers.
+This might include workflows for testing the code using something like `python setup.py develop`, or it might mean describing how to make use of extension points provided by you package.
+
+Examples:
+
+- capabilities: http://docs.ros.org/hydro/api/capabilities/html/
+ - This one gives an example of docs which describe the public API
+- catkin_tools: https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html
+ - This is an example of describing an extension point for a package
 
 
 ### Best Practices
