@@ -1,5 +1,5 @@
-#Background
-ROS 2 is built on the DDS middleware, which offers a rich variety of quality of service parameters. With the right set of quality of service parameters, DDS can be as reliable as TCP or as best-effort as TCP, with many, many possible states in between. Unlike ROS 1, which primarily only supported TCP, ROS 2 will benefit from the flexibility of DDS in environments with lossy wireless networks where a best effort policy would be more suitable, or in real-time computing systems where the right quality of service profile is needed to meet deadlines.
+# Background
+ROS 2 is built on the DDS middleware, which offers a rich variety of quality of service parameters. With the right set of quality of service parameters, DDS can be as reliable as TCP or as best-effort as UDP, with many, many possible states in between. Unlike ROS 1, which primarily only supported TCP, ROS 2 will benefit from the flexibility of DDS in environments with lossy wireless networks where a best effort policy would be more suitable, or in real-time computing systems where the right quality of service profile is needed to meet deadlines.
 
 The flexibility offered by DDS comes at the cost of complexity. The philosophy of ROS 2 will be to expose the quality of service parameters that ROS users and roboticists will care about, but not to duplicate the large number of quality of service options provided by DDS. (To learn more about DDS QoS policies, visit http://www.opendds.org/qospolicies.html or https://community.rti.com/documentation.)
 
