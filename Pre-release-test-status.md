@@ -10,7 +10,7 @@ Feel free to add more items here.
   * RC 2 was built with `CMAKE_BUILD_TYPE=RelWithDebInfo`
 * From-binary installation (best to start with a clean VM):
   * Windows
-      * **Esteve**
+      * **Esteve** :cry: Binaries need MSVCP140D.DLL, but can't find it anywhere. Fix for ament: https://github.com/ament/ament_package/pull/17
   * Linux
     * **Tully** :heavy_check_mark:
     * **Steve** installed with docker `osrf/ros:indigo-desktop` image. :heavy_check_mark:
