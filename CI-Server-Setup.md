@@ -75,7 +75,7 @@ Then I added to the jenkins credentials as an "From the jenkins master ~/.ssh" w
 
 I added this key to a "machine" GitHub account that I created for this farm and I added that user, `ros2-buildfarm`, to the `ros2`, `ament`, and `osrf` organizations.
 
-# Creating Jobs
+## Creating Jobs
 
 I cloned the `ros2/ros2` repository to the `ci_scripts` branch:
 

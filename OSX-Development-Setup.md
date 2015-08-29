@@ -174,19 +174,3 @@ $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/j
 
 The first command is necessary to avoid things built against the system libjpeg (etc.) from getting the version in /usr/local/lib.
 The others are updating things built by Homebrew so that they can find the version of libjpeg (etc.) without having them in /usr/local/lib.
-
-## Maintainer notes
-
-**Note: this is now done by Jenkins.**
-
-To build a binary package for distribution, follow the steps described above, then:
-
-    cd ~/ros2_ws
-    cp -a install ros2
-    # Remove some unneeded executables
-    find ros2 -name "*__rmw_*" -exec rm -rf {} \;
-    find ros2 -name "simple_bridge*" -exec rm -rf {} \;
-    find ros2 -name "static_bridge*" -exec rm -rf {} \;
-    tar cvfL ros2-package-osx.tar ros2
-    bzip2 ros2-package-osx.tar
-Ship it!

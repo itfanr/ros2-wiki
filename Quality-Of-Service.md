@@ -1,4 +1,6 @@
-# Background
+# Quality of service
+
+## Background
 
 ROS 2 is built on the DDS middleware, which offers a rich variety of quality of service parameters.
 With the right set of quality of service parameters, DDS can be as reliable as TCP or as best-effort as UDP, with many, many possible states in between.
@@ -11,19 +13,19 @@ The philosophy of ROS 2 will be to expose the quality of service parameters that
 In the quality of service demo, we will spawn a node that publishes a camera image and another that subscribes to the image and shows it on the screen.
 We will then simulate a lossy network connection between them and show how different quality of service settings handle the bad link.
 
-# Build/install the demo
+## Build/install the demo
 
-## From pre-compiled binaries
+### From pre-compiled binaries
 
 Simply download the binary packages for your OS from the [installation page](https://github.com/ros2/ros2/wiki/Installation).
 
-## From source
+### From source
 
 OpenCV is a prerequisite for the QoS demo.
 See the [OpenCV documentation](http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction) for installation instructions.
 Follow the instructions on the [installation page](https://github.com/ros2/ros2/wiki/Installation#building-from-source) for your particular platform.
 
-# Run the demo
+## Run the demo
 
 Before running the demo, make sure you have a working webcam connected to your computer.
 
@@ -70,7 +72,7 @@ Received image #3
 ...
 ```
 
-## Command line options
+### Command line options
 
 In one of your terminals, add a -h flag to the original command:
 
@@ -112,7 +114,7 @@ If the consumer requires the publisher to be reliable, DDS will not match them a
 
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
-## Add network traffic
+### Add network traffic
 
 This next section is Linux-specific.
 For OS X user, however, you can achieve a similar effect with the utility called "Network Link Conditioner" which is part of the xcode tool suite, but it will not be covered in this tutorial.

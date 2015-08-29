@@ -44,9 +44,9 @@ You need the following things installed before installing ROS 2.
 
 ## Downloading ROS 2
 
-* Go the releases page: https://github.com/ros2/ros2/releases
-* Download the latest package for OS X; let's assume that it ends up at `~/Downloads/ros2-package-osx.tar.bz2`.
-* Unpack it:
+- Go the releases page: https://github.com/ros2/ros2/releases
+- Download the latest package for OS X; let's assume that it ends up at `~/Downloads/ros2-package-osx.tar.bz2`.
+- Unpack it:
 
         mkdir -p ~/ros2_install
         cd ~/ros2_install

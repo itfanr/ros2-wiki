@@ -10,28 +10,28 @@ This is a list of the features targeted for development in the future.
 
 - Continue to iterate on design documents: http://design.ros2.org
 - Evaluate and support more DDS / RTPS implementations:
- - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
- - freertps: https://github.com/ros2/freertps
+  - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
+  - freertps: https://github.com/ros2/freertps
 - Component life-cycle:
- - Introspection and orchestration APIs
+  - Introspection and orchestration APIs
 - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - C client library
 - Python client library
 - Static remapping
- - a la ROS Names: http://wiki.ros.org/Names
+  - a la ROS Names: http://wiki.ros.org/Names
 - Dynamic remapping
- - Remapping and aliasing through a Service interface
+  - Remapping and aliasing through a Service interface
 - Launch system
 - Type masquerading
- - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
+  - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
 - Graph API
- - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
+  - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Command line tools:
   - introspection, a la `rostopic`
   - console logging, a la `rosconsole`
   - data recording / playback, a la `rosbag`
 - ROS 1 / ROS 2 Migration Guide
- - Tutorials and examples of migrating ROS 1 packages
+  - Tutorials and examples of migrating ROS 1 packages
 - Debian packaging, Windows packaging
 - Expand on real-time safety
   - For services, clients, and parameters
@@ -45,26 +45,28 @@ This is a list of the features targeted for development in the future.
 Our first release contains the following features and supports the following demos.
 
 Major Features:
+
 - Multi-platform support
- - Linux
- - OS X
- - Windows
- - RTOS or no OS
+  - Linux
+  - OS X
+  - Windows
+  - RTOS or no OS
 - Build system
 - Message generation
 - Abstract middleware interface
- - Multiple DDS vendor support
-  - OpenSplice
-  - Connext
-  - Connext with Dynamic Data support
+  - Multiple DDS vendor support
+    - OpenSplice
+    - Connext
+    - Connext with Dynamic Data support
 - ROS C++ client library
- - Executor model
- - Publish / subscribe API
- - Request / response (Services) API
-  - Synchronous as well as asynchronous
- - Dynamic parameter API
+  - Executor model
+  - Publish / subscribe API
+  - Request / response (Services) API
+    - Synchronous as well as asynchronous
+  - Dynamic parameter API
 
 Demonstrations:
+
 - ROS 1 <-> ROS 2 bridge
 - Quality of Service in lossy environments
 - Efficient intra-process communications

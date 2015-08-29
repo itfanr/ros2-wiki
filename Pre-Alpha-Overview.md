@@ -2,7 +2,7 @@
 
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
-##### Table of Contents
+## Table of Contents
 
 - [Background](#background)
 - [Status](#status)
@@ -55,19 +55,15 @@ your own demos.
 
 The major features included in this release are:
 
-* Discovery, transport, and serialization [use
-DDS](http://design.ros2.org/articles/ros_on_dds.html);
-* Support [multiple DDS
-vendors](http://design.ros2.org/articles/ros_on_dds.html#vendors-and-licensing);
-* Support messaging primitives: topics (publish / subscribe), services
-(request / response), and parameters
-* Support Linux (Ubuntu Trusty), OS X (Yosemite) and Windows (8).
-* [[Use quality-of-service settings to handle lossy networks|Quality-Of-Service]]
-* [[Communicate inter-process or intra-process with the same API|Intra-Process-Communication]]
-* [[Write real-time safe code that uses the ROS 2 APIs|Real-Time-Programming]]
-* [Run ROS 2 on "bare-metal" microcontrollers (no operating
-system)](https://github.com/ros2/freertps/wiki)
-* [[Bridge communication between ROS 1 and ROS 2|https://github.com/ros2/ros1_bridge/blob/master/README.md]]
+- Discovery, transport, and serialization [use DDS](http://design.ros2.org/articles/ros_on_dds.html)
+- Support [multiple DDS vendors](http://design.ros2.org/articles/ros_on_dds.html#vendors-and-licensing)
+- Support messaging primitives: topics (publish / subscribe), services (request / response), and parameters
+- Support Linux (Ubuntu Trusty), OS X (Yosemite) and Windows (8)
+- [[Use quality-of-service settings to handle lossy networks|Quality-Of-Service]]
+- [[Communicate inter-process or intra-process with the same API|Intra-Process-Communication]]
+- [[Write real-time safe code that uses the ROS 2 APIs|Real-Time-Programming]]
+- [Run ROS 2 on "bare-metal" microcontrollers (no operating system)](https://github.com/ros2/freertps/wiki)
+- [[Bridge communication between ROS 1 and ROS 2|https://github.com/ros2/ros1_bridge/blob/master/README.md]]
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].

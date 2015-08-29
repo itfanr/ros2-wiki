@@ -85,7 +85,7 @@ Afterwards source the `local_setup.*` from the `install` / `install_isolated` fo
 Now that you have finished building the workspace, you can run talker and listener, they are on your path.
 See the [demos](Tutorials) for other things to try.
 
-## Alternative DDS sources.
+### Alternative DDS sources
 
 The demos will attempt to build against any detected DDS vendor.
 If you would like to switch out the vendor below are the instructions.

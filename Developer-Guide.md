@@ -2,7 +2,8 @@
 
 This page defines the practices and policies we employ when developing ROS 2.
 
-##### Table of Contents
+## Table of Contents
+
 - [General Practices](#general-practices)
 - [Language Versions and Code Format](#language-versions-and-code-format)
   - [C](#c)
@@ -23,35 +24,35 @@ Some practices are common to all ROS 2 development:
 
 When filling an issue please make sure to:
 
-* Include enough information for another person to understand the issue.
-* In case of a bug consider to provide a [short, self contained, correct (compilable), example](http://sscce.org/).
+- Include enough information for another person to understand the issue.
+- In case of a bug consider to provide a [short, self contained, correct (compilable), example](http://sscce.org/).
 
 ### Pull requests
 
-* A pull request should only focus on one change.
+- A pull request should only focus on one change.
   Separate changes should go into separate pull requests.
-* A patch should be minimal in size and avoid any kind of unnecessary changes.
-* Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
+- A patch should be minimal in size and avoid any kind of unnecessary changes.
+- Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
-* Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
+- Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
 
 ### Development Process
 
-* The default branch (in most cases the master branch) must always build, pass all tests and compile without warnings.
+- The default branch (in most cases the master branch) must always build, pass all tests and compile without warnings.
   If at any time there is a regression it is the top priority to restore at least the previous state.
-* Always build with tests enabled.
-* Always run tests locally after changes and before proposing them in a pull request.
+- Always build with tests enabled.
+- Always run tests locally after changes and before proposing them in a pull request.
   Beside using automated tests also run the modified code path manually to ensure that the patch works as intended.
-* Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
+- Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
 
 ### Programming conventions
 
-* Defensive programming: ensure that assumptions are held as early as possible.
+- Defensive programming: ensure that assumptions are held as early as possible.
   E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
-* All error messages must be directed to `stderr`.
-* Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
-* Declare variables in the narrowest scope possible.
-* Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
+- All error messages must be directed to `stderr`.
+- Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
+- Declare variables in the narrowest scope possible.
+- Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
 
 ## Language Versions and Code Format
 
@@ -74,16 +75,16 @@ http://legacy.python.org/dev/peps/pep-0007/
 Some modifications and additions:
 
 - We will target C99, as we do not need to support C89 (as PEP7 recommends)
- - rationale: among other things it allows us to use both `//` and `/* */` style comments
- - rationale: C99 is pretty much ubiquitous now
+  - rationale: among other things it allows us to use both `//` and `/* */` style comments
+  - rationale: C99 is pretty much ubiquitous now
 - C++ style `//` comments are allowed
 - Always place literals on the left hand side of comparison operators, e.g. `0 == ret` instead of `ret == 0`
- - rationale: `ret == 0` too easily turns into `ret = 0` by accident
+  - rationale: `ret == 0` too easily turns into `ret = 0` by accident
 
 All of the following modifications only apply if we are not writing Python modules:
 
 - Do not use `Py_` as a prefix for everything
- - Instead use a CamelCase version of the package name or other appropriate prefix
+  - Instead use a CamelCase version of the package name or other appropriate prefix
 - The stuff about documentation strings doesn't apply
 
 We can use the `pep7` python module for style checking:
@@ -101,34 +102,34 @@ We will use the Google C++ Style Guide, with some modifications:
 http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 
 - Access Control: drop requirement for all class members to be private and therefore require accessors
- - rationale: this is overly constraining for user API design
- - we should prefer private members, only making them public when they are needed
- - we should consider using accessors before choosing to allow direct member access
- - we should have a good reason for allowing direct member access, other than because it is convenient for us
+  - rationale: this is overly constraining for user API design
+  - we should prefer private members, only making them public when they are needed
+  - we should consider using accessors before choosing to allow direct member access
+  - we should have a good reason for allowing direct member access, other than because it is convenient for us
 - Exceptions are allowed
- - rationale: this is a new code base, so the legacy argument doesn't apply to us
- - rationale: for user facing API's it is more idiomatic C++ to have exceptions
- - Exceptions in destructors should be explicitly avoided
+  - rationale: this is a new code base, so the legacy argument doesn't apply to us
+  - rationale: for user facing API's it is more idiomatic C++ to have exceptions
+  - Exceptions in destructors should be explicitly avoided
 - We should consider avoiding Exceptions if we intend to wrap the resulting API in C
- - rationale: it will make it easier to wrap in C
- - rationale: most of our dependencies in code we intend to wrap in C do not use exceptions anyways
+  - rationale: it will make it easier to wrap in C
+  - rationale: most of our dependencies in code we intend to wrap in C do not use exceptions anyways
 - No restrictions on Lambda's or `std::function` or `std::bind`
 - Boost should be avoided until absolutely required
 - Use `/* */` comments for _documentation_ purposes and `//` style comments for notes and general comments
- - Class and Function comments should use `/* */` style comments
- - rationale: `/* */` style comments are recommended for Doxygen and Sphinx in C/C++
- - rationale: mixing `/* */` and `//` is convenient for block commenting out code which contains comments
- - Descriptions of how the code works or notes within classes and functions should use `//` style comments
+  - Class and Function comments should use `/* */` style comments
+  - rationale: `/* */` style comments are recommended for Doxygen and Sphinx in C/C++
+  - rationale: mixing `/* */` and `//` is convenient for block commenting out code which contains comments
+  - Descriptions of how the code works or notes within classes and functions should use `//` style comments
 - Prefer `char * c;` to `char* c;` or `char *c;` because of this scenario `char* c, *d, *e;`
 - Do not put 1 space before `public:`, `private:`, or `protected:`, it is more consistent for all indentions to be a multiple of 2
- - rationale: most editors don't like indentions which are not a multiple of the (soft) tab size
- - Use zero spaces before `public:`, `private:`, or `protected:`, or 2 spaces
- - If you use 2 spaces before, indent other class statements by 2 additional spaces
- - Prefer zero spaces, i.e. `public:`, `private:`, or `protected:` in the same column as the class
+  - rationale: most editors don't like indentions which are not a multiple of the (soft) tab size
+  - Use zero spaces before `public:`, `private:`, or `protected:`, or 2 spaces
+  - If you use 2 spaces before, indent other class statements by 2 additional spaces
+  - Prefer zero spaces, i.e. `public:`, `private:`, or `protected:` in the same column as the class
 - Never add whitespace to nested templates
- - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
+  - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
 - Use open braces for `function`, `class`, and `struct` definitions, but allow cuddle braces on `if`, `else`, `while`, `for`, etc...
- - Open braces are allowed with all blocks and encouraged if the statement before the opening brace is multiline
+  - Open braces are allowed with all blocks and encouraged if the statement before the opening brace is multiline
 
 This is OK:
 
@@ -267,7 +268,7 @@ The following rules to format the markdown syntax is intended to increase readab
 - Each section title should be preceded by one empty line and succeeded by one empty line.
   - Rationale: It expedites to get an overview about the structure when screening the document.
 - Each sentence must start on a new line.
- - Rationale: For longer paragraphs a single change in the beginning makes the diff unreadable since it carries forward through the whole paragraph.
+  - Rationale: For longer paragraphs a single change in the beginning makes the diff unreadable since it carries forward through the whole paragraph.
 - Each sentence can optionally be wrapped to keep each line short.
 - The lines should not have any trailing white spaces.
 - A code block must be preceded and succeeded by an empty line.
@@ -345,9 +346,9 @@ The filesystem layout of packages and repositories should follow the same conven
 #### Package layout
 
 - `src`: contains all C and C++ code
- - Also contains C/C++ headers which are not installed
+  - Also contains C/C++ headers which are not installed
 - `include`: contains all C and C++ headers which are installed
- - `<package name>`: for all C and C++ installed headers they should be folder namespaced by the package name
+  - `<package name>`: for all C and C++ installed headers they should be folder namespaced by the package name
 - `<package_name>`: contains all Python code
 - `test`: contains all automated tests and test data
 - `doc`: contains all the documentation
@@ -355,9 +356,9 @@ The filesystem layout of packages and repositories should follow the same conven
 - `CMakeLists.txt`: only ROS packages which use CMake
 - `setup.py`: only ROS packages which use Python code only
 - `README.md`: README which can be rendered on Github as a landing page for the project
- - This can be as short or detailed as is convenient, but it should atleast link to project documentation
- - Consider putting a CI or code coverage tag in this readme
- - It can also be `.rst` or anything else that Github supports
+  - This can be as short or detailed as is convenient, but it should atleast link to project documentation
+  - Consider putting a CI or code coverage tag in this readme
+  - It can also be `.rst` or anything else that Github supports
 - `LICENSE`: A copy of the license or licenses for this package
 - `CHANGELOG.rst`: [REP-0132](http://www.ros.org/reps/rep-0132.html) compliant changelog
 
@@ -398,9 +399,9 @@ This might include workflows for testing the code using something like `python s
 Examples:
 
 - capabilities: http://docs.ros.org/hydro/api/capabilities/html/
- - This one gives an example of docs which describe the public API
+  - This one gives an example of docs which describe the public API
 - catkin_tools: https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html
- - This is an example of describing an extension point for a package
+  - This is an example of describing an extension point for a package
 
 ### Best Practices
 
