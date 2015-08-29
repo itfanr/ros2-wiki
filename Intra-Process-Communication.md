@@ -39,6 +39,7 @@ TODO(wjwwood): figure out how to perma link to the source
 First lets take a look at the source:
 
 https://github.com/ros2/demos/blob/intra_process_img/intra_process_comms/src/two_node_pipeline/two_node_pipeline.cpp
+
 ```c++
 #include <chrono>
 #include <cstdio>
@@ -142,6 +143,7 @@ This demo is similar to the previous one, but instead of the producer creating a
 This is achieved by creating a cycle in the graph and "kicking off" communication by externally making one of the nodes publish before spinning the executor:
 
 https://github.com/ros2/demos/blob/intra_process_img/intra_process_comms/src/cyclic_pipeline/cyclic_pipeline.cpp
+
 ```c++
 #include <chrono>
 #include <cstdio>

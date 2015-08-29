@@ -108,6 +108,7 @@ talker
 And you will see the numbers incrementing.
 
 Lets take down the nodes and try creating our own workspace overlay.
+
 ```bash
 ^-C
 kill %1

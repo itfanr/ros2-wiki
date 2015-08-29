@@ -283,6 +283,10 @@ The following rules to format the markdown syntax is intended to increase readab
  - Rationale: For longer paragraphs a single change in the beginning makes the diff unreadable since it carries forward through the whole paragraph.
 - Each sentence can optionally be wrapped to keep each line short.
 - The lines should not have any trailing white spaces.
+- A code block must be preceded and succeeded by an empty line.
+  - Rationale: Whitespace is significant only directly before and directly after fenced code blocks.
+    Following these instructions will ensure that highlighting works properly and consistently.
+- A code block should specify a syntax after the opening triple backticks.
 
 
 ### Javascript

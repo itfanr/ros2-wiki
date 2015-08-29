@@ -37,9 +37,11 @@ Once you've installed ROS 2, source your setup.bash file:
 ```
 
 Then run:
+
 ```
 showimage
 ```
+
 Nothing will happen yet.
 `showimage` is a subscriber node that is waiting for a publisher on the `image` topic.
 
@@ -47,10 +49,13 @@ Note: you have to close the `showimage` process with `Ctrl-C` later.
 You can't just close the window.
 
 In a separate terminal, source the install file and run the publisher node:
+
 ```
 cam2image
 ```
+
 In this window, you'll see terminal output:
+
 ```
 Publishing image #1
 Publishing image #2
@@ -60,6 +65,7 @@ Publishing image #3
 
 A window will pop up with the title "view" showing your camera feed.
 In the first window, you'll see output from the subscriber:
+
 ```
 Received image #1
 Received image #2
@@ -71,9 +77,11 @@ Received image #3
 ## Command line options
 
 In one of your terminals, add a -h flag to the original command:
+
 ```
 showimage -h
 ```
+
 You'll see a list of the possible options you can pass to the demo.
 
 `-h`: The help message.
@@ -135,6 +143,7 @@ We see now that some of the frame on the `showimage` side were dropped, the fram
 ![Best effort image transfer ](https://raw.githubusercontent.com/ros2/demos/master/image_tools/doc/qos-best-effort.png)
 
 When you're done, remember to delete the queueing discipline:
+
 ```
 sudo tc qdisc delete dev lo root netem loss 5%
 ```

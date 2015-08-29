@@ -22,6 +22,7 @@ sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83D
 ```
 
 Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collide) and setuptools:
+
 ```
 sudo apt-get update
 sudo apt-get install git wget
@@ -29,6 +30,7 @@ sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy py
 ```
 
 The setuptools version shipped with Ubuntu Trusty is not recent enough - we require at least version 8.2 (see https://bitbucket.org/pypa/setuptools/pull-request/85/):
+
 ```
 sudo pip3 install -U setuptools
 ```
@@ -37,6 +39,7 @@ sudo pip3 install -U setuptools
 ### Get ROS 2.0 code
 
 Create a workspace and clone all repos:
+
 ```
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
@@ -71,6 +74,7 @@ More info on working with an ament workspace can be found in [this tutorial](Ame
 cd ~/ros2_ws/
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
+
 Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can usine `AMENT_IGNORE` is that same manner as [`CATKIN_IGNORE`](https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst) to ignore the subtree or remove the folder from the workspace.
 Take for instance: you would like to avoid installing the large opencv library.
 Well then simply `$ touch AMENT_IGNORE` file in the `cam2image` demo directory to leave it out of the build process.
@@ -107,6 +111,7 @@ sudo apt-get install libopensplice64  # from packages.osrfoundation.org
 ```
 
 Add this to your `~/.bashrc`
+
 ```
 export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 ```
@@ -120,6 +125,7 @@ Then, source the ROS `setup.bash` file, and finally, source the `release.com` fi
 After that, your shell is ready to run ROS2 binaries with the official OpenSplice distribution.
 
 You may also need to add the following line to you `.bashrc` file:
+
 ```
 export PTECH_LICENSE_FILE=path/to/prismtech.lic
 ```
@@ -134,6 +140,7 @@ If you build OpenSplice from source, be sure to remember to following the INSTAL
 
 To use RTI Connext you will need to have obtained a license from RTI.
 Add the following line to your `.bashrc` file pointing to your copy of the license.
+
 ```
 export RTI_LICENSE_FILE=path/to/rti_license.dat
 ```
@@ -157,6 +164,7 @@ After downloading `chmod +x` on the .run the executable and execute.
 The default location is `/opt/rti_connext_dds-5.2.0`
 
 Source the setup file to set the `NDDSHOME` environment variable.
+
 ```
 source /opt/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
@@ -192,16 +200,21 @@ It should be accessible via `OSPL_URI` in your environment.
 You can either edit the file in place or make a copy and update your environment variable to point to the new copy.
 
 replace:
+
 ```
       <Id>0</Id>
 ```
+
 with:
+
 ```
       <Id>${ROS_DOMAIN_ID}</Id>
 ```
+
 In the debian packages this file is /usr/etc/opensplice/config/ospl.xml by default.
 
 To do this quickly use the following
+
 ```
 cp /usr/etc/opensplice/config/ospl.xml ~
 sed -i 's|<Id>0</Id>|<Id>${ROS_DOMAIN_ID}</Id>|' ~/ospl.xml

@@ -62,6 +62,7 @@ If we want those pagefaults to go away, we'll have to...
 ## Adjust permissions for memory locking
 
 Add to `/etc/security/limits.conf` (as sudo):
+
 ```
 <your username>    -   memlock   <limit in kB>
 ```
@@ -155,6 +156,7 @@ You can get slightly better performance by following the instructions in the nex
 ## Setting permissions for the scheduler:
 
 Add to `/etc/security/limits.conf` (as sudo):
+
 ```
 <your username>    -   rtprio   98
 ```

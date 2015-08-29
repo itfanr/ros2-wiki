@@ -153,8 +153,10 @@ I also updated the slaves which the jobs will run on to make sure they matched t
 
 Overtime docker images and particularly containers will pile up.
 To clean up use:
+
 ```
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q -f dangling=true)
 ```
+
 from https://www.calazan.com/docker-cleanup-commands/
