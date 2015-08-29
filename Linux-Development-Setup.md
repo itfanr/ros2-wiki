@@ -104,7 +104,7 @@ export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 ##### Official binary packages from PrismTech
 
 Install the packages provided by [OpenSplice](http://www.prismtech.com/dds-community/software-downloads) (we currently use 6.4.1p2).
-Source the `release.com` file to set the `OSPL_HOME` environment variable.
+Remember to replace `@@INSTALLDIR@@` with the path where you unpacked the OpenSplice distribution. Then, source the ROS `setup.bash` file, and finally, source the `release.com` file in the root of the OpenSplice distribution to set the `OSPL_HOME` environment variable appropriately. After that, your shell is ready to run ROS2 binaries with the official OpenSplice distribution.
 
 You may also need to add the following line to you `.bashrc` file:
 ```
