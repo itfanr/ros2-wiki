@@ -23,7 +23,7 @@ Feel free to add more items here.
       * **Tully** :heavy_check_mark:
     * OpenSplice binaries - **Morgan** :heavy_check_mark: :heavy_check_mark: :bike: :chicken: :fork_and_knife: 
     * RTI OSRF Debs
-      * **Steve (in process)** [install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79)
+      * **Steve (in process)** [install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79), temporary workaround: install opensplice. Also I ran into the rosbag bug but had trouble finding info about it, but that will be fixed with the next ros_comm release.
     * RTI Trial Binaries
       * **Tully** :heavy_check_mark:
   * OSX
