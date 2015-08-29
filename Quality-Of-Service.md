@@ -50,9 +50,6 @@ Received image #3
 ...
 ```
 
-## The code explained
-TODO
-
 ##Command line options
 In one of your terminals, add a -h flag to the original command:
 ```
