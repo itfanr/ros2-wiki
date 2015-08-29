@@ -34,19 +34,19 @@ When filling an issue please make sure to:
 * A pull request should only focus on one change.
   Separate changes should go into separate pull requests.
 * A patch should be minimal in size and avoid any kind of unnecessary changes.
-* Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
+* Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 * Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
 
 
 ### Development Process
 
-* The default branches (in most cases the master branches) must always build, pass all tests and compile without warnings.
-  Currently the Windows build has some warnings which we aim to get down to zero over time.
-  If at any time that is not the case it is the top priority to restore a working condition.
+* The default branch (in most cases the master branch) must always build, pass all tests and compile without warnings.
+  If at any time there is a regression it is the top priority to restore at least the previous state.
 * Always build with tests enabled.
 * Always run tests locally after changes and before proposing them in a pull request.
-* Always run trigger CI jobs for all platforms for every pull request and include links to jobs the pull request.
+  Beside using automated tests also run the modified code path manually to ensure that the patch works as intended.
+* Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
 
 
 ### Programming conventions
@@ -67,7 +67,7 @@ For other things like package layout or documentation layout we will need to com
 Additionally, where ever possible, developers should use integrated tools to allow them to check that these guidelines are followed in their editors.
 For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.
 
-Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues.
+Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see [ament_lint_auto](https://github.com/ament/ament_lint/blob/master/ament_lint_auto/doc/index.rst)).
 
 
 ### C
@@ -257,21 +257,6 @@ Integration with editors:
 - Sublime Text: https://sublime.wbond.net/packages/SublimeLinter-flake8
 
 
-### Javascript
-*(Speculative, not yet used)*
-
-We will target Javascript 1.5, which seems to provide the best balance of support in browsers and languages (node.js) and new features.
-
-We will use the airbnb Javascript Style guide:
-
-https://github.com/airbnb/javascript
-
-The above repository comes with a `jshintrc` file which allows the style to be enforced using `jshint`.
-Editor integration for `jshint` include `vim`, `emacs`, `Sublime Text`, and others:
-
-http://www.jshint.com/install/
-
-
 ### CMake
 
 We will target CMake 2.8.12.2.
@@ -284,6 +269,35 @@ Since there is not an existing CMake style guide we will define our own:
 - Use two spaces of indention, do not use tabs
 - Prefer functions with `set(PARENT_SCOPE)` to macros
 - When using macros prefix local variables with `_` or a reasonable prefix
+
+
+### Markdown
+
+The following rules to format the markdown syntax is intended to increase readability as well versioning.
+
+
+- Each section title should be preceded by two empty line and succeeded by one empty line.
+  - Rationale: It expedites to get an overview about the structure when screening the document.
+- Each sentence must start on a new line.
+ - Rationale: For longer paragraphs a single change in the beginning makes the diff unreadable since it carries forward through the whole paragraph.
+- Each sentence can optionally be wrapped to keep each line short.
+- The lines should not have any trailing white spaces.
+
+
+### Javascript
+
+*(Speculative, not yet used)*
+
+We will target Javascript 1.5, which seems to provide the best balance of support in browsers and languages (node.js) and new features.
+
+We will use the airbnb Javascript Style guide:
+
+https://github.com/airbnb/javascript
+
+The above repository comes with a `jshintrc` file which allows the style to be enforced using `jshint`.
+Editor integration for `jshint` include `vim`, `emacs`, `Sublime Text`, and others:
+
+http://www.jshint.com/install/
 
 
 ## Testing
@@ -309,8 +323,7 @@ All packages should have some unit tests and possibly integration tests, but the
 
 Some packages should have a mechanism setup to capture test coverage information (if applicable to the language).
 Coverage tools exist for some of the languages described here including C, C++, and Python, but possibly others.
-When possible coverage should be measured in terms of branch coverage, as opposed to
-statement or function coverage.
+When possible coverage should be measured in terms of branch coverage, as opposed to statement or function coverage.
 
 
 ## Versioning
@@ -372,12 +385,12 @@ Examples:
  - This is an example of describing an extension point for a package
 
 
-## Package Layout
+### Filesystem Layout
 
-The filesystem layout of packages should follow the same conventions in order to provide a consistent experience for users browsing our source code.
+The filesystem layout of packages and repositories should follow the same conventions in order to provide a consistent experience for users browsing our source code.
 
 
-### Prescribed Layout
+#### Package layout
 
 - `src`: contains all C and C++ code
  - Also contains C/C++ headers which are not installed
@@ -395,6 +408,15 @@ The filesystem layout of packages should follow the same conventions in order to
  - It can also be `.rst` or anything else that Github supports
 - `LICENSE`: A copy of the license or licenses for this package
 - `CHANGELOG.rst`: [REP-0132](http://www.ros.org/reps/rep-0132.html) compliant changelog
+
+
+#### Repository layout
+
+Each package should be in a subfolder which has the same name as the package.
+If a repository contains only a single package it can optionally be in the root of the repository.
+
+The root of the repository should have a `CONTRIBUTING.md` file describing the contribution guidelines.
+This might include license implication when using e.g. the Apache 2 License.
 
 
 ### Best Practices
