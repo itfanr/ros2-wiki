@@ -2,9 +2,11 @@
 
 This guide is about how to setup a development environment for ROS2 on Windows.
 
+
 ### Prerequisites
 
 First you'll need Windows 8.1 and Visual Studio 14.0 2015 installed.
+
 
 ### Install Chocolatey
 
@@ -13,6 +15,7 @@ Chocolatey is a package manager for Windows, install it by follow their installa
 https://chocolatey.org/
 
 You'll use Chocolatey to install some other developer tools.
+
 
 ### Installing Build Tools
 
@@ -49,6 +52,7 @@ Also install CMake:
 
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
+
 ### Installing Developer Tools
 
 Now we are ready to install some our tools that we use to help in developing ROS 2, but first we need to put Python's `Scripts` folder on the path.
@@ -71,6 +75,7 @@ Also, you should install `curl`:
 ```
 > choco install -y curl
 ```
+
 
 ### Getting the Source Code
 
@@ -95,10 +100,12 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 > vcs import src < ros2.repos
 ```
 
+
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
 There is support for PrismTech's OpenSplice as well as RTI's Connext DDS.
+
 
 #### OpenSplice
 
@@ -131,6 +138,7 @@ Also, for now you'll need to patch OpenSplice with this diff:
  OS_API extern char *optarg;
  OS_API extern int optind, opterr;
 ```
+
 
 ### Installing a few dependencies
 
@@ -170,6 +178,7 @@ Next install cppcheck:
 > choco install -y cppcheck
 ```
 
+
 ### Building the ROS 2 Code
 
 In order to build the ROS 2 Code you must first "source" the `release.bat` file provided by OpenSplice:
@@ -189,6 +198,7 @@ You can additionally build the tests by adding the `--build-tests` option:
 ```
 > python src\ament\ament_tools\scripts\ament.py build --build-tests
 ```
+
 
 ### Testing and Running
 

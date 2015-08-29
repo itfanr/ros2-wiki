@@ -2,6 +2,7 @@
 
 This page defines the practices and policies we employ when developing ROS 2.
 
+
 ##### Table of Contents
 - [General Practices](#general-practices)
 - [Language Versions and Code Format](#language-versions-and-code-format)
@@ -14,16 +15,22 @@ This page defines the practices and policies we employ when developing ROS 2.
 - [Versioning](#versioning)
 - [Documentation](#documentation)
 
+
 ## General Practices
+
 Some practices are common to all ROS 2 development:
 
+
 ### Issues
+
 When filling an issue please make sure to:
 
 * Include enough information for another person to understand the issue.
 * In case of a bug consider to provide a [short, self contained, correct (compilable), example](http://sscce.org/).
 
+
 ### Pull requests
+
 * A pull request should only focus on one change.
   Separate changes should go into separate pull requests.
 * A patch should be minimal in size and avoid any kind of unnecessary changes.
@@ -31,25 +38,37 @@ When filling an issue please make sure to:
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 * Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
 
+
 ### Development Process
-* The default branches (in most cases the master branches) must always build, pass all tests and compile without warnings.  Currently the Windows build has some warnings which we aim to get down to zero over time.  If at any time that is not the case it is the top priority to restore a working condition.
+
+* The default branches (in most cases the master branches) must always build, pass all tests and compile without warnings.
+  Currently the Windows build has some warnings which we aim to get down to zero over time.
+  If at any time that is not the case it is the top priority to restore a working condition.
 * Always build with tests enabled.
 * Always run tests locally after changes and before proposing them in a pull request.
 * Always run trigger CI jobs for all platforms for every pull request and include links to jobs the pull request.
 
+
 ### Programming conventions
-* Defensive programming: ensure that assumptions are held as early as possible.  E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
+
+* Defensive programming: ensure that assumptions are held as early as possible.
+  E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
 * All error messages must be directed to `stderr`.
 * Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
 * Declare variables in the narrowest scope possible.
 * Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
 
-## Language Versions and Code Format
-In order to achieve a consistent looking product we will all follow externally (if possible) defined style guidelines for each language. For other things like package layout or documentation layout we will need to come up with our own guidelines, drawing on current, popular styles in use now.
 
-Additionally, where ever possible, developers should use integrated tools to allow them to check that these guidelines are followed in their editors. For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.
+## Language Versions and Code Format
+
+In order to achieve a consistent looking product we will all follow externally (if possible) defined style guidelines for each language.
+For other things like package layout or documentation layout we will need to come up with our own guidelines, drawing on current, popular styles in use now.
+
+Additionally, where ever possible, developers should use integrated tools to allow them to check that these guidelines are followed in their editors.
+For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.
 
 Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues.
+
 
 ### C
 
@@ -79,6 +98,7 @@ We can use the `pep7` python module for style checking:
 https://github.com/mike-perdide/pep7
 
 The editor integration seems slim, we may need to looking to automated checking for C in more detail.
+
 
 ### C++
 
@@ -196,7 +216,8 @@ MyClass::MyClass(int var)
 }
 ```
 
-Most of these styles and restrictions can be checked with a combination of Google's [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/) and [clang-format](http://clang.llvm.org/docs/ClangFormat.html), though we may need to modify them slightly for our above changes. Editor integration for `cpplint.py`:
+Most of these styles and restrictions can be checked with a combination of Google's [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/) and [clang-format](http://clang.llvm.org/docs/ClangFormat.html), though we may need to modify them slightly for our above changes.
+Editor integration for `cpplint.py`:
 
 - vim: https://github.com/funorpain/vim-cpplint
 - emacs: http://google-styleguide.googlecode.com/svn/trunk/google-c-style.el
@@ -211,6 +232,7 @@ And can be integrated into many existing editors:
 - vim: http://clang.llvm.org/docs/ClangFormat.html#vim-integration
 - emacs: http://clang.llvm.org/docs/ClangFormat.html#emacs-integration
 - sublime text: https://llvm.org/svn/llvm-project/cfe/trunk/tools/clang-format/clang-format-sublime.py
+
 
 ### Python
 
@@ -234,6 +256,7 @@ Integration with editors:
 - emacs: http://kwbeam.com/emacs-for-python-i.html
 - Sublime Text: https://sublime.wbond.net/packages/SublimeLinter-flake8
 
+
 ### Javascript
 *(Speculative, not yet used)*
 
@@ -243,9 +266,11 @@ We will use the airbnb Javascript Style guide:
 
 https://github.com/airbnb/javascript
 
-The above repository comes with a `jshintrc` file which allows the style to be enforced using `jshint`. Editor integration for `jshint` include `vim`, `emacs`, `Sublime Text`, and others:
+The above repository comes with a `jshintrc` file which allows the style to be enforced using `jshint`.
+Editor integration for `jshint` include `vim`, `emacs`, `Sublime Text`, and others:
 
 http://www.jshint.com/install/
+
 
 ### CMake
 
@@ -260,13 +285,18 @@ Since there is not an existing CMake style guide we will define our own:
 - Prefer functions with `set(PARENT_SCOPE)` to macros
 - When using macros prefix local variables with `_` or a reasonable prefix
 
+
 ## Testing
 
-All packages should have some level of tests. Tests can be broken down into three main categories, System tests, Integration tests, and Unit tests.
+All packages should have some level of tests.
+Tests can be broken down into three main categories, System tests, Integration tests, and Unit tests.
 
-Unit tests should always be in the package which is being tested and should make use of tools like `Mock` to try and test narrow parts of the code base in constructed scenarios. Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, mock, etc...
+Unit tests should always be in the package which is being tested and should make use of tools like `Mock` to try and test narrow parts of the code base in constructed scenarios.
+Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, mock, etc...
 
-Integration tests can test interactions between parts of the code or between parts of the code and the system.  They often test software interfaces in ways that we expect the user to use them. Like Unit tests, Integration tests should be in the package which is being tested and should not bring in non-tool test dependencies unless absolutely necessary, i.e. all non-tool dependencies should only be allowed under extreme scrutiny so they should be avoided if possible.
+Integration tests can test interactions between parts of the code or between parts of the code and the system.
+They often test software interfaces in ways that we expect the user to use them.
+Like Unit tests, Integration tests should be in the package which is being tested and should not bring in non-tool test dependencies unless absolutely necessary, i.e. all non-tool dependencies should only be allowed under extreme scrutiny so they should be avoided if possible.
 
 System tests are designed to test end-to-end situations between packages and should be in their own packages to avoid bloating or coupling packages and to avoid circular dependencies.
 
@@ -274,25 +304,42 @@ In general minimizing external or cross package test dependencies should be avoi
 
 All packages should have some unit tests and possibly integration tests, but the degree to which they should have them is based on the package's category (described later).
 
+
 ### Test Coverage
 
-Some packages should have a mechanism setup to capture test coverage information (if applicable to the language). Coverage tools exist for some of the languages described here including C, C++, and Python, but possibly others. When possible coverage should be measured in terms of branch coverage, as opposed to
+Some packages should have a mechanism setup to capture test coverage information (if applicable to the language).
+Coverage tools exist for some of the languages described here including C, C++, and Python, but possibly others.
+When possible coverage should be measured in terms of branch coverage, as opposed to
 statement or function coverage.
 
+
 ## Versioning
+
 *(Planned; not yet used)*
 
 We will use the Semantic Versioning guidelines for versioning:
 
 http://semver.org/
 
-Anything below version `1.0.0` is free to make changes at will and for most of our near-term development this will be the case. In general though for versions less than `1.0.0` we should increment the `minor` (as `major.minor.patch`) when we break existing API and increment `patch` for anything else.
+Anything below version `1.0.0` is free to make changes at will and for most of our near-term development this will be the case.
+In general though for versions less than `1.0.0` we should increment the `minor` (as `major.minor.patch`) when we break existing API and increment `patch` for anything else.
 
-Another part of adhering to the Semantic Versioning guidelines is that every package must declare a public API. The declaration for most C and C++ packages is simple, it is any header that it installs, but it is acceptable to define a set of symbols which are considered private. When ever possible having private symbols in public headers should be avoided. For other languages like Python, a public API must be explicitly defined, so that it is clear what symbols can be relied on with respect to the versioning guidelines. The public API can also be extended to build artifacts like configuration variables, CMake config files, etc. as well as executables and command line options and output. Any elements of the public API should be clearly stated in the package's documentation. If something you are using is not explicitly listed as part of the public API in the package's documentation, then you cannot depend on it not changing between minor or patch versions.
+Another part of adhering to the Semantic Versioning guidelines is that every package must declare a public API.
+The declaration for most C and C++ packages is simple, it is any header that it installs, but it is acceptable to define a set of symbols which are considered private.
+When ever possible having private symbols in public headers should be avoided.
+For other languages like Python, a public API must be explicitly defined, so that it is clear what symbols can be relied on with respect to the versioning guidelines.
+The public API can also be extended to build artifacts like configuration variables, CMake config files, etc. as well as executables and command line options and output.
+Any elements of the public API should be clearly stated in the package's documentation.
+If something you are using is not explicitly listed as part of the public API in the package's documentation, then you cannot depend on it not changing between minor or patch versions.
 
-With respect to library versioning, we will version all libraries within a package together. This means that libraries inherit their version from the package. This keeps library and package versions from diverging and shares reasoning with the policy of releasing packages which share a repository together. If you need libraries to have different versions then consider splitting them into different packages.
+With respect to library versioning, we will version all libraries within a package together.
+This means that libraries inherit their version from the package.
+This keeps library and package versions from diverging and shares reasoning with the policy of releasing packages which share a repository together.
+If you need libraries to have different versions then consider splitting them into different packages.
+
 
 ## Documentation
+
 *(API docs are not yet being automatically generated)*
 
 All packages should have these documentation elements:
@@ -305,13 +352,17 @@ All packages should have these documentation elements:
 - How to build documentation
 - How to develop (useful for describing things like `python setup.py develop`)
 
-Each package should describe itself and its purpose or how it is used in the larger scope. The description should be written, as much as possible, assuming that the reader has stumbled onto it without previous knowledge of ROS or other related projects.
+Each package should describe itself and its purpose or how it is used in the larger scope.
+The description should be written, as much as possible, assuming that the reader has stumbled onto it without previous knowledge of ROS or other related projects.
 
-Each package should define and describe its public API so that there is a reasonable expectation for users what is covered by the semantic versioning policy. Even in C and C++, where the public API can be enforced by API and ABI checking, it is a good opportunity to describe the layout of the code and the function of each part of the code.
+Each package should define and describe its public API so that there is a reasonable expectation for users what is covered by the semantic versioning policy.
+Even in C and C++, where the public API can be enforced by API and ABI checking, it is a good opportunity to describe the layout of the code and the function of each part of the code.
 
-It should be easy to take any package and from that package's documentation understand how to build, run, build and run tests, and build the documentation. Obviously we should avoid repeating ourselves for common workflows, like build a package in a workspace, but the basic workflows should be either described or referenced.
+It should be easy to take any package and from that package's documentation understand how to build, run, build and run tests, and build the documentation.
+Obviously we should avoid repeating ourselves for common workflows, like build a package in a workspace, but the basic workflows should be either described or referenced.
 
-Finally, it should include any documentation for developers. This might include workflows for testing the code using something like `python setup.py develop`, or it might mean describing how to make use of extension points provided by you package.
+Finally, it should include any documentation for developers.
+This might include workflows for testing the code using something like `python setup.py develop`, or it might mean describing how to make use of extension points provided by you package.
 
 Examples:
 
@@ -320,9 +371,11 @@ Examples:
 - catkin_tools: https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html
  - This is an example of describing an extension point for a package
 
+
 ## Package Layout
 
 The filesystem layout of packages should follow the same conventions in order to provide a consistent experience for users browsing our source code.
+
 
 ### Prescribed Layout
 
@@ -343,22 +396,35 @@ The filesystem layout of packages should follow the same conventions in order to
 - `LICENSE`: A copy of the license or licenses for this package
 - `CHANGELOG.rst`: [REP-0132](http://www.ros.org/reps/rep-0132.html) compliant changelog
 
+
 ### Best Practices
 
 TBD
 
+
 ## Package Categories
+
 *(Planned; not yet used)*
 
-The policies will apply differently to packages depending on their categorization. The categories are meant to give some expectation as to the quality of a package and allows us to be more strict or compliant with some packages and less so with others.
+The policies will apply differently to packages depending on their categorization.
+The categories are meant to give some expectation as to the quality of a package and allows us to be more strict or compliant with some packages and less so with others.
+
 
 ### (Level 1)
 
-This category should be used for packages which are required for a reasonable ROS system in a production environment. That is to say that after you remove development tools, build tools, and introspection tools, these packages are still left over as requirements for a basic ROS system to run. However, just because you can conceive a system which does not need a particular package does not mean that it shouldn't be called 'Level 1', in fact the opposite is true. If we can imagine that any reasonable production scenario where a package would be used in some essential function, then that package should be considered for this category. However, packages which we consider essential to getting a robot up and running quickly, but is a generic solution to the problem should probably not start out as 'Level 1'.
+This category should be used for packages which are required for a reasonable ROS system in a production environment.
+That is to say that after you remove development tools, build tools, and introspection tools, these packages are still left over as requirements for a basic ROS system to run.
+However, just because you can conceive a system which does not need a particular package does not mean that it shouldn't be called 'Level 1', in fact the opposite is true.
+If we can imagine that any reasonable production scenario where a package would be used in some essential function, then that package should be considered for this category.
+However, packages which we consider essential to getting a robot up and running quickly, but is a generic solution to the problem should probably not start out as 'Level 1'.
 
-For Example, the packages which provide in-process communication, interprocess communication, generated message runtime code, and component lifecycle should probably all be considered 'Level 1'. However, a package which provides pose estimation (like `robot_pose_ekf`) is a generic solution something that most people need, but is often replaced with a domain specific solution in production, and therefore it should probably not start out as 'Level 1'. However, it may upgrade to it at a later date, if it proves to be a solution that people want to use in their products.
+For Example, the packages which provide in-process communication, interprocess communication, generated message runtime code, and component lifecycle should probably all be considered 'Level 1'.
+However, a package which provides pose estimation (like `robot_pose_ekf`) is a generic solution something that most people need, but is often replaced with a domain specific solution in production, and therefore it should probably not start out as 'Level 1'.
+However, it may upgrade to it at a later date, if it proves to be a solution that people want to use in their products.
 
-Tools, like `rostopic`, generally do not fall into this category, but are not categorically excluded. For example, it may be the case the tool which launches and verifies a ROS graph (something like `roslaunch`) may need to be considered 'Level 1' for use in production systems.
+Tools, like `rostopic`, generally do not fall into this category, but are not categorically excluded.
+For example, it may be the case the tool which launches and verifies a ROS graph (something like `roslaunch`) may need to be considered 'Level 1' for use in production systems.
+
 
 #### Package Requirements
 
@@ -371,9 +437,12 @@ Requirements to be considered a 'Level 1' package:
 - Have system tests for any corner cases encountered during testing
 - Must be >= version 1.0.0
 
+
 #### Change Control Process
 
-The change control process requires all changes, regardless of trivialness, must go through a pull request. This is to ensure a complete memoranda of changes to the code base. In order for a pull request to get merged:
+The change control process requires all changes, regardless of trivialness, must go through a pull request.
+This is to ensure a complete memoranda of changes to the code base.
+In order for a pull request to get merged:
 
 - Changes must be reviewed by two reviewers
 - Commits must be concise and descriptive
@@ -381,14 +450,21 @@ The change control process requires all changes, regardless of trivialness, must
 - Code coverage must stay at 100 percent
 - Any changes which require updates to documentation must be made before merging
 
+
 ### (Level 2)
 
-These are packages which need to be solidly developed and might be used in production environments, but are not strictly required, or are commonly replaced by custom solutions. This can also include packages which are not yet up to 'Level 1' but intend to be in the future.
+These are packages which need to be solidly developed and might be used in production environments, but are not strictly required, or are commonly replaced by custom solutions.
+This can also include packages which are not yet up to 'Level 1' but intend to be in the future.
+
 
 ### (Level 3)
 
-These are packages which are useful for development purposes or introspection, but are not recommended for use in embedded products or mission critical scenarios. These packages are more lax on documentation, testing, and scope of public API's in order to make development time lower or foster addition of new features.
+These are packages which are useful for development purposes or introspection, but are not recommended for use in embedded products or mission critical scenarios.
+These packages are more lax on documentation, testing, and scope of public API's in order to make development time lower or foster addition of new features.
+
 
 ### (Level 4)
 
-These are demos, tutorials, or experiments. They don't have strict requirements, but are not excluded from having good documentation or tests. For example, this might be a tutorial package which is not intended for reuse but has excellent documentation because it serves primarily as an example to others.
+These are demos, tutorials, or experiments.
+They don't have strict requirements, but are not excluded from having good documentation or tests.
+For example, this might be a tutorial package which is not intended for reuse but has excellent documentation because it serves primarily as an example to others.

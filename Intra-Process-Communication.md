@@ -7,14 +7,17 @@ In ROS 2 we aim to improve on the design of Nodelets by addressing some fundamen
 
 In this demo we'll be highlighting how nodes can be composed manually, by defining the nodes separately but combining them in different process layouts without changing the node's code or limiting its abilities.
 
+
 # Build the demos
 
 These demos should work on any of the three major OS's (Windows, Mac, or Linux).
 Some of them do require OpenCV to have been installed.
 
+
 ## Using the pre-built binaries
 
 If you've installed the binaries, simply source the ROS 2 setup file and then skip down to any of the individual demos to see how to run them.
+
 
 ## Building from source
 
@@ -22,9 +25,11 @@ Make sure you have OpenCV installed and then follow the from source instructions
 You can find the from source instructions linked from the main [ros2 repository](https://github.com/ros2/ros2.git).
 Once built source the setup file and continue down to one of the specific demos to read about them and for instructions on how to run them.
 
+
 # Running and understanding the demos
 
 There are few different demos, some are toy problems designed to highlight features of the intra process communications functionality and some are end to end examples which use OpenCV and demonstrate the ability to recombine nodes into different configurations.
+
 
 ## The two node pipeline demo
 
@@ -130,9 +135,11 @@ This shows that the address of the message being received is the same as the one
 This is because we're publishing and subscribing with `std::unique_ptr`'s which allow ownership of a message to be moved around the system safely.
 You can also publish and subscribe with `const &` and `std::shared_ptr`, but zero-copy will not occur in that case.
 
+
 ## The cyclic pipeline demo
 
-This demo is similar to the previous one, but instead of the producer creating a new message for each iteration, this demo only ever uses one message instance. This is achieved by creating a cycle in the graph and "kicking off" communication by externally making one of the nodes publish before spinning the executor:
+This demo is similar to the previous one, but instead of the producer creating a new message for each iteration, this demo only ever uses one message instance.
+This is achieved by creating a cycle in the graph and "kicking off" communication by externally making one of the nodes publish before spinning the executor:
 
 https://github.com/ros2/demos/blob/intra_process_img/intra_process_comms/src/cyclic_pipeline/cyclic_pipeline.cpp
 ```c++
@@ -191,11 +198,13 @@ int main(int argc, char * argv[])
 }
 ```
 
-Unlike the previous demo, this demo uses only one Node instantiated twice with different names and configurations. The graph ends up being `pipe1` -> `pipe2` -> `pipe1` ... in a loop.
+Unlike the previous demo, this demo uses only one Node instantiated twice with different names and configurations.
+The graph ends up being `pipe1` -> `pipe2` -> `pipe1` ... in a loop.
 
 The line `pipe1->pub->publish(msg);` kicks the process off, but from then on the messages are passed back and forth between the nodes by each one calling publish within its own subscription callback.
 
-The expectation here is that the nodes pass the message back and forth, once a second, incrementing the value of the message each time. Because the message is being published and subscribed to as a `unique_ptr` the same message created at the beginning is continuously used.
+The expectation here is that the nodes pass the message back and forth, once a second, incrementing the value of the message each time.
+Because the message is being published and subscribed to as a `unique_ptr` the same message created at the beginning is continuously used.
 
 To test those expectations, let's run it:
 
@@ -229,11 +238,13 @@ Received message with value:         47, and address: 0x7fd2ce0a2bc0
 
 As you can see you'll ever increasing numbers on each iteration, start with 42... because 42, and the whole time it reuses the same message, as demonstrated by the pointer addresses which do not change, which avoids unnecessary copies.
 
+
 ## Other Toy Demos
 
 TODO Other demo ideas:
 - intra process with a fork to show copying
 - demonstrate use of `shared_ptr` and the effect on zero-copy
+
 
 ## The image pipeline demo
 

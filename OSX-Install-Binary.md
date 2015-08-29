@@ -1,10 +1,15 @@
 # Installing ROS 2 on OS X
+
 This page explains how to install ROS 2 on OS X from a pre-built binary package.
 
+
 ## System requirements
+
 We support OS X Yosemite (10.10.x).
 
+
 ## Installing prerequisites
+
 You need the following things installed before installing ROS 2.
 
  1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation; that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
@@ -36,9 +41,12 @@ You need the following things installed before installing ROS 2.
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew install homebrew/science/opencv --without-python
         brew install python3 opensplice
-1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
+1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
+  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
+
 
 ## Downloading ROS 2
+
 * Go the releases page: https://github.com/ros2/ros2/releases
 * Download the latest package for OS X; let's assume that it ends up at `~/Downloads/ros2-package-osx.tar.bz2`.
 * Unpack it:
@@ -47,7 +55,9 @@ You need the following things installed before installing ROS 2.
         cd ~/ros2_install
         tar xf ~/Downloads/ros2-package-osx.tar.bz2
 
+
 ## Try some examples
+
 In one terminal, source the setup file and then run a `talker`:
 
     . ~/ros2_install/ros2-osx/setup.bash
@@ -59,7 +69,9 @@ In another terminal source the setup file and then run a `listener`:
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
 
+
 ### ROS 1 bridge
+
 If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file; we'll assume that it's `~/ros_catkin_ws/install_isolated/setup.bash`.
 
 If you haven't already, start a roscore:

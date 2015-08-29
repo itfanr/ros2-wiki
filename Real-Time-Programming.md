@@ -1,4 +1,5 @@
-# Background
+# Real-time - Background
+
 Real-time computing is a key feature of many robotics systems, particularly safety- and mission-critical applications such as autonomous vehicles, spacecrafts, and industrial manufacturing.
 We are designing and prototyping ROS 2 with real-time performance constraints in mind, since this is a requirement that was not considered in the early stages of ROS 1 and it is now intractable to refactor ROS 1 to be real-time friendly.
 
@@ -14,18 +15,23 @@ But if the controller reliably updates at a rate faster than the motor controlli
 
 Now that you know everything about real-time computing, let's try a demo!
 
+
 # Install and run the demo
+
 The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions.
 Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems.
 So, if you are an OSX or Windows user, don't try this part!
 
-First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary). 
+First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary).
+
 
 ## Run the tests
+
 Source your ROS 2 setup.bash.
 
 Run the demo binary, and redirect the output:
 `pendulum_demo > output.txt`
+
 
 # What the heck just happened?
 
@@ -52,6 +58,7 @@ rttest statistics:
 
 If we want those pagefaults to go away, we'll have to...
 
+
 ## Adjust permissions for memory locking
 
 Add to `/etc/security/limits.conf` (as sudo):
@@ -68,6 +75,7 @@ Then rerun the `pendulum_demo` invocation.
 You'll either see zero pagefaults in your output file, or an error saying that a bad_alloc exception was caught.
 If this happened, you didn't have enough free memory available to lock the memory allocated for the process into RAM.
 You'll need to install more RAM in your computer to see zero pagefaults!
+
 
 ## Pre-execution mallocs
 
@@ -108,6 +116,7 @@ The demo periodically prints out the pendulum's state and the runtime performanc
 
 As you can see while scrolling, the state and performance statistics keep printing, with no mallocs in between!
 
+
 ## Latency
 
 At the end of the file, you'll see the final statistics collected for the demo:
@@ -138,9 +147,13 @@ If you're running a vanilla Linux system and you don't have the RT_PREEMPT kerne
 
 See the [realtime design article](https://github.com/ros2/design/blob/gh-pages/articles/realtime.md#multithreaded-programming-and-synchronization) for more information.
 
-The demo attempts to set the scheduler and thread priority of the demo to be suitable for real-time performance. If this operation failed, you'll see an error message: "Couldn't set scheduling priority and policy: Operation not permitted". You can get slightly better performance by following the instructions in the next section:
+The demo attempts to set the scheduler and thread priority of the demo to be suitable for real-time performance.
+If this operation failed, you'll see an error message: "Couldn't set scheduling priority and policy: Operation not permitted".
+You can get slightly better performance by following the instructions in the next section:
+
 
 ## Setting permissions for the scheduler:
+
 Add to `/etc/security/limits.conf` (as sudo):
 ```
 <your username>    -   rtprio   98
@@ -150,14 +163,20 @@ The range of the rtprio (real-time priority) field is 0-99.
 However, do NOT set the limit to 99 because then your processes could interfere with important system processes that run at the top priority (e.g. watchdog).
 This demo will attempt to run the control loop at priority 98.
 
-#Plotting results
+
+# Plotting results
+
 You can plot the latency and pagefault statistics that are collected in this demo after the demo runs.
 
 Because the code has been instrumented with [rttest](https://github.com/ros2/rttest), there are useful command line tools available to us:
 
--i Specify how many iterations to run the real-time loop. Default is 1000.
+-i Specify how many iterations to run the real-time loop.
+Default is 1000.
 
--u Specify the update period. Default units are microseconds. Use the suffix "s" for seconds, "ms" for milliseconds, "us" for microseconds, and "ns" for nanoseconds. Default update period is 1ms.
+-u Specify the update period.
+Default units are microseconds.
+Use the suffix "s" for seconds, "ms" for milliseconds, "us" for microseconds, and "ns" for nanoseconds.
+Default update period is 1ms.
 
 -f Specify the name of the file for writing the collected data.
 

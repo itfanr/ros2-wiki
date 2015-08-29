@@ -1,4 +1,6 @@
-# Installing
+# Setup CI server
+
+## Installing
 
 I've pulled the .deb manually from:
 
@@ -7,7 +9,8 @@ http://pkg.jenkins-ci.org/debian/
 And installed it using `dpkg -i ...`.
 This way we don't get unexpected updates with apt-get upgrade.
 
-# Running on port 80
+
+## Running on port 80
 
 I used this SO answer to setup a subdomain to a port:
 
@@ -15,7 +18,8 @@ http://serverfault.com/a/140161/186748
 
 I had to remove the `hudson` in each of the lines that contained it.
 
-# Install git
+
+## Install git
 
 I also installed `git` for Jenkins:
 
@@ -23,11 +27,13 @@ I also installed `git` for Jenkins:
 sudo apt-get install git
 ```
 
-# Configuring Jenkins
+
+## Configuring Jenkins
 
 First I updated all the preinstalled  plugins.
 
-## Authentication
+
+### Authentication
 
 Then I setup authentication with the `github-oauth` plugin.
 I just installed it and followed their setup instructions:
@@ -40,7 +46,8 @@ https://github.com/organizations/ros2/settings/applications/215300
 
 I also tuned the permissions in `Manage Jenkins->Configure Global Security`.
 
-## Plugins
+
+### Plugins
 
 Next I installed all of these plugins:
 
@@ -56,7 +63,8 @@ Next I installed all of these plugins:
 - `warnings`
 - `xunit`
 
-## Adding an ssh key
+
+### Adding an ssh key
 
 Jenkins needs a valid ssh key in order to pull from some of our private repositories, for example to get the rti deb files.
 
@@ -131,7 +139,8 @@ Creating job 'ros2_batch_ci_linux'
 Creating job 'ros2_batch_ci_launcher'
 ```
 
-## Tuning Auto-generated Jobs
+
+### Tuning Auto-generated Jobs
 
 The final step is to fine tune the jobs.
 For each job you'll want to check the ssh key being used for the git clone (only on Linux) and the ssh-agent.
@@ -139,7 +148,9 @@ It should be set to the ssh key setup in the previous steps for the jenkins user
 
 I also updated the slaves which the jobs will run on to make sure they matched the names of the slaves I added for Linux, OS X and Windows.
 
+
 ## Disk space
+
 Overtime docker images and particularly containers will pile up.
 To clean up use:
 ```

@@ -1,14 +1,19 @@
 # ROS 2 Pre-alpha release (Aug/Sep 2015)
+
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
+
 ##### Table of Contents
+
 - [Background](#background)
 - [Status](#status)
 - [Intended audience](#intended-audience)
 - [Scope](#scope)
 - [Contact us](#contact-us)
 
+
 ## Background
+
 As explained in a [design
 article](http://design.ros2.org/articles/why_ros2.html), we are engaged in
 the development of a new major version of ROS, called "ROS 2." While the
@@ -20,7 +25,9 @@ For a deeper treatment of those changes and their
 rationale, consult the other [ROS 2 design
 articles](http://design.ros.org).
 
+
 ## Status
+
 In August / September 2015, we are releasing a *pre-alpha* release of ROS
 2, code-named **NAME-TBD**.
 Our primary goal with this release is to give
@@ -34,11 +41,15 @@ feedback](#contact-us).
 We're especially interested to know how well (or
 poorly) we're addressing use cases that are important to you.
 
+
 ## Intended audience
+
 While everyone is welcome to try out the demos and look through the code, we're aiming this release at people who are already experienced with ROS 1 development.
 At this point, the ROS 2 documentation is pretty sparse and much of the system is explained by way of how it compares to ROS 1.
 
+
 ## Scope
+
 As the "pre-alpha" qualifier suggests, this release of ROS 2 is far from
 complete.
 You should not expect to switch from ROS 1 to ROS 2, nor should
@@ -66,5 +77,7 @@ system)](https://github.com/ros2/freertps/wiki)
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
 
+
 ## Contact us
+
 See [[the contact page|Contact]].
