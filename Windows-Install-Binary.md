@@ -6,6 +6,12 @@ We support Windows 8.1.
 
 ## Installing prerequisites
 
+### Install the Visual C++ Redistributable for Visual Studio 2015
+
+You'll first need to install the appropriate redistributable for Visual Studio 2015:
+
+https://www.microsoft.com/en-us/download/details.aspx?id=48145
+
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to work with.
