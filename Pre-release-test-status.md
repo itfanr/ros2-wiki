@@ -69,7 +69,7 @@ Feel free to add more items here.
     * Linux
       * **Dirk** :heavy_check_mark: 
     * OSX
-      * **William**
+      * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
 * Stuff not covered by the demos:
   * services - **Esteve** :heavy_check_mark: 
