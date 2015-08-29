@@ -21,8 +21,7 @@ Feel free to add more items here.
   * Linux
     * OpenSplice OSRF Debs - **Morgan** :heavy_check_mark:
       * **Tully** :heavy_check_mark:
-    * OpenSplice binaries 
-      * **Morgan (in process)**
+    * OpenSplice binaries - **Morgan** :heavy_check_mark: :heavy_check_mark: :ship:
     * RTI OSRF Debs
       * **Steve (in process)** [install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79)
     * RTI Trial Binaries
