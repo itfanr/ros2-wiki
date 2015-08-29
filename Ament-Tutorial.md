@@ -6,10 +6,10 @@ It will be a practical tutorial and is not designed to replace the core document
 
 ## Background
 
-Ament is an interation on the catkin meta-build tool.
+Ament is an iteration on the catkin meta-build tool.
 For more information on the design of ament see [this document](http://design.ros2.org/articles/ament.html).
 
-The source can be found in [ament github orgainization](https://github.com/ament).
+The source can be found in [ament GitHub organization](https://github.com/ament).
 
 
 ## Prerequisites
@@ -17,14 +17,15 @@ The source can be found in [ament github orgainization](https://github.com/ament
 ## Basics
 
 An ament workspace is a directory with a particular structure.
-The one requirement is that there is a `src` subdirectory.
-Inside that subdirectory is where the sourecode will be located.
+Commonly there is a `src` subdirectory.
+Inside that subdirectory is where the source code will be located.
 Typically the directory starts otherwise empty.
 
 Ament does out of source builds.
 By default it will create a `build` and `install` directory as peers of the `src` directory.
 The `build` directory will be where intermediate files are stored.
-The `install` directory is where the resultant libraries and executables will be generated.
+For each package subfolder will be created in which e.g. CMake is being invoked.
+The `install` directory is where each package will be installed to.
 
 NB: Compared to catkin there is no `devel` directory.
 
@@ -56,28 +57,34 @@ Since this is a bootstrap environment we need to call ament.py by it's full path
 
 Note: In the future once ament is either installed on your system or in an underlayed workspace this will no longer be necessary.
 
-Since there is not `devel` space in ament it supports the option for `--symlink-install` for faster scripting language iteration.
+Since there is no `devel` space in ament and it requires installing each package it supports the option `--symlink-install`.
+This allows to change files in the `source` space (e.g. Python files or other not compiled resourced) for faster iteration.
 
 ```
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
 
-## Run the unit tests
+## Run the tests
 
-Ament has unit testing and system tests integrated.
-To run the unit tests you just built, with the `--build-tests` option above, run the following.
+To run the tests you just built, with the `--build-tests` option above, run the following:
 
 ```
-src/ament/ament_tools/scripts/ament.py test --skip-build
+src/ament/ament_tools/scripts/ament.py test
+```
+
+If you have build (and installed) a workspace before including the tests (using `build --build-tests`) you can skip the build and install step to speed up the process:
+
+```
+src/ament/ament_tools/scripts/ament.py test --skip-build --skip-install
 ```
 
 
 ## Source the environment
 
 When ament has completed building successfully the output will be in the `install` directory.
-To use the output libraries and executables you need add the `install` directory to your path.
-Ament will have generated bash files in the `install` directory to help do this.
+To use the executables and libraries you need to e.g. add the `install/bin` directory to your path.
+Ament will have generated bash files in the `install` directory to help setup the environment.
 These files will both add the required elements to your path and library paths as well as provide any exported bash or shell commands exported by packages.
 
 ```
@@ -86,7 +93,7 @@ These files will both add the required elements to your path and library paths a
 
 NB: This is slightly different than catkin.
 The `local_setup.*` file is slightly different that the `setup.*` file in that it will only apply settings from the current workspace.
-`setup.*` will recursively set parameters.
+When using more then one workspace you will still source the `setup.*` files to get the environment including all parent workspaces.
 
 
 ## Try a demo
@@ -109,9 +116,9 @@ kill %1
 
 ## Develop your own package
 
-Ament uses the same package.xml as catkin defined in [REP 140](http://www.ros.org/reps/rep-0140.html).
+Ament uses the same `package.xml` specification as defined for catkin in [REP 140](http://www.ros.org/reps/rep-0140.html).
 
-You can create your own package inside the `src` directory however it is recommended to use an overlay when
+You can create your own package inside the `src` directory however it is recommended to use an overlay when you are going to iterate only on a few packages.
 
 
 ## Create an overlay
@@ -125,13 +132,13 @@ mkdir -p ~/overlay_ws/src
 cd ~/overlay_ws/src
 ```
 
-And to get started we'll overlay the [ros2/examples repository](https://github.com/ros2/examples)
+And to get started we'll overlay the [ros2/examples repository](https://github.com/ros2/examples):
 
 ```
 git clone https://github.com/ros2/examples.git
 ```
 
-And build the overlay, but lets build with debug so we can make sure to get :
+And build the overlay, but lets build with debug so we can make sure to get debug symbols:
 
 ```
 cd ~/overlay_ws
@@ -148,16 +155,16 @@ If you are returning with a new terminal to your development and want to pick up
 ## Create your own package
 
 You can create your own package.
-The equivalent of catkin_create_package will be ported to ament but is not available yet.
+The equivalent of `catkin_create_package` will be ported to ament but is not available yet.
 
 Ament supports multiple build types.
 The recommended build types are `ament_cmake` and `ament_python`.
-Also implements is pure `cmake` packages.
+Also supported are pure `cmake` packages.
 It's expected to add support for more [build types](https://github.com/ament/ament_tools/blob/master/doc/development/build_types.rst).
 
-An example of an `ament_python` build is the []`ament_tools` package](https://github.com/ament/ament_tools), where the setup.py is the primary entry point for building.
+An example of an `ament_python` build is the [`ament_tools` package](https://github.com/ament/ament_tools), where the setup.py is the primary entry point for building.
 
-While a package such as [`rclcpp_examples`](https://github.com/ros2/examples/tree/master/rclcpp_examples) uses the `ament_cmake` build type, and uses CMake as the build tool.
+A package such as [`rclcpp_examples`](https://github.com/ros2/examples/tree/master/rclcpp_examples) uses the `ament_cmake` build type, and uses CMake as the build tool.
 
 
 ## Tips
