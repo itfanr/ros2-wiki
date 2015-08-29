@@ -6,11 +6,13 @@ We support Windows 8.1.
 
 ## Installing prerequisites
 
-### Install the Visual C++ Redistributable for Visual Studio 2015
+### Install the Visual Studio Community 2015
 
-You'll first need to install the appropriate redistributable for Visual Studio 2015:
+If you already have a paid version of Visual Studio 2015 (Professional, Enterprise), skip this step.
 
-https://www.microsoft.com/en-us/download/details.aspx?id=48145
+Microsoft provides a free of charge version of Visual Studio 2015, named Community, which can be used to build applications that use ROS2:
+
+https://www.visualstudio.com/products/visual-studio-community-vs
 
 ### Getting a DDS Vendor
 
