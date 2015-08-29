@@ -78,7 +78,7 @@ It's worth noting that both ends must have the same reliability settings for thi
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
 
 ##Add network traffic
-This next section is Linux-specific.
+This next section is Linux-specific. For OS X user, however, you can achieve a similar effect with the utility called "Network Link Conditioner" which is part of the xcode tool suite, but it will not be covered in this tutorial.
 
 We are going to use the Linux network traffic control utility, `tc` (http://linux.die.net/man/8/tc).
 
