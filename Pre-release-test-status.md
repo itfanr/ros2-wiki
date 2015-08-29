@@ -24,7 +24,7 @@ Feel free to add more items here.
     * OpenSplice binaries 
       * **Morgan (in process)**
     * RTI OSRF Debs
-      * **Steve (in process)** [install fails with opensplice being installed](https://github.com/ros2/rmw_opensplice/issues/79)
+      * **Steve (in process)** [install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79)
     * RTI Trial Binaries
       * **Tully** :heavy_check_mark:
   * OSX
