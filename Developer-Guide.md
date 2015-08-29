@@ -13,8 +13,8 @@ This page defines the practices and policies we employ when developing ROS 2.
   - [Markdown](#markdown)
 - [Testing](#testing)
 - [Versioning](#versioning)
+- [Filesystem layout](#filesystem-layout)
 - [Documentation](#documentation)
-  - [Filesystem layout](#filesystem-layout)
 
 
 ## General Practices
