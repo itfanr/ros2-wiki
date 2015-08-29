@@ -10,21 +10,17 @@ If you're looking for information on ROS 1 (i.e., ROS as it has existed for seve
 
 **Before you proceed here, please read the [[Pre Alpha Release Overview|Pre-Alpha-Overview]] to get an idea of what is (and is not) in the current ROS 2 release.**
 
-
 ## Installation
 
 See [[the installation page|Installation]].
-
 
 ## Tutorials
 
 See [[the tutorials page|Tutorials]].
 
-
 ## Reporting problems and asking questions
 
 See [[the contact page|Contact]].
-
 
 ## Contributing
 

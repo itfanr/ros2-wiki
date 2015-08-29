@@ -3,11 +3,9 @@
 You want to contribute to ROS 2.
 Excellent!
 
-
 ## Setting up your development environment
 
 To get started, you'll want to install from source; follow [[the installation instructions|Installation]] for your platform.
-
 
 ## Contributing code
 

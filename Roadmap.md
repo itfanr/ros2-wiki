@@ -4,7 +4,6 @@ For more information on the design of ROS 2.0 please see [design.ros2.org](http:
 The core code for ros2 is on the [ros2 github organization](https://github.com/ros2).
 The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
 
-
 ## Upcoming targeted features
 
 This is a list of the features targeted for development in the future.
@@ -40,7 +39,6 @@ This is a list of the features targeted for development in the future.
   - Support deterministic ordering of executables in Executor (fair scheduling)
   - Expose more quality of service parameters related to real-time performance
 - Multi-robot supporting features and demos
-
 
 ## Pre Alpha release
 

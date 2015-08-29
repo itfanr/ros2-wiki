@@ -2,11 +2,9 @@
 
 This page explains how to install ROS 2 on Linux from a pre-built binary package.
 
-
 ## System Requirements
 
 We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available yet for ARM or 32-bit x86).
-
 
 ## Installing prerequisites
 
@@ -25,7 +23,6 @@ We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available y
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/Ubuntu
 
-
 ## Downloading ROS 2
 
 * Go the releases page: https://github.com/ros2/ros2/releases
@@ -35,7 +32,6 @@ We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available y
         mkdir -p ~/ros2_install
         cd ~/ros2_install
         tar xf ~/Downloads/ros2-package-linux.tar.bz2
-
 
 ## Try some examples
 
@@ -49,7 +45,6 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
-
 
 ### ROS 1 bridge
 

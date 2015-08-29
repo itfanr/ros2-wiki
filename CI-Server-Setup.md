@@ -9,7 +9,6 @@ http://pkg.jenkins-ci.org/debian/
 And installed it using `dpkg -i ...`.
 This way we don't get unexpected updates with apt-get upgrade.
 
-
 ## Running on port 80
 
 I used this SO answer to setup a subdomain to a port:
@@ -17,7 +16,6 @@ I used this SO answer to setup a subdomain to a port:
 http://serverfault.com/a/140161/186748
 
 I had to remove the `hudson` in each of the lines that contained it.
-
 
 ## Install git
 
@@ -27,11 +25,9 @@ I also installed `git` for Jenkins:
 sudo apt-get install git
 ```
 
-
 ## Configuring Jenkins
 
 First I updated all the preinstalled  plugins.
-
 
 ### Authentication
 
@@ -45,7 +41,6 @@ I created an application entry on the ros2 GitHub organization:
 https://github.com/organizations/ros2/settings/applications/215300
 
 I also tuned the permissions in `Manage Jenkins->Configure Global Security`.
-
 
 ### Plugins
 
@@ -62,7 +57,6 @@ Next I installed all of these plugins:
 - `ssh-agent`
 - `warnings`
 - `xunit`
-
 
 ### Adding an ssh key
 
@@ -139,7 +133,6 @@ Creating job 'ros2_batch_ci_linux'
 Creating job 'ros2_batch_ci_launcher'
 ```
 
-
 ### Tuning Auto-generated Jobs
 
 The final step is to fine tune the jobs.
@@ -147,7 +140,6 @@ For each job you'll want to check the ssh key being used for the git clone (only
 It should be set to the ssh key setup in the previous steps for the jenkins user.
 
 I also updated the slaves which the jobs will run on to make sure they matched the names of the slaves I added for Linux, OS X and Windows.
-
 
 ## Disk space
 

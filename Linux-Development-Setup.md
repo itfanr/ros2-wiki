@@ -4,7 +4,6 @@
 
 We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit.
 
-
 ## How to setup the development environment?
 
 First make sure you have the ROS apt repositories added to your system, if not:
@@ -35,7 +34,6 @@ The setuptools version shipped with Ubuntu Trusty is not recent enough - we requ
 sudo pip3 install -U setuptools
 ```
 
-
 ### Get ROS 2.0 code
 
 Create a workspace and clone all repos:
@@ -47,7 +45,6 @@ wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
 
-
 ### Install one or more DDS implementations
 
 ROS 2.0 builds on top of DDS.
@@ -57,14 +54,12 @@ You can choose to install one or more of the supported versions of DDS.
 By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF.
 Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
-
 #### PrismTech OpenSplice Debian Packages built by OSRF
 
 ```
 sudo apt-get update
 sudo apt-get install libopensplice64  # from packages.osrfoundation.org
 ```
-
 
 ### Build the prototype using the bootstrap script from ament_tools
 
@@ -90,18 +85,15 @@ Afterwards source the `local_setup.*` from the `install` / `install_isolated` fo
 Now that you have finished building the workspace, you can run talker and listener, they are on your path.
 See the [demos](Tutorials) for other things to try.
 
-
 ## Alternative DDS sources.
 
 The demos will attempt to build against any detected DDS vendor.
 If you would like to switch out the vendor below are the instructions.
 When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
 
-
 #### PrismTech OpenSplice
 
 Choose one of the following options for PrismTech OpenSplice.
-
 
 ##### Debian packages built by OSRF (used in the default instruction sequence above)
 
@@ -116,7 +108,6 @@ Add this to your `~/.bashrc`
 export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 ```
 
-
 ##### Official binary packages from PrismTech
 
 Install the packages provided by [OpenSplice](http://www.prismtech.com/dds-community/software-downloads) (we currently use 6.4.1p2).
@@ -130,11 +121,9 @@ You may also need to add the following line to you `.bashrc` file:
 export PTECH_LICENSE_FILE=path/to/prismtech.lic
 ```
 
-
 ##### Building OpenSplice from source
 
 If you build OpenSplice from source, be sure to remember to following the INSTALL.txt instructions and manually replace the @@INSTALLDIR@@ placeholder in the OpenSplice install/HDE/x86_64.linux/release.com
-
 
 #### RTI Connext
 
@@ -153,7 +142,6 @@ sudo apt-get install openjdk-7-jre
 
 Choose one of the following options for RTI Connext.
 
-
 ##### Official binary packages from RTI
 
 You can install the packages provided by [RTI](http://www.rti.com/downloads/connext-files.html#DOWNLOAD)  - Get the 14.04 version.
@@ -169,14 +157,12 @@ Source the setup file to set the `NDDSHOME` environment variable.
 source /opt/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
 
-
 ##### Debian packages built by OSRF
 
 These packages are not public due to pending license questions.
 Download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
 
 Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
-
 
 ## Troubleshooting
 
@@ -185,13 +171,11 @@ Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be
 The ros1_bridge in it's current form requires 4Gb of free RAM to compile.
 If you don't have that amount of RAM available it's suggested to use `AMENT_IGNORE` in that folder and skip it's compilation.
 
-
 ### Multiple Host Interference
 
 If you're running multiple instances on the same network you may get interference.
 To avoid this you can set the environment variable `ROS_DOMAIN_ID` to a different integer, the default is zero.
 This will define the DDS domain id for your system.
-
 
 #### On OpenSplice
 

@@ -4,7 +4,6 @@
 
 We support OS X Yosemite (10.10.x).
 
-
 ## Install prerequisites
 
 **TODO: Extend these instructions for other DDS implementations, starting with RTI Connext.**
@@ -58,7 +57,6 @@ You need the following things installed to build ROS 2:
             wstool init -j8 src indigo-ros2-bridge-deps.rosinstall
     Otherwise, just follow the normal instructions, then source the resulting `install_isolated/setup.bash` before proceeding here to build ROS 2.
 
-
 ## Get the ROS 2 code
 
 Create a workspace and clone all repos:
@@ -68,7 +66,6 @@ Create a workspace and clone all repos:
     wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
     vcs import ~/ros2_ws/src < ros2.repos
 
-
 ## Build the ROS 2 code
 
 **Note**: if you installed and sourced the setup file for ROS 1, then you should instead follow the [modified instructions](#building-with-the-ros-1-bridge).
@@ -77,7 +74,6 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 
     cd ~/ros2_ws/
     src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
-
 
 ### Building with the ROS 1 bridge
 
@@ -100,7 +96,6 @@ Here are the steps:
     # Un-patch rosbag to put back the non-Python3-compatible line
     sed -i '' 's/#import roslz4/import roslz4/' $ROS_ROOT/../../lib/python2.7/site-packages/rosbag/bag.py
 
-
 ## Try some examples
 
 In one terminal, source the setup file and then run a `talker`:
@@ -113,7 +108,6 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
-
 
 ## Troubleshooting
 
@@ -151,7 +145,6 @@ It can be undone with:
 $ sudo rm /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug
 ```
 
-
 ### Missing symbol when opencv (and therefore libjpeg, libtiff, and libpng) are installed with Homebrew
 
 If you have opencv installed you might get this:
@@ -181,7 +174,6 @@ $ sudo install_name_tool -change /usr/local/lib/libjpeg.8.dylib /usr/local/opt/j
 
 The first command is necessary to avoid things built against the system libjpeg (etc.) from getting the version in /usr/local/lib.
 The others are updating things built by Homebrew so that they can find the version of libjpeg (etc.) without having them in /usr/local/lib.
-
 
 ## Maintainer notes
 

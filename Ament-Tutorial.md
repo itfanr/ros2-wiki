@@ -3,14 +3,12 @@
 This will provide you with a quick summary of how to get up and running using an ament workspace.
 It will be a practical tutorial and is not designed to replace the core documentation.
 
-
 ## Background
 
 Ament is an iteration on the catkin meta-build tool.
 For more information on the design of ament see [this document](http://design.ros2.org/articles/ament.html).
 
 The source can be found in [ament GitHub organization](https://github.com/ament).
-
 
 ## Prerequisites
 
@@ -29,7 +27,6 @@ The `install` directory is where each package will be installed to.
 
 NB: Compared to catkin there is no `devel` directory.
 
-
 ## Create directory structure
 
 To make the basic structure in the directory `~/example_ament_ws`:
@@ -40,7 +37,6 @@ mkdir ~/ros2_ws/src
 cd ~/ros2_ws
 ```
 
-
 ## Add some sources
 
 To start off we need to setup a underlay without any of ROS2 installed.
@@ -49,7 +45,6 @@ To start off we need to setup a underlay without any of ROS2 installed.
 wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
-
 
 ## Run the build
 
@@ -63,7 +58,6 @@ This allows to change files in the `source` space (e.g. Python files or other no
 ```bash
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
-
 
 ## Run the tests
 
@@ -79,7 +73,6 @@ If you have build (and installed) a workspace before including the tests (using 
 src/ament/ament_tools/scripts/ament.py test --skip-build --skip-install
 ```
 
-
 ## Source the environment
 
 When ament has completed building successfully the output will be in the `install` directory.
@@ -94,7 +87,6 @@ These files will both add the required elements to your path and library paths a
 NB: This is slightly different than catkin.
 The `local_setup.*` file is slightly different that the `setup.*` file in that it will only apply settings from the current workspace.
 When using more then one workspace you will still source the `setup.*` files to get the environment including all parent workspaces.
-
 
 ## Try a demo
 
@@ -114,13 +106,11 @@ Lets take down the nodes and try creating our own workspace overlay.
 kill %1
 ```
 
-
 ## Develop your own package
 
 Ament uses the same `package.xml` specification as defined for catkin in [REP 140](http://www.ros.org/reps/rep-0140.html).
 
 You can create your own package inside the `src` directory however it is recommended to use an overlay when you are going to iterate only on a few packages.
-
 
 ## Create an overlay
 
@@ -152,7 +142,6 @@ If you source `~/overlay_ws/install/local_setup.bash` it will change to refer to
 
 If you are returning with a new terminal to your development and want to pick up developing on your overlay you can simply source `~/overlay_ws/setup.bash` which will source all parent workspaces environments automatically.
 
-
 ## Create your own package
 
 You can create your own package.
@@ -166,7 +155,6 @@ It's expected to add support for more [build types](https://github.com/ament/ame
 An example of an `ament_python` build is the [`ament_tools` package](https://github.com/ament/ament_tools), where the setup.py is the primary entry point for building.
 
 A package such as [`rclcpp_examples`](https://github.com/ros2/examples/tree/master/rclcpp_examples) uses the `ament_cmake` build type, and uses CMake as the build tool.
-
 
 ## Tips
 

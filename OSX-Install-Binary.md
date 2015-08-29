@@ -2,11 +2,9 @@
 
 This page explains how to install ROS 2 on OS X from a pre-built binary package.
 
-
 ## System requirements
 
 We support OS X Yosemite (10.10.x).
-
 
 ## Installing prerequisites
 
@@ -44,7 +42,6 @@ You need the following things installed before installing ROS 2.
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
 
-
 ## Downloading ROS 2
 
 * Go the releases page: https://github.com/ros2/ros2/releases
@@ -54,7 +51,6 @@ You need the following things installed before installing ROS 2.
         mkdir -p ~/ros2_install
         cd ~/ros2_install
         tar xf ~/Downloads/ros2-package-osx.tar.bz2
-
 
 ## Try some examples
 
@@ -68,7 +64,6 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
-
 
 ### ROS 1 bridge
 

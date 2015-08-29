@@ -11,20 +11,17 @@ The philosophy of ROS 2 will be to expose the quality of service parameters that
 In the quality of service demo, we will spawn a node that publishes a camera image and another that subscribes to the image and shows it on the screen.
 We will then simulate a lossy network connection between them and show how different quality of service settings handle the bad link.
 
-
 # Build/install the demo
 
 ## From pre-compiled binaries
 
 Simply download the binary packages for your OS from the [installation page](https://github.com/ros2/ros2/wiki/Installation).
 
-
 ## From source
 
 OpenCV is a prerequisite for the QoS demo.
 See the [OpenCV documentation](http://docs.opencv.org/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction) for installation instructions.
 Follow the instructions on the [installation page](https://github.com/ros2/ros2/wiki/Installation#building-from-source) for your particular platform.
-
 
 # Run the demo
 
@@ -73,7 +70,6 @@ Received image #3
 ...
 ```
 
-
 ## Command line options
 
 In one of your terminals, add a -h flag to the original command:
@@ -115,7 +111,6 @@ It's worth noting that both ends must have the same reliability settings for thi
 If the consumer requires the publisher to be reliable, DDS will not match them and there won't be any exchange between them.
 
 We won't see much of a difference if we change the quality of service settings, since the publisher and subscriber are passing messages over inter-process communication, and messages are unlikely to get dropped if they are travelling within the same machine.
-
 
 ## Add network traffic
 

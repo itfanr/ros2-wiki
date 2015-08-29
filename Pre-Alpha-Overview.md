@@ -2,7 +2,6 @@
 
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
-
 ##### Table of Contents
 
 - [Background](#background)
@@ -10,7 +9,6 @@ Welcome to the first release of ROS 2 software!  We hope that you try it out and
 - [Intended audience](#intended-audience)
 - [Scope](#scope)
 - [Contact us](#contact-us)
-
 
 ## Background
 
@@ -24,7 +22,6 @@ some of the core APIs.
 For a deeper treatment of those changes and their
 rationale, consult the other [ROS 2 design
 articles](http://design.ros.org).
-
 
 ## Status
 
@@ -41,12 +38,10 @@ feedback](#contact-us).
 We're especially interested to know how well (or
 poorly) we're addressing use cases that are important to you.
 
-
 ## Intended audience
 
 While everyone is welcome to try out the demos and look through the code, we're aiming this release at people who are already experienced with ROS 1 development.
 At this point, the ROS 2 documentation is pretty sparse and much of the system is explained by way of how it compares to ROS 1.
-
 
 ## Scope
 
@@ -76,7 +71,6 @@ system)](https://github.com/ros2/freertps/wiki)
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
-
 
 ## Contact us
 

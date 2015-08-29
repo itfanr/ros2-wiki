@@ -2,7 +2,6 @@
 
 This page defines the practices and policies we employ when developing ROS 2.
 
-
 ##### Table of Contents
 - [General Practices](#general-practices)
 - [Language Versions and Code Format](#language-versions-and-code-format)
@@ -16,11 +15,9 @@ This page defines the practices and policies we employ when developing ROS 2.
 - [Filesystem layout](#filesystem-layout)
 - [Documentation](#documentation)
 
-
 ## General Practices
 
 Some practices are common to all ROS 2 development:
-
 
 ### Issues
 
@@ -28,7 +25,6 @@ When filling an issue please make sure to:
 
 * Include enough information for another person to understand the issue.
 * In case of a bug consider to provide a [short, self contained, correct (compilable), example](http://sscce.org/).
-
 
 ### Pull requests
 
@@ -39,7 +35,6 @@ When filling an issue please make sure to:
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 * Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
 
-
 ### Development Process
 
 * The default branch (in most cases the master branch) must always build, pass all tests and compile without warnings.
@@ -48,7 +43,6 @@ When filling an issue please make sure to:
 * Always run tests locally after changes and before proposing them in a pull request.
   Beside using automated tests also run the modified code path manually to ensure that the patch works as intended.
 * Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
-
 
 ### Programming conventions
 
@@ -59,7 +53,6 @@ When filling an issue please make sure to:
 * Declare variables in the narrowest scope possible.
 * Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
 
-
 ## Language Versions and Code Format
 
 In order to achieve a consistent looking product we will all follow externally (if possible) defined style guidelines for each language.
@@ -69,7 +62,6 @@ Additionally, where ever possible, developers should use integrated tools to all
 For example, everyone should have a PEP8 checker built into their editor to cut down on review iterations related to style.
 
 Also where possible, packages should check style as part of their unit tests to help with the automated detection of style issues (see [ament_lint_auto](https://github.com/ament/ament_lint/blob/master/ament_lint_auto/doc/index.rst)).
-
 
 ### C
 
@@ -99,7 +91,6 @@ We can use the `pep7` python module for style checking:
 https://github.com/mike-perdide/pep7
 
 The editor integration seems slim, we may need to looking to automated checking for C in more detail.
-
 
 ### C++
 
@@ -234,7 +225,6 @@ And can be integrated into many existing editors:
 - emacs: http://clang.llvm.org/docs/ClangFormat.html#emacs-integration
 - sublime text: https://llvm.org/svn/llvm-project/cfe/trunk/tools/clang-format/clang-format-sublime.py
 
-
 ### Python
 
 We will target Python 3 for our development.
@@ -257,7 +247,6 @@ Integration with editors:
 - emacs: http://kwbeam.com/emacs-for-python-i.html
 - Sublime Text: https://sublime.wbond.net/packages/SublimeLinter-flake8
 
-
 ### CMake
 
 We will target CMake 2.8.12.2.
@@ -271,13 +260,11 @@ Since there is not an existing CMake style guide we will define our own:
 - Prefer functions with `set(PARENT_SCOPE)` to macros
 - When using macros prefix local variables with `_` or a reasonable prefix
 
-
 ### Markdown
 
 The following rules to format the markdown syntax is intended to increase readability as well versioning.
 
-
-- Each section title should be preceded by two empty line and succeeded by one empty line.
+- Each section title should be preceded by one empty line and succeeded by one empty line.
   - Rationale: It expedites to get an overview about the structure when screening the document.
 - Each sentence must start on a new line.
  - Rationale: For longer paragraphs a single change in the beginning makes the diff unreadable since it carries forward through the whole paragraph.
@@ -287,7 +274,6 @@ The following rules to format the markdown syntax is intended to increase readab
   - Rationale: Whitespace is significant only directly before and directly after fenced code blocks.
     Following these instructions will ensure that highlighting works properly and consistently.
 - A code block should specify a syntax after the opening triple backticks.
-
 
 ### Javascript
 
@@ -303,7 +289,6 @@ The above repository comes with a `jshintrc` file which allows the style to be e
 Editor integration for `jshint` include `vim`, `emacs`, `Sublime Text`, and others:
 
 http://www.jshint.com/install/
-
 
 ## Testing
 
@@ -323,13 +308,11 @@ In general minimizing external or cross package test dependencies should be avoi
 
 All packages should have some unit tests and possibly integration tests, but the degree to which they should have them is based on the package's category (described later).
 
-
 ### Test Coverage
 
 Some packages should have a mechanism setup to capture test coverage information (if applicable to the language).
 Coverage tools exist for some of the languages described here including C, C++, and Python, but possibly others.
 When possible coverage should be measured in terms of branch coverage, as opposed to statement or function coverage.
-
 
 ## Versioning
 
@@ -355,11 +338,9 @@ This means that libraries inherit their version from the package.
 This keeps library and package versions from diverging and shares reasoning with the policy of releasing packages which share a repository together.
 If you need libraries to have different versions then consider splitting them into different packages.
 
-
 ### Filesystem Layout
 
 The filesystem layout of packages and repositories should follow the same conventions in order to provide a consistent experience for users browsing our source code.
-
 
 #### Package layout
 
@@ -380,7 +361,6 @@ The filesystem layout of packages and repositories should follow the same conven
 - `LICENSE`: A copy of the license or licenses for this package
 - `CHANGELOG.rst`: [REP-0132](http://www.ros.org/reps/rep-0132.html) compliant changelog
 
-
 #### Repository layout
 
 Each package should be in a subfolder which has the same name as the package.
@@ -388,7 +368,6 @@ If a repository contains only a single package it can optionally be in the root 
 
 The root of the repository should have a `CONTRIBUTING.md` file describing the contribution guidelines.
 This might include license implication when using e.g. the Apache 2 License.
-
 
 ## Documentation
 
@@ -423,11 +402,9 @@ Examples:
 - catkin_tools: https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html
  - This is an example of describing an extension point for a package
 
-
 ### Best Practices
 
 TBD
-
 
 ## Package Categories
 
@@ -435,7 +412,6 @@ TBD
 
 The policies will apply differently to packages depending on their categorization.
 The categories are meant to give some expectation as to the quality of a package and allows us to be more strict or compliant with some packages and less so with others.
-
 
 ### (Level 1)
 
@@ -452,7 +428,6 @@ However, it may upgrade to it at a later date, if it proves to be a solution tha
 Tools, like `rostopic`, generally do not fall into this category, but are not categorically excluded.
 For example, it may be the case the tool which launches and verifies a ROS graph (something like `roslaunch`) may need to be considered 'Level 1' for use in production systems.
 
-
 #### Package Requirements
 
 Requirements to be considered a 'Level 1' package:
@@ -463,7 +438,6 @@ Requirements to be considered a 'Level 1' package:
 - Have system tests which cover any scenarios covered in documentation
 - Have system tests for any corner cases encountered during testing
 - Must be >= version 1.0.0
-
 
 #### Change Control Process
 
@@ -477,18 +451,15 @@ In order for a pull request to get merged:
 - Code coverage must stay at 100 percent
 - Any changes which require updates to documentation must be made before merging
 
-
 ### (Level 2)
 
 These are packages which need to be solidly developed and might be used in production environments, but are not strictly required, or are commonly replaced by custom solutions.
 This can also include packages which are not yet up to 'Level 1' but intend to be in the future.
 
-
 ### (Level 3)
 
 These are packages which are useful for development purposes or introspection, but are not recommended for use in embedded products or mission critical scenarios.
 These packages are more lax on documentation, testing, and scope of public API's in order to make development time lower or foster addition of new features.
-
 
 ### (Level 4)
 
