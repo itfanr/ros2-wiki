@@ -23,7 +23,7 @@ So, if you are an OSX or Windows user, don't try this part!
 Source your ROS 2 setup.bash.
 
 Run the demo binary with OpenSplice, and redirect the output:
-`pendulum_demo__rmw_opensplice_cpp > output.txt`
+`pendulum_demo > output.txt`
 
 ## Building from source:
 First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary). 
@@ -37,7 +37,7 @@ If you've already built ROS 2 from source and you want to rebuild this package a
 Source your ROS 2 setup.bash.
 
 Run the demo binary with OpenSplice, and redirect the output:
-`pendulum_demo__rmw_opensplice_cpp > output.txt`
+`pendulum_demo > output.txt`
 
 # What the heck just happened?
 
