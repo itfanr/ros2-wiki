@@ -6,7 +6,9 @@ Feel free to add more items here.
   * List PRs here that need review
 
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
-* From-binary installation (best to start with a clean VM) using https://github.com/ros2/ros2/releases/tag/pre-alpha-rc1:
+  * ~~RC 1 was built without CMAKE_BUILD_TYPE being set~~
+  * RC 2 was built with CMAKE_BUILD_TYPE=RelWithDebInfo
+* From-binary installation (best to start with a clean VM):
   * Windows
       * **Esteve**
   * Linux
