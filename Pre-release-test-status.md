@@ -59,6 +59,8 @@ Feel free to add more items here.
       * **Brian**
         * From binary (no gui): :heavy_check_mark: 
         * From source (no gui): :heavy_check_mark: 
+      * **William**
+        * From binary (no gui): :shipit: 
     * Linux
       * **Tully** :heavy_check_mark: (binary install, except gui)
       * **Steve** :heavy_check_mark: (binary install, except gui)
