@@ -72,4 +72,7 @@ In another terminal, start the bridge:
     . ~/ros_catkin_ws/install_isolated/setup.bash
     . ~/ros2_install/ros2-osx/setup.bash
     dynamic_bridge
+
 For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
+
+If you run into issues, see the troubleshooting section on the source installation page: https://github.com/ros2/ros2/wiki/OSX-Development-Setup#troubleshooting
