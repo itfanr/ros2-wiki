@@ -14,29 +14,17 @@ But if the controller reliably updates at a rate faster than the motor controlli
 
 Now that you know everything about real-time computing, let's try a demo!
 
-# Build and run the demo
+# Install and run the demo
 The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions.
 Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems.
 So, if you are an OSX or Windows user, don't try this part!
 
-## Pre-built binaries
-Source your ROS 2 setup.bash.
-
-Run the demo binary with OpenSplice, and redirect the output:
-`pendulum_demo > output.txt`
-
-## Building from source:
 First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary). 
 
-If you've already built ROS 2 from source and you want to rebuild this package after making modifications, you can use:
-
-```
-./src/ament/ament_tools/scripts/ament.py build --symlink-install --only pendulum_control
-```
-
+## Run the tests
 Source your ROS 2 setup.bash.
 
-Run the demo binary with OpenSplice, and redirect the output:
+Run the demo binary, and redirect the output:
 `pendulum_demo > output.txt`
 
 # What the heck just happened?
