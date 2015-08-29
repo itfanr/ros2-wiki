@@ -38,7 +38,7 @@ When filling an issue please make sure to:
 * Always run trigger CI jobs for all platforms for every pull request and include links to jobs the pull request.
 
 ### Programming conventions
-* Defensive programming: ensure that assumptions are hold as early as possible.  E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
+* Defensive programming: ensure that assumptions are held as early as possible.  E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
 * All error messages must be directed to `stderr`.
 * Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
 * Declare variables in the narrowest scope possible.
