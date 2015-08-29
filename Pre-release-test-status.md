@@ -75,12 +75,13 @@ Feel free to add more items here.
     * OSX
       * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
-* Binaries not covered by the demos
-  * add_two_ints_server / add_two_ints_client
-  * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
-  * talker_memory / listener_memory
 * Stuff not covered by the demos:
   * services - **Esteve** :heavy_check_mark: 
   * parameters - **Esteve** :heavy_check_mark: 
   * documentation entry point
     * **Brian** :heavy_check_mark: 
+* Binaries not covered by the demos
+  * add_two_ints_server / add_two_ints_client
+  * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
+  * talker_memory / listener_memory
+* Remaining ToDos in the wiki pages (currently 6)
