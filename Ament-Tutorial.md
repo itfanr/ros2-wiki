@@ -45,7 +45,7 @@ cd ~/ros2_ws
 
 To start off we need to setup a underlay without any of ROS2 installed.
 
-```
+```bash
 wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
@@ -60,7 +60,7 @@ Note: In the future once ament is either installed on your system or in an under
 Since there is no `devel` space in ament and it requires installing each package it supports the option `--symlink-install`.
 This allows to change files in the `source` space (e.g. Python files or other not compiled resourced) for faster iteration.
 
-```
+```bash
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
@@ -69,13 +69,13 @@ src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 
 To run the tests you just built, with the `--build-tests` option above, run the following:
 
-```
+```bash
 src/ament/ament_tools/scripts/ament.py test
 ```
 
 If you have build (and installed) a workspace before including the tests (using `build --build-tests`) you can skip the build and install step to speed up the process:
 
-```
+```bash
 src/ament/ament_tools/scripts/ament.py test --skip-build --skip-install
 ```
 
@@ -87,7 +87,7 @@ To use the executables and libraries you need to e.g. add the `install/bin` dire
 Ament will have generated bash files in the `install` directory to help setup the environment.
 These files will both add the required elements to your path and library paths as well as provide any exported bash or shell commands exported by packages.
 
-```
+```bash
 . install/local_setup.bash
 ```
 
@@ -100,7 +100,7 @@ When using more then one workspace you will still source the `setup.*` files to 
 
 With the environment sourced you can now run executables built by ament.
 
-```
+```bash
 listener &
 talker
 ```
@@ -108,7 +108,7 @@ talker
 And you will see the numbers incrementing.
 
 Lets take down the nodes and try creating our own workspace overlay.
-```
+```bash
 ^-C
 kill %1
 ```
@@ -127,20 +127,20 @@ Now that you have setup your bootstrap underlay you will also find `ament` is on
 
 Lets make a new overlay directory `~/overlay_ws`.
 
-```
+```bash
 mkdir -p ~/overlay_ws/src
 cd ~/overlay_ws/src
 ```
 
 And to get started we'll overlay the [ros2/examples repository](https://github.com/ros2/examples):
 
-```
+```bash
 git clone https://github.com/ros2/examples.git
 ```
 
 And build the overlay, but lets build with debug so we can make sure to get debug symbols:
 
-```
+```bash
 cd ~/overlay_ws
 ament build --cmake-args -DCMAKE_BUILD_TYPE=Debug
 ```
