@@ -12,7 +12,7 @@ Feel free to add more items here.
   * Windows
       * **Esteve**
   * Linux
-    * **Tully**
+    * **Tully** :heavy_check_mark:
     * **Steve** installed with docker `osrf/ros:indigo-desktop` image. :heavy_check_mark:
   * OSX
       * **William** :shipit: 
