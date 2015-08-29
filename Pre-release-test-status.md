@@ -8,6 +8,10 @@ Feel free to add more items here.
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
   * ~~RC 1 was built without `CMAKE_BUILD_TYPE` being set~~
   * RC 2 was built with `CMAKE_BUILD_TYPE=RelWithDebInfo`
+  * upcoming:
+    * https://github.com/ros2/examples/pull/58
+    * https://github.com/ament/ament_package/pull/17
+    * https://github.com/ros2/rmw_opensplice/issues/79
 * From-binary installation (best to start with a clean VM):
   * Windows
       * **Esteve** :cry: Binaries need MSVCP140D.DLL, but can't find it anywhere. Fix for ament: https://github.com/ament/ament_package/pull/17
