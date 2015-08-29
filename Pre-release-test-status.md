@@ -15,7 +15,7 @@ Feel free to add more items here.
     * **Tully**
     * **Steve** installed with docker `osrf/ros:indigo-desktop` image. :heavy_check_mark:
   * OSX
-      * **William**
+      * **William** :shipit: 
 * From-source installation (best to start with a clean VM) using https://gist.github.com/dirk-thomas/25906bd5af20e64d311c:
   * Windows
   * Linux
