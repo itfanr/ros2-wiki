@@ -241,16 +241,13 @@ Received message with value:         47, and address: 0x7fd2ce0a2bc0
 
 As you can see you'll ever increasing numbers on each iteration, start with 42... because 42, and the whole time it reuses the same message, as demonstrated by the pointer addresses which do not change, which avoids unnecessary copies.
 
-### Other Toy Demos
-
-TODO Other demo ideas:
-- intra process with a fork to show copying
-- demonstrate use of `shared_ptr` and the effect on zero-copy
-
 ### The image pipeline demo
 
-This demo is meant to be a bit more concrete and relatable.
-In this demo we have a pipeline of three nodes, arranged as such: `camera_node` -> `watermark_node` -> `image_view_node`
+In this demo we'll use OpenCV to capture, annotate, and then view images.
+
+#### Simple pipeline
+
+First we'll have a pipeline of three nodes, arranged as such: `camera_node` -> `watermark_node` -> `image_view_node`
 
 The `camera_node` reads from camera device `0` on your computer, writes some information on the image and publishes it.
 The `watermark_node` subscribes to the output of the `camera_node` and adds more text before publishing it too.
@@ -265,11 +262,19 @@ In this situation, the pipeline is still running.
 
 Let's run the demo by executing the `image_pipeline_all_in_one` executable, and you should see something like this:
 
-![](http://i.imgur.com/CtkGLsN.png)
+![](http://i.imgur.com/tqiIVgT.png)
 
 You can pause the rendering of the image by pressing the spacebar and you can resume by pressing the spacebar again.
 You can also press `q` or `ESC` to exit.
 
 If you pause the image viewer, you should be able to compare the addresses written on the image and see that they are the same.
 
-TODO(wjwwood): do some other process layout for comparison.
+#### Pipeline with two image viewers
+
+Now let's look at an example just the one above, except it has two image view nodes.
+All the nodes are still in the same process, but now two image view windows should show up.
+Let's run it with the command `image_pipeline_with_two_image_view`:
+
+![](http://i.imgur.com/iLIT02t.png)
+
+Just like the last example, you can pause the rendering with the spacebar and continue by pressing the spacebar a second time. You can stop the updating to inspect the pointers written to the screen.
