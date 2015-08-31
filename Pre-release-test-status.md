@@ -29,7 +29,7 @@ Feel free to add more items here.
       * **Tully** :heavy_check_mark:
     * OpenSplice binaries - **Morgan** :heavy_check_mark: :heavy_check_mark: :bike: :chicken: :fork_and_knife: 
     * RTI OSRF Debs
-      * **Steve (in process)** ~~[install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79), temporary workaround: install opensplice.~~ Also I ran into the rosbag bug but had trouble finding info about it, but that will be fixed with the next ros_comm release.
+      * **Steve (in process)** ~~[install fails if opensplice isn't installed](https://github.com/ros2/rmw_opensplice/issues/79), temporary workaround: install opensplice.~~ I ran into the rosbag bug when building ros1_bridge, which is [documented in the ros1_bridge README](https://github.com/ros2/ros1_bridge/blob/master/README.md), but was hard to find on the build from source tutorial, though that will be fixed with the next ros_comm release.
     * RTI Trial Binaries
       * **Tully** :heavy_check_mark:
   * OSX
