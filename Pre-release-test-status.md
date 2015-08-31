@@ -76,8 +76,16 @@ Feel free to add more items here.
       * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
 * Stuff not covered by the demos:
-  * services - **Esteve** :heavy_check_mark: 
-  * parameters - **Esteve** :heavy_check_mark: 
+  * services
+    * Linux
+      * **Esteve** :heavy_check_mark: 
+    * Windows
+      * **Esteve** :cry:
+  * parameters
+    * Linux
+      * **Esteve** :heavy_check_mark: 
+    * Windows
+      * **Esteve** :cry:
   * documentation entry point
     * **Brian** :heavy_check_mark: 
 * Binaries not covered by the demos
