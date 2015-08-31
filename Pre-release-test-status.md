@@ -51,6 +51,7 @@ Feel free to add more items here.
     * Windows
       * **Esteve**
         * From binary: :heavy_check_mark: 
+        * From source: :heavy_check_mark: 
   * embedded (at least one person should grab hardware from Morgan and try the whole thing)
     * Linux
       * **Esteve**
@@ -84,17 +85,17 @@ Feel free to add more items here.
 * Binaries not covered by the demos
   * add_two_ints_server / add_two_ints_client
     * Windows
-      * **Esteve** (from source) :heavy_check_mark: 
-      * **Esteve** (from binaries) :cry: 
+      * **Esteve** from binary :cry: 
+      * **Esteve** from source :heavy_check_mark: 
     * Linux
-      * **Esteve** (from source) :heavy_check_mark: 
+      * **Esteve** from source :heavy_check_mark: 
   * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
     * Windows
-      * **Esteve** (from source) :cry:
+      * **Esteve** from source :cry:
     * Linux
-      * **Esteve** (from source) :heavy_check_mark: 
+      * **Esteve** from source :heavy_check_mark: 
   * talker_memory / listener_memory
     * Windows
-      * **Esteve** (from source) :heavy_check_mark: 
-      * **Esteve** (from binaries) :heavy_check_mark: 
+      * **Esteve** from binaries :heavy_check_mark: 
+      * **Esteve** from source :heavy_check_mark: 
 * Remaining ToDos in the wiki pages (currently 6)
