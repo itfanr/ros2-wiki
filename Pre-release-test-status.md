@@ -93,6 +93,7 @@ Feel free to add more items here.
       * **Esteve** from source :heavy_check_mark: 
   * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
     * Windows
+      * **Esteve** from binary :cry:
       * **Esteve** from source :cry:
     * Linux
       * **Esteve** from source :heavy_check_mark: 
