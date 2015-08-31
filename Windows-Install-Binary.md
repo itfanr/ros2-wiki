@@ -8,7 +8,7 @@ We support Windows 8.1.
 
 ## Installing prerequisites
 
-### Install the Visual Studio Community 2015
+### Install Visual Studio Community 2015
 
 If you already have a paid version of Visual Studio 2015 (Professional, Enterprise), skip this step.
 
