@@ -9,11 +9,11 @@ Feel free to add more items here.
   * ~~RC 1 was built without `CMAKE_BUILD_TYPE` being set~~
   * ~~RC 2 was built with `CMAKE_BUILD_TYPE=RelWithDebInfo`~~
   * RC 3:
-    * https://github.com/ament/ament_package/pull/17
-    * https://github.com/ros2/demos/pull/20
-    * https://github.com/ros2/demos/pull/21
-    * https://github.com/ros2/examples/pull/58
-    * https://github.com/ros2/rmw_opensplice/pull/80
+    * ~~https://github.com/ament/ament_package/pull/17~~
+    * ~~https://github.com/ros2/demos/pull/20~~
+    * ~~https://github.com/ros2/demos/pull/21~~
+    * ~~https://github.com/ros2/examples/pull/58~~
+    * ~~https://github.com/ros2/rmw_opensplice/pull/80~~
 * From-binary installation (best to start with a clean VM):
   * Windows
       * **Esteve** :heavy_check_mark: Binaries need MSVCP140D.DLL, added instructions to install VS2015 Community https://github.com/ros2/ros2/wiki/Windows-Install-Binary#install-visual-studio-community-2015 
