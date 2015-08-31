@@ -16,6 +16,18 @@ Microsoft provides a free of charge version of Visual Studio 2015, named Communi
 
 https://www.visualstudio.com/products/visual-studio-community-vs
 
+Make sure that the Visual C++ features are installed. First choose 'Custom installation':
+
+![Custom installation](http://i.imgur.com/tUcOMOA.png)
+
+Next check Visual C++:
+
+![Visual C++](http://i.imgur.com/yWVEUkm.png)
+
+Ensure that the correct features will be installed:
+
+![Summary](http://i.imgur.com/VxdbA7G.png)
+
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to work with.
