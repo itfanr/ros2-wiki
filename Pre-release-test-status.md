@@ -14,7 +14,7 @@ Feel free to add more items here.
     * https://github.com/ros2/rmw_opensplice/issues/79
 * From-binary installation (best to start with a clean VM):
   * Windows
-      * **Esteve** :heavy_check_mark: Binaries need MSVCP140D.DLL, added instructions to install VS2015 Community. Fix for ament: https://github.com/ament/ament_package/pull/17 Hack for OpenCV DLLs mismatch (do not merge): https://github.com/ros2/ros2/tree/hack-opencv-dlls
+      * **Esteve** :heavy_check_mark: Binaries need MSVCP140D.DLL, added instructions to install VS2015 Community https://github.com/ros2/ros2/wiki/Windows-Install-Binary#install-visual-studio-community-2015 Fix for ament: https://github.com/ament/ament_package/pull/17
   * Linux
     * **Tully** :heavy_check_mark:
     * **Steve** installed with docker `osrf/ros:indigo-desktop` image. :heavy_check_mark:
