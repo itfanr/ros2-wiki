@@ -79,7 +79,7 @@ Feel free to add more items here.
     * OSX
       * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
-      * **Esteve**
+      * **Esteve** :heavy_check_mark: (used Clumsy, http://jagt.github.io/clumsy/index.html)
 * Stuff not covered by the demos:
   * documentation entry point
     * **Brian** :heavy_check_mark: 
