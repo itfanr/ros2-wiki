@@ -93,6 +93,14 @@ Feel free to add more items here.
     * **Brian** :heavy_check_mark: 
 * Binaries not covered by the demos
   * add_two_ints_server / add_two_ints_client
+    * Windows
+      * **Esteve* (from source) :heavy_check_mark: 
+      * **Esteve* (from binaries) :cry: 
   * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
+    * Windows
+      * **Esteve** (from source) :cry:
   * talker_memory / listener_memory
+    * Windows
+      * **Esteve** (from source) :heavy_check_mark: 
+      * **Esteve** (from binaries) :heavy_check_mark: 
 * Remaining ToDos in the wiki pages (currently 6)
