@@ -79,6 +79,7 @@ Feel free to add more items here.
     * OSX
       * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
+      * **Esteve**
 * Stuff not covered by the demos:
   * documentation entry point
     * **Brian** :heavy_check_mark: 
