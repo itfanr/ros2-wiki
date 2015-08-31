@@ -117,7 +117,7 @@ We won't see much of a difference if we change the quality of service settings, 
 ### Add network traffic
 
 This next section is Linux-specific.
-For OS X user, however, you can achieve a similar effect with the utility called "Network Link Conditioner" which is part of the xcode tool suite, but it will not be covered in this tutorial.
+However, for OS X and Windows you can achieve a similar effect with the utilities "Network Link Conditioner" (part of the xcode tool suite) and "Clumsy" (http://jagt.github.io/clumsy/index.html), respectively, but they will not be covered in this tutorial.
 
 We are going to use the Linux network traffic control utility, `tc` (http://linux.die.net/man/8/tc).
 
