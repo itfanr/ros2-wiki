@@ -94,8 +94,8 @@ Feel free to add more items here.
 * Binaries not covered by the demos
   * add_two_ints_server / add_two_ints_client
     * Windows
-      * **Esteve* (from source) :heavy_check_mark: 
-      * **Esteve* (from binaries) :cry: 
+      * **Esteve** (from source) :heavy_check_mark: 
+      * **Esteve** (from binaries) :cry: 
   * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
     * Windows
       * **Esteve** (from source) :cry:
