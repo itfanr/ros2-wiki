@@ -190,6 +190,18 @@ You can additionally build the tests by adding the `--build-tests` option:
 > python src\ament\ament_tools\scripts\ament.py build --build-tests
 ```
 
+### Install a binary distribution of OpenCV compatible with Visual Studio 2015
+
+You can download a precompiled version of OpenCV from:
+
+https://github.com/ros2/ros2/releases/download/pre-alpha-rc1/opencv-2.4.11-win-vs2015-x64.zip
+
+Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt (requires Admin privileges):
+
+```
+setx -m OPENCV_DIR C:\opencv\build
+```
+
 ### Testing and Running
 
 You can run the tests using this command:
