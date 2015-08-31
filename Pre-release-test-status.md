@@ -79,16 +79,6 @@ Feel free to add more items here.
       * **William** :+1: (binary, used Network Link Conditioner instead of `tc`)
     * Windows
 * Stuff not covered by the demos:
-  * services
-    * Linux
-      * **Esteve** :heavy_check_mark: 
-    * Windows
-      * **Esteve** :cry:
-  * parameters
-    * Linux
-      * **Esteve** :heavy_check_mark: 
-    * Windows
-      * **Esteve** :cry:
   * documentation entry point
     * **Brian** :heavy_check_mark: 
 * Binaries not covered by the demos
@@ -96,9 +86,13 @@ Feel free to add more items here.
     * Windows
       * **Esteve** (from source) :heavy_check_mark: 
       * **Esteve** (from binaries) :cry: 
+    * Linux
+      * **Esteve** (from source) :heavy_check_mark: 
   * list_parameters / parameter_events / set_and_get_parameters (and the _async versions)
     * Windows
       * **Esteve** (from source) :cry:
+    * Linux
+      * **Esteve** (from source) :heavy_check_mark: 
   * talker_memory / listener_memory
     * Windows
       * **Esteve** (from source) :heavy_check_mark: 
