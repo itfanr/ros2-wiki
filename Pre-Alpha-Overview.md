@@ -1,4 +1,4 @@
-# ROS 2 Pre-alpha release (Aug/Sep 2015)
+# ROS 2 Pre-alpha release (code name Anchor; Aug/Sep 2015)
 
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
@@ -26,7 +26,7 @@ articles](http://design.ros.org).
 ## Status
 
 In August / September 2015, we are releasing a *pre-alpha* release of ROS
-2, code-named **NAME-TBD**.
+2, code-named **Anchor**.
 Our primary goal with this release is to give
 you the opportunity to understand how ROS 2 works, in particular how it
 differs from ROS 1.
