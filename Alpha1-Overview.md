@@ -1,4 +1,4 @@
-# ROS 2 Pre-alpha release (code name *Anchor*; Aug/Sep 2015)
+# ROS 2 Alpha 1 release (code name *Anchor*; Aug 2015)
 
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
@@ -25,8 +25,8 @@ articles](http://design.ros.org).
 
 ## Status
 
-In August / September 2015, we are releasing a *pre-alpha* release of ROS
-2, code-named **Anchor**.
+On August 31, 2015, we are releasing ROS 2 alpha1,
+code-named **Anchor**.
 Our primary goal with this release is to give
 you the opportunity to understand how ROS 2 works, in particular how it
 differs from ROS 1.
@@ -45,7 +45,7 @@ At this point, the ROS 2 documentation is pretty sparse and much of the system i
 
 ## Scope
 
-As the "pre-alpha" qualifier suggests, this release of ROS 2 is far from
+As the "alpha" qualifier suggests, this release of ROS 2 is far from
 complete.
 You should not expect to switch from ROS 1 to ROS 2, nor should
 you expect to build a new robot control system with ROS 2.
