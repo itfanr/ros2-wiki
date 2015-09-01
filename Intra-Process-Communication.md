@@ -278,3 +278,92 @@ Let's run it with the command `image_pipeline_with_two_image_view`:
 ![](http://i.imgur.com/iLIT02t.png)
 
 Just like the last example, you can pause the rendering with the spacebar and continue by pressing the spacebar a second time. You can stop the updating to inspect the pointers written to the screen.
+
+As you can see in the example image above, we have one image with all of pointers the same and then another image with the same pointers as the first image for the first two entries, but the last pointer on the second image is different. To understand why this is happening consider the graph's topology:
+
+`camera_node` -> `watermark_node` -> `image_view_node`
+                                 \-> `image_view_node2`
+
+The link between the `camera_node` and the `watermark_node` can use the same pointer without copying because there is only one intra process subscription to which the message should be delivered. But for the link between the `watermark_node` and the two image view nodes the relationship is one to many, so if the image view nodes were using `unique_ptr` callbacks then it would be impossible to deliver the ownership of the same pointer to both. It can be, however, delivered to one of them. Which one would get the original pointer is not defined, but instead is simply the last to be delivered.
+
+But the image view nodes are not subscribed with `unique_ptr` callbacks. Instead they are subscribed with `const shared_ptr`'s. This means the system could have delivered the same `shared_ptr` to both callbacks. Currently the intra process system is not that intelligent and so it stores the message internally as a `unique_ptr` and copies it into a `shared_ptr` for each callback until the last one. On the last callback, regardless of the type, the ownership is transferred out of intra process storage and in the case of the image view, the ownership is moved into a new `shared_ptr` and delivered. Thus, one of the image view nodes gets a copy and the other gets the original.
+
+#### Pipeline with interprocess viewer
+
+One other important thing to get right is to avoid interruption of the intra process zero copy behavior when interprocess subscriptions are made. To test this we can run the first image pipeline demo, `image_pipeline_all_in_one`, and then run an instance of the stand alone `image_view_node`. This will look something like this:
+
+![](http://i.imgur.com/MoWRH1u.png)
+
+It's hard to pause both images at the same time so the images may not line up, but the important thing to notice is that the `image_pipeline_all_in_one` image view shows the same address for each step. This means that the intra process zero copy is preserved even when an external view is subscribed as well. You can also see that the interprocess image view has different process id's for the first two lines of text and the PID of the standalone image viewer in the third line of text.
+
+## Looking forward
+
+These demos are the foundation for some cool new features on which we're actively working, but right now some things are missing.
+
+### Room for Improvement
+
+I'll start by pointing out what we know we can do better or different and move on from there.
+
+#### Intra Process Manager Storage
+
+At the core of the intra process implementation is something called the intra process manager. It is the shared state between nodes (not necessarily global) which facilitates intra process communication. The intra process has a lot of room for improvement, but one thing on our short list is to have it be more intelligent about how to store the user's data internally. In the example with two image view nodes all in the same process, we could have delivered the user's provided pointer to both image view nodes as copies of a single `shared_ptr`. This is possible only because of the intra process graph's structure, but given any relationship of a publisher to one or more intra process subscriptions there should be a prefer solution.
+
+For example, imagine if there was a publisher connected to three intra process subscriptions where one was subscribed as a `unique_ptr` and the other two were subscribed as a `shared_ptr`. If you store the the message as a `unique_ptr` then you must make a copy for each of the `shared_ptr` but you can deliver to the `unique_ptr` callback without a copy. But if you instead stored the message as a `shared_ptr` then you give that `shared_ptr` to the two `shared_ptr` callbacks and make one copy for the `unique_ptr` callback, which would save on copies. In both cases I've assumed that only one copy of the message should be stored, i.e. we will not store a `unique_ptr` of the message as well as a `shared_ptr` copy. There is a performance trade-off to make those copies or not, so one thing to figure out moving forward is how and when to expose this trade-off to the developer.
+
+This problem gets more interesting when we start doing Type Masquerading :smile:, which I'll take about below.
+
+#### Avoiding Unnecessary Interprocess Publishes
+
+Currently we're relying on the middleware, the DDS vendor, to avoid publishing to the wire unnecessarily, but no matter what we have to give the middleware a copy of the user's message. We could avoid this copy given to the system if we could know if it is needed. We can do this currently by checking to see if there are any non intra process subscriptions currently attached to the publisher. The problem with this comes in when we go to implement latching, which I'll talk about below.
+
+#### Avoiding Memory Allocation
+
+In other parts of the system we've worked really hard to allow users to avoid memory allocation. This has performance benefits and may be required for real-time or embedded scenarios. We cannot currently do that with intra process. Mostly this is because we haven't had time to figure out the right interfaces, but the general problem is that if a message needs to be delivered to more than one subscription, or if the user gives us a `const &` or `const shared_ptr` when publishing, we need to make a copy. And the destination of the copy is currently created using `new` and is not configurable. We expect to resolve that in the future.
+
+#### Performance, Performance, Performance
+
+This is a very rough first draft. There is a lot of room for improvement, even beyond what I enumerated above. We'll start to improve performance as we dig into the details of the system, build up better understanding of exactly what our middleware vendors are doing, and as we try alternative strategies for implementing intra process.
+
+### What's Missing
+
+Those are some things we can improve with what's already there. But there are also some things we'd like to add on top of this that are pretty interesting and some things that are just necessary.
+
+#### Latching
+
+We haven't fully implemented the concept of latching yet, but it's very likely we'll need to adjust the implementation of the intra process manager to account for the fact that late intra process subscriptions should be delivered to as well. There are several options on how to do that, and we'll do some testing and figure out what to do in the near future.
+
+#### Beyond Pub/Sub
+
+We've not done any of this with Services, Parameters, or Actions, but we will.
+
+#### Type Masquerading
+
+This is the coolest (in my opinion) upcoming feature that we didn't get to in this demo.
+Imagine the image pipeline demo above, but rather than passing `sensor_msgs/Image`'s around, you're publishing and subscribing to `cv::Mat` objects. This exists in ROS 1, see: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
+
+In ROS 1, this is accomplished by serializing/deserializing the third party type when handling it. This means that with intra process you'll be serializing when passing it between nodelets. But in ROS 2 we want to do it in the most performant way possible. Similar to how these demos have been demonstrating that an instance of a message can be used through the whole pipeline in certain cases, we'd like to do the same with third party types. So conceivably you could have the image pipeline with a single `cv::Mat` which never gets copied by the middleware. To do this requires some additional intelligence in the intra process manager, but we've already got a design and some proof of concepts in the works.
+
+Given these features, hopefully there will come a point where you can trust the middleware to handle your data as efficiently as is possible. This will allow you to write performant algorithms without sacrificing modularity or introspection!
+
+#### Tooling
+
+One of the sticking points of nodelets in ROS 1 was the complexity of defining, building, and using them.
+We've not tackled that problem yet, but we are working on it. We've got a port of class loader (https://github.com/ros/class_loader/tree/ros2) and pluginlib (https://github.com/ros/pluginlib/tree/ros2) for ROS 2, but we only have prototypes of the CMake infrastructure which will help users build and run their nodes. Here's a sketch of the design we expect:
+
+```cmake
+add_node(my_node src/my_node.cpp)
+target_link_libraries(my_node ${external_dependency_LIBRARIES} ...)
+```
+
+We'll provide an interface similar to CMake's `add_executable` or `add_library`. This doesn't preclude the idea of providing a more automatic solution a la `ament_cmake_auto`.
+
+This simple CMake entry will generate a few things:
+
+- A marker file used to discover the node by pluginlib.
+- A shared library for your node.
+- An executable for your node.
+ - The executable can run the node in it's own process, or serve as a proxy while the node runs in a different container.
+
+We'll also need to develop the container, which can run nodes inside of itself and is controller externally by ROS primitives like Services.
+
+We've got a lot of work to do, but hopefully this tutorial gives you a sense of where we're going and what we're trying to do in terms of performance and features.
