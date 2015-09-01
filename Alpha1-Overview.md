@@ -1,4 +1,4 @@
-# ROS 2 Alpha 1 release (code name *Anchor*; Aug 2015)
+# ROS 2 alpha1 release (code name *Anchor*; Aug 2015)
 
 Welcome to the first release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
