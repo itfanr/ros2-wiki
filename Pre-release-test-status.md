@@ -8,10 +8,11 @@ Feel free to add more items here.
 * Create up-to-date packages from a known state (e.g. create .repos file with hashed as gist)
   * ~~RC 1 was built without `CMAKE_BUILD_TYPE` being set~~
   * ~~RC 2 was built with `CMAKE_BUILD_TYPE=RelWithDebInfo`~~
-  * RC 3:
+  * RC 3 (https://gist.github.com/dirk-thomas/449706c6029c2be99899):
     * ~~https://github.com/ament/ament_package/pull/17~~
     * ~~https://github.com/ros2/demos/pull/20~~
     * ~~https://github.com/ros2/demos/pull/21~~
+    * ~~https://github.com/ros2/demos/pull/22~~
     * ~~https://github.com/ros2/examples/pull/58~~
     * ~~https://github.com/ros2/rmw_opensplice/pull/80~~
 * From-binary installation (best to start with a clean VM):
