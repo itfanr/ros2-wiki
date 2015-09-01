@@ -21,7 +21,7 @@ opportunity to make substantial changes to the system, including changing
 some of the core APIs.
 For a deeper treatment of those changes and their
 rationale, consult the other [ROS 2 design
-articles](http://design.ros.org).
+articles](http://design.ros2.org).
 
 ## Status
 
