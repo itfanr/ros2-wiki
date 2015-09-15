@@ -50,9 +50,13 @@ When filling an issue please make sure to:
 - Defensive programming: ensure that assumptions are held as early as possible.
   E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
 - All error messages must be directed to `stderr`.
-- Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
 - Declare variables in the narrowest scope possible.
 - Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
+
+#### C++ specific
+
+- Avoid using direct streaming (`<<`) to `stdout` / `stderr` to prevent interleaving between multiple threads.
+- Avoid using references for `std::shared_ptr` since that subverts the reference counting. If the original instance goes out of scope and the reference is being used it accesses freed memory.
 
 ## Language Versions and Code Format
 
