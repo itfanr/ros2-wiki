@@ -31,6 +31,7 @@ When filling an issue please make sure to:
 
 - A pull request should only focus on one change.
   Separate changes should go into separate pull requests.
+  See [GitHub's guide to writing the perfect pull request](https://github.com/blog/1943-how-to-write-the-perfect-pull-request)
 - A patch should be minimal in size and avoid any kind of unnecessary changes.
 - Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
