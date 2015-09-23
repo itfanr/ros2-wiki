@@ -16,6 +16,16 @@ This page defines the practices and policies we employ when developing ROS 2.
 - [Filesystem layout](#filesystem-layout)
 - [Documentation](#documentation)
 
+## General Principles
+
+Some principles are common to all ROS 2 development:
+
+- **Shared ownership**: Everybody working on ROS2 should feel ownership over all parts of the system.
+  The original author of a chunk of code does not have any special permission or obligation to control or maintain that chunk of code.
+  Everyone is free to propose changes anywhere, to handle any type of ticket, and to review any pull request.
+- **Be willing to work on anything**: As a corollary to shared ownership, everybody should be willing to take on any available task and contribute to any aspect of the system.
+- **Ask for help**: If you run into trouble on something, ask your fellow developers for help, via tickets, comments, or email, as appropriate.
+
 ## General Practices
 
 Some practices are common to all ROS 2 development:
@@ -36,6 +46,16 @@ When filling an issue please make sure to:
 - Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 - Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
+- A minimum of 1 `+1` from a fellow developer is required to consider a pull request to be approved, which is required before merging.
+  - (Maybe one day, GitHub will add a pull request `Approve` button like Bitbucket has long had.
+    Then we could stop having to look for `+1` in comments.
+    People have even written [browser code](https://github.com/cisox/github-approve-deny) to parse such comments into buttons.)
+- Any developer is welcome to review and approve a pull request (see [General Principles](#general-principles)).
+- When you start reviewing a pull request, assign it to yourself so that other developers know that you're reviewing it.
+- Pull-request review is not read-only, with the reviewer making comments and then waiting for the author to address them.
+  As a reviewer, feel free to make minor improvements (typos, style issues, etc.) in-place.
+  As a reviewer, also feel free to make more substantial improvements, but consider putting them in a separate branch (either mention the new branch in a comment, or open another pull request from the new branch to the original branch).
+- Any developer (the author, the reviewer, or somebody else) can merge any approved pull request.
 
 ### Development Process
 
