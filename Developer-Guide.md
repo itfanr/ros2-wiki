@@ -4,6 +4,7 @@ This page defines the practices and policies we employ when developing ROS 2.
 
 ## Table of Contents
 
+- [General Principles](#general-principles)
 - [General Practices](#general-practices)
 - [Language Versions and Code Format](#language-versions-and-code-format)
   - [C](#c)
