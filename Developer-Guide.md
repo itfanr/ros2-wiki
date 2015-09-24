@@ -61,13 +61,13 @@ When filling an issue please make sure to:
   If at any time there is a regression it is the top priority to restore at least the previous state.
 - Always build with tests enabled.
 - Always run tests locally after changes and before proposing them in a pull request.
-  Beside using automated tests also run the modified code path manually to ensure that the patch works as intended.
+  Besides using automated tests, also run the modified code path manually to ensure that the patch works as intended.
 - Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
 
 ### Programming conventions
 
 - Defensive programming: ensure that assumptions are held as early as possible.
-  E.g. check every return code and make sure to least throw an exception until the case is handled more gracefully.
+  E.g. check every return code and make sure to at least throw an exception until the case is handled more gracefully.
 - All error messages must be directed to `stderr`.
 - Declare variables in the narrowest scope possible.
 - Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.
