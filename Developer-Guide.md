@@ -286,7 +286,7 @@ Since there is not an existing CMake style guide we will define our own:
 
 ### Markdown
 
-The following rules to format the markdown syntax is intended to increase readability as well versioning.
+The following rules to format the markdown syntax is intended to increase readability as well as versioning.
 
 - Each section title should be preceded by one empty line and succeeded by one empty line.
   - Rationale: It expedites to get an overview about the structure when screening the document.
