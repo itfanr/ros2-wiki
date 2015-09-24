@@ -48,11 +48,8 @@ When filling an issue please make sure to:
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 - Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
 - A minimum of 1 `+1` from a fellow developer is required to consider a pull request to be approved, which is required before merging.
-  - (Maybe one day, GitHub will add a pull request `Approve` button like Bitbucket has long had.
-    Then we could stop having to look for `+1` in comments.
-    People have even written [browser code](https://github.com/cisox/github-approve-deny) to parse such comments into buttons.)
 - Any developer is welcome to review and approve a pull request (see [General Principles](#general-principles)).
-- When you start reviewing a pull request, assign it to yourself so that other developers know that you're reviewing it.
+- When you start reviewing a pull request, comment on the pull request so that other developers know that you're reviewing it.
 - Pull-request review is not read-only, with the reviewer making comments and then waiting for the author to address them.
   As a reviewer, feel free to make minor improvements (typos, style issues, etc.) in-place.
   As a reviewer, also feel free to make more substantial improvements, but consider putting them in a separate branch (either mention the new branch in a comment, or open another pull request from the new branch to the original branch).
