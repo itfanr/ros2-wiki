@@ -68,7 +68,7 @@ When filing an issue please make sure to:
 
 To help organize the work, the core ROS 2 development team is using a kanban system hosted at waffle.io: [ROS 2 kanban](https://waffle.io/ros2/ros2).
 This board augments the capabilities of GitHub by using labels to give a custom view into issues and pull requests across multiple repositories.
-The data produced and edited via waffle.io are stored in underlying the GitHub objects, so there's no requirement to use waffle.io (or for the core team to be tied to it); it just provides a useful perspective on things.
+The data produced and edited via waffle.io are stored in the underlying GitHub objects, so there's no requirement to use waffle.io (or for the core team to be tied to it); it just provides a useful perspective on things.
 
 Here's how we're using the columns in the board:
 
