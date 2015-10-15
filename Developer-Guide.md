@@ -88,9 +88,9 @@ This column shows recently completed cards, for informational purposes only.
 
 Tips for working with the kanban board:
 
-* Requesting permission to make changes: **TODO**
-* Using markup to connect issues and pull requests: **TODO**
-* Doing equivalent things outside waffle.io, directly via GitHub: **TODO**
+* Requesting permission to make changes: Simply comment on specific tickets that you want to work on it. Depending on the complexity it might be useful to describe how you want to address it. We will update the status (if you don't have the permission) and you can start working on a pull request. If you contribute regularly we will likely just grant you permission to manage the labels etc. yourself.
+* Using markup to connect issues and pull requests: see the waffle.io FAQ: https://github.com/waffleio/waffle.io/wiki/FAQs#prs-connect-keywords
+* Doing equivalent things outside waffle.io, directly via GitHub: The column a card is in is determined by the label. The first and last column do not require a specific label. For the other column a label with the same name can be assigned.
 
 ### Programming conventions
 
