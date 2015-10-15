@@ -33,7 +33,7 @@ Some practices are common to all ROS 2 development:
 
 ### Issues
 
-When filling an issue please make sure to:
+When filing an issue please make sure to:
 
 - Include enough information for another person to understand the issue.
 - In case of a bug consider to provide a [short, self contained, correct (compilable), example](http://sscce.org/).
@@ -63,6 +63,34 @@ When filling an issue please make sure to:
 - Always run tests locally after changes and before proposing them in a pull request.
   Besides using automated tests, also run the modified code path manually to ensure that the patch works as intended.
 - Always run CI jobs for all platforms for every pull request and include links to jobs the pull request.
+
+### kanban board (waffle.io)
+
+To help organize the work, the core ROS 2 development team is using a kanban system hosted at waffle.io: [ROS 2 kanban](https://waffle.io/ros2/ros2).
+This board augments the capabilities of GitHub by using labels to give a custom view into issues and pull requests across multiple repositories.
+The data produced and edited via waffle.io are stored in underlying the GitHub objects, so there's no requirement to use waffle.io (or for the core team to be tied to it); it just provides a useful perspective on things.
+
+Here's how we're using the columns in the board:
+
+* **Backlog**: cards (issues) that nobody is yet working on.
+Their order in the backlog is an approximate indicator of priority, with cards higher in the column having higher priority.
+* **Ready**: cards on which work will be started very soon.
+Cards in this column should have an owner assigned.
+Cards should not sit in this column for more than a few days.
+* **In Progress**: cards on which work is currently in progress.
+Cards in this column must have an owner assigned.
+Cards should not sit in this column for more than a week.
+When it is determined that a card will take longer, break it up into multiple cards and put the extras in the backlog.
+* **In Review**: cards for which the work is done and the relevant pull request/s is/are ready for review.
+Cards remain in this column during review, but if review uncovers significant extra work to be done, move the card into an earlier column as appropriate.
+* **Done**: cards for which the work is done, meaning that the relevant pull request/s has/have been merged.
+This column shows recently completed cards, for informational purposes only.
+
+Tips for working with the kanban board:
+
+* Requesting permission to make changes: **TODO**
+* Using markup to connect issues and pull requests: **TODO**
+* Doing equivalent things outside waffle.io, directly via GitHub: **TODO**
 
 ### Programming conventions
 
