@@ -207,13 +207,13 @@ setx -m OPENCV_DIR C:\opencv\build
 You can run the tests using this command:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py test .\src
+> python src\ament\ament_tools\scripts\ament.py test
 ```
 
 Afterwards you can get a summary of the tests using this command:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py test_results .\src
+> python src\ament\ament_tools\scripts\ament.py test_results
 ```
 
 You can run the built examples by opening a new `cmd.exe` sourcing the `local_setup.bat` file and then executing them directly, for example:
