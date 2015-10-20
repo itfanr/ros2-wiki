@@ -11,19 +11,35 @@ This is a list of the features targeted for development in the future.
 *Under construction; not final.*
 
 ### alpha2 (circa 2015-10-30)
-- Finish rcl
-- Python client library
-- Real-time-safe intra-process messaging?
-- Something about Windows?
-- Something about QoS?
+- Refactor rclcpp into a library
+ - Requires resolution of Windows lazy symbolism
+- Support for custom allocators in rclcpp
+ - Useful for real-time messaging
+- Feature parity of Windows with Linux/OSX
+ - Workspace management
+ - Services
+ - Parameters
+- Support for FastRTPS
+ - At least on Linux
+ - Missing support for large message fragmentation
+- rclcpp API improvements
+- FreeRTPS improvements:
+ - Fragmentation of large messages (on the sending side)
+ - Camera demo
 
-### alpha3 (circa 2015-12-18)
+### alpha3 (circa 2015-12-18) (Star Wars release)
+- Refactor into rcl
+ - Include C message structures
+- Python client library
 - Component life-cycle:
   - Introspection and orchestration APIs
   - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - Launch system
   - Use life-cycle and orchestration
-- Gazebo support
+- Add TF support
+- Real-time-safe intra-process messaging
+- FreeRTPS improvements:
+ - RMW support
 
 ### alpha4 (circa 2016-02-12)
 - Graph API
@@ -37,6 +53,7 @@ This is a list of the features targeted for development in the future.
 - console logging, a la `rosconsole`
 - Add actions
 - Implement rclc
+- Gazebo support
 
 ### alpha5 (circa 2016-04-01)
 - data recording / playback, a la `rosbag`
