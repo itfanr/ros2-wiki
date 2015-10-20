@@ -8,16 +8,24 @@ The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.googl
 
 This is a list of the features targeted for development in the future.
 
-### alpha2
+*Under construction; not final.*
+
+### alpha2 (circa 2015-10-30)
+- Finish rcl
+- Python client library
+- Real-time-safe intra-process messaging?
+- Something about Windows?
+- Something about QoS?
+
+### alpha3 (circa 2015-12-18)
 - Component life-cycle:
   - Introspection and orchestration APIs
   - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - Launch system
   - Use life-cycle and orchestration
-- Finish rcl
-- Python client library
+- Gazebo support
 
-### alpha3
+### alpha4 (circa 2016-02-12)
 - Graph API
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Command line tools:
@@ -30,9 +38,12 @@ This is a list of the features targeted for development in the future.
 - Add actions
 - Implement rclc
 
-### alpha4
+### alpha5 (circa 2016-04-01)
 - data recording / playback, a la `rosbag`
 - *add more here*
+
+### alpha6 (circa 2016-05-13)
+- *TBD*
 
 ### Future
 - Continue to iterate on design documents: http://design.ros2.org
