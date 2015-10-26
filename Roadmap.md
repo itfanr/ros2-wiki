@@ -11,25 +11,27 @@ This is a list of the features targeted for development in the future.
 *Under construction; not final.*
 
 ### alpha2 (circa 2015-10-30)
+
 - Refactor rclcpp into a library
- - Requires resolution of Windows lazy symbolism
+  - Requires resolution of Windows lazy symbolism
 - Support for custom allocators in rclcpp
- - Useful for real-time messaging
+  - Useful for real-time messaging
 - Feature parity of Windows with Linux/OSX
- - Workspace management
- - Services
- - Parameters
+  - Workspace management
+  - Services
+  - Parameters
 - Support for FastRTPS
- - At least on Linux
- - Missing support for large message fragmentation
+  - At least on Linux
+  - Missing support for large message fragmentation
 - rclcpp API improvements
 - FreeRTPS improvements:
- - Fragmentation of large messages (on the sending side)
- - Camera demo
+  - Fragmentation of large messages (on the sending side)
+  - Camera demo
 
 ### alpha3 (circa 2015-12-18) (Star Wars release)
+
 - Refactor into rcl
- - Include C message structures
+  - Include C message structures
 - Python client library
 - Component life-cycle:
   - Introspection and orchestration APIs
@@ -39,9 +41,10 @@ This is a list of the features targeted for development in the future.
 - Add TF support
 - Real-time-safe intra-process messaging
 - FreeRTPS improvements:
- - RMW support
+  - RMW support
 
 ### alpha4 (circa 2016-02-12)
+
 - Graph API
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Command line tools:
@@ -56,13 +59,16 @@ This is a list of the features targeted for development in the future.
 - Gazebo support
 
 ### alpha5 (circa 2016-04-01)
+
 - data recording / playback, a la `rosbag`
 - *add more here*
 
 ### alpha6 (circa 2016-05-13)
+
 - *TBD*
 
 ### Future
+
 - Continue to iterate on design documents: http://design.ros2.org
 - Evaluate and support more DDS / RTPS implementations:
   - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
@@ -86,9 +92,9 @@ This is a list of the features targeted for development in the future.
 - Add pre-emption for services
 - Implement actions
 - Build packages in parallel
-- Run-time DDS implementation choice 
+- Run-time DDS implementation choice
 
-## Reducing Technical Debt
+### Reducing Technical Debt
 
 - Fix failing and flaky tests.
 - Add missing Windows stuff.
