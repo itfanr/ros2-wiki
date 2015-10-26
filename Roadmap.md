@@ -97,8 +97,9 @@ This is a list of the features targeted for development in the future.
 - Address TODOs in code / docs
 - Address important issues (e.g., services are broken on Windows)
 
+## Past releases
 
-## Pre Alpha release
+### Alpha 1 (2015-08-31)
 
 Our first release contains the following features and supports the following demos.
 
