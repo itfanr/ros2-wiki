@@ -1,7 +1,7 @@
 # Overview
 
 This will provide you with a quick summary of how to get up and running using an ament workspace.
-It will be a practical tutorial and is not designed to replace the core documentation.
+It will be a practical tutorial and is not designed to replace the core documentation. Make sure that you have setup your development environment according to the building-from-source [[instruction|Installation]].
 
 ## Background
 
