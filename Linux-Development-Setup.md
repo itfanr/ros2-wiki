@@ -168,7 +168,7 @@ Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be
 
 ### Out of memory
 
-The ros1_bridge in it's current form requires 4Gb of free RAM to compile.
+The ros1_bridge in its current form requires 4Gb of free RAM to compile.
 If you don't have that amount of RAM available it's suggested to use `AMENT_IGNORE` in that folder and skip it's compilation.
 
 ### Multiple Host Interference
