@@ -8,7 +8,7 @@ The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.googl
 
 This is a list of the features targeted for development in the future.
 
-*Under construction; not final.*
+*Subject to change.*
 
 ### alpha2 (circa 2015-10-30)
 
@@ -20,9 +20,6 @@ This is a list of the features targeted for development in the future.
   - Workspace management
   - Services
   - Parameters
-- Support for FastRTPS
-  - At least on Linux
-  - Missing support for large message fragmentation
 - rclcpp API improvements
 - FreeRTPS improvements:
   - Fragmentation of large messages (on the sending side)
@@ -30,6 +27,9 @@ This is a list of the features targeted for development in the future.
 
 ### alpha3 (circa 2015-12-18) (Star Wars release)
 
+- Support for FastRTPS
+  - At least on Linux
+  - Missing support for large message fragmentation
 - Refactor into rcl
   - Include C message structures
 - Python client library
