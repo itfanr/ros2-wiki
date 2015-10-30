@@ -1,4 +1,4 @@
-# ROS 2 alpha2 release (code name *Bailing wire*; October 2015)
+# ROS 2 alpha2 release (code name *Baling wire*; October 2015)
 
 Welcome to the second release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
@@ -26,7 +26,7 @@ articles](http://design.ros2.org).
 ## Status
 
 On October 30, 2015, we are releasing ROS 2 alpha2,
-code-named **Bailing wire**.
+code-named **Baling wire**.
 Our primary goal with this release is to add more features, while also addressing the feedback we received for the previous alpha 1 release.
 To that end, we built a set of [demos](Tutorials) that
 show some of the key features of ROS 2.
