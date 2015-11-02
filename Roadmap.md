@@ -12,6 +12,7 @@ This is a list of the features targeted for development in the future.
 
 ### alpha2 (circa 2015-10-30)
 
+- https://github.com/ros2/ros2/issues/131
 - Support for custom allocators in rclcpp
   - Useful for real-time messaging
 - Feature parity of Windows with Linux/OSX
