@@ -219,15 +219,15 @@ Afterwards you can get a summary of the tests using this command:
 You can run the built examples by opening a new `cmd.exe` sourcing the `local_setup.bat` file and then executing them directly, for example:
 
 ```
-> call ./install/local_setup.bat
-> ./install/bin/talker
+> call install\local_setup.bat
+> install\bin\talker
 ```
 
 In a separate shell you can do the same, but instead run the `listener`:
 
 ```
-> call ./install/local_setup.bat
-> ./install/bin/listener
+> call install\local_setup.bat
+> install\bin\listener
 ```
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
