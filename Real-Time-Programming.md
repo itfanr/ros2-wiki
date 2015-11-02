@@ -1,5 +1,3 @@
-# Real-time Programming
-
 **Alpha 2 Update**: The MemoryStrategy approach for zero page faults was refactored out in favor of adding a template argument to entities in rclcpp. We haven't yet implemented a zero-pagefault realtime allocator for this demo, but expect to have a working prototype by Alpha 3.
 
 ## Background
