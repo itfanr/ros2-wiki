@@ -8,6 +8,22 @@ We support Windows 8.1.
 
 ## Installing prerequisites
 
+### Install Chocolatey
+
+Chocolatey is a package manager for Windows, install it by follow their installation instructions:
+
+https://chocolatey.org/
+
+You'll use Chocolatey to install some other developer tools.
+
+### Install Python
+
+Open a Command Prompt and type the following to install Python via Chocolatey:
+
+```
+> choco install -y python
+```
+
 ### Install Visual Studio Community 2015
 
 If you already have a paid version of Visual Studio 2015 (Professional, Enterprise), skip this step.
