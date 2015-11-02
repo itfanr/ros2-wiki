@@ -12,8 +12,6 @@ This is a list of the features targeted for development in the future.
 
 ### alpha2 (circa 2015-10-30)
 
-- Refactor rclcpp into a library
-  - Requires resolution of Windows lazy symbolism
 - Support for custom allocators in rclcpp
   - Useful for real-time messaging
 - Feature parity of Windows with Linux/OSX
@@ -27,6 +25,8 @@ This is a list of the features targeted for development in the future.
 
 ### alpha3 (circa 2015-12-18) (Star Wars release)
 
+- Refactor rclcpp into a library
+  - Requires resolution of Windows lazy symbolism
 - Support for FastRTPS
   - At least on Linux
   - Missing support for large message fragmentation
