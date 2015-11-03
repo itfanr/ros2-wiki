@@ -77,7 +77,6 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 
 ### Building with the ROS 1 bridge
 
-To build the ROS 1 bridge, read the [ros1_bridge tutorial](
 The ROS 1 bridge requires a patched version of `rosbag` (for Python 3 compatibility) that has not yet been released.
 As a quick workaround, we're going to comment out one line in `rosbag`, build the ROS 1 bridge, then revert that change (to make your ROS 1 `rosbag` package work again).
 
@@ -95,7 +94,7 @@ Here are the steps:
     rm src/ros2/ros1_bridge/AMENT_IGNORE
     src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --only ros1_bridge --make-flags -j1
     # Un-patch rosbag to put back the non-Python3-compatible line
-    sed -i '' 's/#import roslz4/import roslz4/' $ROS_ROOT/../../lib/python2.7/site-packages/rosbag/bag.py).
+    sed -i '' 's/#import roslz4/import roslz4/' $ROS_ROOT/../../lib/python2.7/site-packages/rosbag/bag.py
 
 ## Try some examples
 
