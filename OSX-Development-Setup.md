@@ -77,24 +77,7 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 
 ### Building with the ROS 1 bridge
 
-The ROS 1 bridge requires a patched version of `rosbag` (for Python 3 compatibility) that has not yet been released.
-As a quick workaround, we're going to comment out one line in `rosbag`, build the ROS 1 bridge, then revert that change (to make your ROS 1 `rosbag` package work again).
-
-Also, building the ROS 1 bridge can consume a tremendous amount of memory to the point that it can easily overwhelm a computer if done with parallel compilation enabled.
-As such, we recommend first building everything else as usual, then coming back to build the ROS 1 bridge without parallel compilation.
-
-Here are the steps:
-
-    # Patch rosbag to remove non-Python3-compatible line
-    sed -i '' 's/import roslz4/#import roslz4/' $ROS_ROOT/../../lib/python2.7/site-packages/rosbag/bag.py
-    # Ignore ros1_bridge and build everything else
-    touch src/ros2/ros1_bridge/AMENT_IGNORE
-    src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
-    # Un-ignore ros1_bridge and build it, non-parallel
-    rm src/ros2/ros1_bridge/AMENT_IGNORE
-    src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --only ros1_bridge --make-flags -j1
-    # Un-patch rosbag to put back the non-Python3-compatible line
-    sed -i '' 's/#import roslz4/import roslz4/' $ROS_ROOT/../../lib/python2.7/site-packages/rosbag/bag.py
+To build the ROS 1 bridge, read the [ros1_bridge tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md#build-the-bridge-from-source).
 
 ## Try some examples
 
