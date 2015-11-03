@@ -47,6 +47,8 @@ Also install CMake:
 > choco install -y cmake
 ```
 
+You might also have to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` to the PATH.
+
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
 ### Installing Developer Tools
@@ -237,4 +239,3 @@ Note: it is not recommended to build in the same cmd prompt that you've sourced 
 ### CMake error setting modification time
 
 If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it it likely that an anti virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
-
