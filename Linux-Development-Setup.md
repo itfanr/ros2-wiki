@@ -63,6 +63,8 @@ sudo apt-get install libopensplice64  # from packages.osrfoundation.org
 
 ### Build the prototype using the bootstrap script from ament_tools
 
+Note: to build the ROS 1 bridge, read the [ros1_bridge instructions](https://github.com/ros2/ros1_bridge/blob/master/README.md#build-the-bridge-from-source).
+
 More info on working with an ament workspace can be found in [this tutorial](Ament-Tutorial).
 
 ```
