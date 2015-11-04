@@ -72,6 +72,15 @@ Received image #3
 ...
 ```
 
+Note: If you these examples do not work or you receive an error like `ddsi_conn_write failed -1` then you'll need to increase your system wide UDP packet size:
+
+```
+$ sudo sysctl -w net.inet.udp.recvspace=209715
+$ sudo sysctl -w net.inet.udp.maxdgram=65500
+```
+
+These changes will not persist a reboot.
+
 ### Command line options
 
 In one of your terminals, add a -h flag to the original command:
