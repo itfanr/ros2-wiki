@@ -178,31 +178,3 @@ If you don't have that amount of RAM available it's suggested to use `AMENT_IGNO
 If you're running multiple instances on the same network you may get interference.
 To avoid this you can set the environment variable `ROS_DOMAIN_ID` to a different integer, the default is zero.
 This will define the DDS domain id for your system.
-
-#### On OpenSplice
-
-If you are using OpenSplice you will need to change the config file.
-It should be accessible via `OSPL_URI` in your environment.
-You can either edit the file in place or make a copy and update your environment variable to point to the new copy.
-
-replace:
-
-```
-      <Id>0</Id>
-```
-
-with:
-
-```
-      <Id>${ROS_DOMAIN_ID}</Id>
-```
-
-In the debian packages this file is /usr/etc/opensplice/config/ospl.xml by default.
-
-To do this quickly use the following
-
-```
-cp /usr/etc/opensplice/config/ospl.xml ~
-sed -i 's|<Id>0</Id>|<Id>${ROS_DOMAIN_ID}</Id>|' ~/ospl.xml
-echo export OSPL_URI=file://$HOME/ospl.xml >> ~/.bashrc
-```
