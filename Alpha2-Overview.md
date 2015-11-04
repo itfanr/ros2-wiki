@@ -25,7 +25,7 @@ articles](http://design.ros2.org).
 
 ## Status
 
-On October 30, 2015, we are releasing ROS 2 alpha2,
+On November 3, 2015, we are releasing ROS 2 alpha2,
 code-named **Baling wire**.
 Our primary goal with this release is to add more features, while also addressing the feedback we received for the previous alpha 1 release.
 To that end, we built a set of [demos](Tutorials) that
