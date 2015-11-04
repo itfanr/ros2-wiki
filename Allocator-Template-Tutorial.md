@@ -136,7 +136,12 @@ The IntraProcessManager is a class that is usually hidden from the user, but in 
 
 Make sure to instantiate publishers and subscribers AFTER constructing the node in this way.
 
-## Testing the code
+## Example
+
+A full working example is available here:
+https://github.com/ros2/examples/blob/allocator_template_example/rclcpp_examples/src/topics/allocator_example.cpp
+
+## Testing and verifying the code
 How do you know that your custom allocator is actually getting called?
 
 The obvious thing to do would be to count the calls made to your custom allocator's `allocate` and `deallocate` functions and compare that to the calls to `new` and `delete`.
