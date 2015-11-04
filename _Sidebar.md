@@ -1,6 +1,6 @@
 * [[Home]]
 * [[alpha2 Release Overview|alpha2-Overview]]
-* [[Older Releases|Older-Releases]]
+* [[All Releases|Releases]]
 * [[Installation]]
 * [[Tutorials]]
 * [[Contact]]
