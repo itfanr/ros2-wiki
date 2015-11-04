@@ -244,7 +244,7 @@ As you can see you'll ever increasing numbers on each iteration, start with 42..
 
 In this demo we'll use OpenCV to capture, annotate, and then view images.
 
-Note: If you these examples do not work or you receive an error like `ddsi_conn_write failed -1` then you'll need to increase your system wide UDP packet size:
+Note for OS X users: If you these examples do not work or you receive an error like `ddsi_conn_write failed -1` then you'll need to increase your system wide UDP packet size:
 
 ```
 $ sudo sysctl -w net.inet.udp.recvspace=209715
