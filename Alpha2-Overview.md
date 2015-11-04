@@ -53,7 +53,6 @@ your own demos.
 
 The major features included in this release are:
 
-- Refactor rclcpp into a library
 - Support for custom allocators in rclcpp, useful for real-time messaging
 - Feature parity of Windows with Linux/OSX, including workspace management, services and parameters
 - rclcpp API improvements
