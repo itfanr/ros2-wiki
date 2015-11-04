@@ -10,21 +10,7 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### alpha2 (circa 2015-10-30)
-
-- https://github.com/ros2/ros2/issues/131
-- Support for custom allocators in rclcpp
-  - Useful for real-time messaging
-- Feature parity of Windows with Linux/OSX
-  - Workspace management
-  - Services
-  - Parameters
-- rclcpp API improvements
-- FreeRTPS improvements:
-  - Fragmentation of large messages (on the sending side)
-  - Camera demo
-
-### alpha3 (circa 2015-12-18) (Star Wars release)
+### Alpha 3 (circa 2015-12-18) (Star Wars release)
 
 - Refactor rclcpp into a library
   - Requires resolution of Windows lazy symbolism
@@ -44,7 +30,7 @@ This is a list of the features targeted for development in the future.
 - FreeRTPS improvements:
   - RMW support
 
-### alpha4 (circa 2016-02-12)
+### Alpha 4 (circa 2016-02-12)
 
 - Graph API
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
@@ -59,12 +45,12 @@ This is a list of the features targeted for development in the future.
 - Implement rclc
 - Gazebo support
 
-### alpha5 (circa 2016-04-01)
+### Alpha 5 (circa 2016-04-01)
 
 - data recording / playback, a la `rosbag`
 - *add more here*
 
-### alpha6 (circa 2016-05-13)
+### Alpha 6 (circa 2016-05-13)
 
 - *TBD*
 
@@ -105,6 +91,20 @@ This is a list of the features targeted for development in the future.
 - Address important issues (e.g., services are broken on Windows)
 
 ## Past releases
+
+### Alpha 2 (2015-11-03)
+
+- Ticket tracking progress https://github.com/ros2/ros2/issues/131
+- Support for custom allocators in rclcpp
+  - Useful for real-time messaging
+- Feature parity of Windows with Linux/OSX
+  - Workspace management
+  - Services
+  - Parameters
+- rclcpp API improvements
+- FreeRTPS improvements:
+  - Fragmentation of large messages (on the sending side)
+  - Camera demo
 
 ### Alpha 1 (2015-08-31)
 
