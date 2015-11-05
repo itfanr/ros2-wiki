@@ -36,6 +36,7 @@ You need the following things installed to build ROS 2:
 
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
+        brew tap homebrew/science
         brew install opencv --without-python
         brew install python3 wget cmake cppcheck opensplice gtest
     *Optional*: Make sure that you have `gtest` 1.7:
