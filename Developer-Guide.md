@@ -293,11 +293,14 @@ Should we follow this or make a allowance for longer lines?
 
 Tools like the `pep8` python package or the `flake8` Python package should be used in unit-test and/or editor integration for checking Python code style.
 
+The pep8 configuration used in the linter is [here](https://github.com/ament/ament_lint/blob/master/ament_pep8/ament_pep8/configuration/ament_pep8.ini)
+
 Integration with editors:
 
-- vim: https://github.com/nvie/vim-flake8
+- atom: https://atom.io/packages/linter-pep8
 - emacs: http://kwbeam.com/emacs-for-python-i.html
 - Sublime Text: https://sublime.wbond.net/packages/SublimeLinter-flake8
+- vim: https://github.com/nvie/vim-flake8
 
 ### CMake
 
