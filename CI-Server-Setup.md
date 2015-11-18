@@ -17,6 +17,16 @@ http://serverfault.com/a/140161/186748
 
 I had to remove the `hudson` in each of the lines that contained it.
 
+## Temporary rewrite for changed job name
+
+We renamed the windows job, so I added a rewrite rule in apache:
+
+```
+# Temporary rewrite rule because we changed the Windows job name.
+RewriteEngine On
+RewriteRule ^(.*)/ros2_batch_ci_windows/(.*)$ $1/ros2_batch_ci_windows_opensplice/$2 [R=301,L]
+```
+
 ## Install git
 
 I also installed `git` for Jenkins:
