@@ -19,12 +19,27 @@ I had to remove the `hudson` in each of the lines that contained it.
 
 ## Temporary rewrite for changed job name
 
-We renamed the windows job, so I added a rewrite rule in apache:
+We renamed some of the job, so I added rewrite rules in apache:
 
 ```
-# Temporary rewrite rule because we changed the Windows job name.
+# Temporary rewrite rule because we changed the job names.
 RewriteEngine On
-RewriteRule ^(.*)/ros2_batch_ci_windows/(.*)$ $1/ros2_batch_ci_windows_opensplice/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_linux/(.*)$ $1/ci_linux/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_osx/(.*)$ $1/ci_osx/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows/(.*)$ $1/ci_windows_opensplice/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_opensplice/(.*)$ $1/ci_windows_opensplice/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_connext_static/(.*)$ $1/ci_windows_connext_static/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_connext_dynamic/(.*)$ $1/ci_windows_connext_dynamic/$2 [R=301,L]
+
+RewriteRule ^(.*)/ros2_batch_ci_linux_nightly/(.*)$ $1/nightly_linux/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_osx_nightly/(.*)$ $1/nightly_osx/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_opensplice_nightly/(.*)$ $1/nightly_windows_opensplice/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_connext_static_nightly/(.*)$ $1/nightly_windows_connext_static/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_batch_ci_windows_connext_dynamic_nightly/(.*)$ $1/nightly_windows_connext_dynamic/$2 [R=301,L]
+
+RewriteRule ^(.*)/ros2_packaging_linux/(.*)$ $1/packaging_linux/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_packaging_osx/(.*)$ $1/packaging_osx/$2 [R=301,L]
+RewriteRule ^(.*)/ros2_packaging_windows_opensplice/(.*)$ $1/packaging_windows_opensplice/$2 [R=301,L]
 ```
 
 ## Install git
