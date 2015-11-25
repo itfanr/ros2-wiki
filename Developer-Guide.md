@@ -8,7 +8,7 @@ This page defines the practices and policies we employ when developing ROS 2.
 - [General Practices](#general-practices)
 - [Language Versions and Code Format](#language-versions-and-code-format)
   - [C](#c)
-  - [C++](#c++)
+  - [C++](#c-1)
   - [Python](#python)
   - [CMake](#cmake)
   - [Markdown](#markdown)
