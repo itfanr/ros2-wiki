@@ -180,7 +180,7 @@ http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 - Never add whitespace to nested templates
   - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
 - Use open braces for `function`, `class`, and `struct` definitions, but always cuddle braces on `if`, `else`, `while`, `for`, etc...
-- When a function call cannot fit on one line, wrap at the open parenthesis (not in between arguments) and start them on the next line with a 4-space indent.  Continue with the 4-space indent on subsequent lines for more arguments.  (Note that the [Google guide](https://google.github.io/styleguide/cppguide.html#Function_Calls) is internally contradictory on this point.)
+- When a function call cannot fit on one line, wrap at the open parenthesis (not in between arguments) and start them on the next line with a 2-space indent.  Continue with the 2-space indent on subsequent lines for more arguments.  (Note that the [Google guide](https://google.github.io/styleguide/cppguide.html#Function_Calls) is internally contradictory on this point.)
 
 This is OK:
 
@@ -194,12 +194,30 @@ int main(int argc, char **argv)
   }
 }
 
-if (this &&
-    that ||
-    both)
+if (this && that || both) {
+  ...
+}
+
+// Long condition; open brace
+if (
+  this && that || both && this && that || both && this && that || both && this && that)
 {
   ...
 }
+
+// Short function call
+call_func(foo, bar);
+
+// Long function call; wrap at the open parenthesis
+call_func(
+  foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar,
+  foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar, foo, bar);
+
+// Very long function argument; separate it for readability
+call_func(
+  bang,
+  fooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo,
+  bar, bat);
 ```
 
 Bad:
