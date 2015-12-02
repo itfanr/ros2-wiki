@@ -171,7 +171,7 @@ http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
   - rationale: `/* */` style comments are recommended for Doxygen and Sphinx in C/C++
   - rationale: mixing `/* */` and `//` is convenient for block commenting out code which contains comments
   - Descriptions of how the code works or notes within classes and functions should use `//` style comments
-- Prefer `char * c;` to `char* c;` or `char *c;` because of this scenario `char* c, *d, *e;`
+- Use `char * c;` instead of `char* c;` or `char *c;` because of this scenario `char* c, *d, *e;`
 - Do not put 1 space before `public:`, `private:`, or `protected:`, it is more consistent for all indentions to be a multiple of 2
   - rationale: most editors don't like indentions which are not a multiple of the (soft) tab size
   - Use zero spaces before `public:`, `private:`, or `protected:`, or 2 spaces
@@ -179,8 +179,8 @@ http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
   - Prefer zero spaces, i.e. `public:`, `private:`, or `protected:` in the same column as the class
 - Never add whitespace to nested templates
   - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
-- Use open braces for `function`, `class`, and `struct` definitions, but allow cuddle braces on `if`, `else`, `while`, `for`, etc...
-  - Open braces are allowed with all blocks and encouraged if the statement before the opening brace is multiline
+- Use open braces for `function`, `class`, and `struct` definitions, but always cuddle braces on `if`, `else`, `while`, `for`, etc...
+- When a function call cannot fit on one line, wrap at the open parenthesis (not in between arguments) and start them on the next line with a 4-space indent.  Continue with the 4-space indent on subsequent lines for more arguments.  (Note that the [Google guide](https://google.github.io/styleguide/cppguide.html#Function_Calls) is internally contradictory on this point.)
 
 This is OK:
 
