@@ -166,9 +166,9 @@ http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
   - rationale: most of our dependencies in code we intend to wrap in C do not use exceptions anyways
 - No restrictions on Lambda's or `std::function` or `std::bind`
 - Boost should be avoided until absolutely required
-- Use `/* */` comments for _documentation_ purposes and `//` style comments for notes and general comments
-  - Class and Function comments should use `/* */` style comments
-  - rationale: `/* */` style comments are recommended for Doxygen and Sphinx in C/C++
+- Use `///` and `/** */` comments for _documentation_ purposes and `//` style comments for notes and general comments
+  - Class and Function comments should use `///` and `/** */` style comments
+  - rationale: these are recommended for Doxygen and Sphinx in C/C++
   - rationale: mixing `/* */` and `//` is convenient for block commenting out code which contains comments
   - Descriptions of how the code works or notes within classes and functions should use `//` style comments
 - Use `char * c;` instead of `char* c;` or `char *c;` because of this scenario `char* c, *d, *e;`
