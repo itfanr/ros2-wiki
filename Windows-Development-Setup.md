@@ -16,7 +16,7 @@ You'll use Chocolatey to install some other developer tools.
 
 ### Installing Build Tools
 
-Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools".
+Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`
 
 In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
 Right click on this shortcut and select "Run as administrator".
@@ -34,6 +34,7 @@ First install git:
 ```
 > choco install -y git
 ```
+You will need to append the CMake bin folder `C:\Program Files\Git\bin` to the PATH.
 
 Then Python 3:
 
@@ -47,7 +48,7 @@ Also install CMake:
 > choco install -y cmake
 ```
 
-You might also have to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` to the PATH.
+You will need to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` to the PATH.
 
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
