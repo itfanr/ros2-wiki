@@ -4,7 +4,7 @@ This guide is about how to setup a development environment for ROS2 on Windows.
 
 ## Prerequisites
 
-First you'll need Windows 8.1 and Visual Studio 14.0 2015 installed.
+First you'll need Windows 8.1 and Visual Studio 14.0 2015 installed. With Visual C++ selected during the installation (It is not selected by default in Community Edition)
 
 ### Install Chocolatey
 
