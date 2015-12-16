@@ -2,12 +2,7 @@
 
 ## Installing
 
-I've pulled the .deb manually from:
-
-http://pkg.jenkins-ci.org/debian/
-
-And installed it using `dpkg -i ...`.
-This way we don't get unexpected updates with apt-get upgrade.
+Install the latest LTS release from http://pkg.jenkins-ci.org/debian-stable/
 
 ## Running on port 80
 
