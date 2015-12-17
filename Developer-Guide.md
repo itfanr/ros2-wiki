@@ -152,6 +152,7 @@ We will use the Google C++ Style Guide, with some modifications:
 
 http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 
+- Line Length: our maximum line length is 100 characters.
 - Access Control: drop requirement for all class members to be private and therefore require accessors
   - rationale: this is overly constraining for user API design
   - we should prefer private members, only making them public when they are needed
