@@ -53,7 +53,7 @@ your own demos.
 
 The major features included in this release are:
 
-- <add your stuff here>
+- **add your stuff here**
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
