@@ -53,9 +53,10 @@ your own demos.
 
 The major features included in this release are:
 
-- Updated `rcl` interface, which will be wrapped in order to create language bindings, e.g. `rclpy`.
- - See: https://github.com/ros2/rcl/tree/release-alpha3/rcl/include/rcl
+- Updated `rcl` interface.
+ - This interface will be wrapped in order to create language bindings, e.g. `rclpy`.
  - This interface has improved documentation and test coverage over existing interfaces we currently have, e.g. `rmw` and `rclcpp`.
+ - See: https://github.com/ros2/rcl/tree/release-alpha3/rcl/include/rcl
 - **add your stuff here**
 
 Pretty much anything not listed above is not included in this release.
