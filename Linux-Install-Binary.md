@@ -19,7 +19,12 @@ We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available y
             libhighgui2.4 \
             libopencv-imgproc2.4 \
             libopensplice64 \
-            wget
+            wget \
+            libboost-chrono-dev \ # for FastRTPS
+            libboost-date-time-dev \
+            libboost-regex-dev \
+            libboost-system-dev \
+            libboost-thread-dev
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/Ubuntu
