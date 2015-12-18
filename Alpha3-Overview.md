@@ -57,8 +57,6 @@ The major features included in this release are:
  - This interface will be wrapped in order to create language bindings, e.g. `rclpy`.
  - This interface has improved documentation and test coverage over existing interfaces we currently have, e.g. `rmw` and `rclcpp`.
  - See: https://github.com/ros2/rcl/tree/release-alpha3/rcl/include/rcl
-- **add your stuff here**
-
 - Added support in rclcpp for using the TLSF (two-level segregate fit) allocator, a memory allocator design for embedded and real-time systems.
 - Improved efficiency of MultiThreadedExecutor and fixed numerous bugs with multi-threaded execution, which is now test on CI.
 - Added ability to cancel an Executor from within a callback called in spin.
