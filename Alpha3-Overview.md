@@ -1,4 +1,4 @@
-# ROS 2 alpha3 release (code name *TODO*; December 2015)
+# ROS 2 alpha3 release (code name *Cement*; December 2015)
 
 Welcome to the latest release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
@@ -26,7 +26,7 @@ articles](http://design.ros2.org).
 ## Status
 
 On December 18, 2015, we are releasing ROS 2 alpha3,
-code-named **TODO**.
+code-named **Cement**.
 Our primary goal with this release is to add more features, while also addressing the feedback we received for the previous releases.
 To that end, we built a set of [demos](Tutorials) that
 show some of the key features of ROS 2.
