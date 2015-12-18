@@ -62,6 +62,8 @@ The major features included in this release are:
 - Added ability to cancel an Executor from within a callback called in spin.
 - Added ability for a timer to cancel itself by supporting a Timer callback that accepts a reference to itself as a function parameter.
 - Added checks for disallowing multiple threads to enter Executor::spin.
+- Improved reliability of numerous tests that had been sporadically failing.
+- Added support for using FastRTPS (instead of, e.g., OpenSplice or Connext).
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
