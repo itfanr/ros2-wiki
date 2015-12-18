@@ -20,7 +20,7 @@ We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available y
             libopencv-imgproc2.4 \
             libopensplice64 \
             wget \
-            libboost-chrono-dev \ # for FastRTPS
+            libboost-chrono-dev \
             libboost-date-time-dev \
             libboost-regex-dev \
             libboost-system-dev \
