@@ -39,6 +39,8 @@ You need the following things installed to build ROS 2:
         brew tap homebrew/science
         brew install opencv --without-python
         brew install python3 wget cmake cppcheck opensplice gtest
+        # install boost for FastRTPS
+        brew install boost
     *Optional*: Make sure that you have `gtest` 1.7:
 
         $ brew info gtest
