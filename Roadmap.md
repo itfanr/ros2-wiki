@@ -15,23 +15,22 @@ This is a list of the features targeted for development in the future.
 - Refactor rclcpp into a library
   - Requires resolution of Windows lazy symbolism
 - Support for FastRTPS
-  - At least on Linux
   - Missing support for large message fragmentation
 - Refactor into rcl
-  - Include C message structures
+  - Include C message structures and type support
+- Add TF support
+
+### Alpha 4 (circa 2016-02-12)
+
 - Python client library
 - Component life-cycle:
   - Introspection and orchestration APIs
   - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - Launch system
   - Use life-cycle and orchestration
-- Add TF support
 - Real-time-safe intra-process messaging
 - FreeRTPS improvements:
   - RMW support
-
-### Alpha 4 (circa 2016-02-12)
-
 - Graph API
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Command line tools:
