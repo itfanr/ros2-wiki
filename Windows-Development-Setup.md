@@ -109,6 +109,8 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 > vcs import src < ros2.repos
 ```
 
+Note: In order to build the FastRTPS middleware option, edit the `ros2.repos` file and uncomment these two entries for `Fast-RTPS`, `Fast-CDR`,  and `ROS-RMW-Fast-RTPS-cpp`. Then rerun the `vcs import ...` command.
+
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
