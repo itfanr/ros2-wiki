@@ -64,6 +64,7 @@ The major features included in this release are:
 - Added checks for disallowing multiple threads to enter Executor::spin.
 - Improved reliability of numerous tests that had been sporadically failing.
 - Added support for using FastRTPS (instead of, e.g., OpenSplice or Connext).
+- A partial port of tf2 including the core libraries and core command line tools. 
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
