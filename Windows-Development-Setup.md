@@ -52,6 +52,13 @@ You will need to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` 
 
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
+### Installing Boost
+
+FastRTPS requires boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.59.0/) We test with [this binary](http://downloads.sourceforge.net/project/boost/boost-binaries/1.59.0/boost_1_59_0-msvc-14.0-64.exe)
+
+The installer will by default install itself into `C:\local` 
+
+
 ### Installing Developer Tools
 
 Now we are ready to install some our tools that we use to help in developing ROS 2, but first we need to put Python's `Scripts` folder on the path.
