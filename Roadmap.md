@@ -22,6 +22,10 @@ This is a list of the features targeted for development in the future.
 
 ### Alpha 4 (circa 2016-02-12)
 
+- rcl
+  - support for services
+- rclcpp
+  - refactor to use rcl
 - Python client library
 - Component life-cycle:
   - Introspection and orchestration APIs
