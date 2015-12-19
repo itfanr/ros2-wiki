@@ -100,7 +100,7 @@ First setup a development folder, I use `C:\dev\ros2`:
 Get the `ros2.repos` file which defines the repositories to clone from:
 
 ```
-> curl -sk https://raw.githubusercontent.com/ros2/ros2/release-alpha2/ros2.repos -o ros2.repos
+> curl -sk https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 ```
 
 Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
