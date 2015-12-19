@@ -58,6 +58,10 @@ FastRTPS requires boost as a dependency. To install it grab the appropriate inst
 
 The installer will by default install itself into `C:\local` 
 
+You will then need to add the following system environment variables. 
+    BOOST_ROOT=C:\local\boost_1_59_0
+    BOOST_LIBRARYDIR=C:\local\boost_1_59_0\lib64-msvc-14.0
+
 
 ### Installing Developer Tools
 
