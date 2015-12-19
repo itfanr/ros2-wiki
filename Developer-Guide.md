@@ -47,6 +47,9 @@ When filing an issue please make sure to:
 - Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
 - Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
+ - But avoid squashing commits while a pull request is under review.
+   Your reviewers might not notice that you made the change, thereby introducing potential for confusion.
+   Plus, you're going to squash before merging anyway; there's no benefit to doing it early.
 - A minimum of 1 `+1` from a fellow developer is required to consider a pull request to be approved, which is required before merging.
 - Any developer is welcome to review and approve a pull request (see [General Principles](#general-principles)).
 - When you start reviewing a pull request, comment on the pull request so that other developers know that you're reviewing it.
