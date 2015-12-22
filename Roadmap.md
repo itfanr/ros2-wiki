@@ -10,16 +10,6 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Alpha 3 (circa 2015-12-18) (Star Wars release)
-
-- Refactor rclcpp into a library
-  - Requires resolution of Windows lazy symbolism
-- Support for FastRTPS
-  - Missing support for large message fragmentation
-- Refactor into rcl
-  - Include C message structures and type support
-- Add TF support
-
 ### Alpha 4 (circa 2016-02-12)
 
 - rcl
@@ -94,6 +84,16 @@ This is a list of the features targeted for development in the future.
 - Address important issues (e.g., services are broken on Windows)
 
 ## Past releases
+
+### Alpha 3 (2015-12-18)
+
+- Refactor rclcpp into a library
+  - Requires resolution of Windows lazy symbolism
+- Support for FastRTPS
+  - Missing support for large message fragmentation
+- Refactor into rcl
+  - Include C message structures and type support
+- Add TF support
 
 ### Alpha 2 (2015-11-03)
 
