@@ -170,6 +170,37 @@ Download the three Debian packages of the latest release from https://github.com
 
 Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
 
+## Installation on different Linux than Ubuntu 14.04
+
+### Debian Jessie/Stretch
+
+In order to use the ROS 1 components with debian have look at http://wiki.ros.org/indigo/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 componets in order to test ROS 2 without the ROS 1 Bridge.
+
+
+Then add the osrf (gazebo) debian repository:
+
+```
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu trusty main" > /etc/apt/sources.list.d/gazebo-latest.list'
+sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
+```
+
+Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collide) and setuptools:
+
+```
+sudo apt-get update
+sudo apt-get install git wget
+sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-empy python3-setuptools python3-nose python3-pip 
+# dependencies for fastrtps
+sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
+```
+
+Then run:
+```
+sudo pip3 install vcstool
+```
+
+Afterwards you can proceed with Get ROS 2.0 code.
+
 ## Troubleshooting
 
 ### Out of memory
