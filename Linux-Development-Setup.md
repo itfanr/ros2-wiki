@@ -199,7 +199,7 @@ Then run:
 sudo pip3 install vcstool
 ```
 
-Afterwards you can proceed with Get ROS 2.0 code.
+Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
 
 ## Troubleshooting
 
