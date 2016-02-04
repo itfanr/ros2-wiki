@@ -309,13 +309,12 @@ We will use the PEP8 guidelines for code format:
 
 http://legacy.python.org/dev/peps/pep-0008/
 
-```
-PEP8 you can optionally allow lines up to 100 characters, instead of 80, if the docstrings and comments stay under 76 but for example the standard Python library still requires 80 characters (effectively 79 characters).
+We chose the following more precise rule where PEP 8 leaves some freedom:
 
-Should we follow this or make a allowance for longer lines?
-```
+- We allow up to 100 character per line (fifth paragraph http://legacy.python.org/dev/peps/pep-0008/#maximum-line-length)
+- We pick single quotes over double quotes as long as no escaping is necessary (http://legacy.python.org/dev/peps/pep-0008/#string-quotes)
 
-Tools like the `pep8` python package or the `flake8` Python package should be used in unit-test and/or editor integration for checking Python code style.
+Tools like the `(ament_)pep8` Python package should be used in unit-test and/or editor integration for checking Python code style.
 
 The pep8 configuration used in the linter is [here](https://github.com/ament/ament_lint/blob/master/ament_pep8/ament_pep8/configuration/ament_pep8.ini)
 
