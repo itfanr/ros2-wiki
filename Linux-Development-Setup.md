@@ -25,7 +25,7 @@ Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collid
 ```
 sudo apt-get update
 sudo apt-get install git wget
-sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-empy python3-setuptools python3-nose python3-pip python3-vcstool
+sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-empy python3-setuptools python3-nose python3-pip python3-vcstool python3-dev
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
