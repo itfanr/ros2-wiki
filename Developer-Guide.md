@@ -183,6 +183,8 @@ http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
   - Prefer zero spaces, i.e. `public:`, `private:`, or `protected:` in the same column as the class
 - Never add whitespace to nested templates
   - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
+- Always use braces following `if`, `else`, `do`, `while`, and `for`, even when the body if a single line.
+  - rationale: less opportunity for visual ambiguity and for complications due to use of macros in the body
 - Use open braces for `function`, `class`, and `struct` definitions, but cuddle braces on `if`, `else`, `while`, `for`, etc...
   - Exception: when an `if` (or `while`, etc.) condition is long enough to require line-wrapping, then use an open brace (i.e., don't cuddle).
 - When a function call cannot fit on one line, wrap at the open parenthesis (not in between arguments) and start them on the next line with a 2-space indent.  Continue with the 2-space indent on subsequent lines for more arguments.  (Note that the [Google guide](https://google.github.io/styleguide/cppguide.html#Function_Calls) is internally contradictory on this point.)
