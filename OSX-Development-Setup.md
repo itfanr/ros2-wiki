@@ -69,8 +69,6 @@ Create a workspace and clone all repos:
     wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
     vcs import ~/ros2_ws/src < ros2.repos
 
-Note: In order to build the FastRTPS middleware option, edit the `ros2.repos` file and uncomment these two entries for `Fast-RTPS`, `Fast-CDR`,  and `ROS-RMW-Fast-RTPS-cpp`. Then rerun the `vcs import ...` command.
-
 ## Build the ROS 2 code
 
 **Note**: if you installed and sourced the setup file for ROS 1, then you should instead follow the [modified instructions](#building-with-the-ros-1-bridge).
