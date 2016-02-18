@@ -42,4 +42,5 @@ This page tries to capture the process we go through to make a new alpha release
 - Create an overview page for the alpha release, e.g. https://github.com/ros2/ros2/wiki/Alpha3-Overview
 - Update the releases page to point to it: https://github.com/ros2/ros2/wiki/Releases
 - Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
+- Update the link on the home page: https://github.com/ros2/ros2/wiki
 - Draft and send an email to the ng sig about that release
