@@ -54,7 +54,7 @@ your own demos.
 The major features included in this release are:
 
 - Improved type support infrastructure, including support for C
-- Preliminary Python client library, only publishers and subscriptions are supported. Beware, the API is subject to change!
+- Preliminary Python client library, only publishers and subscriptions are supported. Beware, the API is subject to change and is far from complete!
 - Added support for ROS time
 
 Pretty much anything not listed above is not included in this release.
