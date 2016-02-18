@@ -19,7 +19,7 @@ sudo pip3 install -U setuptools
 
 Before running either you must source the appropriate `setup.*` file in your terminal.
 
-The two classic ROS 2 examples have been implemented in Python using the rclpy, open two terminals and run `talker_py` on one and `listener_py` on the other.
+The two classic ROS 2 examples have been implemented in Python using `rclpy`, open two terminals and run `talker_py` on one and `listener_py` on the other.
 If you installed from the binary packages (i.e. you did not build it from source) then you'll need to invoke the examples with the Python executable directly (for now we're working on a fix for this).
 Since you can also do this when building from source, we'll use this pattern in both cased, but you should be able to invoke the python scripts directly if you build from source.
 
