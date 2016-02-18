@@ -55,7 +55,8 @@ The major features included in this release are:
 
 - Improved type support infrastructure, including support for C
 - Preliminary Python client library, only publishers and subscriptions are supported. Beware, the API is subject to change and is far from complete!
-- Added support for ROS time
+- Added structures for ROS time in C API (still needs C++ API)
+  - New concept of extensible "time sources" for ROS Time, the default time source will be like ROS 1 (implementation pending)
 
 Pretty much anything not listed above is not included in this release.
 The next steps are described in the [[Roadmap]].
