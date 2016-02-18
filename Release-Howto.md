@@ -16,8 +16,18 @@ This page tries to capture the process we go through to make a new alpha release
   - If we ever have something other than `git` repositories we'll need to use the `--git` and `--hg` (for example) arguments separately
 - Update the `release-latest` tag on all repositories
   - `vcs custom ./src --args tag -f release-latest`
-- Push new tags for all repositories
-  - `vcs custom ./src --args push --tags`
+- Push new tags for all repositories that we control
+  - `vcs custom ./src/ros2 --args push --tags`
+  - `vcs custom ./src/ament/ament_cmake --args push --tags`
+  - `vcs custom ./src/ament/ament_index --args push --tags`
+  - `vcs custom ./src/ament/ament_lint --args push --tags`
+  - `vcs custom ./src/ament/ament_package --args push --tags`
+  - `vcs custom ./src/ament/ament_tools --args push --tags`
+  - `vcs custom ./src/ament/gmock_vendor --args push --tags`
+  - `vcs custom ./src/ament/gtest_vendor --args push --tags`
+  - `vcs custom ./src/ament/osrf_pycommon --args push --tags`
+  - `vcs custom ./src/ament/uncrustify --args push --tags`
+  - Make sure to avoid `geometry_experimental`, `console_bridge`, `osrf_pycommon` and others
 - Rename the artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
   - E.g. `ros2-alpha4-package-linux.tar.bz2`
 - Create a tag on the ros2/ros2 repository called `release-alpha#` and put the new `.repos` file in the root
