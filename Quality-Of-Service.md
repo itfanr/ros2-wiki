@@ -72,6 +72,19 @@ Received image #3
 ...
 ```
 
+Note for RTI Connext users: You may get an error message when you try to run the `cam2image` executable:
+
+```
+Publishing image #1
+COMMENDSrWriterService_write:!write. Reliable large data requires asynchronous writer.
+PRESPsWriter_writeInternal:!srw->write
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  failed to publish message: failed to publish message, at /home/jackie/code/ros2_ws/src/ros2/rmw_connext/rmw_connext_cpp/src/functions.cpp:410
+Aborted (core dumped)
+```
+
+You will need to launch cam2image with the reliable QoS setting turned off. Read on to learn how to do this.
+
 Note for OS X users: If you these examples do not work or you receive an error like `ddsi_conn_write failed -1` then you'll need to increase your system wide UDP packet size:
 
 ```
