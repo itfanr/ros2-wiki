@@ -4,38 +4,4 @@ Releases of ROS 2 software are listed here:
 * [[alpha2 Release Overview|alpha2-Overview]]
 * [[alpha1 Release Overview|alpha1-Overview]]
 
-Notes on making an alpha release:
-
-- Get a fresh copy of all repositories using the master [`ros2.repos` file](https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos)
-  - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos | vcs import ./src`
-- Create a `.repos` file with the exact commit hashes you have checked out locally
-  - `vcs export --exact ./src > release-alpha4.repos` (adjust file name appropriately)
-- Run a packaging job using this new `.repos` file
-  - First upload it somewhere (like gist.github.com)
-  - Then create a packaging job for each platform and put the url of the hosted `.repos` file in the `CI_ROS2_REPOS_URL` field
-- When they finish download the artifact file they produce from the Jenkins Job page
-- Test the artifact by extracting it and following the from binary install instructions on the wiki
-  - https://github.com/ros2/ros2/wiki/Installation#binary-packages
-  - If it doesn't work, fix it and start the process over :stuck_out_tongue:
-- Since it works, add a tag on all the repositories for this alpha release using vcstool
-  - `vcs custom ./src --args tag release-alpha4` (adjust the tag name appropriately)
-  - If we ever have something other than `git` repositories we'll need to use the `--git` and `--hg` (for example) arguments separately
-- Update the `release-latest` tag on all repositories
-  - `vcs custom ./src --args tag -f release-latest`
-- Push new tags for all repositories
-  - `vcs custom ./src --args push --tags`
-- Rename the artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
-  - E.g. `ros2-alpha4-package-linux.tar.bz2`
-- Create a tag on the ros2/ros2 repository called `release-alpha#` and put the new `.repos` file in the root
-  - Clone ros2/ros2 to the master branch
-  - Replace the `ros2.repos` file's content with that of the one you created above
-  - Commit it with a message like the tag name, e.g. `release-alpha4`
-  - Tag it with `git tag release-alpha4` and `git tag -f release-latest` push both with `git push --tags`
-- Create a new release on the "Releases" section of ros2/ros2 using this new tag: https://github.com/ros2/ros2/releases
-  - Use the title `ROS 2 Alpha # release` (matching the style of previous releases)
-- Upload the renamed artifact to the Release on GitHub using the web interface:
-  - E.g. https://github.com/ros2/ros2/releases/edit/release-alpha3
-- Create an overview page for the alpha release, e.g. https://github.com/ros2/ros2/wiki/Alpha3-Overview
-- Update this page to point at it
-- Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
-- Draft and send an email to the ng sig about that release
+Notes on making an alpha release: [[Release-Howto]]
