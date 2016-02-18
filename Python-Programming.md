@@ -8,7 +8,16 @@ The `rclpy` module enables developers to use the ROS 2 API from Python. As of Al
 
 `rclpy` is part of the standard ROS 2 distribution, so it'll be installed alongside the rest of the ROS 2 packages.
 
+## Prerequisites
+
+Before you can run the python examples you need to install a few packages. 
+```
+sudo apt-get install -y python3-pkg-resources python3-pip
+sudo pip3 install -U setuptools
+```
 ## Run the examples
+
+Before running either you must source the appropriate `setup.*` file in your terminal.
 
 The two classic ROS 2 examples have been implemented in Python using the rclpy, open two terminals and run `talker_py` on one and `listener_py` on the other.
 If you installed from the binary packages (i.e. you did not build it from source) then you'll need to invoke the examples with the Python executable directly (for now we're working on a fix for this).
