@@ -37,9 +37,9 @@ This page tries to capture the process we go through to make a new alpha release
   - Tag it with `git tag release-alpha4` and `git tag -f release-latest` push both with `git push --tags`
 - Create a new release on the "Releases" section of ros2/ros2 using this new tag: https://github.com/ros2/ros2/releases
   - Use the title `ROS 2 Alpha # release` (matching the style of previous releases)
-- Upload the renamed artifact to the Release on GitHub using the web interface:
+- Upload the renamed artifacts to the Release on GitHub using the web interface:
   - E.g. https://github.com/ros2/ros2/releases/edit/release-alpha3
 - Create an overview page for the alpha release, e.g. https://github.com/ros2/ros2/wiki/Alpha3-Overview
-- Update this page to point at it
+- Update the releases page to point to it: https://github.com/ros2/ros2/wiki/Releases
 - Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
 - Draft and send an email to the ng sig about that release
