@@ -1,4 +1,4 @@
-## ROS 2 alpha4 release (code name *Duct tape*; February 2016)
+# ROS 2 alpha4 release (code name *Duct tape*; February 2016)
 
 Welcome to the latest release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
