@@ -159,3 +159,9 @@ A package such as [`rclcpp_examples`](https://github.com/ros2/examples/tree/mast
 ## Tips
 
 If you do not want to build a specific package place an empty file named `AMENT_IGNORE` in the directory and it will not be indexed.
+
+"Catch all" options like --cmake-args should be placed after other options, or delimited with '--':
+
+```bash
+ament build . --force-cmake-configure --cmake-args -DCMAKE_BUILD_TYPE=Debug -- --ament-cmake-args -DCMAKE_BUILD_TYPE=Release
+```
