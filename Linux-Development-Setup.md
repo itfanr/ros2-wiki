@@ -36,7 +36,7 @@ sudo apt-get update
 sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
 # dependencies for fastrtps
-sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
+sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
 
 The setuptools version shipped with Ubuntu Trusty is not recent enough - we require at least version 8.2 (see https://bitbucket.org/pypa/setuptools/pull-request/85/):
