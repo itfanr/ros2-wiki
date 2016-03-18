@@ -45,17 +45,23 @@ RewriteRule ^(.*)/ros2_packaging_windows_opensplice/(.*)$ $1/packaging_windows_o
 RewriteRule ^(.*)/packaging_windows_opensplice/(.*)$ $1/packaging_windows/$2 [R=301,L]
 ```
 
-## Install stuff
+## Install stuff (needed on master and slaves)
 
 ```
-sudo apt-get install git
+sudo apt-get update
+sudo apt-get install -y git
 # qemu and vcs are required for ARM builds
-sudo apt-get install qemu-user-static
-sudo bash -c 'echo "deb http://repositories.ros.org/ubuntu/testing/`lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-get install -y qemu-user-static
+sudo bash -c 'echo "deb http://repositories.ros.org/ubuntu/testing/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo bash -c 'curl --silent http://repositories.ros.org/repos.key |sudo apt-key add -'
 sudo apt-get update
-sudo apt-get install python-vcstool
+sudo apt-get install -y python-vcstool
+curl -fsSL https://get.docker.com/ | sh
+sudo usermod -aG docker jenkins
 ```
+
+## Adding a slave to the farm
+Copy config from "linux 2" and modify as needed.
 
 ## Configuring Jenkins
 
