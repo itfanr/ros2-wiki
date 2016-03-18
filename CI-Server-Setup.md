@@ -57,11 +57,15 @@ sudo bash -c 'curl --silent http://repositories.ros.org/repos.key |sudo apt-key 
 sudo apt-get update
 sudo apt-get install -y python-vcstool
 curl -fsSL https://get.docker.com/ | sh
+sudo adduser jenkins
 sudo usermod -aG docker jenkins
 ```
 
 ## Adding a slave to the farm
-Copy config from "linux 2" and modify as needed.
+Approximately:
+
+* Shell into the master (`ci.ros2.org`), copy `/home/jenkins/.ssh/id_rsa.pub` and paste it into `/home/jenkins/.ssh/authorized_keys` on the new machine.
+* Copy config from the `linux 2` machine, rename and otherwise modify as needed (e.g., change the IP/host).
 
 ## Configuring Jenkins
 
