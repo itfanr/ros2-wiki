@@ -45,12 +45,16 @@ RewriteRule ^(.*)/ros2_packaging_windows_opensplice/(.*)$ $1/packaging_windows_o
 RewriteRule ^(.*)/packaging_windows_opensplice/(.*)$ $1/packaging_windows/$2 [R=301,L]
 ```
 
-## Install git
-
-I also installed `git` for Jenkins:
+## Install stuff
 
 ```
 sudo apt-get install git
+# qemu and vcs are required for ARM builds
+sudo apt-get install qemu-user-static
+sudo bash -c 'echo "deb http://repositories.ros.org/ubuntu/testing/`lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo bash -c 'curl --silent http://repositories.ros.org/repos.key |sudo apt-key add -'
+sudo apt-get update
+sudo apt-get install python-vcstool
 ```
 
 ## Configuring Jenkins
