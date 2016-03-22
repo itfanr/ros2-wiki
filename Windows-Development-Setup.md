@@ -254,3 +254,33 @@ Note: it is not recommended to build in the same cmd prompt that you've sourced 
 ### CMake error setting modification time
 
 If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it it likely that an anti virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
+
+## Extra stuff for Debug mode
+
+If you want to be able to run all the tests in Debug mode, you'll need to install a few more things:
+
+* To be able to extract the Python source tarball, you can use PeaZip:
+```
+> choco install -y peazip
+```
+* You'll also need SVN, since some of the Python source-build dependencies are checked out via SVN:
+```
+> choco install -y svn
+```
+* Install the Python 3.5.1 source from the tarball [here](https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz). To keep these instructions concise, please extract it to C:\dev\Python-3.5.1
+* Now, build the Python source in debug mode from a Visual Studio command prompt (it may need to be in Administrator mode; can't remember right now...)
+```
+> cd C:\dev\Python-3.5.1\PCbuild
+> get_externals.bat
+> build.bat -p x64 -d
+```
+* Finally, copy the build products into the chocolatey installation directories, next to the Release-mode Python executable and DLL's:
+```
+> cd C:\dev\Python-3.5.1\PCbuild
+> copy python_d.exe C:\ProgramData\chocolatey\bin
+> copy python35_d.dll C:\ProgramData\chocolatey\lib\python3\tools
+> copy python3_d.dll C:\ProgramData\chocolatey\lib\python3\tools
+> copy python35_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
+> copy python3_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
+* Now, from a fresh command prompt, make sure that `python_d` works (i.e., you enter an interactive session with Python built in debug mode).
+* Hooray, you're done!
