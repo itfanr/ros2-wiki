@@ -282,5 +282,6 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 > copy python3_d.dll C:\ProgramData\chocolatey\lib\python3\tools
 > copy python35_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
 > copy python3_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
+```
 * Now, from a fresh command prompt, make sure that `python_d` works (i.e., you enter an interactive session with Python built in debug mode).
 * Hooray, you're done!
