@@ -56,8 +56,6 @@ wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
 
-Note: In order to build the FastRTPS middleware option, edit the `ros2.repos` file and uncomment these two entries for `Fast-RTPS`, `Fast-CDR`,  and `ROS-RMW-Fast-RTPS-cpp`. Then rerun the `vcs import ...` command.
-
 ### Install one or more DDS implementations
 
 ROS 2.0 builds on top of DDS.
