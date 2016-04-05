@@ -37,10 +37,12 @@ First lets take a look at the source:
 https://github.com/ros2/demos/blob/release-alpha5/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp
 ```c++
 #include <chrono>
+#include <cinttypes>
 #include <cstdio>
+#include <string>
 
-#include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/int32.hpp>
+#include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/int32.hpp"
 
 // Node that produces messages.
 struct Producer : public rclcpp::Node
@@ -50,18 +52,26 @@ struct Producer : public rclcpp::Node
   {
     // Create a publisher on the output topic.
     pub_ = this->create_publisher<std_msgs::msg::Int32>(output, rmw_qos_profile_default);
+    std::weak_ptr<std::remove_pointer<decltype(pub_.get())>::type> captured_pub = pub_;
     // Create a timer which publishes on the output topic at ~1Hz.
-    timer_ = this->create_wall_timer(1_s, [this]() {
-      static int32_t count = 0;
-      std_msgs::msg::Int32::UniquePtr msg(new std_msgs::msg::Int32());
-      msg->data = count++;
-      printf("Published message with value: %d, and address: %p\n", msg->data, msg.get());
-      pub_->publish(msg);
-    });
+    auto callback = [captured_pub]() -> void {
+        auto pub_ptr = captured_pub.lock();
+        if (!pub_ptr) {
+          return;
+        }
+        static int32_t count = 0;
+        std_msgs::msg::Int32::UniquePtr msg(new std_msgs::msg::Int32());
+        msg->data = count++;
+        printf(
+          "Published message with value: %d, and address: 0x%" PRIXPTR "\n", msg->data,
+          reinterpret_cast<std::uintptr_t>(msg.get()));
+        pub_ptr->publish(msg);
+      };
+    timer_ = this->create_wall_timer(1_s, callback);
   }
 
-  rclcpp::Publisher::SharedPtr pub_;
-  rclcpp::WallTimer::SharedPtr timer_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub_;
+  rclcpp::TimerBase::SharedPtr timer_;
 };
 
 // Node that consumes messages.
@@ -71,10 +81,12 @@ struct Consumer : public rclcpp::Node
   : Node(name, true)
   {
     // Create a subscription on the input topic which prints on receipt of new messages.
-    sub_ = this->create_subscription_with_unique_ptr_callback<std_msgs::msg::Int32>(
-      input, rmw_qos_profile_default, [](std_msgs::msg::Int32::UniquePtr & msg) {
-      printf(" Received message with value: %d, and address: %p\n", msg->data, msg.get());
-    });
+    sub_ = this->create_subscription<std_msgs::msg::Int32>(
+      input, [](std_msgs::msg::Int32::UniquePtr msg) {
+      printf(
+        " Received message with value: %d, and address: 0x%" PRIXPTR "\n", msg->data,
+        reinterpret_cast<std::uintptr_t>(msg.get()));
+    }, rmw_qos_profile_default);
   }
 
   rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr sub_;
@@ -82,6 +94,7 @@ struct Consumer : public rclcpp::Node
 
 int main(int argc, char * argv[])
 {
+  setvbuf(stdout, NULL, _IONBF, BUFSIZ);
   rclcpp::init(argc, argv);
   rclcpp::executors::SingleThreadedExecutor executor;
 
