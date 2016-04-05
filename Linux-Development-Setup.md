@@ -83,9 +83,9 @@ cd ~/ros2_ws/
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
-Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can usine `AMENT_IGNORE` is that same manner as [`CATKIN_IGNORE`](https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst) to ignore the subtree or remove the folder from the workspace.
+Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can use `AMENT_IGNORE` in the same manner as [`CATKIN_IGNORE`](https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst) to ignore the subtree or remove the folder from the workspace.
 Take for instance: you would like to avoid installing the large opencv library.
-Well then simply `$ touch AMENT_IGNORE` file in the `cam2image` demo directory to leave it out of the build process.
+Well then simply `$ touch AMENT_IGNORE` in the `cam2image` demo directory to leave it out of the build process.
 
 Optionally build all packages in isolation:
 
