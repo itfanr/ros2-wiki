@@ -248,6 +248,7 @@ In a separate shell you can do the same, but instead run the `listener`:
 ```
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
+
 Note: if you built FastRTPS in your workspace, FastRTPS uses Boost, so the Boost DLLs will need to be on your PATH. Otherwise install\bin\talker.exe (for example) will fail to run. However, OpenSplice does not use Boost, so install\bin\talker__rmw_opensplice_cpp.exe (for example) will run correctly.
 
 ## Troubleshooting
