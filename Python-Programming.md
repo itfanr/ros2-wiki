@@ -8,13 +8,6 @@ The `rclpy` module enables developers to use the ROS 2 API from Python. As of Al
 
 `rclpy` is part of the standard ROS 2 distribution, so it'll be installed alongside the rest of the ROS 2 packages.
 
-## Prerequisites
-
-Before you can run the python examples you need to install a few packages. 
-```
-sudo apt-get install -y python3-pkg-resources python3-pip
-sudo pip3 install -U setuptools
-```
 ## Run the examples
 
 Before running either you must source the appropriate `setup.*` file in your terminal.
