@@ -6,7 +6,7 @@ Here's how to try it out. In each shell, be sure to start by sourcing the ROS 2 
 
 ## Publishing transform data
 
-First run the [static_transform_publisher](http://wiki.ros.org/tf2_tools) to generate `tf2` data:
+First run the [static_transform_publisher](http://wiki.ros.org/tf2_ros#static_transform_publisher) to generate `tf2` data:
 
     static_transform_publisher 1 2 3 0.5 0.1 -1.0 foo bar
 
@@ -14,7 +14,7 @@ That tool will publish a static transform from the parent frame `foo` to the chi
 
 ## Receiving transform data
 
-Now we can check whether it's possible to receive that transform data. Start with [tf2_echo](http://wiki.ros.org/tf2_tools):
+Now we can check whether it's possible to receive that transform data. Start with `tf2_echo`:
 
     tf2_echo foo bar
 
@@ -28,7 +28,7 @@ At time 0.0
 
 Note that `tf2_echo` is reporting the rotation as a quaternion instead of roll, pitch, and yaw.
 
-We can also try to listen for the transform data using [tf2_monitor](http://wiki.ros.org/tf2_tools):
+We can also try to listen for the transform data using `tf2_monitor`:
 
     tf2_monitor
 
