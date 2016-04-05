@@ -4,7 +4,7 @@ This page explains how to install ROS 2 on Windows from a pre-built binary packa
 
 ## System requirements
 
-We support Windows 8.1.
+We support Windows 8.1. Windows 10 support is experimental.
 
 ## Installing prerequisites
 
@@ -65,7 +65,7 @@ Once downloaded you can extract it to `C:\dev\opensplice`
 
 ## Try some examples
 
-Before running an example, you need to `source` both the ROS 2 setup file. Start a command shell, then run a talker:
+Before running an example, you need to `source` the ROS 2 setup file. Start a command shell, then run a talker:
 
 ```
 > call C:\dev\ros2\local_setup.bat
