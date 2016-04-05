@@ -34,7 +34,7 @@ This demo is designed to show that the intra process publish/subscribe connectio
 
 First lets take a look at the source:
 
-https://github.com/ros2/demos/blob/release-alpha1/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp
+https://github.com/ros2/demos/blob/release-alpha5/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp
 ```c++
 #include <chrono>
 #include <cstdio>
@@ -141,7 +141,7 @@ You can also publish and subscribe with `const &` and `std::shared_ptr`, but zer
 This demo is similar to the previous one, but instead of the producer creating a new message for each iteration, this demo only ever uses one message instance.
 This is achieved by creating a cycle in the graph and "kicking off" communication by externally making one of the nodes publish before spinning the executor:
 
-https://github.com/ros2/demos/blob/release-alpha1/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp
+https://github.com/ros2/demos/blob/release-alpha5/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp
 ```c++
 #include <chrono>
 #include <cstdio>
