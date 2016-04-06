@@ -7,8 +7,8 @@ This page tries to capture the process we go through to make a new alpha release
 - Run a packaging job using this new `.repos` file
   - First upload it somewhere (like gist.github.com)
   - Then create a packaging job for each platform and put the url of the hosted `.repos` file in the `CI_ROS2_REPOS_URL` field
-- When they finish download the artifact file they produce from the Jenkins Job page
-- Test the artifact by extracting it and following the from binary install instructions on the wiki
+- When they finish download the artifact files (from the three platforms) they produce from the Jenkins Job page
+- Test the artifacts by extracting them and following the from binary install instructions on the wiki
   - https://github.com/ros2/ros2/wiki/Installation#binary-packages
   - If it doesn't work, fix it and start the process over :stuck_out_tongue:
 - Since it works, add a tag on all the repositories for this alpha release using vcstool. Note that for this step to work without requiring lots of password typing, you either need a `~/.netrc` file with your credentials, or you need to change the github URLs in the `.repos` file to use ssh instead of https.
@@ -26,7 +26,7 @@ This page tries to capture the process we go through to make a new alpha release
   - `vcs custom ./src/ament/gmock_vendor --args push --tags -f`
   - `vcs custom ./src/ament/gtest_vendor --args push --tags -f`
   - `vcs custom ./src/ament/uncrustify --args push --tags -f`
-- Rename the artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
+- Rename each artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
   - E.g. `ros2-alpha4-package-linux.tar.bz2`
 - Create a tag on the ros2/ros2 repository called `release-alpha#` and put the new `.repos` file in the root
   - Clone ros2/ros2 to the master branch
