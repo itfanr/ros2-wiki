@@ -64,6 +64,12 @@ BOOST_ROOT=C:\local\boost_1_59_0
 BOOST_LIBRARYDIR=C:\local\boost_1_59_0\lib64-msvc-14.0
 ```
 
+You will also need to make sure the Boost DLLs are listed in the PATH environment variable. For example,
+
+```
+PATH=C:\local\boost_1_59_0\lib64-msvc-14.0
+```
+
 ### Installing Developer Tools
 
 Now we are ready to install some our tools that we use to help in developing ROS 2, but first we need to put Python's `Scripts` folder on the path.
@@ -248,8 +254,6 @@ In a separate shell you can do the same, but instead run the `listener`:
 ```
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
-
-Note: if you built FastRTPS in your workspace, FastRTPS uses Boost, so the Boost DLLs will need to be on your PATH. Otherwise install\bin\talker.exe (for example) will fail to run. However, OpenSplice does not use Boost, so install\bin\talker__rmw_opensplice_cpp.exe (for example) will run correctly.
 
 ## Troubleshooting
 
