@@ -11,21 +11,21 @@ This page tries to capture the process we go through to make a new alpha release
 - Test the artifact by extracting it and following the from binary install instructions on the wiki
   - https://github.com/ros2/ros2/wiki/Installation#binary-packages
   - If it doesn't work, fix it and start the process over :stuck_out_tongue:
-- Since it works, add a tag on all the repositories for this alpha release using vcstool
+- Since it works, add a tag on all the repositories for this alpha release using vcstool. Note that for this step to work without requiring lots of password typing, you either need a `~/.netrc` file with your credentials, or you need to change the github URLs in the `.repos` file to use ssh instead of https.
   - `vcs custom ./src --args tag release-alpha4` (adjust the tag name appropriately)
   - If we ever have something other than `git` repositories we'll need to use the `--git` and `--hg` (for example) arguments separately
 - Update the `release-latest` tag on all repositories
   - `vcs custom ./src --args tag -f release-latest`
 - Push new tags for all ROS 2-specific repositories (we'll track the non ROS 2 repos with commit hashes):
-  - `vcs custom ./src/ros2 --args push --tags`
-  - `vcs custom ./src/ament/ament_cmake --args push --tags`
-  - `vcs custom ./src/ament/ament_index --args push --tags`
-  - `vcs custom ./src/ament/ament_lint --args push --tags`
-  - `vcs custom ./src/ament/ament_package --args push --tags`
-  - `vcs custom ./src/ament/ament_tools --args push --tags`
-  - `vcs custom ./src/ament/gmock_vendor --args push --tags`
-  - `vcs custom ./src/ament/gtest_vendor --args push --tags`
-  - `vcs custom ./src/ament/uncrustify --args push --tags`
+  - `vcs custom ./src/ros2 --args push --tags -f`
+  - `vcs custom ./src/ament/ament_cmake --args push --tags -f`
+  - `vcs custom ./src/ament/ament_index --args push --tags -f`
+  - `vcs custom ./src/ament/ament_lint --args push --tags -f`
+  - `vcs custom ./src/ament/ament_package --args push --tags -f`
+  - `vcs custom ./src/ament/ament_tools --args push --tags -f`
+  - `vcs custom ./src/ament/gmock_vendor --args push --tags -f`
+  - `vcs custom ./src/ament/gtest_vendor --args push --tags -f`
+  - `vcs custom ./src/ament/uncrustify --args push --tags -f`
 - Rename the artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
   - E.g. `ros2-alpha4-package-linux.tar.bz2`
 - Create a tag on the ros2/ros2 repository called `release-alpha#` and put the new `.repos` file in the root
