@@ -1,8 +1,7 @@
 This page tries to capture the process we go through to make a new alpha release of ROS 2:
 
 - Get a fresh copy of all repositories using the master [`ros2.repos` file](https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos)
-  - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos`
-  - `vcs import ./src < ros2.repos`
+  - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos | vcs import ./src`
 - Create a `.repos` file with the exact commit hashes you have checked out locally
   - `vcs export --exact ./src > release-alpha4.repos` (adjust file name appropriately)
 - Run a packaging job using this new `.repos` file
@@ -33,7 +32,7 @@ This page tries to capture the process we go through to make a new alpha release
   - Clone ros2/ros2 to the master branch
   - Replace the `ros2.repos` file's content with that of the one you created above
   - Commit it with a message like the tag name, e.g. `release-alpha4`
-  - Tag it with `git tag release-alpha4` and `git tag -f release-latest` push both with `git push --tags`
+  - Tag it with `git tag release-alpha4` and `git tag -f release-latest` push both with `git push --tags -f`
 - Create a new release on the "Releases" section of ros2/ros2 using this new tag: https://github.com/ros2/ros2/releases
   - Use the title `ROS 2 Alpha # release` (matching the style of previous releases)
 - Upload the renamed artifacts to the Release on GitHub using the web interface:
