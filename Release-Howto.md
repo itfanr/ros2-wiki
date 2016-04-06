@@ -1,7 +1,8 @@
 This page tries to capture the process we go through to make a new alpha release of ROS 2:
 
 - Get a fresh copy of all repositories using the master [`ros2.repos` file](https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos)
-  - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos | vcs import ./src`
+  - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos`
+  - `vcs import ./src < ros2.repos`
 - Create a `.repos` file with the exact commit hashes you have checked out locally
   - `vcs export --exact ./src > release-alpha4.repos` (adjust file name appropriately)
 - Run a packaging job using this new `.repos` file
