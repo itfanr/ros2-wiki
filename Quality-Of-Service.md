@@ -92,7 +92,12 @@ $ sudo sysctl -w net.inet.udp.recvspace=209715
 $ sudo sysctl -w net.inet.udp.maxdgram=65500
 ```
 
-These changes will not persist a reboot.
+These changes will not persist a reboot. If you want the changes to persist, add these lines to `/etc/sysctl.conf` (create the file if it doesn't exist already):
+
+```
+net.inet.udp.recvspace=209715
+net.inet.udp.maxdgram=65500
+```
 
 ### Command line options
 
