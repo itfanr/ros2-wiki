@@ -10,7 +10,16 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Alpha 4 (circa 2016-02-12)
+### Alpha 6 (circa 2016-05-20)
+
+See https://github.com/ros2/ros2/issues/212
+
+### Alpha 7 (circa 2016-07)
+
+- revisit embedded use cases
+- consider candidates for refactoring
+
+### Future
 
 - rcl
   - support for services
@@ -37,18 +46,6 @@ This is a list of the features targeted for development in the future.
 - Add actions
 - Implement rclc
 - Gazebo support
-
-### Alpha 5 (circa 2016-04-01)
-
-- data recording / playback, a la `rosbag`
-- *add more here*
-
-### Alpha 6 (circa 2016-05-13)
-
-- *TBD*
-
-### Future
-
 - Continue to iterate on design documents: http://design.ros2.org
 - Evaluate and support more DDS / RTPS implementations:
   - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
@@ -85,59 +82,4 @@ This is a list of the features targeted for development in the future.
 
 ## Past releases
 
-### Alpha 3 (2015-12-18)
-
-- Refactor rclcpp into a library
-  - Requires resolution of Windows lazy symbolism
-- Support for FastRTPS
-  - Missing support for large message fragmentation
-- Refactor into rcl
-  - Include C message structures and type support
-- Add TF support
-
-### Alpha 2 (2015-11-03)
-
-- Ticket tracking progress https://github.com/ros2/ros2/issues/131
-- Support for custom allocators in rclcpp
-  - Useful for real-time messaging
-- Feature parity of Windows with Linux/OSX
-  - Workspace management
-  - Services
-  - Parameters
-- rclcpp API improvements
-- FreeRTPS improvements:
-  - Fragmentation of large messages (on the sending side)
-  - Camera demo
-
-### Alpha 1 (2015-08-31)
-
-Our first release contains the following features and supports the following demos.
-
-Major Features:
-
-- Multi-platform support
-  - Linux
-  - OS X
-  - Windows
-  - RTOS or no OS
-- Build system
-- Message generation
-- Abstract middleware interface
-  - Multiple DDS vendor support
-    - OpenSplice
-    - Connext
-    - Connext with Dynamic Data support
-- ROS C++ client library
-  - Executor model
-  - Publish / subscribe API
-  - Request / response (Services) API
-    - Synchronous as well as asynchronous
-  - Dynamic parameter API
-
-Demonstrations:
-
-- ROS 1 <-> ROS 2 bridge
-- Quality of Service in lossy environments
-- Efficient intra-process communications
-- Real-time controller
-- Publish/Subscribe on an embedded system without an OS
+See [list of releases](Releases).
