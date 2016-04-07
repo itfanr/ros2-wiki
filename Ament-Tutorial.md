@@ -8,7 +8,7 @@ It will be a practical tutorial and is not designed to replace the core document
 Ament is an iteration on the catkin meta-build tool.
 For more information on the design of ament see [this document](http://design.ros2.org/articles/ament.html).
 
-The source can be found in [ament GitHub organization](https://github.com/ament).
+The source can be found in the [ament GitHub organization](https://github.com/ament).
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Typically the directory starts otherwise empty.
 Ament does out of source builds.
 By default it will create a `build` and `install` directory as peers of the `src` directory.
 The `build` directory will be where intermediate files are stored.
-For each package subfolder will be created in which e.g. CMake is being invoked.
+For each package a subfolder will be created in which e.g. CMake is being invoked.
 The `install` directory is where each package will be installed to.
 
 NB: Compared to catkin there is no `devel` directory.
@@ -39,7 +39,7 @@ cd ~/ros2_ws
 
 ## Add some sources
 
-To start off we need to setup a underlay without any of ROS2 installed.
+To start off we need to setup an underlay without any of ROS2 installed.
 
 ```bash
 wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
@@ -48,12 +48,12 @@ vcs import ~/ros2_ws/src < ros2.repos
 
 ## Run the build
 
-Since this is a bootstrap environment we need to call ament.py by it's full path.
+Since this is a bootstrap environment we need to call ament.py by its full path.
 
 Note: In the future once ament is either installed on your system or in an underlayed workspace this will no longer be necessary.
 
 Since there is no `devel` space in ament and it requires installing each package it supports the option `--symlink-install`.
-This allows to change files in the `source` space (e.g. Python files or other not compiled resourced) for faster iteration.
+This allows the installed files to be changed by changing the files in the `source` space (e.g. Python files or other not compiled resourced) for faster iteration.
 
 ```bash
 src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
@@ -67,7 +67,7 @@ To run the tests you just built, with the `--build-tests` option above, run the 
 src/ament/ament_tools/scripts/ament.py test
 ```
 
-If you have build (and installed) a workspace before including the tests (using `build --build-tests`) you can skip the build and install step to speed up the process:
+If you have built (and installed) a workspace before including the tests (using `build --build-tests`) you can skip the build and install step to speed up the process:
 
 ```bash
 src/ament/ament_tools/scripts/ament.py test --skip-build --skip-install
@@ -85,8 +85,8 @@ These files will both add the required elements to your path and library paths a
 ```
 
 NB: This is slightly different than catkin.
-The `local_setup.*` file is slightly different that the `setup.*` file in that it will only apply settings from the current workspace.
-When using more then one workspace you will still source the `setup.*` files to get the environment including all parent workspaces.
+The `local_setup.*` file is slightly different than the `setup.*` file in that it will only apply settings from the current workspace.
+When using more than one workspace you will still source the `setup.*` files to get the environment including all parent workspaces.
 
 ## Try a demo
 
@@ -129,7 +129,7 @@ And to get started we'll overlay the [ros2/examples repository](https://github.c
 git clone https://github.com/ros2/examples.git
 ```
 
-And build the overlay, but lets build with debug so we can make sure to get debug symbols:
+And build the overlay, but let's build with debug so we can make sure to get debug symbols:
 
 ```bash
 cd ~/overlay_ws
