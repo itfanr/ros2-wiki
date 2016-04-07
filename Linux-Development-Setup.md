@@ -36,7 +36,7 @@ sudo apt-get update
 sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
 # dependencies for testing
-sudo apt-get install clang-format-3.4 cppcheck git pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
+sudo apt-get install clang-format-3.4 pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
@@ -199,6 +199,8 @@ Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collid
 sudo apt-get update
 sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-empy python3-setuptools python3-nose python3-pip 
+# dependencies for testing
+sudo apt-get install clang-format-3.4 pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
