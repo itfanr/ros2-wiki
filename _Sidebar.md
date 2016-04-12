@@ -3,6 +3,7 @@
 * [[All Releases|Releases]]
 * [[Installation]]
 * [[Tutorials]]
+* [[Migration-guide]]
 * [[Contact]]
 * [[Contributing]]
 * [[Developer Guide|Developer-Guide]]
