@@ -212,6 +212,22 @@ sudo pip3 install vcstool
 
 Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
 
+## Alternate compilers
+Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger cmake configuration (by using `--force-cmake-config` or by deleting the packages you want affected), cmake will reconfigure and use the different compiler.
+
+### Clang
+
+To configure cmake to detect and use Clang:
+
+```
+sudo apt-get install clang
+export CC=clang
+export CXX=clang++
+ament build --force-cmake-config
+```
+
+TODO: using ThreadSanitizer, MemorySanitizer
+
 ## Troubleshooting
 
 ### Out of memory
