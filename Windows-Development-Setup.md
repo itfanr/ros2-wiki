@@ -16,12 +16,14 @@ You'll use Chocolatey to install some other developer tools.
 
 ### Installing Build Tools
 
-Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`
-
-In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
+Windows 8.1:
+Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`. In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
 Right click on this shortcut and select "Run as administrator".
-This will open a cmd prompt with the Visual Studio tools on the `PATH` and running as administrator's permissions.
 
+Windows 10:
+Press the windows key and type `apps: vs2015 x64 native tools command prompt` then right click on the app with the same name and select "Run as administrator".
+
+This will open a cmd prompt with the Visual Studio tools on the `PATH` and running as administrator's permissions.
 Anytime you are doing anything you should use this command prompt so that, for example, cmake can find the C compiler and commands like `msbuild` are on the `PATH`.
 
 It is probably worth right clicking on the shortcut, selecting properties, then advanced and checking the run as administrator box so that it always opens as administrator.
