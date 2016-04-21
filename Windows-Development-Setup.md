@@ -284,6 +284,7 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 > cd C:\dev\Python-3.5.1\PCbuild\amd64
 > copy python_d.exe C:\ProgramData\chocolatey\bin
+> copy python35_d.dll C:\ProgramData\chocolatey\bin
 > copy python35_d.dll C:\ProgramData\chocolatey\lib\python3\tools
 > copy python3_d.dll C:\ProgramData\chocolatey\lib\python3\tools
 > copy python35_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
