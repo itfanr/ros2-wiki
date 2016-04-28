@@ -175,7 +175,7 @@ source ~/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ##### Debian packages built by OSRF
 
 These packages are not public due to pending license questions.
-Download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
+If you have been granted access, you can download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
 
 Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
 
