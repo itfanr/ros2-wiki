@@ -164,12 +164,12 @@ You can install the packages provided by [RTI](http://www.rti.com/downloads/conn
 After downloading `chmod +x` on the .run the executable and execute.
 (If you're installing to a system directory use `sudo`.)
 
-The default location is `/opt/rti_connext_dds-5.2.0`
+The default location is `~/rti_connext_dds-5.2.0`
 
 Source the setup file to set the `NDDSHOME` environment variable.
 
 ```
-source /opt/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
+source ~/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
 
 ##### Debian packages built by OSRF
