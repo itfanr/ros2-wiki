@@ -146,7 +146,7 @@ Apply the following changes to use `ament_cmake` instead of `catkin`:
 
 If you are using gtest
 
-- replace `CATKIN_ENABLE_TESTING` with `AMENT_ENABLE_TESTING`
+- replace `CATKIN_ENABLE_TESTING` with `BUILD_TESTING` (until alpha 5 this was `AMENT_ENABLE_TESTING`)
 - replace `catkin_add_gtest` with `ament_add_gtest`
 - add a `<test_depend>ament_cmake_gtest</test_depend>`
 
@@ -155,7 +155,7 @@ If you are using gtest
 In ROS 2.0 we are working to maintain clean code using linters.
 The styles for different languages are defined in our [Developer Guide](https://github.com/ros2/ros2/wiki/Developer-Guide).
 
-If you are starting a project from scratch it is recommended to follow the style guide and turn on the automatic linter unittests by adding these lines just below `if(AMENT_ENABLE_TESTING)`
+If you are starting a project from scratch it is recommended to follow the style guide and turn on the automatic linter unittests by adding these lines just below `if(BUILD_TESTING)` (until alpha 5 this was `AMENT_ENABLE_TESTING`)
 
 ``` cmake
 find_package(ament_lint_auto REQUIRED)
