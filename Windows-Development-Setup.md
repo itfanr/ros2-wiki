@@ -178,7 +178,7 @@ Next install testing tools like `Nose` and others:
 Next install linters and checkers like `flake8` and others:
 
 ```
-> pip install flake8 pep8 pyflakes
+> pip install flake8 pep8 pydocstyle pyflakes
 ```
 
 Also install `trollius` now so that it uses the wheel rather than trying to install from source:
