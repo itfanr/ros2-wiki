@@ -1,16 +1,17 @@
 This tutorial will teach you how to integrate a custom allocator for publishers and subscribers so that the default heap allocator is never called while your ROS nodes are executing.
+The code for this tutorial is available at: https://github.com/ros2/examples/blob/master/rclcpp_examples/src/topics/allocator_example.cpp
 
 ## Background
 Suppose you want to write real-time safe code, and you've heard about the many dangers of calling "new" during the real-time critical section, because the default heap allocator on most platforms is nondeterministic.
 
-By default, many C++ standard library structures will implicitly allocate memory as they grow, such as `std::vector`. However, these data structures also accept an "Allocator" template argument. If you specify a custom allocator to one of these data structures, it will use that allocator for your instead of the system allocator to grow or shrink the data structure. Your custom allocator could have a pool of memory preallocated on the stack, which might be better suited to real-time applications.
+By default, many C++ standard library structures will implicitly allocate memory as they grow, such as `std::vector`. However, these data structures also accept an "Allocator" template argument. If you specify a custom allocator to one of these data structures, it will use that allocator for you instead of the system allocator to grow or shrink the data structure. Your custom allocator could have a pool of memory preallocated on the stack, which might be better suited to real-time applications.
 
 In the ROS 2 C++ client library (rclcpp), we are following a similar philosophy to the C++ standard library. Publishers, subscribers, and the Executor accept an Allocator template parameter that controls allocations made by that entity during execution.
 
 ## Writing an allocator
 To write an allocator compatible with ROS 2's allocator interface, your allocator must be compatible with the C++ standard library allocator interface.
 
-The C++11 library provides something called `allocator_traits`. The C++11 standard specifies that a custom allocator only needs to fulfill a minimal set of requirements to be used to allocate and deallocate memory in a standard way. `allocator_traits` is a generic structure that fills out other qualities of an allocator based on an allocator written with the minimal requirements.
+The C++11 library provides something called `allocator_traits`. The C++11 standard specifies that a custom allocator only needs to fulfil a minimal set of requirements to be used to allocate and deallocate memory in a standard way. `allocator_traits` is a generic structure that fills out other qualities of an allocator based on an allocator written with the minimal requirements.
 
 For example, the following declaration for a custom allocator would satisfy `allocator_traits` (of course, you would still need to implement the declared functions in this struct):
 
@@ -136,21 +137,6 @@ The IntraProcessManager is a class that is usually hidden from the user, but in 
 
 Make sure to instantiate publishers and subscribers AFTER constructing the node in this way.
 
-## TLSF
-
-ROS 2 offers support for the TLSF (Two Level Segregate Fit) allocator, which was designed to meet real-time requirements:
-
-https://github.com/ros2/realtime_support/tree/master/tlsf_cpp
-
-For more information about TLSF, see http://www.gii.upv.es/tlsf/
-
-Note that the TLSF allocator is licensed under a dual-GPL/LGPL license.
-
-## Example
-
-A full working example using the TLSF allocator is here:
-https://github.com/ros2/realtime_support/blob/master/tlsf_cpp/example/allocator_example.cpp
-
 ## Testing and verifying the code
 How do you know that your custom allocator is actually getting called?
 
@@ -211,6 +197,22 @@ We've caught about 2/3 of the allocations/deallocations that happen on the execu
 
 As a matter of fact, these allocations/deallocations originate in the underlying DDS implementation used in this example.
 
-Proving this is out of the scope of this tutorial, but you can check out the test for the allocation path that gets run on CI, which backtraces through the code and figures out when certain function calls originate in the rmw implementation or in a DDS implementation:
+Proving this is out of the scope of this tutorial, but you can check out the test for the allocation path that gets run as part of the ROS 2 continuous integration testing, which backtraces through the code and figures out whether certain function calls originate in the rmw implementation or in a DDS implementation:
 
 https://github.com/ros2/realtime_support/blob/master/tlsf_cpp/test/test_tlsf.cpp#L41
+
+Note that this test is not using the custom allocator we just created, but the TLSF allocator (see below).
+
+
+## The TLSF allocator
+
+ROS 2 offers support for the TLSF (Two Level Segregate Fit) allocator, which was designed to meet real-time requirements:
+
+https://github.com/ros2/realtime_support/tree/master/tlsf_cpp
+
+For more information about TLSF, see http://www.gii.upv.es/tlsf/
+
+Note that the TLSF allocator is licensed under a dual-GPL/LGPL license.
+
+A full working example using the TLSF allocator is here:
+https://github.com/ros2/realtime_support/blob/master/tlsf_cpp/example/allocator_example.cpp
