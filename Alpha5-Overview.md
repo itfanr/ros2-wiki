@@ -14,7 +14,7 @@ your own demos.
 
 The major features included in this release are:
 
-- Support for C data structures in Fast and Connext Dynamic rmw implementations.
+- Support for C data structures in Fast RTPS and Connext Dynamic rmw implementations.
 - Support services in C.
 - Added 32-bit and 64-bit ARM as experimentally supported platforms.
 
