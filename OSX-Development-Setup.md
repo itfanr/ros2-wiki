@@ -51,7 +51,7 @@ You need the following things installed to build ROS 2:
         From: https://github.com/ros/homebrew-deps/blob/master/gtest.rb
  1. Use `pip3` (**not `pip`**, which will install Python 2.7 packages!) to install more stuff:
 
-        pip3 install empy setuptools nose vcstool nose pep8 pydocstyle pyflakes flake8 mock coverage
+        pip3 install empy setuptools nose vcstool pep8 pydocstyle pyflakes flake8 mock coverage
  1. *Optional*: if you want to build the ROS 1<->2 bridge, then you must also install ROS 1:
   * Start with the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
   * When you get to the step where you call `rosinstall_generator` to get the source code, here's an alternate invocation that brings in just the minimum required to produce a useful bridge:
