@@ -19,8 +19,9 @@ See https://github.com/ros2/ros2/issues/225
 - rcl
   - support for services
 - rclcpp
-  - refactor to use rcl
+  - refactor to use rcl (services and parameters)
 - Python client library
+  - Services and parameters
 - Component life-cycle:
   - Introspection and orchestration APIs
   - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
