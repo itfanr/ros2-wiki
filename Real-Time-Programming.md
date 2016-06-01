@@ -28,7 +28,9 @@ First, follow the instructions to build ROS 2 [from source](Linux-Development-Se
 Source your ROS 2 setup.bash.
 
 Run the demo binary, and redirect the output:
-`pendulum_demo > output.txt`
+```
+pendulum_demo > output.txt
+```
 
 ## What the heck just happened?
 
