@@ -10,14 +10,9 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Alpha 6 (circa 2016-05-20)
-
-See https://github.com/ros2/ros2/issues/212
-
 ### Alpha 7 (circa 2016-07)
 
-- revisit embedded use cases
-- consider candidates for refactoring
+See https://github.com/ros2/ros2/issues/225
 
 ### Future
 
