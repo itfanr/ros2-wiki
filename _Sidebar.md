@@ -1,5 +1,5 @@
 * [[Home]]
-* [[Alpha5 Release Overview|Alpha5-Overview]]
+* [[Alpha6 Release Overview|Alpha6-Overview]]
 * [[All Releases|Releases]]
 * [[Installation]]
 * [[Tutorials]]
