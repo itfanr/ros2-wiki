@@ -2,6 +2,7 @@
 
 * [[Installation from binary and source, all platforms|Installation]]
 * [Using ament to build a custom package](Ament-Tutorial)
+* [Implement a custom memory allocator](Allocator-Template-Tutorial)
 
 ## ROS 2 Demos
 
