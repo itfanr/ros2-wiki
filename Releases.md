@@ -1,5 +1,6 @@
 Releases of ROS 2 software are listed here:
 
+* [[alpha6 Release Overview|alpha6-Overview]]
 * [[alpha5 Release Overview|alpha5-Overview]]
 * [[alpha4 Release Overview|alpha4-Overview]]
 * [[alpha3 Release Overview|alpha3-Overview]]
