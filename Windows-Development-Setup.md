@@ -202,7 +202,7 @@ https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-
 Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt (requires Admin privileges):
 
 ```
-setx -m OPENCV_DIR C:\opencv\build
+setx -m OpenCV_DIR C:\opencv\build
 ```
 
 ### Building the ROS 2 Code
