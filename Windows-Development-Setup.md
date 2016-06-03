@@ -78,7 +78,7 @@ Now we are ready to install some our tools that we use to help in developing ROS
 We need to do this so that installed python packages with scripts can be run directly from the prompt.
 
 So, push the windows key and type `environment`, then select "Edit the system environment variables".
-Then select the "Environment Variables..." button and edit the entry for the `PATH` under the "system environment variable", adding `C:\ProgramData\chocolatey\lib\python3\Scripts;` to the end.
+Then select the "Environment Variables..." button and edit the entry for the `PATH` under the "system environment variable", adding `C:\ProgramData\chocolatey\lib\python3\tools\Scripts;` to the end.
 You might need to open a new cmd prompt for this to take effect.
 
 Now we can actually install those tools, start with `vcstool`:
