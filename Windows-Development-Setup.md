@@ -36,7 +36,7 @@ First install git:
 ```
 > choco install -y git
 ```
-You will need to append the CMake bin folder `C:\Program Files\Git\bin` to the PATH.
+You will need to append the CMake bin folder `C:\Program Files\Git\bin` to the PATH. (last seen not needed on Windows 10)
 
 Then Python 3:
 
@@ -56,20 +56,20 @@ You may need to close the cmd prompt and open a new one, but at this point you s
 
 ### Installing Boost
 
-FastRTPS requires boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.59.0/) We test with [this binary](http://downloads.sourceforge.net/project/boost/boost-binaries/1.59.0/boost_1_59_0-msvc-14.0-64.exe)
+FastRTPS requires boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/) We test with [this binary](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe)
 
 The installer will by default install itself into `C:\local` 
 
 You will then need to add the following system environment variables.
 ```
-BOOST_ROOT=C:\local\boost_1_59_0
-BOOST_LIBRARYDIR=C:\local\boost_1_59_0\lib64-msvc-14.0
+BOOST_ROOT=C:\local\boost_1_61_0
+BOOST_LIBRARYDIR=C:\local\boost_1_61_0\lib64-msvc-14.0
 ```
 
 You will also need to make sure the Boost DLLs are listed in the PATH environment variable. For example,
 
 ```
-PATH=C:\local\boost_1_59_0\lib64-msvc-14.0
+PATH=C:\local\boost_1_61_0\lib64-msvc-14.0
 ```
 
 ### Installing Developer Tools
