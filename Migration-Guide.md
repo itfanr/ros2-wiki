@@ -642,7 +642,7 @@ strictly speaking, orthogonal to ROS 2).**
 ROS 2 relies on the C++11 standard.
 Depending on what compiler you're using, support for C++11 might not be enabled
 by default.
-Using `gcc` 4.8 (which is what is used on Ubuntu Trusty), we need to enable it
+Using `gcc` 5.3 (which is what is used on Ubuntu Xenial), we need to enable it
 explicitly, which we do by adding this line near the top of the file:
 
 ``` cmake
