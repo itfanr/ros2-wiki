@@ -14,6 +14,8 @@ This is a list of the features targeted for development in the future.
 
 See https://github.com/ros2/ros2/issues/225
 
+Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha ROS 2 is targeting Ubuntu Xenial Xerus (16.04) to benefit from newer versions of the compiler, CMake, Python, etc.
+
 ### Future
 
 - rcl
