@@ -2,7 +2,7 @@
 
 ## System Requirements
 
-We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit.
+We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04).
 
 Make sure that you have a locale set which supports `UTF-8` We test with the following settings.
 If you are in a minimal environment such as a docker containers the local may be set to something minimal like POSIX.
@@ -29,22 +29,16 @@ sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_relea
 sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
 ```
 
-Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collide) and setuptools:
+Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't collide) and setuptools:
 
 ```
 sudo apt-get update
 sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
 # dependencies for testing
-sudo apt-get install clang-format-3.4 pyflakes python3-coverage python3-mock python3-pep8 uncrustify
+sudo apt-get install clang-format pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
-```
-
-The setuptools version shipped with Ubuntu Trusty is not recent enough - we require at least version 8.2 (see https://bitbucket.org/pypa/setuptools/pull-request/85/):
-
-```
-sudo pip3 install -U setuptools
 ```
 
 ### Get ROS 2.0 code
@@ -164,12 +158,12 @@ You can install the packages provided by [RTI](http://www.rti.com/downloads/conn
 After downloading `chmod +x` on the .run the executable and execute.
 (If you're installing to a system directory use `sudo`.)
 
-The default location is `~/rti_connext_dds-5.2.0`
+The default location is `~/rti_connext_dds-5.2.3`
 
 Source the setup file to set the `NDDSHOME` environment variable.
 
 ```
-source ~/rti_connext_dds-5.2.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
+source ~/rti_connext_dds-5.2.3/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
 
 ##### Debian packages built by OSRF
@@ -179,28 +173,28 @@ If you have been granted access, you can download the three Debian packages of t
 
 Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
 
-## Installation on different Linux than Ubuntu 14.04
+## Installation on different Linux than Ubuntu 16.04
 
 ### Debian Jessie/Stretch
 
-In order to use the ROS 1 components with debian have look at http://wiki.ros.org/indigo/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 componets in order to test ROS 2 without the ROS 1 Bridge.
+In order to use the ROS 1 components with Debian have look at http://wiki.ros.org/indigo/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to Debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 components in order to test ROS 2 without the ROS 1 Bridge.
 
 
-Then add the osrf (gazebo) debian repository:
+Then add the OSRF (gazebo) Debian repository:
 
 ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu trusty main" > /etc/apt/sources.list.d/gazebo-latest.list'
 sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
 ```
 
-Install GCC, G++ CMake, Python3 EmPy package (custom packages which don't collide) and setuptools:
+Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't collide) and setuptools:
 
 ```
 sudo apt-get update
 sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-empy python3-setuptools python3-nose python3-pip 
 # dependencies for testing
-sudo apt-get install clang-format-3.4 pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
+sudo apt-get install clang-format pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
@@ -213,11 +207,11 @@ sudo pip3 install vcstool
 Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
 
 ## Alternate compilers
-Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger cmake configuration (by using `--force-cmake-config` or by deleting the packages you want affected), cmake will reconfigure and use the different compiler.
+Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger CMake configuration (by using `--force-cmake-config` or by deleting the packages you want affected), CMake will reconfigure and use the different compiler.
 
 ### Clang
 
-To configure cmake to detect and use Clang:
+To configure CMake to detect and use Clang:
 
 ```
 sudo apt-get install clang
