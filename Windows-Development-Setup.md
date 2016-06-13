@@ -200,6 +200,7 @@ Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt 
 ```
 setx -m OpenCV_DIR C:\opencv\build
 ```
+You will need to open a new command prompt for this environment variable to take effect
 
 ### Building the ROS 2 Code
 
@@ -285,6 +286,15 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 > copy python3_d.dll C:\ProgramData\chocolatey\lib\python3\tools
 > copy python35_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
 > copy python3_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
+> for %I in (*_d.pyd) do copy %I C:\ProgramData\chocolatey\lib\python3\tools\DLLs
 ```
-* Now, from a fresh command prompt, make sure that `python_d` works (i.e., you enter an interactive session with Python built in debug mode).
+* Now, from a fresh command prompt, make sure that `python_d` works:
+```
+> python_d
+> import _ctypes
+```
+* To create executables python scripts(.exe), python_d should be used to invoke ament_tools
+```
+> python_d src\ament\ament_tools\scripts\ament.py build 
+```
 * Hooray, you're done!
