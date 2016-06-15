@@ -117,7 +117,18 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
-There is support for PrismTech's OpenSplice as well as RTI's Connext DDS.
+There is support for PrismTech's OpenSplice, RTI's Connext DDS, and eProsima Fast RTPS.
+
+#### eProsima FastRTPS
+
+You can download the latest eProsima Fast RTPS release binaries for Windows from their website:
+
+http://www.eprosima.com/.
+
+Afternatively you can get the source code from GitHub:
+
+https://github.com/eProsima/Fast-RTPS
+
 
 #### OpenSplice
 
@@ -204,7 +215,7 @@ You will need to open a new command prompt for this environment variable to take
 
 ### Building the ROS 2 Code
 
-In order to build the ROS 2 Code you must first "source" the `release.bat` file provided by OpenSplice:
+In order to build the ROS 2 Code, if you want to use OpenSplice you must first "source" the provided `release.bat` file:
 
 ```
 > call C:\dev\opensplice\HDE\x86_64.win64\release.bat
