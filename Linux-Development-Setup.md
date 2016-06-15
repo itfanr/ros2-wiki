@@ -55,8 +55,8 @@ vcs import ~/ros2_ws/src < ros2.repos
 ### Install one or more DDS implementations
 
 ROS 2.0 builds on top of DDS.
-It is compatible with multiple vendors.
-You can choose to install one or more of the supported versions of DDS.
+It is compatible with multiple vendors. The downloaded ROS 2.0 code from the repositories comes bundled with eProsima Fast RTPS.
+You may choose to provide additional DDS implementations. If you do so, ROS 2.0 will compile for each one.
 
 By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF.
 Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
@@ -97,6 +97,7 @@ See the [demos](Tutorials) for other things to try.
 ### Alternative DDS sources
 
 The demos will attempt to build against any detected DDS vendor.
+By default ROS 2.0  will use eProsima FastRTPS, which comes bundled when downloading from the repositories.
 If you would like to switch out the vendor below are the instructions.
 When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
 
