@@ -153,7 +153,7 @@ We will target C++11, using new built-in C++11 features over Boost equivalents w
 
 We will use the Google C++ Style Guide, with some modifications:
 
-http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
+https://google.github.io/styleguide/cppguide.html
 
 - Line Length: our maximum line length is 100 characters.
 - Access Control: drop requirement for all class members to be private and therefore require accessors
