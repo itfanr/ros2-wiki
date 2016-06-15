@@ -134,7 +134,7 @@ export PTECH_LICENSE_FILE=path/to/prismtech.lic
 
 If you build OpenSplice from source, be sure to remember to following the INSTALL.txt instructions and manually replace the @@INSTALLDIR@@ placeholder in the OpenSplice install/HDE/x86_64.linux/release.com
 
-#### RTI Connext
+#### RTI Connext (version 5.2 or higher)
 
 To use RTI Connext you will need to have obtained a license from RTI.
 Add the following line to your `.bashrc` file pointing to your copy of the license.
