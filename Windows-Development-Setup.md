@@ -123,7 +123,7 @@ There is support for PrismTech's OpenSplice, RTI's Connext DDS, and eProsima Fas
 
 You can download the latest eProsima Fast RTPS release binaries for Windows from their website:
 
-http://www.eprosima.com/.
+http://www.eprosima.com/
 
 Afternatively you can get the source code from GitHub:
 
@@ -215,7 +215,9 @@ You will need to open a new command prompt for this environment variable to take
 
 ### Building the ROS 2 Code
 
-In order to build the ROS 2 Code, if you want to use OpenSplice you must first "source" the provided `release.bat` file:
+FastRTPS is bundled with the ROS 2 source and will always be built unless you put an `AMENT_IGNORE` file in the `src\eProsima` folder.
+
+Before building, "source" the `release.bat` file provided by OpenSplice, otherwise ROS 2 will not be able to find the OpenSplice installation and will not be built with OpenSplice support:
 
 ```
 > call C:\dev\opensplice\HDE\x86_64.win64\release.bat
