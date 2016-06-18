@@ -55,8 +55,10 @@ vcs import ~/ros2_ws/src < ros2.repos
 ### Install one or more DDS implementations
 
 ROS 2.0 builds on top of DDS.
-It is compatible with multiple vendors. The downloaded ROS 2.0 code from the repositories comes bundled with eProsima Fast RTPS.
-You may choose to provide additional DDS implementations. If you do so, ROS 2.0 will compile for each one.
+It is compatible with multiple DDS or RTPS (the DDS wire protocol) vendors.
+The repositories you downloaded for ROS 2.0 includes eProsima's Fast RTPS, which is the only bundled vendor.
+If you would like to use one of the other vendors you will need to install their software separately before building.
+The ROS 2.0 build will automatically build support for vendors that have been installed and sourced correctly.
 
 By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF.
 Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
@@ -97,9 +99,14 @@ See the [demos](Tutorials) for other things to try.
 ### Alternative DDS sources
 
 The demos will attempt to build against any detected DDS vendor.
-By default ROS 2.0  will use eProsima FastRTPS, which comes bundled when downloading from the repositories.
+The only bundled vendor is eProsima's Fast RTPS, which is included in the default set of sources for ROS 2.0.
 If you would like to switch out the vendor below are the instructions.
 When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
+
+When multiple vendors are present, many of the binaries produced by the core ROS 2.0 packages and examples will have versions which are suffixed with the vendor for which it was built.
+Each binary will also generate a "default" binary which will use one of the vendors (for now the first vendor alphabetically).
+For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_opensplice_cpp` or `talker__rmw_fastrtps_cpp`.
+That way you can ensure you're using the right vendor for each binary by including the suffix when you run the program.
 
 #### PrismTech OpenSplice
 
@@ -208,6 +215,7 @@ sudo pip3 install vcstool
 Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
 
 ## Alternate compilers
+
 Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger CMake configuration (by using `--force-cmake-config` or by deleting the packages you want affected), CMake will reconfigure and use the different compiler.
 
 ### Clang
