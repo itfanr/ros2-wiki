@@ -24,7 +24,7 @@ Windows 10:
 Press the windows key and type `apps: vs2015 x64 native tools command prompt` then right click on the app with the same name and select "Run as administrator".
 
 This will open a cmd prompt with the Visual Studio tools on the `PATH` and running as administrator's permissions.
-Anytime you are doing anything you should use this command prompt so that, for example, CMmake can find the C compiler and commands like `msbuild` are on the `PATH`.
+Anytime you are doing anything you should use this command prompt so that, for example, CMake can find the C compiler and commands like `msbuild` are on the `PATH`.
 
 It is probably worth right clicking on the shortcut, selecting properties, then advanced and checking the run as administrator box so that it always opens as administrator.
 Then you can right click it again and say pin to taskbar so it's easy to get to.
@@ -44,7 +44,11 @@ Then Python 3.5 or higher:
 > choco install -y python
 ```
 
-Since we require CMake 3.5 (and Chocolatey only provides 3.4.3) you need to download and install the [official CMake package](https://cmake.org/download/).
+Then CMake 3.5 or higher
+
+```
+> choco install -y cmake
+```
 
 You will need to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` to the PATH.
 
