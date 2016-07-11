@@ -2,6 +2,10 @@
 
 Welcome to the latest release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
+## New version of Ubuntu required
+
+Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha ROS 2 is targeting Ubuntu Xenial Xerus (16.04) to benefit from newer versions of the compiler, CMake, Python, etc.
+
 ## Scope
 
 As the "alpha" qualifier suggests, this release of ROS 2 is far from complete.
