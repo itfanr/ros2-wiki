@@ -208,7 +208,7 @@ Now build the ROS2 packages:
 . $HOME/catkin/setup.bash
 . $HOME/ament_ws/install/setup.bash
 cd ~/ros2_ws
-catkin_make_isolated
+PYTHONPATH=$PYTHONPATH:/home/gerkey/ros2_ws_catkin/install_isolated/lib/python3.5/site-packages catkin_make_isolated --install
 ```
 
 Voila: you've built ROS2 using the tools you're familiar with.
