@@ -211,8 +211,7 @@ cd ~/ros2_ws
 PYTHONPATH=$PYTHONPATH:/home/gerkey/ros2_ws_catkin/install_isolated/lib/python3.5/site-packages catkin_make_isolated --install
 ```
 
-Voila: you've built ROS2 using the tools you're familiar with.
-*Caveat: I'm currently getting a build failure in `builtin_interfaces` due to an apparent dependency problem related to `rosidl_generator_c`; investigation required.*
+Voila: you've built ROS2 using the tools that you're familiar with.
 
 ### Combining all of ROS and ROS2 in one workspace and building it (TODO)
 
