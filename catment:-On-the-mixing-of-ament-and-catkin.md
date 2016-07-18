@@ -51,7 +51,7 @@ Whenever possible (not all combinations will be practical), developers should be
 Such mixing and matching is especially important when developers want to combine a large existing code base using one meta-build system (e.g., ROS with `catkin`) with new libraries and tools offered by a code base using another meta-build system (e.g., ROS2 with `ament`).
 Ideally that kind of combination can be done without requiring changes to the API used by either code base and without telling the developer which builder tool to use.
 
-  1. Corollary: **Workspaces needn't to be homogeneous.**
+  1. Corollary: **Workspaces needn't be homogeneous.**
   There's no reason that we shouldn't be able to freely mix, say, `catkin` and `ament` packages in one workspace, with dependencies going in both directions, so long as the builder tool in use knows how to build them both.
   The primary interface between packages (at least, CMake-controlled packages) is their CMake configuration file.
   So long as that configuration file follows the standard protocol (setting `foo_LIBRARIES`, etc.), then it shouldn't matter who wrote the file.
