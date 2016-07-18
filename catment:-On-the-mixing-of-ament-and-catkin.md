@@ -148,6 +148,7 @@ Voila: when adding new packages atop ROS2, you're free to choose which CMake API
 
 * **Caveat**: I had to comment out the use of `CATKIN_DEPENDS` inside `catkin_package()`, because somewhere somebody was getting upset that things like `rclcpp` aren't `catkin` packages.
 That constraint needs to be relaxed somehow.
+* **TODO**: The same demo but with a `ament` package that depends on a `catkin` package (this is easy).
 * **TODO**: The same demo but with a package that has a vanilla `CMakeLists.txt` that uses neither `ament` nor `catkin`, and provides a manually generated `fooConfig.cmake` file that exports the right stuff to make it look the same to outsiders.
 
 ### Building ROS2 packages with `catkin_make_isolated`
