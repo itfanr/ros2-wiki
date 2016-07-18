@@ -208,10 +208,15 @@ Now build the ROS2 packages:
 . $HOME/catkin/setup.bash
 . $HOME/ament_ws/install/setup.bash
 cd ~/ros2_ws
+touch src/eProsima/AMENT_IGNORE
 PYTHONPATH=$PYTHONPATH:/home/gerkey/ros2_ws_catkin/install_isolated/lib/python3.5/site-packages catkin_make_isolated --install
 ```
 
 Voila: you've built ROS2 using the tools that you're familiar with.
+
+* **Caveat**: we're ignoring the `eProsima` packages in the workspace because they lack `package.xml` files, which means that `catkin` can't see them.
+`ament` has some heuristics for handling such packages.
+Options: backport those heuristics to `catkin`; switch to installing non-`package.xml`-containing packages outside of the workspace; or just add a `package.xml` to each of those packages (e.g., in our own fork).
 
 ### Combining all of ROS and ROS2 in one workspace and building it (TODO)
 
