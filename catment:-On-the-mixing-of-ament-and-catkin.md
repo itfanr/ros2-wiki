@@ -121,10 +121,12 @@ Here's an example of doing that, installing to `$HOME/catkin`:
 # install catkin_pkg
 git clone https://github.com/ros-infrastructure/catkin_pkg.git
 cd catkin_pkg
+git checkout ament
 python3 setup.py install --prefix $HOME/catkin --single-version-externally-managed --record foo --install-layout deb
 # install catkin
 git clone https://github.com/ros/catkin.git
 cd catkin
+git checkout ament
 mkdir build
 cd build
 PYTHONPATH=$HOME/catkin/lib/python3/dist-packages/ cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/catkin -DPYTHON_EXECUTABLE=/usr/bin/python3
@@ -162,8 +164,11 @@ Add support for packages that declare themselves to have a build type of `ament_
 This implementation calls out to `ament` to build each such package.
 While `ament_cmake` packages can be treated as plain `cmake` packages (as we did when adding `catkin` support to `ament`), `ament_python` packages require some gnarly invocations of Python.
 Instead of trying to replicate that logic in `catkin`, it's easier to just let `ament` handle it.
+Also in this patch, we add the `buildtool_export_depend` packages to the set that are considered when building.
+* [catkin_pkg](https://github.com/ros-infrastructure/catkin_pkg/compare/ament?expand=1):
+Also in this patch, we add the `buildtool_export_depend` packages to the set that are considered when computing the topological order.
 
-Because we're going to call out to `ament build`, we will need a minimal installation of `ament`, as did in a previous example:
+Because we're going to call out to `ament build`, we will also need a minimal installation of `ament`, as did in a previous example:
 
 ```
 mkdir -p ~/ament_ws/src
@@ -183,12 +188,18 @@ cd ../..
 Then we need to install the modified version of catkin somewhere:
 
 ```
+# install catkin_pkg
+git clone https://github.com/ros-infrastructure/catkin_pkg.git
+cd catkin_pkg
+git checkout ament
+python3 setup.py install --prefix $HOME/catkin --single-version-externally-managed --record foo --install-layout deb
+# install catkin
 git clone https://github.com/ros/catkin.git
 cd catkin
 git checkout ament
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$HOME/catkin ..
+PYTHONPATH=$HOME/catkin/lib/python3/dist-packages/ cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/catkin -DPYTHON_EXECUTABLE=/usr/bin/python3
 make install
 ```
 
