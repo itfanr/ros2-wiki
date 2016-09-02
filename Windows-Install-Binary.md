@@ -61,6 +61,7 @@ Once downloaded you can extract it to `C:\dev\opensplice`
 
 * Go the releases page: https://github.com/ros2/ros2/releases
 * Download the latest package for Windows, e.g., `ros2-package-windows.zip`.
+  * Note: there may be more than one binary download option which might cause the file name to differ.
 * Unpack the zip file somewhere (we'll assume `C:\dev\ros2`).
 
 ## Try some examples
