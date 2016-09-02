@@ -4,7 +4,9 @@ This page explains how to install ROS 2 on Linux from a pre-built binary package
 
 ## System Requirements
 
-We support Ubuntu Linux Trusty Tahr 14.04 on 64-bit x86 (no binaries available yet for ARM or 32-bit x86).
+We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit x86 (no binaries available yet for ARM or 32-bit x86).
+
+Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
 
 ## Installing prerequisites
 
