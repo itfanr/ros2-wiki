@@ -185,7 +185,7 @@ Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be
 
 ### Debian Jessie/Stretch
 
-In order to use the ROS 1 components with Debian have look at http://wiki.ros.org/indigo/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to Debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 components in order to test ROS 2 without the ROS 1 Bridge.
+In order to use the ROS 1 components with Debian have look at http://wiki.ros.org/kinetic/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to Debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 components in order to test ROS 2 without the ROS 1 Bridge.
 
 
 Then add the OSRF (gazebo) Debian repository:
