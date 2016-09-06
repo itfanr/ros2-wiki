@@ -24,7 +24,7 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
             wget
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
-  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/Ubuntu
+  Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 ## Downloading ROS 2
 
