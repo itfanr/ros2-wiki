@@ -49,3 +49,19 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
+
+### ROS 1 bridge
+
+If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file; we'll assume that it's `/opt/ros/indigo/setup.bash`.
+
+If you haven't already, start a roscore:
+
+    . /opt/ros/indigo/setup.bash
+    roscore
+
+In another terminal, start the bridge:
+
+    . /opt/ros/indigo/setup.bash
+    . ~/ros2_install/ros2-linux/setup.bash
+    dynamic_bridge
+For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
