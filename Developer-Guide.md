@@ -46,7 +46,7 @@ When filing an issue please make sure to:
 - A patch should be minimal in size and avoid any kind of unnecessary changes.
 - Always run CI jobs for all platforms for every pull request and include links to jobs in the pull request.
   (If you don't have access to the Jenkins job someone will trigger the jobs for you.)
-- Before merging a pull request all changes should be squashed into a small number semantic commits to keep the history clear.
+- Before merging a pull request all changes should be squashed into a small number of semantic commits to keep the history clear.
  - But avoid squashing commits while a pull request is under review.
    Your reviewers might not notice that you made the change, thereby introducing potential for confusion.
    Plus, you're going to squash before merging anyway; there's no benefit to doing it early.
@@ -55,6 +55,7 @@ When filing an issue please make sure to:
 - When you start reviewing a pull request, comment on the pull request so that other developers know that you're reviewing it.
 - Pull-request review is not read-only, with the reviewer making comments and then waiting for the author to address them.
   As a reviewer, feel free to make minor improvements (typos, style issues, etc.) in-place.
+  As the opener of a pull-request, if you are working in a fork, checking the box to [allow edits from upstream contributors](https://github.com/blog/2247-improving-collaboration-with-forks) will assist with the aforementioned.
   As a reviewer, also feel free to make more substantial improvements, but consider putting them in a separate branch (either mention the new branch in a comment, or open another pull request from the new branch to the original branch).
 - Any developer (the author, the reviewer, or somebody else) can merge any approved pull request.
 
