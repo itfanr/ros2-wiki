@@ -86,7 +86,7 @@ You should now be able to download the sources associated with the new repositor
 
 #### _Linux/OS X_
 ```
-vcs import src < repos
+vcs import src < ros2.repos
 ```
 
 #### _Windows_
