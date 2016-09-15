@@ -116,6 +116,8 @@ Get the `ros2.repos` file which defines the repositories to clone from:
 > curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 ```
 
+This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
+
 Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
 
 ```
@@ -276,6 +278,9 @@ In a separate shell you can do the same, but instead run the `listener`:
 ```
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
+
+### Maintaining your Source Checkout
+For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
 
 ## Troubleshooting
 
