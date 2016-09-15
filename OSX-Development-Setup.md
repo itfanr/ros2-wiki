@@ -67,7 +67,9 @@ Create a workspace and clone all repos:
     mkdir -p ~/ros2_ws/src
     cd ~/ros2_ws
     wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
-    vcs import ~/ros2_ws/src < ros2.repos
+    vcs import src < ros2.repos
+
+This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
 
 ## Build the ROS 2 code
 
@@ -94,6 +96,10 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
+
+
+## Maintain your source checkout
+For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
 
 ## Troubleshooting
 
