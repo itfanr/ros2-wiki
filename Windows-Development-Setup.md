@@ -50,7 +50,7 @@ Then CMake 3.5 or higher
 > choco install -y cmake
 ```
 
-You will need to append the CMake bin folder `C:\Program Files (x86)\CMake\bin` to the PATH.
+You will need to append the CMake bin folder `C:\Program Files\CMake\bin` to the PATH.
 
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
