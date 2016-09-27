@@ -119,10 +119,10 @@ I added this key to a "machine" GitHub account that I created for this farm and 
 
 ## Creating Jobs
 
-I cloned the `ros2/ros2` repository to the `ci_scripts` branch:
+I cloned the `ros2/ci` repository to the default branch (`master`):
 
 ```
-git clone https://github.com/ros2/ros2.git -b ci_scripts
+git clone https://github.com/ros2/ci.git
 ```
 
 Then I cloned the `ros_buildfarm` repository:
