@@ -99,3 +99,10 @@ Start another command shell and run a listener:
 
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
+
+
+### Troubleshooting
+If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as boost or opencv are located inside your `PATH` variable.
+
+
+
