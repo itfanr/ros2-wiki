@@ -57,6 +57,23 @@ https://github.com/osrf/opensplice/releases/download/6.4.0-0/opensplice-Win64VS2
 
 Once downloaded you can extract it to `C:\dev\opensplice`
 
+#### eProsima Fast-RTPS & Boost
+
+Fast-RTPS is an alternative vendor for which a binary ROS version exists. Fast-RTPS requires boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/). We test with [this](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe) binary.
+
+The installer will by default install itself into `C:\local`. You will then need to add the following system environment variables for ROS to find the libraries.
+
+`PATH=C:\local\boost_1_61_0\lib64-msvc-14.0`
+
+### Install OpenCV
+
+Some of the examples require OpenCV to be installed. You can download a precompiled version of OpenCV from:
+
+https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-vs2015-x64.zip
+
+Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win
+-vs2015-x64\build\x64\vc14\bin`
+
 ## Downloading ROS 2
 
 * Go the releases page: https://github.com/ros2/ros2/releases
