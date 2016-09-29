@@ -52,6 +52,10 @@ In a separate terminal, source the install file and run the publisher node:
 ```
 cam2image
 ```
+This will publish an image from your webcam. In case you don't have a camera attached to your computer, there is a commandline option which publishes predefined images.
+```
+cam2image -b
+```
 
 In this window, you'll see terminal output:
 
