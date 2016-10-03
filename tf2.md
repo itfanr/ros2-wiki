@@ -26,10 +26,4 @@ At time 0.0
 - Rotation: in Quaternion [0.843, -0.475, -0.076, 0.240]
 ~~~
 
-Note that `tf2_echo` is reporting the rotation as a quaternion instead of roll, pitch, and yaw.
-
-We can also try to listen for the transform data using `tf2_monitor`:
-
-    tf2_monitor
-
-When it's working, you should see output about the `foo` and `bar` frames. But at the moment, it's [broken](https://github.com/ros/geometry2/issues/156).
+Note that `tf2_echo` is reporting the rotation as a quaternion as opposed to roll, pitch, and yaw.
