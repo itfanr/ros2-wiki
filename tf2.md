@@ -14,7 +14,7 @@ That tool will publish a static transform from the parent frame `foo` to the chi
 
 ## Receiving transform data
 
-Now we can check whether it's possible to receive that transform data. Start with `tf2_echo`:
+Now we can check whether it's possible to receive that transform data with `tf2_echo`:
 
     tf2_echo foo bar
 
