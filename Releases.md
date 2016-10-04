@@ -18,6 +18,10 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 ## [[alpha8|alpha8-Overview]]
+- Several improvements to FastRTPS and its rmw implementation
+- Switched to FastRTPS as the default rmw implementation
+- Added QoS support in rclpy
+- Fixed various bugs with the previous alpha release
 
 
 ## [[alpha7|alpha7-Overview]]
