@@ -27,7 +27,7 @@ First, follow the instructions to build ROS 2 [from source](Linux-Development-Se
 
 Source your ROS 2 setup.bash.
 
-Run the demo binary, and redirect the output:
+Run the demo binary, and redirect the output. You may want to use `sudo` in case you get permission error:
 ```
 pendulum_demo > output.txt
 ```
