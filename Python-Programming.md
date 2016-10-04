@@ -16,7 +16,13 @@ The two classic ROS 2 examples have been implemented in Python using `rclpy`, op
 If you installed from the binary packages (i.e. you did not build it from source) then you'll need to invoke the examples with the Python executable directly (for now we're working on a fix for this).
 Since you can also do this when building from source, we'll use this pattern in both cased, but you should be able to invoke the python scripts directly if you build from source.
 
-To run them do `talker_py` and `listener_py` respectively, and you should see the following on the terminal running the listener:
+### On Windows:
+To run them do `talker_py` and `listener_py` respectively.
+
+### On Linux:
+To run them do ```python3 `which talker_py` ``` and ```python3 `which listener_py` ```
+
+Once executed you should see the following on the terminal running the listener:
 
 ```
 I heard: [Hello World: 1]
