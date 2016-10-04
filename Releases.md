@@ -1,7 +1,8 @@
 A summary of releases of ROS 2 software is listed below. For more details about each release, see the corresponding release overview. For convenience the key features of each release are repeated on this page.
 
-| Release Overview | Date | 
+| Release Overview | Date |
 | --- | --- |
+| [[alpha8|alpha8-Overview]] | 4 October 2016 |
 | [[alpha7|alpha7-Overview]] | 11 July 2016 |
 | [[alpha6|alpha6-Overview]] | 1 June 2016 |
 | [[alpha5|alpha5-Overview]] | 5 April 2016 |
@@ -14,6 +15,9 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 # New features of each release
+
+
+## [[alpha8|alpha8-Overview]]
 
 
 ## [[alpha7|alpha7-Overview]]

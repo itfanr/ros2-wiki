@@ -8,7 +8,7 @@ Here you will find documentation on how to install and use software from **ROS 2
 
 If you're looking for information on ROS 1 (i.e., ROS as it has existed for several years and what you might be using right now), check the [ROS website](http://www.ros.org) or the [documentation wiki](http://wiki.ros.org).
 
-**Before you proceed here, please read the [[release overview|Alpha7-Overview]] to get an idea of what is (and is not) in the current ROS 2 release.**
+**Before you proceed here, please read the [[release overview|Alpha8-Overview]] to get an idea of what is (and is not) in the current ROS 2 release.**
 
 ## Installation
 
