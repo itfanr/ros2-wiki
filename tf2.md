@@ -2,7 +2,7 @@
 
 There is preliminary support for [tf2](http://wiki.ros.org/tf2) in ROS 2. We rely heavily on tf2 in ROS 1 to manage data about coordinate transforms, and we expect to continue to use extensively in ROS 2.
 
-Here's how to try it out. In each shell, be sure to start by sourcing the ROS 2 setup file as usual (e.g. on Linux `. ~/ros2_ws/install/setup.bash` or on Windows `call C:\dev\ros2`).
+Here's how to try it out. In each shell, be sure to start by sourcing the ROS 2 setup file as usual (e.g. on Linux `. ~/ros2_ws/install/setup.bash` or on Windows `call C:\dev\ros2\install\setup.bat`).
 
 ## Publishing transform data
 
