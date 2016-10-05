@@ -1,5 +1,6 @@
 * [[Home]]
 * [[Alpha8 Release Overview|Alpha8-Overview]]
+* [[Features]]
 * [[All Releases|Releases]]
 * [[Installation]]
 * [[Tutorials]]
