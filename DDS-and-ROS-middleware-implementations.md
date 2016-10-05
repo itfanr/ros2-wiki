@@ -16,13 +16,13 @@ For example, if the code for the [RMW package for Fast RTPS](https://github.com/
 If there are multiple RMW implementations available, other ROS 2 packages that require an RMW implementation will then have to specify which RMW implementation is to be used.
 For many cases you will find that nodes using different RMW implementations are able to communicate, though it this is not true under all circumstances.
 
-# Default RMW implementation
+## Default RMW implementation
 If a ROS 2 workspace has multiple RMW implementations, the default RMW implementation is currently selected as the first in alphabetical order.
 For example, if both `rmw_fastrtps_cpp` and `rmw_connext_cpp` RMW implementations are installed, `rmw_connext_cpp` would be the default.
 See below for how to specify which RMW implementation is to be used when running the ROS 2 examples.
 
-# Specifying RMW implementations
-## C++
+## Specifying RMW implementations
+### C++
 The ROS 2 C++ examples are then configured to build executables for each RMW implementation that has been built.
 For example, for the simple "talker" publisher demo, if you have both Fast RTPS and Connext RMW implementations installed, the following executables are created:
 - a C++ executable named `talker__rmw_fastrtps_cpp` which uses a C++ RMW implementation for Fast RTPS
@@ -31,8 +31,8 @@ For example, for the simple "talker" publisher demo, if you have both Fast RTPS 
 
 If you are curious about how an executable can be automatically created for each RMW implementation for the above example, it's through [the use of](https://github.com/ros2/examples/blob/release-alpha8/rclcpp_examples/CMakeLists.txt#L59) the `call_for_each_rmw_implementation` macro provided by the [RMW CMake package](https://github.com/ros2/rmw/tree/release-alpha8/rmw_implementation_cmake).
 
-## Python
-The ROS 2 Python examples will generate one executable Python script that will use the default RMS implementation.
+### Python
+The ROS 2 Python examples will generate one executable Python script each that will use the default RMW implementation.
 For example, assuming that you have installed and setup your ROS 2 workspace, the following invocation will run the Python simple "talker" publisher demo with the default RMW implementation:
 ```
 python3 `which talker_py`
@@ -43,7 +43,7 @@ For example, to specify that the `rmw_fastrtps_cpp` RMW implementation is to be 
 RCLPY_IMPLEMENTATION=rmw_fastrtps_cpp python3 `which talker_py`
 ```
 
-# Adding RMW implementations to your workspace
+## Adding RMW implementations to your workspace
 Suppose that you have built your ROS 2 workspace with only Fast RTPS installed and therefore only the Fast RTPS RMW implementation built.
 The last time your workspace was built, any other RMW implementation packages, `rmw_connext_cpp` for example, were probably unable to find installations of the relevant DDS implementations.
 If you then install an additional DDS implementation, Connext for example, you will need to re-trigger the check for a Connext installation that occurs when the Connext RMW implementation is being built.
