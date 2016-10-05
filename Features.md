@@ -7,7 +7,7 @@ For planned future development, see the [[Roadmap]].
 | Functionality | Link | Fine print |
 | --- | --- | --- |
 | Discovery, transport and serialization over DDS | [Article](http://design.ros2.org/articles/ros_on_dds.html) | |
-| Support for multiple DDS implementations | | Currently eProsima Fast RTPS and RTI Connext. |
+| Support for multiple DDS implementations | [[Tutorial|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS and RTI Connext are supported. |
 | Publish/subscribe over topics | [Sample code](https://github.com/ros2/examples) | |
 | Clients and services | [Sample code](https://github.com/ros2/examples) | Services not yet available in Python. "wait_for_service" not available for RTI Connext. |
 | Set/retrieve parameters | [Sample code](https://github.com/ros2/examples) | Parameters not yet available in Python. |
