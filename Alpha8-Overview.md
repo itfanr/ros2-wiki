@@ -15,7 +15,6 @@ Rather, you should expect to try out some demos, explore the code, and perhaps w
 The improvements included in this release are:
 
 - Several improvements to FastRTPS and its rmw implementation
-- Switched to FastRTPS as the default rmw implementation
 - Added QoS support in rclpy
 - Fixed various bugs with the previous alpha release
 
