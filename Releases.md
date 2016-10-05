@@ -18,8 +18,11 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 ## [[alpha8|alpha8-Overview]]
-- Several improvements to FastRTPS and its rmw implementation
-- Added QoS support in rclpy
+- Several improvements to Fast RTPS and its rmw implementation
+  - Support for large (image) messages in Fast RTPS
+  - `wait_for_service` functionality in Fast RTPS
+- Support for all ROS 2 message types in Python and C
+- Added support for Quality of Service (QoS) settings in Python
 - Fixed various bugs with the previous alpha release
 
 
