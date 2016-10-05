@@ -2,9 +2,10 @@
 
 Welcome to the latest release of ROS 2 software!  We hope that you try it out and [provide feedback](#contact-us).
 
-## New version of Ubuntu required
+## Changes to supported DDS vendors
 
-Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of Alpha 7 ROS 2 is targeting Ubuntu Xenial Xerus (16.04) to benefit from newer versions of the compiler, CMake, Python, etc.
+Until Alpha 8, ROS 2 was supporting ROS middleware implementations for eProsima's Fast RTPS, RTI's Connext and PrismTech's OpenSplice.
+To streamline our efforts, as of Alpha 8, Fast RTPS and Connext (static) will be supported, with Fast RTPS ([now Apache 2.0-licensed](http://www.eprosima.com/index.php/company-all/news/61-eprosima-goes-apache)) shipped as the default.
 
 ## Scope
 
@@ -14,8 +15,11 @@ Rather, you should expect to try out some demos, explore the code, and perhaps w
 
 The improvements included in this release are:
 
-- Several improvements to FastRTPS and its rmw implementation
-- Added QoS support in rclpy
+- Several improvements to Fast RTPS and its rmw implementation
+  - Support for large (image) messages in Fast RTPS
+  - `wait_for_service` functionality in Fast RTPS
+- Support for all ROS 2 message types in Python and C
+- Added support for Quality of Service (QoS) settings in Python
 - Fixed various bugs with the previous alpha release
 
 Pretty much anything not listed above is not included in this release.
