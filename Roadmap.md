@@ -18,55 +18,46 @@ Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha R
 
 ### Future
 
-- rcl
-  - support for services
-- rclcpp
-  - refactor to use rcl (services and parameters)
-- Python client library
+- Python client library feature parity
   - Services and parameters
 - Component life-cycle:
   - Introspection and orchestration APIs
   - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
 - Launch system
   - Use life-cycle and orchestration
-- Real-time-safe intra-process messaging
-- FreeRTPS improvements:
-  - RMW support
-- Graph API
+- Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
-- Command line tools:
+- Command line tools
   - `rostopic` and friends
 - ROS 1 / ROS 2 Migration Guide
   - Tutorials and examples of migrating ROS 1 packages
 - Type masquerading
   - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
-- console logging, a la `rosconsole`
+- Console logging, a la `rosconsole`
 - Add actions
-- Implement rclc
-- Gazebo support
-- Continue to iterate on design documents: http://design.ros2.org
-- Evaluate and support more DDS / RTPS implementations:
-  - Fast-RTPS: https://github.com/eProsima/Fast-RTPS
-  - freertps: https://github.com/ros2/freertps
 - Static remapping
   - a la ROS Names: http://wiki.ros.org/Names
 - Dynamic remapping
   - Remapping and aliasing through a Service interface
 - Debian packaging, Windows packaging
 - Finish intra-process
-  - make it real-time- / thread-safe
+  - Make it thread-safe
 - Expand on real-time safety
   - For services, clients, and parameters
   - Support deterministic ordering of executables in Executor (fair scheduling)
   - Expose more quality of service parameters related to real-time performance
 - Multi-robot supporting features and demos
-- Use DDS C++ ISO PSM API
-- Use RTI's micro implementation
-- Make rclcpp a library
-  - Make rclcpp more modular / capable of being composed
 - Add pre-emption for services
 - Implement actions
-- Build packages in parallel
+
+### Backlog
+- Real-time-safe intra-process messaging
+- Implement rclc
+- Gazebo support
+- Use DDS C++ ISO PSM API
+- Support more DDS / RTPS implementations:
+  - freertps: https://github.com/ros2/freertps
+  - Use RTI's micro implementation
 - Run-time DDS implementation choice
 
 ### Reducing Technical Debt
