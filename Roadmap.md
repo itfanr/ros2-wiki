@@ -10,31 +10,35 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Alpha 7 (circa 2016-07)
+### Beta 1 (circa 2016-12)
 
-See https://github.com/ros2/ros2/issues/225
+The Beta 1 will target Ubuntu 16.04, Mac OS X 10.11 and Windows 10.
+ * Composition
+   * may use pluginlib and class_loader from ROS 1 for C++
+ * QoS benchmarks
+   * for example: unreliable comms, illustrated by wifi out-and-back
+ * Design documents
+ * Tutorials and examples
+   * Migration guide
+ * "rostopic list", "rostopic echo", and friends
+ * Bridging services to/from ROS1 (in addition to topics)
 
-Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha ROS 2 is targeting Ubuntu Xenial Xerus (16.04) to benefit from newer versions of the compiler, CMake, Python, etc.
+### Nice to have by Beta 1:
+ * Console logging
+ * Orchestration
+   * think “roslaunch + verification & dynamic behavior”
+
 
 ### Future
-
-- Python client library feature parity
-  - Services and parameters
-- Component life-cycle:
-  - Introspection and orchestration APIs
-  - Use [[class_loader|https://github.com/ros/class_loader/tree/ros2]] / [[pluginlib|https://github.com/ros/pluginlib/tree/ros2]]
+- Automatic API documentation generation
 - Launch system
   - Use life-cycle and orchestration
+- data logging, perhaps using rosbag (or a descendant of rosbag)
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
-- Command line tools
-  - `rostopic` and friends
-- ROS 1 / ROS 2 Migration Guide
-  - Tutorials and examples of migrating ROS 1 packages
 - Type masquerading
   - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
-- Console logging, a la `rosconsole`
-- Add actions
+- Add actions and bridge them
 - Static remapping
   - a la ROS Names: http://wiki.ros.org/Names
 - Dynamic remapping
@@ -48,9 +52,6 @@ Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha R
   - Expose more quality of service parameters related to real-time performance
 - Multi-robot supporting features and demos
 - Add pre-emption for services
-- Implement actions
-
-### Backlog
 - Real-time-safe intra-process messaging
 - Implement rclc
 - Gazebo support
@@ -62,12 +63,11 @@ Until Alpha 6 ROS 2 was targeting Ubuntu Trusty Tahr (14.04). As of this Alpha R
 
 ### Reducing Technical Debt
 
-- Fix failing and flaky tests.
+- Fix flaky tests.
 - Add missing Windows stuff.
 - Synchronise / reconcile design docs with the implementation.
   - Pre-release retrospective review (APIs, docs, etc.)
 - Address TODOs in code / docs
-- Address important issues (e.g., services are broken on Windows)
 
 ## Past releases
 
