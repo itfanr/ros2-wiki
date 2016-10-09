@@ -39,6 +39,8 @@ You need the following things installed before installing ROS 2.
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew install homebrew/science/opencv --without-python
         brew install python3 opensplice
+        # install boost for FastRTPS
+        brew install boost
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
 
