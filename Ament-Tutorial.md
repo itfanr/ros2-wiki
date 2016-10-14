@@ -29,11 +29,10 @@ NB: Compared to catkin there is no `devel` directory.
 
 ## Create directory structure
 
-To make the basic structure in the directory `~/example_ament_ws`:
+To make the basic structure in the directory `~/ros2_ws`:
 
 ```bash
-mkdir ~/ros2_ws
-mkdir ~/ros2_ws/src
+mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 ```
 
