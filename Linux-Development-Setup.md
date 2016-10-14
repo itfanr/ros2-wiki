@@ -237,9 +237,13 @@ TODO: using ThreadSanitizer, MemorySanitizer
 
 ## Troubleshooting
 
+### Internal compiler error
+
+If you experience an ICE when trying to compile on a memory constrained platform like a Raspberry PI you might want to build single threaded (append `--make-flags -j1` to the `ament.py` invocation).
+
 ### Out of memory
 
-The ros1_bridge in its current form requires 4Gb of free RAM to compile.
+The `ros1_bridge` in its current form requires 4Gb of free RAM to compile.
 If you don't have that amount of RAM available it's suggested to use `AMENT_IGNORE` in that folder and skip it's compilation.
 
 ### Multiple Host Interference
