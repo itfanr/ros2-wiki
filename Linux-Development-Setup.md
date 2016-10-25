@@ -94,7 +94,23 @@ src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --i
 
 Afterwards source the `local_setup.*` from the `install` / `install_isolated` folder.
 
-Now that you have finished building the workspace, you can run talker and listener, they are on your path.
+### Try some examples
+
+In one terminal, source the setup file and then run a `talker`:
+```
+. ~/ros2_ws/install/local_setup.bash
+# . ~/ros2_ws/install_isolated/local_setup.bash  # if you built in isolation, use this instead of the above line
+talker
+```
+In another terminal source the setup file and then run a `listener`:
+```
+. ~/ros2_ws/install/local_setup.bash
+# . ~/ros2_ws/install_isolated/local_setup.bash  # if you built in isolation, use this instead of the above line
+listener
+```
+You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
+Hooray!
+
 See the [demos](Tutorials) for other things to try.
 
 ### Maintain your Source Checkout
