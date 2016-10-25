@@ -50,6 +50,8 @@ In another terminal source the setup file and then run a `listener`:
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
 
+See the [demos](Tutorials) for other things to try, including how to [run the talker-listener example in Python](Python-Programming).
+
 ### ROS 1 bridge
 
 If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file; we'll assume that it's `/opt/ros/kinetic/setup.bash`.
