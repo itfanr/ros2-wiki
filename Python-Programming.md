@@ -10,17 +10,15 @@ The `rclpy` module enables developers to use the ROS 2 API from Python. As of Al
 
 ## Run the examples
 
-Before running either you must source the appropriate `setup.*` file in your terminal.
+The two classic ROS 2 examples of a "talker" and a "listener" have been implemented in Python using `rclpy`. The source code is available [here](https://github.com/ros2/examples/tree/master/rclpy_examples). 
 
-The two classic ROS 2 examples have been implemented in Python using `rclpy`, open two terminals and run `talker_py` on one and `listener_py` on the other.
-If you installed from the binary packages (i.e. you did not build it from source) then you'll need to invoke the examples with the Python executable directly (for now we're working on a fix for this).
-Since you can also do this when building from source, we'll use this pattern in both cased, but you should be able to invoke the python scripts directly if you build from source.
+Open two terminals, source the appropriate `setup.*`/`local_setup.*` file in the terminals, and run `talker_py` in one and `listener_py` in the other.
 
-### On Windows:
-To run them do `talker_py` and `listener_py` respectively.
 
-### On Linux:
-To run them do ```python3 `which talker_py` ``` and ```python3 `which listener_py` ```
+**_Special case for users on Linux, with ROS 2 installed from pre-built binary packages, for ROS 2 releases up to and including alpha 8:_**
+
+You'll need to invoke the examples with the Python executable directly: use ```python3 `which talker_py` ``` and ```python3 `which listener_py` ```
+
 
 Once executed you should see the following on the terminal running the listener:
 
@@ -37,4 +35,5 @@ I heard: [Hello World: 9]
 I heard: [Hello World: 10]
 ```
 
+## Communication with nodes using different ROS client libraries
 Since `rclpy` uses the underlying ROS 2 infrastructure, Python programs that use `rclpy` can also communicate with applications written in C++, even if they use a different DDS vendor and are running on a different operating system.
