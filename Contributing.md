@@ -37,7 +37,8 @@ To get started, you'll want to install from source; follow [[the source installa
 ### What to work on
 
 
-We have identified a number of tasks that could be worked on by community members [here](https://github.com/search?utf8=%E2%9C%93&q=user%3Aament+user%3Aros2+is%3Aopen+label%3Aunclaimed&type=Issues&ref=searchresults).
+We have identified a number of tasks that could be worked on by community members: they can be listed by [searching across the ROS 2 repositories for issues labeled as "unclaimed"](https://github.com/search?utf8=%E2%9C%93&q=user%3Aament+user%3Aros2+is%3Aopen+label%3Aunclaimed&type=Issues&ref=searchresults) or filtering the items on [the ROS 2 waffle.io board](https://waffle.io/ros2/ros2?search=unclaimed).
+The issues labeled with "experience/beginner" are those that will be the most accessible entry points for people who are new to the code base.
 If you see something on that list that you would like to work on, please comment on the item to let others know that you are working on it.
 
 
