@@ -34,7 +34,7 @@ Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't colli
 ```
 sudo apt-get update
 sudo apt-get install git wget
-sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
+sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
 # dependencies for testing
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # dependencies for fastrtps
@@ -229,7 +229,7 @@ sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-regex-d
 
 Then run:
 ```
-sudo pip3 install vcstool
+sudo pip3 install vcstool flake8
 ```
 
 Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
