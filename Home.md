@@ -47,6 +47,8 @@ The following [ROSCon](http://roscon.ros.org) talks have been given on ROS 2 and
 
 | Title | Type | Links |
 | --- | --- | --- |
+| ROS 2 Update - summary of alpha releases, architectural overview | ROSCon 2016 presentation | [slides](http://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf) / [video](https://vimeo.com/187696091) |
+| Evaluating the resilience of ROS2 communication layer | ROSCon 2016 presentation | [slides](http://roscon.ros.org/2016/presentations/rafal.kozik-ros2evaluation.pdf) / [video](https://vimeo.com/187705229) |
 | State of ROS 2 - demos and the technology behind | ROSCon 2015 presentation | [slides](http://roscon.ros.org/2015/presentations/state-of-ros2.pdf) / [video](https://vimeo.com/142151734) |
 | ROS 2 on "small" embedded systems | ROSCon 2015 presentation | [slides](http://roscon.ros.org/2015/presentations/ros2_on_small_embedded_systems.pdf) / [video](https://vimeo.com/142150576) |
 | Real-time control in ROS and ROS 2.0 | ROSCon 2015 presentation | [slides](http://roscon.ros.org/2015/presentations/RealtimeROS2.pdf) / [video](https://vimeo.com/142621778) |
