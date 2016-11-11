@@ -110,9 +110,9 @@ int main(int argc, char * argv[])
 
 As you can see by looking at the `main` function, we have a producer and a consumer node, we add them to a single threaded executor, and then call spin.
 
-If you look at the "producer" node's implementation in the `Producer` class, you can see that we have created a publisher which publishes on the "number" topic and a timer which periodically creates a new message, prints out its address in memory and its content's value and then publishes it.
+If you look at the "producer" node's implementation in the `Producer` struct, you can see that we have created a publisher which publishes on the "number" topic and a timer which periodically creates a new message, prints out its address in memory and its content's value and then publishes it.
 
-The "consumer" node is a bit simpler, you can see its implementation in the `Consumer` class, as it only subscribes to the "number" topic and prints the address and value of the message it receives.
+The "consumer" node is a bit simpler, you can see its implementation in the `Consumer` struct, as it only subscribes to the "number" topic and prints the address and value of the message it receives.
 
 The expectation is that the producer will print out an address and value and the consumer will print out a matching address and value.
 This demonstrates that intra process communication is indeed working and unnecessary copies are avoided, at least for simple graphs.
