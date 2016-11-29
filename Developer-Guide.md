@@ -338,6 +338,7 @@ Since there is not an existing CMake style guide we will define our own:
 - Use empty `else()` and `end...()` commands
 - No whitespace before `(`'s
 - Use two spaces of indention, do not use tabs
+- Do not use aligned indentation for parameters of multi-line macro invocations. Use two spaces only.
 - Prefer functions with `set(PARENT_SCOPE)` to macros
 - When using macros prefix local variables with `_` or a reasonable prefix
 
