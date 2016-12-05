@@ -12,6 +12,19 @@ For example, RTI has a few variations of their Connext implementation that range
 In order to use a DDS implementation with ROS 2, a ROS middleware (RMW) package needs to be created that implements the abstract ROS middleware interface using the DDS implementation's API and tools.
 It's a lot of work to implement and maintain RMW packages for supporting DDS implementations, but supporting at least a few implementations is important for ensuring that the ROS 2 codebase is not tied to any one particular implementation, as users may wish to switch out implementations depending on their project's needs.
 
+### Supported RMW implementations
+
+| Company | Product name | License | RMW implementation | Status |
+| ------------- | ------------- | ----- | ---- | --- |
+| eProsima | Fast RTPS | Apache 2 | `rmw_fastrtps_cpp` | Full support. Default RMW. Packaged with binary releases. |
+| RTI | Connext | commercial, research | `rmw_connext_cpp` | Full support. Building from source required. |
+| RTI | Connext (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused. Full support until alpha 8. |
+| PrismTech | Opensplice | LGPL (only v6.4), commercial | `rmw_opensplice_cpp` | Support paused. Full support until alpha 8. |
+| OSRF | FreeRTPS | Apache 2 | -- | Partial support. Development paused. |
+
+
+
+
 The [ROS 2 binary releases](https://github.com/ros2/ros2/releases/) only support one implementation at a time.
 The supported implementation is indicated in their file name.
 
