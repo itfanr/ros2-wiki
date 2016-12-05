@@ -14,13 +14,13 @@ It's a lot of work to implement and maintain RMW packages for supporting DDS imp
 
 ### Supported RMW implementations
 
-| Company | Product name | License | RMW implementation | Status |
+| Product name | License | RMW implementation | Status |
 | ------------- | ------------- | ----- | ---- | --- |
-| eProsima | Fast RTPS | Apache 2 | `rmw_fastrtps_cpp` | Full support. Default RMW. Packaged with binary releases. |
-| RTI | Connext | commercial, research | `rmw_connext_cpp` | Full support. Building from source required. |
-| RTI | Connext (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused. Full support until alpha 8. |
-| PrismTech | Opensplice | LGPL (only v6.4), commercial | `rmw_opensplice_cpp` | Support paused. Full support until alpha 8. |
-| OSRF | FreeRTPS | Apache 2 | -- | Partial support. Development paused. |
+| eProsima _Fast RTPS_ | Apache 2 | `rmw_fastrtps_cpp` | Full support. Default RMW. Packaged with binary releases. |
+| RTI _Connext_ | commercial, research | `rmw_connext_cpp` | Full support. Building from source required. |
+| RTI _Connext_ (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused. Full support until alpha 8. |
+| PrismTech _Opensplice_ | LGPL (only v6.4), commercial | `rmw_opensplice_cpp` | Support paused. Full support until alpha 8. |
+| OSRF _FreeRTPS_ | Apache 2 | -- | Partial support. Development paused. |
 
 
 
