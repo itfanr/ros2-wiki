@@ -1,6 +1,8 @@
 # ROS 2 and different DDS vendors
 
-[ROS 2 is built on top of DDS as its middleware](http://design.ros2.org/articles/ros_on_dds.html), which it uses for discovery, serialization and transportation.
+ROS 2 is built on top of DDS as its middleware, which it uses for discovery, serialization and transportation.
+[This article](http://design.ros2.org/articles/ros_on_dds.html) explains the motivation behind using DDS in detail, but in summary DDS is an end-to-end middleware that provides features which are relevant to ROS systems, such as distributed discovery (not centralized like in ROS 1) and control over different "Quality of Service" options for the transportation.
+
 DDS is an industry standard which is then implemented by a range of vendors, such as RTI's implementation [Connext](https://www.rti.com/products/) and eProsima's implementation [Fast RTPS](http://www.eprosima.com/index.php/products-all/eprosima-fast-rtps).
 ROS 2 supports multiple DDS implementations because it is not necessarily "one size fits all" when it comes to choosing a vendor/implementation.
 There are many factors you might consider while choosing a DDS implementation: logistical considerations like the license or technical considerations like platform availability or computation footprint.
