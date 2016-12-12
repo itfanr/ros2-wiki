@@ -307,16 +307,15 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 > get_externals.bat
 > build.bat -p x64 -d
 ```
-* Finally, copy the build products into the chocolatey installation directories, next to the Release-mode Python executable and DLL's:
+* Finally, copy the build products into the Python35 installation directories, next to the Release-mode Python executable and DLL's:
 ```
 > cd C:\dev\Python-3.5.1\PCbuild\amd64
-> copy python_d.exe C:\ProgramData\chocolatey\bin
-> copy python35_d.dll C:\ProgramData\chocolatey\bin
-> copy python35_d.dll C:\ProgramData\chocolatey\lib\python3\tools
-> copy python3_d.dll C:\ProgramData\chocolatey\lib\python3\tools
-> copy python35_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
-> copy python3_d.lib C:\ProgramData\chocolatey\lib\python3\tools\libs
-> for %I in (*_d.pyd) do copy %I C:\ProgramData\chocolatey\lib\python3\tools\DLLs
+> copy python_d.exe C:\Python35
+> copy python35_d.dll C:\Python35
+> copy python3_d.dll C:\Python35
+> copy python35_d.lib C:\Python35\libs
+> copy python3_d.lib C:\Python35\libs
+> for %I in (*_d.pyd) do copy %I C:\Python35\DLLs
 ```
 * Now, from a fresh command prompt, make sure that `python_d` works:
 ```
