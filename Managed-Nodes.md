@@ -46,8 +46,75 @@ The `lifecycle_listener` is a simple listener which shows the characteristics of
 The `lifecycle_service_client` is a script calling different transitions on the `lifecycle_talker`. This is meant as the external user controlling the lifecycle of nodes.   
 
 ##Run the demo
+In order to run this demo, we open three terminals and source our ROS2 environment variables either from the binary distributions or the workspace we compiled from source.
+
 |lifecycle_talker|lifecycle_listener|lifecycle_service_client|
 |----------------|------------------|------------------------|
+|```$ lifecycle_talker```| ```$ lifecycle_listener```|```$ lifecycle_service_client```|
 |[![asciicast](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r.png)](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r)|[![asciicast](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn.png)](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn)|[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
 
+If we look at the output of the `lifecycle_talker`, we notice that nothing seems to happen. And this does make sense, since every node starts as `unconfigured`. The lifecycle_talker is not configured yet and in our example, no publishers and timers are created yet.
+The same behavior can be seen for the `lifecycle_listener`, which is less surprising given that no publishers are available at this moment.
+The interesting part starts with the third terminal. In there we launch our `lifecycle_service_client` which is responsible for changing the states of the `lifecycle_talker`. 
+
+###Triggering transition 1 (configure)
+```
+[lc_client] Transition 1 successfully triggered.
+[lc_client] Node lc_talker has current state inactive.
+```
+makes the lifecycle talker change its state to inactive. Inactive means that all publishers and timers are created and configured. However, the node is still not active. Therefore no messages are getting published.
+```
+[lc_talker] on_configure() is called.
+Lifecycle publisher is currently inactive. Messages are not published.
+...
+```
+The lifecycle listener on the same time receives a notification as it listens to every state change notification of the lifecycle talker. In fact, the listener receives two consecutive notifications. One for changing from the primary state "unconfigured" to "configuring". Because the configuring step was successful within the lifecycle talker, a second notification from "configuring" to "inactive". 
+```
+[lc_listener] notify callback: Transition from state unconfigured to configuring
+[lc_listener] notify callback: Transition from state configuring to inactive
+```
+
+###Triggering transition 2 (activate)
+```
+[lc_client] Transition 2 successfully triggered.
+[lc_client] Node lc_talker has current state active.
+```
+makes the lifecycle talker change its state to active. Active means that all publishers and timers are now activated. Therefore the messages are now getting published. 
+```
+[lc_talker] on_activate() is called.
+[lc_talker] Lifecycle publisher is active. Publishing: [Lifecycle HelloWorld #11]
+[lc_talker] Lifecycle publisher is active. Publishing: [Lifecycle HelloWorld #12]
+...
+```
+The lifecycle listener receives the same set of notifications as before. Lifecycle talker changed its state from inactive to active.
+```
+[lc_listener] notify callback: Transition from state unconfigured to configuring
+[lc_listener] notify callback: Transition from state configuring to inactive
+```
+The difference to the transition event before is that our listener now also receives the actual published data.
+```
+[lc_listener] data_callback: Lifecycle HelloWorld #11
+[lc_listener] data_callback: Lifecycle HelloWorld #12
+...
+```
+Please note that the index of the published message is already at 11. The purpose of this demo is that even though we call `publish` at every state of the lifecycle talker, only when the state in active, the messages are actually published. As for the beta1, all other messages are getting ignored. This behavior may change in future versions in order to provide better error handling.
+
+For the rest of the demo, you will see similar output as we deactivate and activate the lifecycle talker and finally shut it down. 
+
 ##The demo code
+
+If we have a look at the code, there is one significant change for the lifecycle talker compared to a regular talker. Our node does not inherit from the regular ```rclcpp::node::Node``` but from ```rclcpp_lifecycle::LifecycleNode```.
+```
+class LifecycleTalker : public rclcpp_lifecycle::LifecycleNode
+```
+Every child of LifecycleNodes have a set of callbacks provided. These callbacks go along with the applied state machine attached to it. These callbacks are:
+* ```rcl_lifecycle_ret_t on_configure(const rclcpp_lifecycle::State & previous_state)```
+* ```rcl_lifecycle_ret_t on_activate(const rclcpp_lifecycle::State & previous_state)```
+* ```rcl_lifecycle_ret_t on_deactivate(const rclcpp_lifecycle::State & previous_state)```
+* ```rcl_lifecycle_ret_t on_cleanup(const rclcpp_lifecycle::State & previous_state)```
+* ```rcl_lifecycle_ret_t on_shutdown(const rclcpp_lifecycle::State & previous_state)```
+
+All these callbacks have a positive default return value (```return RCL_LIFECYCLE_RET_OK```). This allows that a lifecycle node can change its state even though no explicit callback function was overwritten. 
+There is one other callback function for error handling. Whenever a state transition throws an uncaught exception, we call ```on_error```. 
+* ```bool on_error(const rclcpp_lifecycle::State & previous_state)```
+This gives room for executing a custom error handling. Only (!) in the case that this function returns ```RCL_LIFECYCLE_RET_OK```, the state machine transitions to the state `unconfigured`. By default, the `on_error` returns `RCL_LIFECYCLE_RET_ERROR` and the state machine transitions into `finalized`. 
