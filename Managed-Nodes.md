@@ -48,7 +48,6 @@ The `lifecycle_service_client` is a script calling different transitions on the 
 ##Run the demo
 |lifecycle_talker|lifecycle_listener|lifecycle_service_client|
 |----------------|------------------|------------------------|
-|[![asciicast](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r.png)](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r)|[![asciicast](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn.png)](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn)|
-[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
+|[![asciicast](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r.png)](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r)|[![asciicast](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn.png)](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn)|[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
 
 ##The demo code
