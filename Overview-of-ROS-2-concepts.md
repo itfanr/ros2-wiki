@@ -22,14 +22,18 @@ These concepts will be described in more detail in the sections that follow.
 ## Client Libraries
 ROS client libraries allow nodes written in different programming languages to communicate.
 The following client libraries are maintained by the ROS 2 team:
-rclcpp = C++ client library
-rclpy = Python client library
+- rclcpp = C++ client library
+- rclpy = Python client library
 
-Underneath all client libraries use the common core rcl. See the [[ROS 2 Client Libraries]] article for more details.
+Additionally, other client libraries have been developed by the ROS community.
+Underneath, client libraries use the common core rcl.
+See the [[ROS 2 Client Libraries]] article for more details.
 
 ## Discovery
-Discovery of nodes happens automatically through the underlying middleware of ROS 2. It can be summarized as follows:
-1. When a node is started, it advertises its presence to other nodes on the network with the same ROS domain (set with the ROS_DOMAIN_ID environment variable). Nodes respond to this advertisement with information about themselves so that the appropriate connections can be made and the nodes can communicate.
+Discovery of nodes happens automatically through the underlying middleware of ROS 2.
+It can be summarized as follows:
+1. When a node is started, it advertises its presence to other nodes on the network with the same ROS domain (set with the ROS_DOMAIN_ID environment variable).
+Nodes respond to this advertisement with information about themselves so that the appropriate connections can be made and the nodes can communicate.
 2. Nodes periodically advertise their presence so that connections can be made with new-found entities, even after the initial discovery period.
 3. Nodes advertise to other nodes when they go offline.
 
