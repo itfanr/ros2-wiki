@@ -46,5 +46,8 @@ The `lifecycle_listener` is a simple listener which shows the characteristics of
 The `lifecycle_service_client` is a script calling different transitions on the `lifecycle_talker`. This is meant as the external user controlling the lifecycle of nodes.   
 
 ##Run the demo
+|lifecycle_talker|lifecycle_listener|
+|----------------|------------------|
+|[![asciicast](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r.png)](https://asciinema.org/a/3k2933hk287q2mj0g9r46qw9r)|[![asciicast](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn.png)](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn)|
 
 ##The demo code
