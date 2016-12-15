@@ -103,6 +103,7 @@ For the rest of the demo, you will see similar output as we deactivate and activ
 
 ##The demo code
 
+####lifecycle_talker, lifecycle_listener and lifecycle_service_client
 If we have a look at the code, there is one significant change for the lifecycle talker compared to a regular talker. Our node does not inherit from the regular ```rclcpp::node::Node``` but from ```rclcpp_lifecycle::LifecycleNode```.
 ```
 class LifecycleTalker : public rclcpp_lifecycle::LifecycleNode
