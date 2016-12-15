@@ -57,7 +57,7 @@ If we look at the output of the `lifecycle_talker`, we notice that nothing seems
 The same behavior can be seen for the `lifecycle_listener`, which is less surprising given that no publishers are available at this moment.
 The interesting part starts with the third terminal. In there we launch our `lifecycle_service_client` which is responsible for changing the states of the `lifecycle_talker`. 
 
-###Triggering transition 1 (configure)
+####Triggering transition 1 (configure)
 ```
 [lc_client] Transition 1 successfully triggered.
 [lc_client] Node lc_talker has current state inactive.
@@ -74,7 +74,7 @@ The lifecycle listener on the same time receives a notification as it listens to
 [lc_listener] notify callback: Transition from state configuring to inactive
 ```
 
-###Triggering transition 2 (activate)
+####Triggering transition 2 (activate)
 ```
 [lc_client] Transition 2 successfully triggered.
 [lc_client] Node lc_talker has current state active.
