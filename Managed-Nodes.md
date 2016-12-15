@@ -44,3 +44,7 @@ The principle is implemented in this demo as the typical talker/listener demo. H
 The `lifecycle_listener` is a simple listener which shows the characteristics of the lifecycle talker. The talker enables the message publishing only in the active state and thus making the listener receiving only messages when the talker is in an active state.
 
 The `lifecycle_service_client` is a script calling different transitions on the `lifecycle_talker`. This is meant as the external user controlling the lifecycle of nodes.   
+
+##Run the demo
+
+##The demo code
