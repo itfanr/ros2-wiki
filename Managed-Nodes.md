@@ -119,3 +119,22 @@ There is one other callback function for error handling. Whenever a state transi
 * ```rcl_lifecycle_ret_t on_error(const rclcpp_lifecycle::State & previous_state)```
 
 This gives room for executing a custom error handling. Only (!) in the case that this function returns ```RCL_LIFECYCLE_RET_OK```, the state machine transitions to the state `unconfigured`. By default, the `on_error` returns `RCL_LIFECYCLE_RET_ERROR` and the state machine transitions into `finalized`. 
+
+###lifecycle_service_client_py.py
+The `lifecycle_service_client` application is a fixed order script for this demo purpose only. I explains the use and the API calls made for this lifecycle implementation, but may be inconvenient to use otherwise. For this reason, we implemented a separate python script, which lets you dynamically change states or various nodes.
+```
+python3 `which lifecycle_service_client_py.py`
+usage: lifecycle_service_client_py.py [-h]
+                                      [--change-state-args {configure,cleanup,shutdown,activate,deactivate}]
+                                      {change_state,get_state,get_available_states,get_available_transitions}
+                                      node
+```
+In the case you want to get the current state of the `lc_talker` node, you'd call:
+```
+$ python3 `which lifecycle_service_client_py.py` get_state lc_talker
+lc_talker is in state unconfigured(1)
+```
+The next step would be to execute a state change:
+```
+$ python3 `which lifecycle_service_client_py.py` change_state --change-state-args configure lc_talker
+```
