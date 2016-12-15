@@ -117,4 +117,5 @@ Every child of LifecycleNodes have a set of callbacks provided. These callbacks 
 All these callbacks have a positive default return value (```return RCL_LIFECYCLE_RET_OK```). This allows that a lifecycle node can change its state even though no explicit callback function was overwritten. 
 There is one other callback function for error handling. Whenever a state transition throws an uncaught exception, we call ```on_error```. 
 * ```bool on_error(const rclcpp_lifecycle::State & previous_state)```
+
 This gives room for executing a custom error handling. Only (!) in the case that this function returns ```RCL_LIFECYCLE_RET_OK```, the state machine transitions to the state `unconfigured`. By default, the `on_error` returns `RCL_LIFECYCLE_RET_ERROR` and the state machine transitions into `finalized`. 
