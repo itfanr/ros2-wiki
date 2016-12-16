@@ -1,1 +1,0 @@
-<script type="text/javascript" src="https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t.js" id="asciicast-e0f11qvpberltp8r1w04wzw9t" async></script>
