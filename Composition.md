@@ -47,7 +47,7 @@ The two most common ones are:
 
 The executables from the [composition](https://github.com/ros2/demos/tree/master/composition) packages can be run with the following commands:
 
-### Run-time composition using ROS services (1.) - pub / sub
+### Run-time composition using ROS services (1.) with a publisher and subscriber
 
 In the first shell:
 
@@ -68,7 +68,7 @@ Now the second shell should show repeated output for each received message.
 > The demo uses hardcoded topic names and therefore you can run `api_composition` twice.
 > But in general it would be possible to run to separate container processes and load the talker and listener into separate ones and they would still communicate with each other.
 
-### Run-time composition using ROS services (1.) - server / client
+### Run-time composition using ROS services (1.) with a  server and client
 
 The example with a server and a client is very similar.
 
@@ -85,10 +85,11 @@ In this case the client sends a request to the server, the server processes the 
 
 ### Compile-time composition using ROS services (2.)
 
-This demos  shows that the same shared libraries can be reused to compile a single executable running multiple components.
+This demos shows that the same shared libraries can be reused to compile a single executable running multiple components.
+The executable contains all four components from above: talker and listener as well as server and client.
 
 In the shell call (see [source code](https://github.com/ros2/demos/blob/master/composition/src/manual_composition.cpp)):
 
         manual_composition
 
-This should show repeated messages from both, the talker and the listener.
+This should show repeated messages from both pairs, the talker and the listener as well as the server and the client.
