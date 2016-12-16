@@ -55,13 +55,13 @@ In the first shell:
 
 In the second shell (see [talker](https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp) source code):
 
-        api_composition_cli composition talker
+        api_composition_cli composition composition::Talker
 
 Now the first shell should show a message that the component was loaded as well as repeated message for publishing a message.
 
 Another command in the second shell (see [listener](https://github.com/ros2/demos/blob/master/composition/src/listener_component.cpp) source code):
 
-        api_composition_cli composition listener
+        api_composition_cli composition composition::Listener
 
 Now the second shell should show repeated output for each received message.
 
@@ -78,8 +78,8 @@ In the first shell:
 
 In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code]):
 
-        api_composition_cli composition server
-        api_composition_cli composition client
+        api_composition_cli composition composition::Server
+        api_composition_cli composition composition::Client
 
 In this case the client sends a request to the server, the server processes the request and replies with a response, and the client prints the received response.
 
