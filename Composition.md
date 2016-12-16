@@ -53,13 +53,13 @@ In the first shell:
 
         api_composition
 
-In the second shell:
+In the second shell (see [talker](https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp) source code):
 
         api_composition_cli composition talker
 
 Now the first shell should show a message that the component was loaded as well as repeated message for publishing a message.
 
-Another command in the second shell:
+Another command in the second shell (see [listener](https://github.com/ros2/demos/blob/master/composition/src/listener_component.cpp) source code):
 
         api_composition_cli composition listener
 
@@ -76,7 +76,7 @@ In the first shell:
 
         api_composition
 
-In the second shell:
+In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code]):
 
         api_composition_cli composition server
         api_composition_cli composition client
@@ -87,7 +87,7 @@ In this case the client sends a request to the server, the server processes the 
 
 This demos  shows that the same shared libraries can be reused to compile a single executable running multiple components.
 
-In the shell call:
+In the shell call (see [source code](https://github.com/ros2/demos/blob/master/composition/src/manual_composition.cpp)):
 
         manual_composition
 
