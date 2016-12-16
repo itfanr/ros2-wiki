@@ -51,7 +51,7 @@ In order to run this demo, we open three terminals and source our ROS2 environme
 |lifecycle_talker|lifecycle_listener|lifecycle_service_client|
 |----------------|------------------|------------------------|
 |```$ lifecycle_talker```| ```$ lifecycle_listener```|```$ lifecycle_service_client```|
-|[![asciicast](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t.png)](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t)|[![asciicast](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn.png)](https://asciinema.org/a/dltm4uhdh461v7ts2jfxm9nzn)|[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
+|[![asciicast](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t.png)](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t)|[![asciicast](https://asciinema.org/a/442pjcu729t3vsld7n225orl7.png)](https://asciinema.org/a/442pjcu729t3vsld7n225orl7)|[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
 
 If we look at the output of the `lifecycle_talker`, we notice that nothing seems to happen. And this does make sense, since every node starts as `unconfigured`. The lifecycle_talker is not configured yet and in our example, no publishers and timers are created yet.
 The same behavior can be seen for the `lifecycle_listener`, which is less surprising given that no publishers are available at this moment.
