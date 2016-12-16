@@ -11,7 +11,7 @@
 * [Using ament to build a custom package](Ament-Tutorial)
 * [Efficient intra-process communication](Intra-Process-Communication)
 * [Bridge communication between ROS 1 and ROS 2](https://github.com/ros2/ros1_bridge/blob/master/README.md)
-* [Composition](Composition)
+* [Composing multiple nodes in single process](Composition)
 
 
 ### Advanced
