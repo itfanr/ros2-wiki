@@ -65,7 +65,7 @@ Another command in the second shell (see [listener](https://github.com/ros2/demo
 
 Now the second shell should show repeated output for each received message.
 
-> The demo uses hardcoded topic names and therefore you can run `api_composition` twice.
+> The demo uses hardcoded topic names and therefore you can't run `api_composition` twice.
 > But in general it would be possible to run to separate container processes and load the talker and listener into separate ones and they would still communicate with each other.
 
 ### Run-time composition using ROS services (1.) with a  server and client
