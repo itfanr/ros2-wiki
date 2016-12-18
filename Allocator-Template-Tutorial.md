@@ -1,5 +1,5 @@
 This tutorial will teach you how to integrate a custom allocator for publishers and subscribers so that the default heap allocator is never called while your ROS nodes are executing.
-The code for this tutorial is available [here](https://github.com/ros2/examples/blob/master/rclcpp_examples/src/topics/allocator_example.cpp).
+The code for this tutorial is available [here](https://github.com/ros2/examples/blob/master/demo_nodes_cpp/src/topics/allocator_example.cpp).
 
 ## Background
 Suppose you want to write real-time safe code, and you've heard about the many dangers of calling "new" during the real-time critical section, because the default heap allocator on most platforms is nondeterministic.
@@ -184,7 +184,7 @@ void operator delete(void * ptr, size_t) noexcept {
 
 where the variables we are incrementing are just global static integers, and `is_running` is a global static boolean that gets toggled right before the call to `spin`.
 
-The [example executable](https://github.com/ros2/examples/blob/master/rclcpp_examples/src/topics/allocator_example.cpp) prints the value of the variables. To run the example executable, use:
+The [example executable](https://github.com/ros2/examples/blob/master/demo_nodes_cpp/src/topics/allocator_example.cpp) prints the value of the variables. To run the example executable, use:
 ```
 allocator_example
 ```
