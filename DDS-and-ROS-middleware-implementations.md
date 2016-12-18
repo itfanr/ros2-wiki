@@ -58,7 +58,7 @@ If you are curious about how an executable can be automatically created for each
 
 ### Python
 
-The ROS 2 Python examples ([rclpy_examples](https://github.com/ros2/examples/tree/master/rclpy_examples)) will generate one executable Python script each that will use the default RMW implementation.
+The ROS 2 Python examples ([demo_nodes_py](https://github.com/ros2/examples/tree/master/demo_nodes_py)) will generate one executable Python script each that will use the default RMW implementation.
 For example, assuming that you have installed and setup your ROS 2 workspace, the following invocation will run the Python simple "talker" publisher demo with the default RMW implementation:
 
 ```bash
