@@ -18,12 +18,13 @@ It's a lot of work to implement and maintain RMW packages for supporting DDS imp
 | ------------- | ------------- | ----- | ---- | --- |
 | eProsima _Fast RTPS_ | Apache 2 | `rmw_fastrtps_cpp` | Full support. Default RMW. Packaged with binary releases. |
 | RTI _Connext_ | commercial, research | `rmw_connext_cpp` | Full support. Building from source required. |
-| RTI _Connext_ (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused. Full support until alpha 8. |
-| PrismTech _Opensplice_ | LGPL (only v6.4), commercial | `rmw_opensplice_cpp` | Support paused. Full support until alpha 8. |
+| RTI _Connext_ (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused*. Full support until alpha 8. |
+| PrismTech _Opensplice_ | LGPL (only v6.4), commercial | `rmw_opensplice_cpp` | Support paused*. Full support until alpha 8. |
 | OSRF _FreeRTPS_ | Apache 2 | -- | Partial support. Development paused. |
 
 
-
+_*Support paused means that, since the alpha 8 release of ROS 2, features that have been added to ROS 2 have not been added to these middleware implementations.
+These middleware implementations may or may not be in a functional state._
 
 The [ROS 2 binary releases](https://github.com/ros2/ros2/releases/) only support one implementation at a time.
 The supported implementation is indicated in their file name.
@@ -44,6 +45,7 @@ See below for how to specify which RMW implementation is to be used when running
 *Note:* for ROS 2 alpha releases up to and including alpha 8, only the 'alphabetical order' rule explained above is used, and so the RMW implementation for Fast RTPS does not have any explicit priority over other RMW implementations.
 
 ## Specifying RMW implementations
+To have multiple RMW implementations available for use, you must have built from source.
 
 ### C++
 
@@ -78,5 +80,6 @@ Suppose that you have built your ROS 2 workspace with only Fast RTPS installed a
 The last time your workspace was built, any other RMW implementation packages, `rmw_connext_cpp` for example, were probably unable to find installations of the relevant DDS implementations.
 If you then install an additional DDS implementation, Connext for example, you will need to re-trigger the check for a Connext installation that occurs when the Connext RMW implementation is being built.
 You can do this by specifying the `--force-cmake-configure` flag on your next workspace build, and you should see that the RMW implementation package then gets built for the newly installed DDS implementation.
+
 It is possible to run into a problem when "rebuilding" the workspace with an additional RMW implementation using the `--force-cmake-configure` option where the build complains about the default RMW implementation changing.
 To resolve this, you can either set the default implementation to what is was before with the `RMW_IMPLEMENTATION` CMake argument or you can delete the build folder for packages that complain and continue the build with `--start-with <package name>`.
