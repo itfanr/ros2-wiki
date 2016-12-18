@@ -47,14 +47,14 @@ See below for how to specify which RMW implementation is to be used when running
 
 ### C++
 
-The ROS 2 C++ examples ([rclcpp_examples](https://github.com/ros2/examples/tree/master/rclcpp_examples/src)) are configured to build a version of each executable for all RMW implementations that have been built.
+The ROS 2 C++ examples ([demo_nodes_cpp](https://github.com/ros2/examples/tree/master/demo_nodes_cpp/src)) are configured to build a version of each executable for all RMW implementations that have been built.
 For example, for the simple "talker" publisher demo, if you have both Fast RTPS and Connext RMW implementations installed, the following executables are created:
 
 - a C++ executable named `talker__rmw_fastrtps_cpp` which uses a C++ RMW implementation for Fast RTPS
 - a C++ executable named `talker__rmw_connext_cpp` which uses a C++ RMW implementation for Connext
 - a C++ executable named `talker` which uses the default RMW implementation
 
-If you are curious about how an executable can be automatically created for each RMW implementation, as described above, it's done through [the use of](https://github.com/ros2/examples/blob/release-alpha8/rclcpp_examples/CMakeLists.txt#L59) the `call_for_each_rmw_implementation` macro provided by the [RMW CMake package](https://github.com/ros2/rmw/tree/release-alpha8/rmw_implementation_cmake).
+If you are curious about how an executable can be automatically created for each RMW implementation, as described above, it's done through [the use of](https://github.com/ros2/examples/blob/release-alpha8/demo_nodes_cpp/CMakeLists.txt#L59) the `call_for_each_rmw_implementation` macro provided by the [RMW CMake package](https://github.com/ros2/rmw/tree/release-alpha8/rmw_implementation_cmake).
 
 ### Python
 
