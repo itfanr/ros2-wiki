@@ -89,16 +89,16 @@ The stricter of the two policies will be the one used for the connection.
 The QoS policies exposed in ROS 2 that affect compatibility are the durability and reliability policies.
 The following tables show the compatibility of the different policy settings and the result:
 
-_Compatibility of QoS reliability profiles:_
+_Compatibility of QoS durability profiles:_
 
 | Publisher | Subscriber | Connection | Result |
 | --- | --- | --- | --- |
 | Volatile | Volatile | Yes | Volatile |
 | Volatile | Transient local | No | - |
 | Transient local | Volatile | Yes | Volatile |
-| Transient local | Volatile | Yes | Transient local |
+| Transient local | Transient local | Yes | Transient local |
 
-_Compatibility of QoS durability profiles:_
+_Compatibility of QoS reliability profiles:_
 
 | Publisher | Subscriber | Connection | Result |
 | --- | --- | --- | --- |
@@ -107,5 +107,5 @@ _Compatibility of QoS durability profiles:_
 | Reliable | Best effort | Yes | Best effort |
 | Reliable | Reliable | Yes | Reliable |
 
-In order for a connection to be made, all of the ordered policies must be compatible.
+In order for a connection to be made, all of the policies that affect compatibility must be compatible.
 That is, even if a publisher-subscriber pair have compatible reliability QoS profiles, if they have incompatible durability QoS profiles a connection will not be made, and vice-versa.
