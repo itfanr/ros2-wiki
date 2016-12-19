@@ -133,6 +133,7 @@ Each binary will also generate a "default" binary which will use one of the vend
 For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_opensplice_cpp` or `talker__rmw_fastrtps_cpp`.
 That way you can ensure you're using the right vendor for each binary by including the suffix when you run the program.
 
+<!-- opensplice not currently supported hiding the instructions.
 #### PrismTech OpenSplice
 
 Choose one of the following options for PrismTech OpenSplice.
@@ -166,6 +167,7 @@ export PTECH_LICENSE_FILE=path/to/prismtech.lic
 ##### Building OpenSplice from source
 
 If you build OpenSplice from source, be sure to remember to following the INSTALL.txt instructions and manually replace the @@INSTALLDIR@@ placeholder in the OpenSplice install/HDE/x86_64.linux/release.com
+-->
 
 #### RTI Connext (version 5.2 or higher)
 
