@@ -131,50 +131,8 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
-There is support for PrismTech's OpenSplice, RTI's Connext DDS, and eProsima Fast RTPS.
-
-#### eProsima FastRTPS
-
-You can download the latest eProsima Fast RTPS release binaries for Windows from their website:
-
-http://www.eprosima.com/
-
-Afternatively you can get the source code from GitHub:
-
-https://github.com/eProsima/Fast-RTPS
-
-
-#### OpenSplice
-
-In this example I'll use PrismTech's OpenSplice.
-You can go to their website and login to download their VS2013 binary and then patch it for VS2015 or you can just download the pre-patched version from our OpenSplice fork on GitHub:
-
-https://github.com/osrf/opensplice/releases/download/6.4.0-0/opensplice-Win64VS2013-with-VS2015-patch.zip
-
-Once downloaded you can extract it somewhere, I use `C:\dev\opensplice`, and the continue to the next step of the installation process.
-
-If you want to do it yourself, first download their Windows binary for 64-bit and Visual Studio 2013:
-
-http://www.prismtech.com/dds-community/software-downloads
-
-Once you've downloaded their archive, extract it somewhere, I'll extract mine to `C:\dev\opensplice`.
-
-Also, for now you'll need to patch OpenSplice with this diff:
-
-```diff
---- C:\dev\opensplice\HDE\x86_64.win64\include\include\os_stdlib.h
-+++ (clipboard)
-@@ -66,7 +66,9 @@
-
- #define MAXHOSTNAMELEN MAX_HOSTNAME_LEN
-
-+#if _MSC_VER < 1900
- OS_API extern int snprintf(char *s, size_t n, const char *format, ...);
-+#endif
-
- OS_API extern char *optarg;
- OS_API extern int optind, opterr;
-```
+There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
+The source distribution of ROS 2 includes FastRTPS.
 
 ### Installing a few dependencies
 
