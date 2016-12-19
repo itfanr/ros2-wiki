@@ -46,7 +46,7 @@ Ensure that the correct features will be installed:
 
 ### Getting a DDS Vendor
 
-You'll also need a DDS Vendor available for ROS to work with. The binary package uses eProsima FastRTPS; to use another DDS vendor, [build from source](Windows-Development-Setup).
+The binary package bundles eProsima FastRTPS as the middleware. To use another DDS vendor, you will need to [build from source](Windows-Development-Setup).
 
 #### eProsima FastRTPS & Boost
 
