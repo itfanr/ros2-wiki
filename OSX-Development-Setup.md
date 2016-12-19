@@ -35,10 +35,13 @@ You need the following things installed to build ROS 2:
  1. Use `brew` to install more stuff:
 
         brew install python3 wget cmake cppcheck gtest
+
         # install boost for FastRTPS
         brew install boost
+
         # if you're going to build for OpenSplice, install it
         brew install opensplice
+
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew tap homebrew/science
