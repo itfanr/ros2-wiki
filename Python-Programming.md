@@ -10,7 +10,7 @@ The `rclpy` module enables developers to use the ROS 2 API from Python. As of Al
 
 ## Run the examples
 
-The two classic ROS 2 examples of a "talker" and a "listener" have been implemented in Python using `rclpy`. The source code is available [here](https://github.com/ros2/examples/tree/master/demo_nodes_py).
+The two classic ROS 2 examples of a "talker" and a "listener" have been implemented in Python using `rclpy`. The source code is available [here](https://github.com/ros2/demos/tree/master/demo_nodes_py).
 
 Open two terminals, source the appropriate `setup.*`/`local_setup.*` file in the terminals, and run `talker_py` in one and `listener_py` in the other.
 
