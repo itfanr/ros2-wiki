@@ -43,6 +43,7 @@ We will fill this list and a planned release date soon.
 - Data logging, perhaps using rosbag (or a descendant of rosbag)
 - Finish intra-process making it thread-safe
 - Expand on real-time safety
+  - With FastRTPS
   - For services, clients, and parameters
   - Support deterministic ordering of executables in Executor (fair scheduling)
   - Expose more quality of service parameters related to real-time performance
