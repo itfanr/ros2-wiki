@@ -17,9 +17,9 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
 1. Install runtime dependencies and wget:
 
         sudo apt-get update && sudo apt-get install -q -y \
-            libopencv-core2.4 \
+            libopencv-core2.4v5 \
             libhighgui2.4 \
-            libopencv-imgproc2.4 \
+            libopencv-imgproc2.4v5 \
             libopensplice64 \
             wget
 
