@@ -189,13 +189,7 @@ You will need to open a new command prompt for this environment variable to take
 
 FastRTPS is bundled with the ROS 2 source and will always be built unless you put an `AMENT_IGNORE` file in the `src\eProsima` folder.
 
-Before building, "source" the `release.bat` file provided by OpenSplice, otherwise ROS 2 will not be able to find the OpenSplice installation and will not be built with OpenSplice support:
-
-```
-> call C:\dev\opensplice\HDE\x86_64.win64\release.bat
-```
-
-Then simply run this command in the `\dev\ros2` folder:
+To build the `\dev\ros` folder tree:
 
 ```
 > python src\ament\ament_tools\scripts\ament.py build
