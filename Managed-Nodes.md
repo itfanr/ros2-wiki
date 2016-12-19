@@ -2,7 +2,7 @@
 ROS2 introduces the concept of managed nodes, also called `LifecycleNode`s. In the following tutorial, we explain the purpose of these nodes, what makes them different from regular nodes and how they comply to a lifecycle management.
 Managed nodes are scoped within a state machine of a finite amount of states. These states can be changed by invoking a transition id which indicates the succeeding consecutive state.
 The state machine is implemented as described at the [ROS2 design page](http://design.ros2.org/articles/node_lifecycle.html) 
-Our implementation differentiates between `Primary States` and `Transition States`. Primary States are supposed to be steady states in which any node can do the respected task. On the other hand, Transition States are meant as temporary intermediate states in between transitions. The result of these intermediate states are used to indicate whether a transition between two primary states is considered successful or not. Thus, any managed node can be in one of the following states:
+Our implementation differentiates between `Primary States` and `Transition States`. Primary States are supposed to be steady states in which any node can do the respected task. On the other hand, Transition States are meant as temporary intermediate states attached to a transition. The result of these intermediate states are used to indicate whether a transition between two primary states is considered successful or not. Thus, any managed node can be in one of the following states:
 
 Primary States (steady states):
 * unconfigured
