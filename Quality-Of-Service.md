@@ -23,10 +23,14 @@ Follow the instructions on the [installation page](https://github.com/ros2/ros2/
 
 Before running the demo, make sure you have a working webcam connected to your computer.
 
-Once you've installed ROS 2, source your setup.bash file:
+Once you've installed ROS 2, if you're on Linux, source your setup.bash file:
 
 ```
 . <path to ROS 2 install space>/setup.bash
+```
+or if you're on Windows:
+```
+call <path to ROS 2 install space>/local_setup.bat
 ```
 
 Then run:
