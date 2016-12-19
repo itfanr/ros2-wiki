@@ -33,13 +33,13 @@ The demo is split into 3 different separate applications.
 * lifecycle_listener
 * lifecycle_service_client 
 
-The `lifecycle_talker` represents a managed node and publishes according to which state the node is in. We split the tasks of the talker node into separate pieces and assign them in the respective state.
+The `lifecycle_talker` represents a managed node and publishes according to which state the node is in. We split the tasks of the talker node into separate pieces and execute them as followed.
  1. configuring: We initialize our publisher and timer
  2. activate: We activate the publisher and timer in order to enable a publishing
  3. deactivate: We stop the publisher and timer
  4. cleanup: We destroy the publisher and timer
 
-The principle is implemented in this demo as the typical talker/listener demo. However, imaging a real scenario with attached hardware, one could image bringing up the device driver in the configuring state, start and stop only the publishing of the device's data and only in the cleanup/shutdown phase actually shutdown the device. 
+The principle is implemented in this demo as the typical talker/listener demo. However, imaging a real scenario with attached hardware which may have a rather long booting phase, i.e. a laser or camera. One could image bringing up the device driver in the configuring state, start and stop only the publishing of the device's data and only in the cleanup/shutdown phase actually shutdown the device. 
 
 The `lifecycle_listener` is a simple listener which shows the characteristics of the lifecycle talker. The talker enables the message publishing only in the active state and thus making the listener receiving only messages when the talker is in an active state.
 
@@ -97,7 +97,7 @@ The difference to the transition event before is that our listener now also rece
 [lc_listener] data_callback: Lifecycle HelloWorld #12
 ...
 ```
-Please note that the index of the published message is already at 11. The purpose of this demo is that even though we call `publish` at every state of the lifecycle talker, only when the state in active, the messages are actually published. As for the beta1, all other messages are getting ignored. This behavior may change in future versions in order to provide better error handling.
+Please note that the index of the published message is already at 11. The purpose of this demo is to show that even though we call `publish` at every state of the lifecycle talker, only when the state in active, the messages are actually published. As for the beta1, all other messages are getting ignored. This behavior may change in future versions in order to provide better error handling.
 
 For the rest of the demo, you will see similar output as we deactivate and activate the lifecycle talker and finally shut it down. 
 
@@ -121,6 +121,13 @@ There is one other callback function for error handling. Whenever a state transi
 
 This gives room for executing a custom error handling. Only (!) in the case that this function returns ```RCL_LIFECYCLE_RET_OK```, the state machine transitions to the state `unconfigured`. By default, the `on_error` returns `RCL_LIFECYCLE_RET_ERROR` and the state machine transitions into `finalized`. 
 
+At the same time, every lifecycle node has by default 5 different communication interfaces.
+* Publisher `<node_name>__transition_event`: publishes in case a transition is happening. This allows users to get notified of transition events within the network.
+* Service `<node_name>__get_state`: query about the current state of the node. Return either a primary or transition state.
+* Service `<node_name>__change_state`: triggers a transition for the current node. This service call takes a transition id. Only in the case, that this transition ID is a valid transition of the current state, the transition is fulfilled. All other cases are getting ignored.
+* Service `<node_name>__get_available_states`: This is meant to be an introspection tool. It returns a list of all possible states this node can be. 
+* Service `<node_name>__get_available_transitions`: Same as above, meant to an introspection tool. It returns a list of all possible transitions this node can execute.
+
 ###lifecycle_service_client_py.py
 The `lifecycle_service_client` application is a fixed order script for this demo purpose only. I explains the use and the API calls made for this lifecycle implementation, but may be inconvenient to use otherwise. For this reason, we implemented a separate python script, which lets you dynamically change states or various nodes.
 ```
@@ -139,3 +146,9 @@ The next step would be to execute a state change:
 ```
 $ python3 `which lifecycle_service_client_py.py` change_state --change-state-args configure lc_talker
 ```
+
+##Outlook
+The above description points to the current state of the development as for beta1. The future todo list for this topic comprises:
+* Python lifecycle nodes
+* Lifecycle manager: A global node, handling and dispatching trigger requests for multiple nodes.
+* LifeyclceSubscriber/LifecycleWalltimer/... add more lifecycle controlled entities.
