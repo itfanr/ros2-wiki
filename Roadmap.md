@@ -1,8 +1,8 @@
-# ROS 2.0 Roadmap
+# ROS 2 Roadmap
 
-For more information on the design of ROS 2.0 please see [design.ros2.org](http://design.ros2.org).
-The core code for ros2 is on the [ros2 github organization](https://github.com/ros2).
-The mailing list for discussing ROS 2.0 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
+For more information on the design of ROS 2 please see [design.ros2.org](http://design.ros2.org).
+The core code for ROS 2 is on the [ros2 github organization](https://github.com/ros2).
+The mailing list for discussing ROS 2 is [ros-sig-ng-ros](https://groups.google.com/d/forum/ros-sig-ng-ros).
 
 ## Planned upcoming features
 
@@ -10,63 +10,63 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Beta 1 (circa 2016-12)
+### Beta 2 ()
 
-The Beta 1 will target Ubuntu 16.04, Mac OS X 10.11 and Windows 10.
- * Composition
-   * may use pluginlib and class_loader from ROS 1 for C++
- * QoS benchmarks
-   * for example: unreliable comms, illustrated by wifi out-and-back
- * Design documents
- * Tutorials and examples
-   * Migration guide
- * "rostopic list", "rostopic echo", and friends
- * Bridging services to/from ROS1 (in addition to topics)
-
-### Nice to have by Beta 1:
- * Console logging
- * Orchestration
-   * think “roslaunch + verification & dynamic behavior”
-
+We will fill this list and a planned release date soon.
 
 ### Future
-- Automatic API documentation generation
-- Launch system
-  - Use life-cycle and orchestration
-- data logging, perhaps using rosbag (or a descendant of rosbag)
+
+#### Fix known limitations
+
+- FastRTPS performance with larger data like the image demo
+- Support services with Connext in C / Python
+- Support parameters in C / Python
+
+#### New features (in no specific order)
+
+- Support for namespaced topic names
+- Complete Python API with execution model
+- Console logging API
+- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
+- Command line tools
+- Launch system using life-cycle and orchestration
+- Add pre-emption for services
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
-- Type masquerading
-  - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
-- Add actions and bridge them
 - Static remapping
   - a la ROS Names: http://wiki.ros.org/Names
 - Dynamic remapping
   - Remapping and aliasing through a Service interface
-- Debian packaging, Windows packaging
-- Finish intra-process
-  - Make it thread-safe
+- Type masquerading
+  - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
+- Add actions and support for them in the ros1_bridge
+- Data logging, perhaps using rosbag (or a descendant of rosbag)
+- Finish intra-process making it thread-safe
 - Expand on real-time safety
   - For services, clients, and parameters
   - Support deterministic ordering of executables in Executor (fair scheduling)
   - Expose more quality of service parameters related to real-time performance
+  - Real-time-safe intra-process messaging
 - Multi-robot supporting features and demos
-- Add pre-emption for services
-- Real-time-safe intra-process messaging
 - Implement rclc
-- Gazebo support
-- Use DDS C++ ISO PSM API
 - Support more DDS / RTPS implementations:
+  - Connext dynamic
+  - OpenSplice
   - freertps: https://github.com/ros2/freertps
-  - Use RTI's micro implementation
-- Run-time DDS implementation choice
+  - RTI's micro implementation
+- Gazebo support
+
+#### Infrastructure
+
+- Automatic API documentation generation
+- Debian packaging, Windows packaging
 
 ### Reducing Technical Debt
 
 - Fix flaky tests.
-- Add missing Windows stuff.
-- Synchronise / reconcile design docs with the implementation.
+- Synchronize / reconcile design docs with the implementation.
   - Pre-release retrospective review (APIs, docs, etc.)
+- Address / classify pending tickets
 - Address TODOs in code / docs
 
 ## Past releases
