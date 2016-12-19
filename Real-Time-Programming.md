@@ -19,9 +19,14 @@ Now that you know everything about real-time computing, let's try a demo!
 
 The real-time demo was written with Linux operating systems in mind, since many members of the ROS community doing real-time computing use Xenomai or RT_PREEMPT as their real-time solutions.
 Since many of the operations done in the demo to optimize performance or OS-specific, the demo only builds and runs on Linux systems.
-So, if you are an OSX or Windows user, don't try this part!
+**So, if you are an OSX or Windows user, don't try this part!**
 
-First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) or [from binary packages](Linux-Install-Binary).
+Also this must be built from source using a the static DDS API. **Currently the only supported implementation is Connext**.
+
+First, follow the instructions to build ROS 2 [from source](Linux-Development-Setup) using Connext DDS as the middleware.
+
+
+
 
 ### Run the tests
 
