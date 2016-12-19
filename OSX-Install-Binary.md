@@ -22,15 +22,15 @@ You need the following things installed before installing ROS 2.
         brew tap ros/deps
  1. Use `brew` to install more stuff:
 
+        brew install python3
+
+        # install boost for FastRTPS
+        brew install boost
+
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew install homebrew/science/opencv --without-python
-        brew install python3
-        # install boost for FastRTPS
-        brew install boost
-1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
-  Follow the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
 
 ## Downloading ROS 2
 
@@ -55,22 +55,5 @@ In another terminal source the setup file and then run a `listener`:
     listener
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
-
-### ROS 1 bridge
-
-If you have ROS 1 installed, you can try the ROS 1 bridge, by first sourcing your ROS 1 setup file; we'll assume that it's `~/ros_catkin_ws/install_isolated/setup.bash`.
-
-If you haven't already, start a roscore:
-
-    . ~/ros_catkin_ws/install_isolated/setup.bash
-    roscore
-
-In another terminal, start the bridge:
-
-    . ~/ros_catkin_ws/install_isolated/setup.bash
-    . ~/ros2_install/ros2-osx/setup.bash
-    dynamic_bridge
-
-For more information on the bridge, read the [tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md).
 
 If you run into issues, see the troubleshooting section on the source installation page: https://github.com/ros2/ros2/wiki/OSX-Development-Setup#troubleshooting
