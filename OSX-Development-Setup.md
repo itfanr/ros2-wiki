@@ -10,7 +10,7 @@ We support OS X Yosemite (10.10.x).
 
 You need the following things installed to build ROS 2:
 
- 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation; that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
+ 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation, so you can skip this step if you're not going to use OpenSplice; also that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
   * Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
   * Accept the license terms and download the "Mac OS X x64" version of the `.dmg` file.
   * Install from the `.dmg`.
@@ -34,13 +34,15 @@ You need the following things installed to build ROS 2:
         brew tap ros/deps
  1. Use `brew` to install more stuff:
 
+        brew install python3 wget cmake cppcheck gtest
+        # install boost for FastRTPS
+        brew install boost
+        # if you're going to build for OpenSplice, install it
+        brew install opensplice
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew tap homebrew/science
         brew install opencv --without-python
-        brew install python3 wget cmake cppcheck opensplice gtest
-        # install boost for FastRTPS
-        brew install boost
     *Optional*: Make sure that you have `gtest` 1.7:
 
         $ brew info gtest
@@ -49,9 +51,9 @@ You need the following things installed to build ROS 2:
         /usr/local/Cellar/gtest/1.7.0 (32 files, 1.2M) *
           Built from source
         From: https://github.com/ros/homebrew-deps/blob/master/gtest.rb
- 1. Use `pip3` (**not `pip`**, which will install Python 2.7 packages!) to install more stuff:
+ 1. Use `python3 -m pip` (**not `pip`**, which may install Python 2.7 packages!) to install more stuff:
 
-        pip3 install empy setuptools nose vcstool pep8 pydocstyle pyflakes flake8 mock coverage
+        python3 -m pip install empy setuptools nose vcstool pep8 pydocstyle pyflakes flake8 mock coverage
  1. *Optional*: if you want to build the ROS 1<->2 bridge, then you must also install ROS 1:
   * Start with the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
   * When you get to the step where you call `rosinstall_generator` to get the source code, here's an alternate invocation that brings in just the minimum required to produce a useful bridge:
@@ -90,13 +92,14 @@ In one terminal, source the setup file and then run a `talker`:
 
     . ~/ros2_ws/install/setup.bash
     talker
+
 In another terminal source the setup file and then run a `listener`:
 
     . ~/ros2_ws/install/setup.bash
     listener
+
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
-
 
 ## Maintain your source checkout
 For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
