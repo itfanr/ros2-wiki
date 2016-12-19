@@ -102,7 +102,6 @@ Hooray!
 
 
 ### Troubleshooting
-If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as boost or opencv are located inside your `PATH` variable.
-
-
+* If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as boost or opencv are located inside your `PATH` variable.
+* If you forget to call the `local_setup.bat` file from your terminal, the demo programs will most likely crash immediately.
 
