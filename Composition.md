@@ -76,7 +76,7 @@ In the first shell:
 
         api_composition
 
-In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code]):
+In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code):
 
         api_composition_cli composition composition::Server
         api_composition_cli composition composition::Client
