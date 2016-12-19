@@ -27,5 +27,4 @@
 * [Turtlebot 2 demo using ROS 2](https://github.com/ros2/turtlebot2_demo)
 * [Using tf2 with ROS 2](tf2)
 * [Write real-time safe code that uses the ROS 2 APIs](Real-Time-Programming)
-* [Run ROS 2 on "bare-metal" microcontrollers (no operating system)](https://github.com/ros2/freertps/wiki)
 * [Use the rclpy API to write ROS 2 programs in Python](Python-Programming)
