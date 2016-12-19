@@ -47,21 +47,13 @@ Ensure that the correct features will be installed:
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to work with.
-The binary package only supports for PrismTech's OpenSplice; to use another DDS vendor, [build from source](Windows-Development-Setup).
+The binary package only support for eProsima FastRTPS; to use another DDS vendor, [build from source](Windows-Development-Setup).
 
-#### OpenSplice
+#### eProsima FastRTPS & Boost
 
-Download a patched version from our OpenSplice fork on GitHub:
+FastRTPS requires boost as a dependency. To install it, grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/). We test with [this](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe) binary.
 
-https://github.com/osrf/opensplice/releases/download/6.4.0-0/opensplice-Win64VS2013-with-VS2015-patch.zip
-
-Once downloaded you can extract it to `C:\dev\opensplice`
-
-#### eProsima Fast-RTPS & Boost
-
-Fast-RTPS is an alternative vendor for which a binary ROS version exists. Fast-RTPS requires boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/). We test with [this](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe) binary.
-
-The installer will by default install itself into `C:\local`. You will then need to add the following system environment variables for ROS to find the libraries.
+The installer will install itself by default into `C:\local`. You will then need to add the following system environment variables for ROS to find the libraries.
 
 `PATH=C:\local\boost_1_61_0\lib64-msvc-14.0`
 
@@ -104,4 +96,3 @@ Hooray!
 ### Troubleshooting
 * If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as boost or opencv are located inside your `PATH` variable.
 * If you forget to call the `local_setup.bat` file from your terminal, the demo programs will most likely crash immediately.
-
