@@ -12,6 +12,7 @@
 * [[Working with multiple RMW implementations]]
 * [[Composing multiple nodes in a single process|Composition]]
 * [[Defining custom interfaces (msg/srv)]]
+* [[New features in ROS 2 interfaces (msg srv)]]
 
 
 ### Advanced
