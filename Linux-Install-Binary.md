@@ -10,17 +10,19 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
 
 ## Installing prerequisites
 
-1. Install the OSRF sources for DDS via debian package:
-
+<!-- 1. Install the OSRF sources for DDS via debian package:
         sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
         sudo bash -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
+
+Open splice removed since it's not currently supported. Leaving commented to make it easier to restore in the future. 
+            libopensplice64 \
+-->
 1. Install runtime dependencies and wget:
 
         sudo apt-get update && sudo apt-get install -q -y \
             libopencv-core2.4v5 \
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
-            libopensplice64 \
             wget
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
