@@ -12,7 +12,7 @@ This is a list of the features targeted for development in the future.
 
 ### Beta 2 ()
 
-We will fill this list and a planned release date soon.
+We will fill this list and add a planned release date soon.
 
 ### Future
 
