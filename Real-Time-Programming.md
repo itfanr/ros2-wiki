@@ -30,6 +30,8 @@ First, follow the instructions to build ROS 2 [from source](Linux-Development-Se
 
 ### Run the tests
 
+**Before you run make sure you have at least 8Gb of RAM free. With the memory locking, swap will not work anymore.**
+
 Source your ROS 2 setup.bash.
 
 Run the demo binary, and redirect the output. You may want to use `sudo` in case you get permission error:
