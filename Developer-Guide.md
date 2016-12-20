@@ -330,7 +330,7 @@ Integration with editors:
 
 ### CMake
 
-We will target CMake 2.8.12.2.
+We will target CMake 3.5.
 
 Since there is not an existing CMake style guide we will define our own:
 
