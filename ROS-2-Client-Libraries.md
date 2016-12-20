@@ -44,5 +44,10 @@ While the C++ and Python client libraries are maintained by the core ROS 2 team,
 ## Demo
 For a walkthrough of the message exchange between a publisher using `rclpy` and a subscriber using `rclcpp`, we encourage you to watch [this ROSCon talk](https://vimeo.com/187696091) starting at 17:25 [(here are the slides)](http://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf).
 
+## Comparison to ROS 1
+In ROS 1, all client libraries are developed "from the ground up".
+This allows for the ROS 1 Python client library to be implemented purely in Python, for example, which brings benefits of such as not needing to compile code.
+However, naming conventions and behaviors are not always consistent between client libraries, bug fixes have to be done in multiple places, and there is a lot of functionality that has only ever been implemented in one client library (e.g. UDPROS).
+
 ## Summary
 By utilizing the common core ROS client library, client libraries written in a variety of programming languages are easier to write and have more consistent behaviour.
