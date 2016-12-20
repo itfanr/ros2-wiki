@@ -24,19 +24,25 @@ As a result, client libraries only need to wrap common the functionality in the 
 This keeps client libraries thinner and easier to develop.
 For this reason the common RCL functionality is exposed with C interfaces as the C language is typically the easiest language for client libraries to wrap.
 
-In addition to making the client libraries light-weight, an advantage of having the common core is that if any changes are made to the logic/behavior of the functionality in the core RCL -- namespaces, for example -- all client libraries that use the RCL will have these changes reflected.
-This makes the client libraries easier to maintain when it comes to bug fixes.
+In addition to making the client libraries light-weight, an advantage of having the common core is that the behavior between the languages is more consistent.
+If any changes are made to the logic/behavior of the functionality in the core RCL -- namespaces, for example -- all client libraries that use the RCL will have these changes reflected.
+Furthermore, having the common core means that maintaining multiple client libraries becomes less work when it comes to bug fixes.
 
 [The API documentation for the RCL can be found here.](http://docs.ros2.org/beta1/api/rcl/)
-
-The C++ client library (`rclcpp`) and the Python client library (`rclpy`) are both client libraries which utilize common functionality in the RCL.
-For a walkthrough of the message exchange between a publisher using `rclpy` and a subscriber using `rclcpp`, we encourage you to watch [this video](https://vimeo.com/187696091) starting at 17:25 [(here are the slides)](http://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf).
 
 
 ## Language-specific functionality
 Client library concepts that require language-specific features/properties are not implemented in the RCL but instead are implemented in each client library. 
 For example, threading models used by “spin” functions will have implementations that are specific to the language of the client library.
 
+## Supported client libraries
+
+The C++ client library (`rclcpp`) and the Python client library (`rclpy`) are both client libraries which utilize common functionality in the RCL.
+
+While the C++ and Python client libraries are maintained by the core ROS 2 team, members of the ROS 2 community have created client libraries for Java, C# and Swift programming languages.
+
+## Demo
+For a walkthrough of the message exchange between a publisher using `rclpy` and a subscriber using `rclcpp`, we encourage you to watch [this ROSCon talk](https://vimeo.com/187696091) starting at 17:25 [(here are the slides)](http://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf).
 
 ## Summary
 By utilizing the common core ROS client library, client libraries written in a variety of programming languages are easier to write and have more consistent behaviour.
