@@ -2,6 +2,7 @@ A summary of releases of ROS 2 software is listed below. For more details about 
 
 | Release Overview | Date |
 | --- | --- |
+| [[beta1|beta1-Overview]] | 19 December 2016 |
 | [[alpha8|alpha8-Overview]] | 4 October 2016 |
 | [[alpha7|alpha7-Overview]] | 11 July 2016 |
 | [[alpha6|alpha6-Overview]] | 1 June 2016 |
@@ -15,6 +16,15 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 # New features of each release
+
+
+## [[beta1|beta1-Overview]]
+- Support for node composition at compile, link, or runtime
+- A standard lifecycle for managed nodes
+- Improved support for Quality of Service tuning and tests
+- New and updated design documents: http://design.ros2.org/
+- More tutorials and examples: https://github.com/ros2/ros2/wiki/Tutorials and https://github.com/ros2/examples 
+- Bridging services to / from ROS1 (in addition to topics)
 
 
 ## [[alpha8|alpha8-Overview]]
