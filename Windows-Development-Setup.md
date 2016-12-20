@@ -132,7 +132,13 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 
 You'll also need a DDS Vendor available for ROS to build against.
 There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
-The source distribution of ROS 2 includes FastRTPS.
+The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored. If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS, and then run the following command in your shell before building ROS 2:
+
+```
+call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
+```
+
+Otherwise, ROS 2 will default to using eProsima FastRTPS as the middleware.
 
 ### Installing a few dependencies
 
