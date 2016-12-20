@@ -150,7 +150,7 @@ The editor integration seems slim, we may need to looking to automated checking 
 
 ### C++
 
-We will target C++11, using new built-in C++11 features over Boost equivalents where ever possible.
+We will target C++14, using new built-in C++14 features over Boost equivalents where ever possible.
 
 We will use the Google C++ Style Guide, with some modifications:
 
