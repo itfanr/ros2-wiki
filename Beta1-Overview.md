@@ -36,7 +36,7 @@ Selected features from previous Alpha releases (for the complete list, see the [
   * Bounded arrays
   * Default values
 
-
 Known issues:
-We’re tracking issues in various repositories, but the main entry point is the [ros2/ros2 issue tracker](https://github.com/ros2/ros2/issues)
-We’d like to highlight a [known issue](https://github.com/ros2/rmw_fastrtps/issues/81) that we are working with eProsima to fix that results in significantly degrated performance for large messages under FastRTPS. This will be observed when running some of the demos with larger image resolutions.
+* We’re tracking issues in various repositories, but the main entry point is the [ros2/ros2 issue tracker](https://github.com/ros2/ros2/issues)
+* We’d like to highlight a [known issue](https://github.com/ros2/rmw_fastrtps/issues/81) that we are working with eProsima to fix that results in significantly degrated performance for large messages under FastRTPS.
+This will be observed when running some of the demos with larger image resolutions.
