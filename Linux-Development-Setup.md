@@ -61,7 +61,7 @@ The repositories you downloaded for ROS 2.0 includes eProsima's Fast RTPS, which
 If you would like to use one of the other vendors you will need to install their software separately before building.
 The ROS 2.0 build will automatically build support for vendors that have been installed and sourced correctly.
 
-My default we include eProsima's FastRTPS in the workspace and it is the default middleware. Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
+By default we include eProsima's FastRTPS in the workspace and it is the default middleware. Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
 <!-- commenting out opensplice as we're not currently supporting it
 By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF.
