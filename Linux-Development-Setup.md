@@ -128,9 +128,15 @@ The only bundled vendor is eProsima's Fast RTPS, which is included in the defaul
 If you would like to switch out the vendor below are the instructions.
 When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
 
-When multiple vendors are present, many of the binaries produced by the core ROS 2.0 packages and examples will have versions which are suffixed with the vendor for which it was built.
-Each binary will also generate a "default" binary which will use one of the vendors (for now the first vendor alphabetically).
-For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_opensplice_cpp` or `talker__rmw_fastrtps_cpp`.
+When multiple vendors are present, you can choose the used RMW implementation by setting the the environment variable `RMW_IMPLEMENTATION` to the package providing the RMW implementation.
+If the environment variable is not set the "default" vendor will be used (for now this is `rmw_fastrtps_cpp` if available, otherwise the first in alphabetical order).
+For example, the `talker` binary will use the "default" vendor, but it can be invoked with different vendors, e.g. `RMW_IMPLEMENTATION=rmw_connext_cpp talker`.
+
+#### In beta 1 and earlier
+
+In the beta 1 and earlier releases the `RMW_IMPLEMENTATION` environment variable was not yet supported.
+Instead multiple binaries were being provided.
+For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_connext_cpp`.
 That way you can ensure you're using the right vendor for each binary by including the suffix when you run the program.
 
 <!-- opensplice not currently supported hiding the instructions.
