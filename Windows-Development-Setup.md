@@ -36,7 +36,7 @@ First install git:
 ```
 > choco install -y git
 ```
-You will need to append the git bin folder `C:\Program Files\Git\bin` to the PATH. (last seen not needed on Windows 10)
+If you are on Windows 8, you will need to append the git bin folder `C:\Program Files\Git\bin` to the PATH (this is not necessary on Windows 10)
 
 Then Python 3.5 or higher:
 
