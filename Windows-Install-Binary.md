@@ -62,8 +62,7 @@ Some of the examples require OpenCV to be installed. You can download a precompi
 
 https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-vs2015-x64.zip
 
-Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win
--vs2015-x64\build\x64\vc14\bin`
+Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win-vs2015-x64\build\x64\vc14\bin`
 
 ## Downloading ROS 2
 
