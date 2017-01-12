@@ -198,7 +198,7 @@ You will need to open a new command prompt for this environment variable to take
 
 FastRTPS is bundled with the ROS 2 source and will always be built unless you put an `AMENT_IGNORE` file in the `src\eProsima` folder.
 
-To build the `\dev\ros` folder tree:
+To build the `\dev\ros2` folder tree:
 
 ```
 > python src\ament\ament_tools\scripts\ament.py build
