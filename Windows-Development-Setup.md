@@ -74,14 +74,9 @@ PATH=C:\local\boost_1_61_0\lib64-msvc-14.0
 
 ### Installing Developer Tools
 
-Now we are ready to install some our tools that we use to help in developing ROS 2, but first we need to put Python's `Scripts` folder on the path.
-We need to do this so that installed python packages with scripts can be run directly from the prompt.
+Now we are ready to install some our tools that we use to help in developing ROS 2.
 
-So, push the windows key and type `environment`, then select "Edit the system environment variables".
-Then select the "Environment Variables..." button and edit the entry for the `PATH` under the "system environment variable", adding `C:\ProgramData\chocolatey\lib\python3\tools\Scripts;` to the end.
-You might need to open a new cmd prompt for this to take effect.
-
-Now we can actually install those tools, start with `vcstool`:
+Let's start with `vcstool`:
 
 ```
 > pip install vcstool
@@ -261,22 +256,22 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 > choco install -y svn
 ```
-* Install the Python 3.5.1 source from the tarball [here](https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz). To keep these instructions concise, please extract it to C:\dev\Python-3.5.1
+* Install the Python 3.6.0 source from the tarball [here](https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz). To keep these instructions concise, please extract it to C:\dev\Python-3.6.0
 * Now, build the Python source in debug mode from a Visual Studio command prompt (it may need to be in Administrator mode; can't remember right now...)
 ```
-> cd C:\dev\Python-3.5.1\PCbuild
+> cd C:\dev\Python-3.6.0\PCbuild
 > get_externals.bat
 > build.bat -p x64 -d
 ```
-* Finally, copy the build products into the Python35 installation directories, next to the Release-mode Python executable and DLL's:
+* Finally, copy the build products into the Python36 installation directories, next to the Release-mode Python executable and DLL's:
 ```
-> cd C:\dev\Python-3.5.1\PCbuild\amd64
-> copy python_d.exe C:\Python35
-> copy python35_d.dll C:\Python35
-> copy python3_d.dll C:\Python35
-> copy python35_d.lib C:\Python35\libs
-> copy python3_d.lib C:\Python35\libs
-> for %I in (*_d.pyd) do copy %I C:\Python35\DLLs
+> cd C:\dev\Python-3.6.1\PCbuild\amd64
+> copy python_d.exe C:\Python36
+> copy python36_d.dll C:\Python36
+> copy python3_d.dll C:\Python36
+> copy python36_d.lib C:\Python36\libs
+> copy python3_d.lib C:\Python36\libs
+> for %I in (*_d.pyd) do copy %I C:\Python36\DLLs
 ```
 * Now, from a fresh command prompt, make sure that `python_d` works:
 ```
