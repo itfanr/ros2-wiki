@@ -254,7 +254,7 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 * You'll also need SVN, since some of the Python source-build dependencies are checked out via SVN:
 ```
-> choco install -y svn
+> choco install -y svn hg
 ```
 * You'll need to quit and restart the command prompt after installing the above.
 * Install the Python 3.6.0 source from the tarball [here](https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz). To keep these instructions concise, please extract it to C:\dev\Python-3.6.0
