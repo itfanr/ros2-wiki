@@ -265,7 +265,7 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 * Finally, copy the build products into the Python36 installation directories, next to the Release-mode Python executable and DLL's:
 ```
-> cd C:\dev\Python-3.6.1\PCbuild\amd64
+> cd C:\dev\Python-3.6.0\PCbuild\amd64
 > copy python_d.exe C:\Python36
 > copy python36_d.dll C:\Python36
 > copy python3_d.dll C:\Python36
