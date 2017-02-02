@@ -10,9 +10,13 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Beta 2 ()
-
-We will fill this list and add a planned release date soon.
+### Beta 2 (circa June 2017)
+- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
+- Support for namespaced topics/services
+- Complete Python API with execution model
+- Support for parameters in C / Python
+- Exposure of DDS implementation-specific symbols to users
+- Support for non-ASCII strings in messages / services
 
 ### Future
 
@@ -20,14 +24,10 @@ We will fill this list and add a planned release date soon.
 
 - FastRTPS performance with larger data like the image demo
 - Support services with Connext in C / Python
-- Support parameters in C / Python
 
 #### New features (in no specific order)
 
-- Support for namespaced topic names
-- Complete Python API with execution model
 - Console logging API
-- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
 - Command line tools
 - Launch system using life-cycle and orchestration
 - Add pre-emption for services
