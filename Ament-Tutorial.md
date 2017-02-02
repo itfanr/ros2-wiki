@@ -132,7 +132,7 @@ And build the overlay, but let's build with debug so we can make sure to get deb
 
 ```bash
 cd ~/ros2_overlay_ws
-ament build --cmake-args -DCMAKE_BUILD_TYPE=debug
+ament build --cmake-args -DCMAKE_BUILD_TYPE=Debug
 ```
 
 Now this overlay is on top of the existing overlay so you'll find that `which talker` currently refers to the one from the underlay.
@@ -162,5 +162,5 @@ If you do not want to build a specific package place an empty file named `AMENT_
 "Catch all" options like --cmake-args should be placed after other options, or delimited with '--':
 
 ```bash
-ament build . --force-cmake-configure --cmake-args -DCMAKE_BUILD_TYPE=debug -- --ament-cmake-args -DCMAKE_BUILD_TYPE=Release
+ament build . --force-cmake-configure --cmake-args -DCMAKE_BUILD_TYPE=Debug -- --ament-cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
