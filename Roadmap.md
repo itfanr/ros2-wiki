@@ -14,16 +14,18 @@ This is a list of the features targeted for development in the future.
 - Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
 - Support for namespaced topics/services
 - Complete Python API with execution model
+- Support services with Connext in C / Python
 - Support for parameters in C / Python
 - Exposure of DDS implementation-specific symbols to users
 - Support for non-ASCII strings in messages / services
+- Support DDS-Security specification
 
 ### Future
 
 #### Fix known limitations
 
 - FastRTPS performance with larger data like the image demo
-- Support services with Connext in C / Python
+
 
 #### New features (in no specific order)
 
