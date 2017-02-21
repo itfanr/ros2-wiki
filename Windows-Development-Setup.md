@@ -187,6 +187,8 @@ Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt 
 ```
 setx -m OpenCV_DIR C:\opencv\build
 ```
+You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin`) to the `PATH`.
+
 You will need to open a new command prompt for this environment variable to take effect
 
 ### Building the ROS 2 Code
