@@ -24,7 +24,7 @@
 * [Managed Nodes](Managed-Nodes)
 * [Efficient intra-process communication](Intra-Process-Communication)
 * [Bridge communication between ROS 1 and ROS 2](https://github.com/ros2/ros1_bridge/blob/master/README.md)
-* [Recording topic data with rosbag using the ROS 1 bridge](Rosbag-with-ROS1-Bridge)
+* [Recording and playback of topic data with rosbag using the ROS 1 bridge](Rosbag-with-ROS1-Bridge)
 * [Turtlebot 2 demo using ROS 2](https://github.com/ros2/turtlebot2_demo)
 * [Using tf2 with ROS 2](tf2)
 * [Write real-time safe code that uses the ROS 2 APIs](Real-Time-Programming)
