@@ -5,7 +5,7 @@
 We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04).
 
 Make sure that you have a locale set which supports `UTF-8` We test with the following settings.
-If you are in a minimal environment such as a docker containers the local may be set to something minimal like POSIX.
+If you are in a minimal environment such as a docker containers the locale may be set to something minimal like POSIX.
 To set the locale an example is below. It should be fine if you're using a different UTF-8 supported locale.
 
 ```
