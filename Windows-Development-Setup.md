@@ -175,6 +175,7 @@ Next install cppcheck:
 ```
 > choco install -y cppcheck
 ```
+You will need to add C:\Program Files\Cppcheck to the PATH:
 
 ### Install a binary distribution of OpenCV compatible with Visual Studio 2015
 
