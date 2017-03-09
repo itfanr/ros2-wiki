@@ -185,7 +185,7 @@ I also updated the slaves which the jobs will run on to make sure they matched t
 
 ## Disk space
 
-Overtime docker images and particularly containers will pile up.
+Over time docker images and particularly containers will pile up.
 To clean up use:
 
 ```
