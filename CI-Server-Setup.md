@@ -162,7 +162,7 @@ http://ci.ros2.org/user/wjwwood/configure
 In those settings there should be a field called API Token.
 Copy that field for your password.
 
-Now I can cerate the jobs:
+Now I can create the jobs:
 
 ```
 $ PYTHONPATH=`pwd`/../ros_buildfarm ./create_jenkins_job.py -u http://ci.ros2.org
