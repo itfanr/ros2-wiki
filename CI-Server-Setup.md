@@ -14,7 +14,7 @@ I had to remove the `hudson` in each of the lines that contained it.
 
 ## Temporary rewrite for changed job name
 
-We renamed some of the job, so I added rewrite rules in Apache (`/etc/apache2/sites-enabled/ci.ros2.org.conf`):
+We renamed some of the jobs, so I added rewrite rules in Apache (`/etc/apache2/sites-enabled/ci.ros2.org.conf`):
 
 ```
 # Temporary rewrite rule because we changed the Windows job name.
