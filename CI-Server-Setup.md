@@ -154,7 +154,7 @@ username=wjwwood
 password=<your application token>
 ```
 
-Now, you should first login with GitHub on Jekins if you haven't already.
+Now, you should first login with GitHub on Jenkins if you haven't already.
 Then put your github username in and for the application token, browse to the configuration of your user on Jenkins:
 
 http://ci.ros2.org/user/wjwwood/configure
