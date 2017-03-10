@@ -2,6 +2,9 @@
 
 This tutorial is a follow up to the "Bridge communication between ROS 1 and ROS 2" tutorial linked to from the [Tutorials page on this wiki](Tutorials), and this tutorial assumes you have completed that tutorial already.
 
+**Note**: Be sure to follow the [https://github.com/ros2/ros1_bridge/blob/master/README.md#building-the-bridge-from-source](instructions) for building the bridge from source, which include building the `ros1_bridge` package on its own after building everything else.
+Otherwise you'll end up without all the message support that you need.
+
 What follows is a series of additional examples, like that ones that come at the end of the aforementioned "Bridge communication between ROS 1 and ROS 2" tutorial.
 
 ## Recording Topic Data with rosbag and ROS 1 Bridge
