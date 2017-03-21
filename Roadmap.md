@@ -45,7 +45,7 @@ Additions and changes to the following feature list will occur as Beta 2 progres
 
 ### Version 1.0 (Dec. 13th, 2017)
 
-The feature list for version 1.0 will be filled out as Beta 2 and Beta progress.
+The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progress.
 
 ### Future
 
