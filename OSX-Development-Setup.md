@@ -39,6 +39,9 @@ You need the following things installed to build ROS 2:
         # install boost for FastRTPS
         brew install boost
 
+        # install dependencies for robot state publisher
+        brew install tinyxml eigen
+
         # if you're going to build for OpenSplice, install it
         brew install opensplice
 
