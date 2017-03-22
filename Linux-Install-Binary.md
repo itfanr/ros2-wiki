@@ -24,6 +24,8 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
             libpocofoundation9v5 \
+            libeigen3-dev \
+            libtinyxml-dev \
             wget
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
