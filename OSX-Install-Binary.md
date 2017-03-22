@@ -27,6 +27,9 @@ You need the following things installed before installing ROS 2.
         # install boost for FastRTPS
         brew install boost
 
+        # install dependencies for robot state publisher
+        brew install tinyxml eigen
+
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
