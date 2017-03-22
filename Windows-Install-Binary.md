@@ -68,6 +68,9 @@ Since you are using a precompiled ROS version, we have to tell it where to find 
 In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies. In order to ease the manual installation process, we provide the necessary chocolatey packages.
 
 Please download the two packages for tinyxml and eigen from [this](https://github.com/ros2/choco-packages/releases) github repository. 
+ * tinyxml-usestl.2.6.2.nupkg
+ * eigen-3.3.3.nupkg
+
 Once the two packages are downloaded, open an administrative shell and execute the following two commands:
 
 ```
