@@ -64,6 +64,18 @@ https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-
 
 Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win-vs2015-x64\build\x64\vc14\bin`
 
+### Install dependencies
+In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies. In order to ease the manual installation process, we provide the necessary chocolatey packages.
+
+Please download the two packages for tinyxml and eigen from [this](https://github.com/ros2/choco-packages/releases) github repository. 
+Once the two packages are downloaded, open an administrative shell and execute the following two commands:
+
+```
+> choco install -y -s <PATH\TO\DOWNLOADS\> eigen tinyxml-usestl
+```
+
+Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the two packages in.
+ 
 ## Downloading ROS 2
 
 * Go the releases page: https://github.com/ros2/ros2/releases
