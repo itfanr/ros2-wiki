@@ -40,6 +40,8 @@ sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-m
 sudo pip3 install flake8 flake8-import-order
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
+# dependencies for robot state publisher
+sudo apt-get install libtinyxml-dev libeigen3-dev
 ```
 
 ### Get ROS 2.0 code
@@ -233,7 +235,7 @@ Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't colli
 
 ```
 sudo apt-get update
-sudo apt-get install git wget build-essential cppcheck cmake libopencv-dev libpoco-dev python-empy python3-empy python3-setuptools python3-nose python3-pip pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev python-vcstool libboost-thread-dev libbz2-dev libreadline-dev libsqlite3-dev libusb-1.0-0-dev libudev-dev
+sudo apt-get install git wget build-essential cppcheck cmake libopencv-dev libpoco-dev python-empy python3-empy python3-setuptools python3-nose python3-pip pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev python-vcstool libboost-thread-dev libbz2-dev libreadline-dev libsqlite3-dev libusb-1.0-0-dev libudev-dev libtinyxml-dev libeigen3-dev
 ```
 
 Then run:
