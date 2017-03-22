@@ -34,14 +34,12 @@ Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't colli
 ```
 sudo apt-get update
 sudo apt-get install git wget
-sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool
+sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool libtinyxml-dev libeigen3-dev
 # dependencies for testing
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 sudo pip3 install flake8 flake8-import-order
 # dependencies for fastrtps
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
-# dependencies for robot state publisher
-sudo apt-get install libtinyxml-dev libeigen3-dev
 ```
 
 ### Get ROS 2.0 code
