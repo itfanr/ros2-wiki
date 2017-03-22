@@ -29,3 +29,4 @@
 * [Using tf2 with ROS 2](tf2)
 * [Write real-time safe code that uses the ROS 2 APIs](Real-Time-Programming)
 * [Use the rclpy API to write ROS 2 programs in Python](Python-Programming)
+* [Use the robot state publisher to publish joint states and TF](dummy-robot-demo)
