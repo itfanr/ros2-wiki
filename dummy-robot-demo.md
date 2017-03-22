@@ -1,3 +1,1 @@
-# ROS2 Dummy Robot Demo
-
 Within this demo, we present a simple demo robot with all components from publishing joint states over publishing fake laser data until visualizing the robot model on a map in RViz.
