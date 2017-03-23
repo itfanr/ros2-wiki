@@ -68,7 +68,7 @@ rviz
 ```
 
 After you configured your RViz accordingly, you should see a similar picture:
-<fill in screenshot here>
+![](http://imgur.com/a/QAfb5)
 
 ### What's happening?
 If you have a closer look at the launch file, we start a couple of nodes at the same time.
