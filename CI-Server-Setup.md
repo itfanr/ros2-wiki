@@ -64,7 +64,7 @@ sudo usermod -aG docker jenkins
 ## Adding a Linux slave to the farm
 Approximately:
 
-* Shell into the master (`ci.ros2.org`), copy `/home/jenkins/.ssh/id_rsa.pub` and paste it into `/home/jenkins/.ssh/authorized_keys` on the new machine.
+* Shell into the master (`ci.ros2.org`), copy `/var/lib/jenkins/.ssh/id_rsa.pub` and paste it into `/home/jenkins/.ssh/authorized_keys` on the new machine.
 * Copy config from the `linux 2` machine, rename and otherwise modify as needed (e.g., change the IP/host).
 
 ## Configuring Jenkins
