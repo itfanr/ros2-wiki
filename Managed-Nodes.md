@@ -1,7 +1,8 @@
-##Introduction
+## Introduction
 ROS2 introduces the concept of managed nodes, also called `LifecycleNode`s. In the following tutorial, we explain the purpose of these nodes, what makes them different from regular nodes and how they comply to a lifecycle management.
 Managed nodes are scoped within a state machine of a finite amount of states. These states can be changed by invoking a transition id which indicates the succeeding consecutive state.
-The state machine is implemented as described at the [ROS2 design page](http://design.ros2.org/articles/node_lifecycle.html) 
+The state machine is implemented as described at the [ROS2 design page](http://design.ros2.org/articles/node_lifecycle.html).
+
 Our implementation differentiates between `Primary States` and `Transition States`. Primary States are supposed to be steady states in which any node can do the respected task. On the other hand, Transition States are meant as temporary intermediate states attached to a transition. The result of these intermediate states are used to indicate whether a transition between two primary states is considered successful or not. Thus, any managed node can be in one of the following states:
 
 Primary States (steady states):
@@ -26,8 +27,8 @@ The possible transitions to invoke are:
 
 For a more verbose explanation on the applied state machine, we refer to the design page which provides an in-detail explanation about each state and transition.
 
-##The demo
-###What's happening
+## The demo
+### What's happening
 The demo is split into 3 different separate applications.
 * lifecycle_talker
 * lifecycle_listener
@@ -45,7 +46,7 @@ The `lifecycle_listener` is a simple listener which shows the characteristics of
 
 The `lifecycle_service_client` is a script calling different transitions on the `lifecycle_talker`. This is meant as the external user controlling the lifecycle of nodes.   
 
-##Run the demo
+## Run the demo
 In order to run this demo, we open three terminals and source our ROS2 environment variables either from the binary distributions or the workspace we compiled from source.
 
 |lifecycle_talker|lifecycle_listener|lifecycle_service_client|
@@ -57,7 +58,7 @@ If we look at the output of the `lifecycle_talker`, we notice that nothing seems
 The same behavior can be seen for the `lifecycle_listener`, which is less surprising given that no publishers are available at this moment.
 The interesting part starts with the third terminal. In there we launch our `lifecycle_service_client` which is responsible for changing the states of the `lifecycle_talker`. 
 
-####Triggering transition 1 (configure)
+#### Triggering transition 1 (configure)
 ```
 [lc_client] Transition 1 successfully triggered.
 [lc_client] Node lc_talker has current state inactive.
@@ -74,7 +75,7 @@ The lifecycle listener on the same time receives a notification as it listens to
 [lc_listener] notify callback: Transition from state configuring to inactive
 ```
 
-####Triggering transition 2 (activate)
+#### Triggering transition 2 (activate)
 ```
 [lc_client] Transition 2 successfully triggered.
 [lc_client] Node lc_talker has current state active.
@@ -101,9 +102,9 @@ Please note that the index of the published message is already at 11. The purpos
 
 For the rest of the demo, you will see similar output as we deactivate and activate the lifecycle talker and finally shut it down. 
 
-##The demo code
+## The demo code
 
-####lifecycle_talker, lifecycle_listener and lifecycle_service_client
+#### lifecycle_talker, lifecycle_listener and lifecycle_service_client
 If we have a look at the code, there is one significant change for the lifecycle talker compared to a regular talker. Our node does not inherit from the regular ```rclcpp::node::Node``` but from ```rclcpp_lifecycle::LifecycleNode```.
 ```
 class LifecycleTalker : public rclcpp_lifecycle::LifecycleNode
@@ -128,7 +129,7 @@ At the same time, every lifecycle node has by default 5 different communication 
 * Service `<node_name>__get_available_states`: This is meant to be an introspection tool. It returns a list of all possible states this node can be. 
 * Service `<node_name>__get_available_transitions`: Same as above, meant to an introspection tool. It returns a list of all possible transitions this node can execute.
 
-###lifecycle_service_client_py.py
+### lifecycle_service_client_py.py
 The `lifecycle_service_client` application is a fixed order script for this demo purpose only. I explains the use and the API calls made for this lifecycle implementation, but may be inconvenient to use otherwise. For this reason, we implemented a separate python script, which lets you dynamically change states or various nodes.
 ```
 python3 `which lifecycle_service_client_py.py`
@@ -147,7 +148,7 @@ The next step would be to execute a state change:
 $ python3 `which lifecycle_service_client_py.py` change_state --change-state-args configure lc_talker
 ```
 
-##Outlook
+## Outlook
 The above description points to the current state of the development as for beta1. The future todo list for this topic comprises:
 * Python lifecycle nodes
 * Lifecycle manager: A global node, handling and dispatching trigger requests for multiple nodes.
