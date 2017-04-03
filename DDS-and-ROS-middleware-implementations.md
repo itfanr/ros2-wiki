@@ -15,7 +15,7 @@ It's a lot of work to implement and maintain RMW packages for supporting DDS imp
 ### Supported RMW implementations
 
 | Product name | License | RMW implementation | Status |
-| ------------- | ------------- | ----- | ---- | --- |
+| ------------- | ------------- | ----- | ---- |
 | eProsima _Fast RTPS_ | Apache 2 | `rmw_fastrtps_cpp` | Full support. Default RMW. Packaged with binary releases. |
 | RTI _Connext_ | commercial, research | `rmw_connext_cpp` | Full support. Building from source required. |
 | RTI _Connext_ (dynamic implementation) | commercial, research | `rmw_connext_dynamic_cpp` | Support paused. Full support until alpha 8.* |
