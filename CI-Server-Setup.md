@@ -50,6 +50,9 @@ RewriteRule ^(.*)/packaging_windows_opensplice/(.*)$ $1/packaging_windows/$2 [R=
 ```
 sudo apt-get update
 sudo apt-get install -y git
+# Your java version will vary depending on your OS:
+#sudo apt-get install openjdk-8-jre-headless
+#sudo apt-get install openjdk-8-jre-headless
 # qemu and vcs are required for ARM builds
 sudo apt-get install -y qemu-user-static
 sudo bash -c 'echo "deb http://repositories.ros.org/ubuntu/testing/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
