@@ -34,13 +34,13 @@ Open splice removed since it's not currently supported. Leaving commented to mak
 ## Downloading ROS 2
 
 * Go the releases page: https://github.com/ros2/ros2/releases
-* Download the latest package for Linux; let's assume that it ends up at `~/Downloads/ros2-package-linux.tar.bz2`.
+* Download the latest package for Linux; let's assume that it ends up at `~/Downloads/ros2-package-linux-x86_64.tar.bz2`.
   * Note: there may be more than one binary download option which might cause the file name to differ.
 * Unpack it:
 
         mkdir -p ~/ros2_install
         cd ~/ros2_install
-        tar xf ~/Downloads/ros2-package-linux.tar.bz2
+        tar xf ~/Downloads/ros2-package-linux-x86_64.tar.bz2
 
 ## Try some examples
 
