@@ -61,18 +61,17 @@ import sys
 import time
 
 import rclpy
-from rclpy.qos import qos_profile_default
 
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
 
 def main():
-    rclpy.init(sys.argv)
+    rclpy.init(args=sys.argv)
 
     node = rclpy.create_node('emulate_kobuki_node')
 
-    imu_publisher = node.create_publisher(Imu, 'imu_data', qos_profile_default)
-    odom_publisher = node.create_publisher(Odometry, 'odom', qos_profile_default)
+    imu_publisher = node.create_publisher(Imu, 'imu_data')
+    odom_publisher = node.create_publisher(Odometry, 'odom')
 
     imu_msg = Imu()
     odom_msg = Odometry()
@@ -200,7 +199,6 @@ Since we don't have command line tools in ROS 2 yet (it's coming!) I used this P
 import sys
 
 import rclpy
-from rclpy.qos import qos_profile_default
 
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Image
@@ -233,13 +231,13 @@ def imu_callback(msg):
 
 
 def main():
-    rclpy.init(sys.argv)
+    rclpy.init(args=sys.argv)
 
     node = rclpy.create_node('emulated_kobuki_monitor')
 
-    odom_sub = node.create_subscription(Odometry, 'odom', odom_callback, qos_profile_default)
-    image_sub = node.create_subscription(Image, 'image', image_callback, qos_profile_default)
-    imu_sub = node.create_subscription(Imu, 'imu_data', imu_callback, qos_profile_default)
+    odom_sub = node.create_subscription(Odometry, 'odom', odom_callback)
+    image_sub = node.create_subscription(Image, 'image', image_callback)
+    imu_sub = node.create_subscription(Imu, 'imu_data', imu_callback)
 
     while rclpy.ok():
         rclpy.spin_once(node)
