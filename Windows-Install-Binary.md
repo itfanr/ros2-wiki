@@ -69,8 +69,8 @@ In order to install the packages for the robot state publisher correctly, you ne
 
 Please download these packages from [this](https://github.com/ros2/choco-packages/releases/latest) GitHub repository. 
  * asio.1.10.6.nupkg
- * tinyxml-usestl.2.6.2.nupkg
  * eigen-3.3.3.nupkg
+ * tinyxml-usestl.2.6.2.nupkg
  * tinyxml2.4.1.0.nupkg
 
 Once the these packages are downloaded, open an administrative shell and execute the following command:
