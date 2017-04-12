@@ -28,7 +28,7 @@ You need the following things installed before installing ROS 2.
         brew install boost
 
         # install dependencies for robot state publisher
-        brew install tinyxml tinyxml2 eigen asio
+        brew install tinyxml tinyxml2 eigen asio pcre
 
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
         # We're disabling python support in opencv to avoid a dependency on numpy,
