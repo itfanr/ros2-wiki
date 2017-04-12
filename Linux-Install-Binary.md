@@ -27,7 +27,7 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libeigen3-dev \
             libtinyxml-dev \
             wget \
-            libboost-dev
+            libboost-thread-dev
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
