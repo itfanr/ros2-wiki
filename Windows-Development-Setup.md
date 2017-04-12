@@ -93,17 +93,19 @@ Also, you should install `curl`:
 ### Install dependencies
 In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies. In order to ease the manual installation process, we provide the necessary chocolatey packages.
 
-Please download the two packages for tinyxml and eigen from [this](https://github.com/ros2/choco-packages/releases) github repository. 
+Please download these packages from [this](https://github.com/ros2/choco-packages/releases/latest) GitHub repository. 
+ * asio.1.10.6.nupkg
  * tinyxml-usestl.2.6.2.nupkg
  * eigen-3.3.3.nupkg
+ * tinyxml2.4.1.0.nupkg
 
-Once the two packages are downloaded, open an administrative shell and execute the following two commands:
+Once the these packages are downloaded, open an administrative shell and execute the following command:
 
 ```
-> choco install -y -s <PATH\TO\DOWNLOADS\> eigen tinyxml-usestl
+> choco install -y -s <PATH\TO\DOWNLOADS\> asio eigen tinyxml-usestl tinyxml2
 ```
 
-Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the two packages in.
+Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages to.
  
 ### Getting the Source Code
 
