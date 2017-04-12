@@ -26,8 +26,7 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libpocofoundation9v5 \
             libeigen3-dev \
             libtinyxml-dev \
-            wget \
-            libboost-thread-dev
+            wget
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
