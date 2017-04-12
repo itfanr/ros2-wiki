@@ -34,7 +34,7 @@ You need the following things installed to build ROS 2:
         brew tap ros/deps
  1. Use `brew` to install more stuff:
 
-        brew install python3 wget cmake cppcheck gtest tinyxml eigen
+        brew install python3 wget cmake cppcheck gtest tinyxml eigen pcre
 
         # install dependencies for FastRTPS
         brew install asio tinyxml2
