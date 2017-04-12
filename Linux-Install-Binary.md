@@ -20,14 +20,16 @@ Open splice removed since it's not currently supported. Leaving commented to mak
 1. Install runtime dependencies and wget:
 
         sudo apt-get update && sudo apt-get install -q -y \
+            libboost-thread-dev \
             libopencv-core2.4v5 \
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
             libpocofoundation9v5 \
             libeigen3-dev \
             libtinyxml-dev \
-            wget \
-            libboost-thread-dev
+            wget
+
+Note: `libboost-thread-dev` can probably be removed or be made optional in the release after beta-1.
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
