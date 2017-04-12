@@ -25,8 +25,10 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
             libpocofoundation9v5 \
+            libasio-dev \
             libeigen3-dev \
             libtinyxml-dev \
+            libtinyxml2-dev \
             wget
 
 Note: `libboost-thread-dev` can probably be removed or be made optional in the release after beta-1.
