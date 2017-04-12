@@ -37,7 +37,7 @@ You need the following things installed to build ROS 2:
         brew install python3 wget cmake cppcheck gtest tinyxml eigen
 
         # install dependencies for FastRTPS
-        brew install asio boost tinyxml2
+        brew install asio boost eigen tinyxml tinyxml2
 
         # if you're going to build for OpenSplice, install it
         brew install opensplice
