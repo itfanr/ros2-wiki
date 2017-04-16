@@ -11,7 +11,6 @@ To set the locale an example is below. It should be fine if you're using a diffe
 ```
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-export LANG=en_US.UTF-8
 ```
 
 ## How to setup the development environment?
