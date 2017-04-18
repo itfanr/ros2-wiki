@@ -26,7 +26,7 @@ You need the following things installed before installing ROS 2.
 
         # install boost for FastRTPS (only required for beta-1 and older releases)
         brew install boost
-        # install asio and tinyxml2 for FastRTPS (only if building from master)
+        # install asio and tinyxml2 for FastRTPS (required for beta-2 and newer)
         brew install asio tinyxml2
 
         # install dependencies for robot state publisher
