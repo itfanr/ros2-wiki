@@ -24,7 +24,7 @@ You need the following things installed before installing ROS 2.
 
         brew install python3
 
-        # install boost for FastRTPS
+        # install boost for FastRTPS (only required for beta-1 and older releases)
         brew install boost
 
         # install dependencies for robot state publisher
