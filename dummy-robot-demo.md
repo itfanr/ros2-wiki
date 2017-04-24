@@ -1,9 +1,9 @@
-Within this demo, we present a simple demo robot with all components from publishing joint states over publishing fake laser data until visualizing the robot model on a map in RViz.
+In this demo, we present a simple demo robot with all components from publishing joint states over publishing fake laser data until visualizing the robot model on a map in RViz.
 
 ## Prerequisites
-For the time of this writing, this demo requires a compilation from source as this demo was developed after the binary packages for beta1. Please make sure to refer to the [Install Instruction](https://github.com/ros2/ros2/wiki/Installation) in order to verify your installation.
+At the time of this writing, this demo requires compilation from source as it was developed after the binary packages for beta1. Please make sure to refer to the [Install Instruction](https://github.com/ros2/ros2/wiki/Installation) in order to verify your installation.
 
-As a second prerequisite, we need the ROS1 bridge available. It is not strictly required, however without a functioning bridge, we won't have any chance to visualize the result of this demo in RViz.
+As a second prerequisite, we need the ROS1 bridge available. It is not strictly required, but without a functioning bridge we won't have a chance to visualize the result of this demo in RViz.
 
 ## Launching the demo
 We assume at this point that your ROS1 is setup correctly. We further assume your ROS2 installation dir as `~/ros2_ws`. Please change the directories according to your platform.
