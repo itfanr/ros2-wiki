@@ -249,8 +249,8 @@ If you as compiling **beta-1 or older** you also need to install boost for Fast-
 ```
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
-# dependencies for turtlebot demo ? (should be moved to the turtlebot2_demo page?)
 ```
+# dependencies for turtlebot demo ? (should be moved to the turtlebot2_demo page?)
 sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev libusb-1.0-0-dev libudev-dev 
 ```
 
