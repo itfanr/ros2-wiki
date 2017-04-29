@@ -39,7 +39,12 @@ sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev li
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 sudo pip3 install flake8 flake8-import-order
 # dependencies for FastRTPS
-sudo apt-get install libasio-dev libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev libtinyxml2-dev
+sudo apt-get install libasio-dev libtinyxml2-dev
+```
+
+If you as compiling **beta-1 or older** you also need to install boost for Fast-RTPS
+```
+sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
 
 ### Get ROS 2.0 code
@@ -237,8 +242,15 @@ sudo apt-get install git wget build-essential cppcheck cmake libopencv-dev libpo
 # dependencies for testing
 sudo apt-get install pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
 # dependencies for FastRTPS
-sudo apt-get install libasio-dev libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev libboost-thread-dev libtinyxml2-dev
+sudo apt-get install libasio-dev libtinyxml2-dev
+```
+
+If you as compiling **beta-1 or older** you also need to install boost for Fast-RTPS
+```
+sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
+```
 # dependencies for turtlebot demo ? (should be moved to the turtlebot2_demo page?)
+```
 sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev libusb-1.0-0-dev libudev-dev 
 ```
 
