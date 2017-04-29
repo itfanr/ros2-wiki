@@ -48,7 +48,7 @@ Ensure that the correct features will be installed:
 
 The binary package bundles eProsima FastRTPS as the middleware. To use another DDS vendor, you will need to [build from source](Windows-Development-Setup).
 
-#### eProsima FastRTPS & Boost
+#### eProsima FastRTPS & Boost (only for beta-1 and older releases)
 
 FastRTPS requires boost as a dependency. To install it, grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/). We test with [this](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe) binary.
 
@@ -65,7 +65,7 @@ https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-
 Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win-vs2015-x64\build\x64\vc14\bin`
 
 ### Install dependencies
-In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies. In order to ease the manual installation process, we provide the necessary chocolatey packages.
+There are a few dependencies not available in the Chocolatey package database. In order to ease the manual installation process, we provide the necessary Chocolatey packages.
 
 Please download these packages from [this](https://github.com/ros2/choco-packages/releases/latest) GitHub repository. 
  * asio.1.10.6.nupkg
@@ -99,7 +99,7 @@ Before running an example, you need to `source` the ROS 2 setup file. Start a co
 
 Start another command shell and run a listener:
 
-````
+```
 > call C:\dev\ros2\local_setup.bat
 > listener
 ```
@@ -109,5 +109,5 @@ Hooray!
 
 
 ### Troubleshooting
-* If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as boost or opencv are located inside your `PATH` variable.
+* If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as opencv are located inside your `PATH` variable.
 * If you forget to call the `local_setup.bat` file from your terminal, the demo programs will most likely crash immediately.
