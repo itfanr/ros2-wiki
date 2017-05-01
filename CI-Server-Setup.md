@@ -60,11 +60,14 @@ sudo apt-get install -y git
 sudo apt-get install -y qemu-user-static
 sudo bash -c 'echo "deb http://repositories.ros.org/ubuntu/testing/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo bash -c 'curl --silent http://repositories.ros.org/repos.key |sudo apt-key add -'
+# Or, on aarch64:
+#sudo apt-get install docker.io
 sudo apt-get update
 sudo apt-get install -y python-vcstool
 curl -fsSL https://get.docker.com/ | sh
-sudo adduser jenkins
+sudo adduser --disabled-password jenkins
 sudo usermod -aG docker jenkins
+sudo service docker start
 ```
 
 ## Adding a Linux slave to the farm
