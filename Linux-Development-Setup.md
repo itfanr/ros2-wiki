@@ -2,7 +2,7 @@
 
 ## System Requirements
 
-We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04).
+We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04). While not being actively tested these instructions should also work for later Ubuntu as well as Debian Stretch.
 
 Make sure that you have a locale set which supports `UTF-8` We test with the following settings.
 If you are in a minimal environment such as a docker containers the locale may be set to something minimal like POSIX.
@@ -46,7 +46,13 @@ If you as compiling **beta-1 or older** you also need to install boost for Fast-
 ```
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
-
+<!--
+Keeping these because we can't remember if they were required for Jessie or for another reason. Are very likely not needed at all
+```
+# dependencies for turtlebot demo ? 
+sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev
+```
+-->
 ### Get ROS 2.0 code
 
 Create a workspace and clone all repos:
@@ -219,47 +225,6 @@ These packages are not public due to pending license questions.
 If you have been granted access, you can download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
 
 Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
-
-## Installation on different Linux than Ubuntu 16.04
-
-### Debian Jessie/Stretch
-
-In order to use the ROS 1 components with Debian have look at http://wiki.ros.org/kinetic/Installation/Debian. Otherwise you can also wait a few month until most ROS 1 components are ported to Debian unstable (The core components are waiting to be unblocked by the ftp-masters at the moment). You don't need the ROS 1 components in order to test ROS 2 without the ROS 1 Bridge.
-
-
-Then add the OSRF (gazebo) Debian repository:
-
-```
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu trusty main" > /etc/apt/sources.list.d/gazebo-latest.list'
-sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-```
-
-Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't collide) and setuptools:
-
-```
-sudo apt-get update
-sudo apt-get install git wget build-essential cppcheck cmake libopencv-dev libpoco-dev python-empy python3-empy python3-setuptools python3-nose python3-pip python3-vcstool libtinyxml-dev libeigen3-dev
-# dependencies for testing
-sudo apt-get install pyflakes python3-coverage python3-mock python3-nose python3-pep8 uncrustify
-# dependencies for FastRTPS
-sudo apt-get install libasio-dev libtinyxml2-dev
-```
-
-If you as compiling **beta-1 or older** you also need to install boost for Fast-RTPS
-```
-sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
-```
-```
-# dependencies for turtlebot demo ? (should be moved to the turtlebot2_demo page?)
-sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev libusb-1.0-0-dev libudev-dev 
-```
-
-Then run:
-```
-sudo pip3 install flake8 flake8-import-order
-```
-
-Afterwards you can proceed with [Get ROS 2.0 code](#get-ros-20-code).
 
 ## Alternate compilers
 
