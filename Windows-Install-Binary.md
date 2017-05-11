@@ -3,8 +3,8 @@
 This page explains how to install ROS 2 on Windows from a pre-built binary package.
 
 ## System requirements
-
-We support Windows 8.1 and Windows 10.
+Until beta-1 we supported Windows 8.1 and Windows 10.
+As of beta-2 only Windows 10 is supported.
 
 ## Installing prerequisites
 
