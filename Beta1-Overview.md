@@ -4,7 +4,7 @@ Welcome to the latest release of ROS 2 software! We hope that you try it out and
 
 ### Supported Platforms
 
-We support ROS 2 Beta 1 on three platforms: Ubuntu 16.04 (Xenial), Mac OS X 10.11 (El Capitan), and Windows 10. We provide both binary packages and instructions for how to compile from source for all 3 platforms.
+We support ROS 2 Beta 1 on three platforms: Ubuntu 16.04 (Xenial), Mac OS X 10.11 (El Capitan), and Windows 8.1 and 10. We provide both binary packages and instructions for how to compile from source for all 3 platforms.
 
 ### Features
 
