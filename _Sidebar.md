@@ -8,5 +8,5 @@
 * [[Contact]]
 * [[Contributing]]
 * [[Developer Guide|Developer-Guide]]
-* [[Build Cop and Build Farmer Guide|Build-Cop-and-Build-Farmer-Guide]]
+* [[Build Cop/Build Farmer Guide|Build-Cop-and-Build-Farmer-Guide]]
 * [[Roadmap]]
