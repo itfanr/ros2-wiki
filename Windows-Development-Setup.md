@@ -215,7 +215,7 @@ setx -m OpenCV_DIR C:\opencv
 ```
 You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin` for VS2015 or `C:\opencv\x64\vc15\bin` for VS2017) to the `PATH`.
 
-You will need to open a new command prompt for this environment variable to take effect
+You will need to open a new command prompt for this environment variable to take effect.
 
 ### Building the ROS 2 Code
 
