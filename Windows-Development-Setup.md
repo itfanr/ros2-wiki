@@ -196,18 +196,24 @@ Next install cppcheck:
 ```
 You will need to add C:\Program Files\Cppcheck to the PATH.
 
-### Install a binary distribution of OpenCV compatible with Visual Studio 2015
+### Install a binary distribution of OpenCV
 
 You can download a precompiled version of OpenCV from:
 
-https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-vs2015-x64.zip
+- Visual Studio 2015:
+  - https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-vs2015-x64.zip
+- Visual Studio 2017:
+  - https://github.com/ros2/ros2/releases/download/release-beta1/opencv-2.4.13.2-vc15.zip
 
 Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt (requires Admin privileges):
 
 ```
+# Visual Studio 2015
 setx -m OpenCV_DIR C:\opencv\build
+# Visual Studio 2017
+setx -m OpenCV_DIR C:\opencv
 ```
-You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin`) to the `PATH`.
+You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin` for VS2015 or `C:\opencv\x64\vc15\bin` for VS2017) to the `PATH`.
 
 You will need to open a new command prompt for this environment variable to take effect
 
