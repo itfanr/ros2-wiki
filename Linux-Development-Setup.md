@@ -42,7 +42,7 @@ sudo pip3 install flake8 flake8-import-order
 sudo apt-get install libasio-dev libtinyxml2-dev
 ```
 
-If you as compiling **beta-1 or older** you also need to install boost for Fast-RTPS
+If you are compiling **beta-1 or older** you also need to install boost for Fast-RTPS
 ```
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
 ```
