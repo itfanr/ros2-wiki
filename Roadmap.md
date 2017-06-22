@@ -10,11 +10,10 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Beta 2 (June 14th, 2017)
+### Beta 2 (July 7th, 2017)
 - ROS 2 native support for:
   - Cartographer
   - AMCL
-  - move_base
   - astra driver
   - map_server
   - joystick_driver
@@ -26,7 +25,6 @@ This is a list of the features targeted for development in the future.
 - New documentation platform deployed
 - Released packages, at least Ubuntu
 - Namespaced topics and services
-- Command line parameters and parameters from a yaml file
 - rostopic command line tool (not all verbs)
 - Logging API (rosconsole)
 - Command line static remapping
@@ -42,6 +40,8 @@ Additions and changes to the following feature list will occur as Beta 2 progres
 - rosparam
 - parameters in C
 - ros_control, perception, depth camera 
+- move_base
+- Command line parameters and parameters from a yaml file
 
 ### Version 1.0 (Dec. 13th, 2017)
 
