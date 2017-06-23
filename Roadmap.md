@@ -22,12 +22,10 @@ This is a list of the features targeted for development in the future.
 - Support via the ROS <--> ROS2 bridge:
   - rosbag
   - rviz
-- New documentation platform deployed
 - Released packages, at least Ubuntu
 - Namespaced topics and services
 - rostopic command line tool (not all verbs)
 - Logging API (rosconsole)
-- Command line static remapping
 
 ### Beta 3 (September 13th, 2017)
 Additions and changes to the following feature list will occur as Beta 2 progresses.
@@ -41,7 +39,9 @@ Additions and changes to the following feature list will occur as Beta 2 progres
 - parameters in C
 - ros_control, perception, depth camera 
 - move_base
+- Command line static remapping
 - Command line parameters and parameters from a yaml file
+- New documentation platform deployed
 
 ### Version 1.0 (Dec. 13th, 2017)
 
