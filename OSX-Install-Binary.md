@@ -57,11 +57,15 @@ You need the following things installed before installing ROS 2.
 In one terminal, source the setup file and then run a `talker`:
 
     . ~/ros2_install/ros2-osx/setup.bash
-    talker
+    ros2 run demo_nodes_cpp talker
+
 In another terminal source the setup file and then run a `listener`:
 
     . ~/ros2_install/ros2-osx/setup.bash
-    listener
+    ros2 run demo_nodes_cpp listener
+
+_For Beta 1 releases and earlier, invoke the executables directly by calling "`talker`" and "`listener`"._
+
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
 
