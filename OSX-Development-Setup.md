@@ -2,7 +2,9 @@
 
 ## System requirements
 
-We support OS X 10.12.x. However, some older versions like 10.11.x and 10.10.x are known to work as well.
+We support OS X 10.12.x.
+
+However, some older versions like 10.11.x and 10.10.x are known to work as well.
 
 ## Install prerequisites
 
