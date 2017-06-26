@@ -80,6 +80,13 @@ Once the these packages are downloaded, open an administrative shell and execute
 ```
 
 Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages to.
+
+You must also install `pip` and one python package, `yaml`:
+
+```
+choco install pip
+pip install yaml
+```
  
 ## Downloading ROS 2
 
