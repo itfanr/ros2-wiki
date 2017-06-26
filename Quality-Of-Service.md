@@ -36,7 +36,7 @@ call <path to ROS 2 install space>/local_setup.bat
 Then run:
 
 ```
-showimage
+ros2 run image_tools showimage
 ```
 
 Nothing will happen yet.
@@ -48,11 +48,11 @@ You can't just close the window.
 In a separate terminal, source the install file and run the publisher node:
 
 ```
-cam2image
+ros2 run image_tools cam2image
 ```
 This will publish an image from your webcam. In case you don't have a camera attached to your computer, there is a commandline option which publishes predefined images.
 ```
-cam2image -b
+ros2 run image_tools cam2image -b
 ```
 
 In this window, you'll see terminal output:
@@ -106,7 +106,7 @@ net.inet.udp.maxdgram=65500
 In one of your terminals, add a -h flag to the original command:
 
 ```
-showimage -h
+ros2 run image_tools showimage -h
 ```
 
 You'll see a list of the possible options you can pass to the demo.
