@@ -51,17 +51,17 @@ The executables from the [composition](https://github.com/ros2/demos/tree/master
 
 In the first shell:
 
-        api_composition
+        ros2 run composition api_composition
 
 In the second shell (see [talker](https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp) source code):
 
-        api_composition_cli composition composition::Talker
+        ros2 run composition api_composition_cli composition composition::Talker
 
 Now the first shell should show a message that the component was loaded as well as repeated message for publishing a message.
 
 Another command in the second shell (see [listener](https://github.com/ros2/demos/blob/master/composition/src/listener_component.cpp) source code):
 
-        api_composition_cli composition composition::Listener
+        ros2 run composition api_composition_cli composition composition::Listener
 
 Now the second shell should show repeated output for each received message.
 
@@ -74,12 +74,12 @@ The example with a server and a client is very similar.
 
 In the first shell:
 
-        api_composition
+        ros2 run composition api_composition
 
 In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code):
 
-        api_composition_cli composition composition::Server
-        api_composition_cli composition composition::Client
+        ros2 run composition api_composition_cli composition composition::Server
+        ros2 run composition api_composition_cli composition composition::Client
 
 In this case the client sends a request to the server, the server processes the request and replies with a response, and the client prints the received response.
 
@@ -90,6 +90,6 @@ The executable contains all four components from above: talker and listener as w
 
 In the shell call (see [source code](https://github.com/ros2/demos/blob/master/composition/src/manual_composition.cpp)):
 
-        manual_composition
+        ros2 run composition manual_composition
 
 This should show repeated messages from both pairs, the talker and the listener as well as the server and the client.
