@@ -120,7 +120,7 @@ This demonstrates that intra process communication is indeed working and unneces
 Let's run the demo by executing the `two_node_pipeline` executable (don't forget to source the setup file first):
 
 ```
-$ two_node_pipeline
+$ ros2 run intra_process_demo two_node_pipeline
 Published message with value: 0, and address: 0x7fb02303faf0
 Published message with value: 1, and address: 0x7fb020cf0520
  Received message with value: 1, and address: 0x7fb020cf0520
@@ -237,7 +237,7 @@ Because the message is being published and subscribed to as a `unique_ptr` the s
 To test those expectations, let's run it:
 
 ```
-% cyclic_pipeline
+% ros2 run intra_process_demo cyclic_pipeline
 Published first message with value:  42, and address: 0x7fd2ce0a2bc0
 Received message with value:         42, and address: 0x7fd2ce0a2bc0
   sleeping for 1 second...
