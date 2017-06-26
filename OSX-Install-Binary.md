@@ -15,7 +15,7 @@ You need the following things installed before installing ROS 2.
   * *Optional*: Check that `brew` is happy with your system configuration by running:
 
             brew doctor
-        Fix any problems that it identifies.
+      Fix any problems that it identifies.
  1. Add some extra sources of software for `brew`:
 
         brew tap osrf/ros2
@@ -36,6 +36,9 @@ You need the following things installed before installing ROS 2.
         # We're disabling python support in opencv to avoid a dependency on numpy,
         # which in turn will want to build gcc 5.2.0, which takes a long time.
         brew install homebrew/science/opencv --without-python
+
+ 1. Install additional runtime dependencies for command-line tools:
+        python3 -m pip install pyyaml
 
 ## Downloading ROS 2
 
