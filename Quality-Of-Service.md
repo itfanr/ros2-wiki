@@ -52,7 +52,7 @@ ros2 run image_tools cam2image
 ```
 This will publish an image from your webcam. In case you don't have a camera attached to your computer, there is a commandline option which publishes predefined images.
 ```
-ros2 run image_tools cam2image -b
+ros2 run image_tools cam2image -- -b
 ```
 
 In this window, you'll see terminal output:
@@ -106,7 +106,7 @@ net.inet.udp.maxdgram=65500
 In one of your terminals, add a -h flag to the original command:
 
 ```
-ros2 run image_tools showimage -h
+ros2 run image_tools showimage -- -h
 ```
 
 You'll see a list of the possible options you can pass to the demo.
