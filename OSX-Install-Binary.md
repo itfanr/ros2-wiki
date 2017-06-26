@@ -24,10 +24,13 @@ You need the following things installed before installing ROS 2.
 
         brew install python3
 
-        # install boost for FastRTPS (only required for beta-1 and older releases)
-        brew install boost
-        # install asio and tinyxml2 for FastRTPS (required for beta-2 and newer)
-        brew install asio tinyxml2
+        # install asio and tinyxml2 for Fast-RTPS
+        brew install asio
+        # Fast-RTPS also needs tinyxml2, but for now it requires a slightly older version
+        # tracking issue: https://github.com/ros2/build_cop/issues/39
+        brew uninstall --force tinyxml2
+        brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/196dee239038f34b2bbe8ca2f183ec78a5a53ce2/Formula/tinyxml2.rb
+        brew pin tinyxml2
 
         # install dependencies for robot state publisher
         brew install tinyxml eigen pcre
