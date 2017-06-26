@@ -29,7 +29,7 @@ You need the following things installed to build ROS 2:
   * *Optional*: Check that `brew` is happy with your system configuration by running:
 
             brew doctor
-        Fix any problems that it identifies.
+    Fix any problems that it identifies.
  1. Add some extra sources of software for `brew`:
 
         brew tap osrf/ros2
