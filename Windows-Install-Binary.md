@@ -84,8 +84,7 @@ Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages
 You must also install `pip` and one python package, `yaml`:
 
 ```
-choco install pip
-pip install yaml
+python3 -m pip install -U yaml
 ```
  
 ## Downloading ROS 2
