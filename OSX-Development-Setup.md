@@ -8,11 +8,51 @@ However, some older versions like 10.11.x and 10.10.x are known to work as well.
 
 ## Install prerequisites
 
-**TODO: Extend these instructions for other DDS implementations, starting with RTI Connext.**
-
 You need the following things installed to build ROS 2:
 
- 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation, so you can skip this step if you're not going to use OpenSplice; also that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
+1. **brew** *(needed to install more stuff; you probably already have this)*:
+    * Follow installation instructions at http://brew.sh/
+    * *Optional*: Check that `brew` is happy with your system configuration by running:
+
+    ```
+    brew doctor
+    ```
+
+    Fix any problems that it identifies.
+
+1. Add some extra sources of software for `brew`:
+
+        brew tap homebrew/science
+        brew tap ros/deps
+
+1. Use `brew` to install more stuff:
+
+        brew install python3 wget cmake cppcheck tinyxml eigen pcre
+
+        # install dependencies for Fast-RTPS if you are using it
+        brew install asio tinyxml2
+
+        brew install opencv
+
+1. Use `python3 -m pip` (just `pip` may install Python3 or Python2) to install more stuff:
+
+        python3 -m pip install empy setuptools nose vcstool pep8 pydocstyle pyflakes pyyaml flake8 mock coverage
+
+1. *Optional*: if you want to build the ROS 1<->2 bridge, then you must also install ROS 1:
+
+    * Start with the normal install instructions: http://wiki.ros.org/kinetic/Installation/OSX/Homebrew/Source
+    * When you get to the step where you call `rosinstall_generator` to get the source code, here's an alternate invocation that brings in just the minimum required to produce a useful bridge:
+
+            rosinstall_generator catkin common_msgs roscpp rosmsg --rosdistro kinetic --deps --wet-only --tar > kinetic-ros2-bridge-deps.rosinstall
+            wstool init -j8 src kinetic-ros2-bridge-deps.rosinstall
+
+    Otherwise, just follow the normal instructions, then source the resulting `install_isolated/setup.bash` before proceeding here to build ROS 2.
+
+## Optional: Build with OpenSplice
+
+To build opensplice you will need:
+
+ 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation, but that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
   * Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
   * Accept the license terms and download the "Mac OS X x64" version of the `.dmg` file.
   * Install from the `.dmg`.
@@ -24,51 +64,16 @@ You need the following things installed to build ROS 2:
             java version "1.8.0_60"
             Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
             Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
- 1. **brew** *(needed to install more stuff; you probably already have this)*:
-  * Follow installation instructions at http://brew.sh/
-  * *Optional*: Check that `brew` is happy with your system configuration by running:
 
-            brew doctor
-    Fix any problems that it identifies.
- 1. Add some extra sources of software for `brew`:
+ 1. Add the OSRF Homebrew tap:
 
         brew tap osrf/ros2
-        brew tap ros/deps
- 1. Use `brew` to install more stuff:
 
-        brew install python3 wget cmake cppcheck gtest tinyxml eigen pcre
+ 1. Install OpenSplice:
 
-        # install dependencies for FastRTPS
-        # for master and upcoming releases
-        brew install asio tinyxml2
-        # for beta-1 and older releases
-        brew install boost
-
-        # if you're going to build for OpenSplice, install it
         brew install opensplice
 
-        # We're disabling python support in opencv to avoid a dependency on numpy,
-        # which in turn will want to build gcc 5.2.0, which takes a long time.
-        brew tap homebrew/science
-        brew install opencv --without-python
-    *Optional*: Make sure that you have `gtest` 1.7:
-
-        $ brew info gtest
-        ros/deps/gtest: stable 1.7.0
-        http://code.google.com/p/googletest/
-        /usr/local/Cellar/gtest/1.7.0 (32 files, 1.2M) *
-          Built from source
-        From: https://github.com/ros/homebrew-deps/blob/master/gtest.rb
- 1. Use `python3 -m pip` (**not `pip`**, which may install Python 2.7 packages!) to install more stuff:
-
-        python3 -m pip install empy setuptools nose vcstool pep8 pydocstyle pyflakes pyyaml flake8 mock coverage
- 1. *Optional*: if you want to build the ROS 1<->2 bridge, then you must also install ROS 1:
-  * Start with the normal install instructions: http://wiki.ros.org/indigo/Installation/OSX/Homebrew/Source
-  * When you get to the step where you call `rosinstall_generator` to get the source code, here's an alternate invocation that brings in just the minimum required to produce a useful bridge:
-
-            rosinstall_generator catkin common_msgs roscpp rosmsg --rosdistro indigo --deps --wet-only --tar > indigo-ros2-bridge-deps.rosinstall
-            wstool init -j8 src indigo-ros2-bridge-deps.rosinstall
-    Otherwise, just follow the normal instructions, then source the resulting `install_isolated/setup.bash` before proceeding here to build ROS 2.
+**TODO: Extend these instructions for other DDS implementations, starting with RTI Connext.**
 
 ## Get the ROS 2 code
 
@@ -83,70 +88,33 @@ This will get the code for the latest ROS 2 release. If you want the code from a
 
 ## Build the ROS 2 code
 
-**Note**: if you installed and sourced the setup file for ROS 1, then you should instead follow the [modified instructions](#building-with-the-ros-1-bridge).
+**Note**: if you are trying to build the ROS 1 <-> ROS 2 bridge, follow instead these [modified instructions](https://github.com/ros2/ros1_bridge/blob/master/README.md#build-the-bridge-from-source).
 
 Run the `ament` tool to build everything (more on using `ament` in [[this tutorial|Ament-Tutorial]]):
 
     cd ~/ros2_ws/
     src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 
-### Building with the ROS 1 bridge
-
-To build the ROS 1 bridge, read the [ros1_bridge tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md#build-the-bridge-from-source).
-
 ## Try some examples
 
 In one terminal, source the setup file and then run a `talker`:
 
     . ~/ros2_ws/install/setup.bash
-    talker
+    ros2 run demo_nodes_cpp talker
 
 In another terminal source the setup file and then run a `listener`:
 
     . ~/ros2_ws/install/setup.bash
-    listener
+    ros2 run demo_nodes_cpp listener
 
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
 
 ## Maintain your source checkout
+
 For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
 
 ## Troubleshooting
-
-### Missing include with CLT 10.10.3
-
-If you upgrade to CLT 10.10.3, you might get this error:
-
-```
-[100%] Building CXX object CMakeFiles/rmw_connext_cpp.dir/src/functions.cpp.o
-In file included from /Users/william/ros2/src/ros2/rmw_connext/rmw_connext_cpp/src/functions.cpp:15:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream:38:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ios:216:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__locale:15:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string:439:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/algorithm:628:
-In file included from /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/memory:604:
-/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iterator:341:10: fatal error: '__debug' file not found
-#include <__debug>
-         ^
-1 error generated.
-make[2]: *** [CMakeFiles/rmw_connext_cpp.dir/src/functions.cpp.o] Error 1
-make[1]: *** [CMakeFiles/rmw_connext_cpp.dir/all] Error 2
-make: *** [all] Error 2
-```
-
-I found this SO solution to work (http://stackoverflow.com/a/29576048/671658):
-
-```
-$ echo '#define _LIBCPP_ASSERT(x, m) ((void)0)' | sudo tee -a /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug > /dev/null
-```
-
-It can be undone with:
-
-```
-$ sudo rm /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug
-```
 
 ### Missing symbol when opencv (and therefore libjpeg, libtiff, and libpng) are installed with Homebrew
 
