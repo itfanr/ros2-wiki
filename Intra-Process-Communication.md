@@ -294,7 +294,11 @@ The watermark and image view nodes are designed to modify the image without copy
 This is because the same unique pointer is being reused.
 In this situation, the pipeline is still running.
 
-Let's run the demo by executing the `image_pipeline_all_in_one` executable, and you should see something like this:
+Let's run the demo by executing the following executable:
+```
+ros2 run intra_process_demo image_pipeline_all_in_one
+```
+You should see something like this:
 
 ![](http://i.imgur.com/tqiIVgT.png)
 
@@ -307,7 +311,10 @@ If you pause the image viewer, you should be able to compare the addresses writt
 
 Now let's look at an example just the one above, except it has two image view nodes.
 All the nodes are still in the same process, but now two image view windows should show up. (Note for OS X users: your image view windows might be on top of each other.)
-Let's run it with the command `image_pipeline_with_two_image_view`:
+Let's run it with the command 
+```
+ros2 run intra_process_demo image_pipeline_with_two_image_view
+```
 
 ![](http://i.imgur.com/iLIT02t.png)
 
@@ -324,7 +331,7 @@ Note that the image view nodes are not subscribed with `unique_ptr` callbacks. I
 
 #### Pipeline with interprocess viewer
 
-One other important thing to get right is to avoid interruption of the intra process zero-copy behavior when interprocess subscriptions are made. To test this we can run the first image pipeline demo, `image_pipeline_all_in_one`, and then run an instance of the stand alone `image_view_node`. This will look something like this:
+One other important thing to get right is to avoid interruption of the intra process zero-copy behavior when interprocess subscriptions are made. To test this we can run the first image pipeline demo, `image_pipeline_all_in_one`, and then run an instance of the stand alone `image_view_node` (don't forget to prefix them with `ros2 run intra_process_demo` in the terminal). This will look something like this:
 
 ![](http://i.imgur.com/MoWRH1u.png)
 
