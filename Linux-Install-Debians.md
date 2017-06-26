@@ -4,13 +4,22 @@ For Beta 2 we have started rolling debian packages. They are in a temporary repo
 
 ## Setup Sources
 
-`echo "deb http://repo.ros2.org/ubuntu/testing $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros2-latest.list`
-`curl http://repo.ros2.org/repos.key | apt-key add -`
+```
+echo "deb http://repo.ros2.org/ubuntu/testing $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros2-latest.list
+```
+
+```
+curl http://repo.ros2.org/repos.key | apt-key add -
+```
 
 ## Update
 
-`apt-get update`
+```
+apt-get update
+```
 
 ## Install 
 
-`apt-get install ros-r2b2-*`
+```
+apt-get install ros-r2b2-*
+```
