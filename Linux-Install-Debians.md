@@ -23,3 +23,9 @@ apt-get update
 ```
 apt-get install ros-r2b2-*
 ```
+
+## Environment setup
+
+```
+source /opt/ros/r2b2/setup.bash
+```
