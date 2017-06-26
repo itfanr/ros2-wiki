@@ -165,10 +165,10 @@ First install the latest version of `setuptools` and `pip`:
 > pip install -U setuptools pip
 ```
 
-Then you can continue installing other Python dependencies, install `EmPy`:
+Then you can continue installing other Python dependencies:
 
 ```
-> pip install EmPy
+> pip install EmPy pyyaml
 ```
 
 Next install testing tools like `Nose` and others:
