@@ -38,6 +38,7 @@ You need the following things installed before installing ROS 2.
         brew install homebrew/science/opencv --without-python
 
  1. Install additional runtime dependencies for command-line tools:
+
         python3 -m pip install pyyaml
 
 ## Downloading ROS 2
