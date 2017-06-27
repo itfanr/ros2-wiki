@@ -28,9 +28,13 @@ Once you've installed ROS 2, if you're on Linux, source your setup.bash file:
 ```
 . <path to ROS 2 install space>/setup.bash
 ```
-or if you're on Windows:
+or if you're on Windows **cmd*:
 ```
 call <path to ROS 2 install space>/local_setup.bat
+```
+or if you're on Windows **PowerShell*:
+```
+<path to ROS 2 install space>/local_setup.bat
 ```
 
 Then run:
