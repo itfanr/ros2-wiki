@@ -144,6 +144,7 @@ Next install cppcheck:
 ```
 > choco install -y cppcheck
 ```
+
 You will need to add C:\Program Files\Cppcheck to the PATH.
 
 ### Install a binary distribution of OpenCV
@@ -163,6 +164,7 @@ setx -m OpenCV_DIR C:\opencv\build
 # Visual Studio 2017
 setx -m OpenCV_DIR C:\opencv
 ```
+
 You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin` for VS2015 or `C:\opencv\x64\vc15\bin` for VS2017) to the `PATH`.
 
 You will need to open a new command prompt for this environment variable to take effect.
@@ -211,11 +213,10 @@ If you would like to also build against RTI Connext, you will need to first visi
 ```
 call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
 ```
+
 where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS. The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
 
-Otherwise, ROS 2 will default to using eProsima FastRTPS as the middleware.
-
-
+Otherwise, ROS 2 will default to using eProsima's Fast-RTPS as the middleware.
 
 ### Building the ROS 2 Code
 
