@@ -108,58 +108,8 @@ Once the these packages are downloaded, open an administrative shell and execute
 ```
 
 Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages to.
- 
-### Getting the Source Code
 
-Now that we have the development tools we can get the ROS 2 source code.
-
-First setup a development folder, I use `C:\dev\ros2`:
-
-```
-> md \dev\ros2\src
-> cd \dev\ros2
-```
-
-Get the `ros2.repos` file which defines the repositories to clone from:
-
-```
-# CMD
-> curl -sk https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
-
-# PowerShell
-> curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
-```
-
-This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
-
-Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
-
-```
-# CMD
-> vcs import src < ros2.repos
-
-# PowerShell
-> vcs import --input ros2.repos src
-```
-
-### Getting a DDS Vendor
-
-You'll also need a DDS Vendor available for ROS to build against.
-There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
-The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
-
-If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS, and then something like the following command in your shell before building ROS 2:
-
-```
-call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
-```
-where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS. The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
-
-Otherwise, ROS 2 will default to using eProsima FastRTPS as the middleware.
-
-### Installing a few dependencies
-
-First install the latest version of `setuptools` and `pip`:
+Next install the latest version of `setuptools` and `pip`:
 
 ```
 > pip install -U setuptools pip
@@ -216,6 +166,56 @@ setx -m OpenCV_DIR C:\opencv
 You will also need to add the OpenCV bin directory (in this case `C:\opencv\build\x64\vc14\bin` for VS2015 or `C:\opencv\x64\vc15\bin` for VS2017) to the `PATH`.
 
 You will need to open a new command prompt for this environment variable to take effect.
+
+### Getting the Source Code
+
+Now that we have the development tools we can get the ROS 2 source code.
+
+First setup a development folder, I use `C:\dev\ros2`:
+
+```
+> md \dev\ros2\src
+> cd \dev\ros2
+```
+
+Get the `ros2.repos` file which defines the repositories to clone from:
+
+```
+# CMD
+> curl -sk https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
+
+# PowerShell
+> curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
+```
+
+This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
+
+Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
+
+```
+# CMD
+> vcs import src < ros2.repos
+
+# PowerShell
+> vcs import --input ros2.repos src
+```
+
+### Getting a DDS Vendor
+
+You'll also need a DDS Vendor available for ROS to build against.
+There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
+The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
+
+If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS, and then something like the following command in your shell before building ROS 2:
+
+```
+call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
+```
+where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS. The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
+
+Otherwise, ROS 2 will default to using eProsima FastRTPS as the middleware.
+
+
 
 ### Building the ROS 2 Code
 
