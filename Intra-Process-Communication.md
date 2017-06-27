@@ -34,21 +34,24 @@ This demo is designed to show that the intra process publish/subscribe connectio
 
 First let's take a look at the source:
 
-https://github.com/ros2/demos/blob/release-alpha5/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp
+https://github.com/ros2/demos/blob/master/intra_process_demo/src/two_node_pipeline/two_node_pipeline.cpp
 ```c++
 #include <chrono>
 #include <cinttypes>
 #include <cstdio>
+#include <memory>
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
 
+using namespace std::chrono_literals;
+
 // Node that produces messages.
 struct Producer : public rclcpp::Node
 {
   Producer(const std::string & name, const std::string & output)
-  : Node(name, true)
+  : Node(name, "", true)
   {
     // Create a publisher on the output topic.
     pub_ = this->create_publisher<std_msgs::msg::Int32>(output, rmw_qos_profile_default);
@@ -67,7 +70,7 @@ struct Producer : public rclcpp::Node
           reinterpret_cast<std::uintptr_t>(msg.get()));
         pub_ptr->publish(msg);
       };
-    timer_ = this->create_wall_timer(1_s, callback);
+    timer_ = this->create_wall_timer(1s, callback);
   }
 
   rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub_;
@@ -78,7 +81,7 @@ struct Producer : public rclcpp::Node
 struct Consumer : public rclcpp::Node
 {
   Consumer(const std::string & name, const std::string & input)
-  : Node(name, true)
+  : Node(name, "", true)
   {
     // Create a subscription on the input topic which prints on receipt of new messages.
     sub_ = this->create_subscription<std_msgs::msg::Int32>(
@@ -154,21 +157,24 @@ You can also publish and subscribe with `const &` and `std::shared_ptr`, but zer
 This demo is similar to the previous one, but instead of the producer creating a new message for each iteration, this demo only ever uses one message instance.
 This is achieved by creating a cycle in the graph and "kicking off" communication by externally making one of the nodes publish before spinning the executor:
 
-https://github.com/ros2/demos/blob/release-alpha5/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp
+https://github.com/ros2/demos/blob/master/intra_process_demo/src/cyclic_pipeline/cyclic_pipeline.cpp
 ```c++
 #include <chrono>
 #include <cinttypes>
 #include <cstdio>
+#include <memory>
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
 
+using namespace std::chrono_literals;
+
 // This node receives an Int32, waits 1 second, then increments and sends it.
 struct IncrementerPipe : public rclcpp::Node
 {
   IncrementerPipe(const std::string & name, const std::string & in, const std::string & out)
-  : Node(name, true)
+  : Node(name, "", true)
   {
     // Create a publisher on the output topic.
     pub = this->create_publisher<std_msgs::msg::Int32>(out, rmw_qos_profile_default);
@@ -184,7 +190,7 @@ struct IncrementerPipe : public rclcpp::Node
         "Received message with value:         %d, and address: 0x%" PRIXPTR "\n", msg->data,
         reinterpret_cast<std::uintptr_t>(msg.get()));
       printf("  sleeping for 1 second...\n");
-      if (!rclcpp::sleep_for(1_s)) {
+      if (!rclcpp::sleep_for(1s)) {
         return;    // Return if the sleep failed (e.g. on ctrl-c).
       }
       printf("  done.\n");
@@ -206,11 +212,11 @@ int main(int argc, char * argv[])
   rclcpp::init(argc, argv);
   rclcpp::executors::SingleThreadedExecutor executor;
 
-  // Create a simple loop by connecting the in and out topics of two IncrementerPipes.
+  // Create a simple loop by connecting the in and out topics of two IncrementerPipe's.
   // The expectation is that the address of the message being passed between them never changes.
   auto pipe1 = std::make_shared<IncrementerPipe>("pipe1", "topic1", "topic2");
   auto pipe2 = std::make_shared<IncrementerPipe>("pipe2", "topic2", "topic1");
-  rclcpp::sleep_for(1_s);  // Wait for subscriptions to be established to avoid race conditions.
+  rclcpp::sleep_for(1s);  // Wait for subscriptions to be established to avoid race conditions.
   // Publish the first message (kicking off the cycle).
   std::unique_ptr<std_msgs::msg::Int32> msg(new std_msgs::msg::Int32());
   msg->data = 42;
@@ -311,7 +317,7 @@ If you pause the image viewer, you should be able to compare the addresses writt
 
 Now let's look at an example just the one above, except it has two image view nodes.
 All the nodes are still in the same process, but now two image view windows should show up. (Note for OS X users: your image view windows might be on top of each other.)
-Let's run it with the command 
+Let's run it with the command
 ```
 ros2 run intra_process_demo image_pipeline_with_two_image_view
 ```
@@ -403,7 +409,7 @@ This simple CMake entry will generate a few things:
 - A marker file used to discover the node by pluginlib.
 - A shared library for your node.
 - An executable for your node.
- - The executable can run the node in its own process, or serve as a proxy while the node runs in a different container.
+  - The executable can run the node in its own process, or serve as a proxy while the node runs in a different container.
 
 We'll also need to develop the container, which can run nodes inside of itself and is controlled externally by ROS primitives like Services.
 
