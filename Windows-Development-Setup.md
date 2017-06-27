@@ -16,7 +16,11 @@ https://chocolatey.org/
 
 You'll use Chocolatey to install some other developer tools.
 
-### Installing Build Tools
+### Installing Visual Studio
+
+We have tested with VS2015 Update 3. You can get it from here: https://www.visualstudio.com/vs/older-downloads/ with an MSDN account or Free Dev Essential account.
+
+2017 is newer but is known to have some issues that have not been resolved.
 
 Windows 8.1:
 Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`. In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
@@ -30,6 +34,8 @@ Anytime you are doing anything you should use this command prompt so that, for e
 
 It is probably worth right clicking on the shortcut, selecting properties, then advanced and checking the run as administrator box so that it always opens as administrator.
 Then you can right click it again and say pin to taskbar so it's easy to get to.
+
+### Installing some dependencies
 
 Next we can actually install some dependencies.
 
