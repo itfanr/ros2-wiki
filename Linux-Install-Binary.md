@@ -29,6 +29,7 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libeigen3-dev \
             libtinyxml-dev \
             libtinyxml2-dev \
+            python3-yaml \
             wget
 
 Note: `libboost-thread-dev` can probably be removed or be made optional in the release after beta-1.
