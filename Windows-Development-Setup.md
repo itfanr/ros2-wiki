@@ -154,12 +154,6 @@ Next install cppcheck:
 
 You will need to add C:\Program Files\Cppcheck to the PATH.
 
-Next install argcomplete for argument completion with the command-line tools:
-
-```
-> pip install argcomplete
-```
-
 ### Install a binary distribution of OpenCV
 
 You can download a precompiled version of OpenCV from:
