@@ -215,7 +215,7 @@ You'll also need a DDS Vendor available for ROS to build against.
 There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
 The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
 
-If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS, and then something like the following command in your shell before building ROS 2:
+If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS. After installing use the RTI Launcher to load your license file. Then for any shell that you open and want to user RTI programs run something like the following command before building ROS 2:
 
 ```
 call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
