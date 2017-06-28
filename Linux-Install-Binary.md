@@ -37,6 +37,10 @@ Open splice removed since it's not currently supported. Leaving commented to mak
         sudo apt-get update && sudo apt-get install -q -y \
             libboost-thread-dev
 
+1.  Install argcomplete from pip for argument completion.  Note that the apt-get version available in Ubuntu 16.04 (Xenial) will not work due to a bug in argcomplete:
+
+        sudo pip3 install argcomplete
+
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
 
