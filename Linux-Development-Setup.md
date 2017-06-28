@@ -22,13 +22,6 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -cs` main"
 sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys 421C365BD9FF1F717815A3895523BAEEB01FA116
 ```
 
-Also get the osrf (gazebo) debian repository:
-
-```
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
-sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-```
-
 Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't collide) and setuptools:
 
 ```
@@ -82,6 +75,14 @@ By default we will demonstrate installing PrismTech OpenSplice using Debian pack
 
 
 #### PrismTech OpenSplice Debian Packages built by OSRF
+
+
+Get an additional debian repository:
+
+```
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
+sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
+```
 
 ```
 sudo apt-get update
