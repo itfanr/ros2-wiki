@@ -42,7 +42,7 @@ You need the following things installed before installing ROS 2.
 
  1. Install additional runtime dependencies for command-line tools:
 
-        python3 -m pip install pyyaml setuptools
+        python3 -m pip install pyyaml setuptools argcomplete
 
 ## Downloading ROS 2
 
