@@ -30,6 +30,7 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             libtinyxml-dev \
             libtinyxml2-dev \
             python3-yaml \
+            python3-setuptools \
             wget
 
 Note: `libboost-thread-dev` can probably be removed or be made optional in the release after beta-1.
