@@ -51,7 +51,7 @@ In order to run this demo, we open three terminals and source our ROS2 environme
 
 |lifecycle_talker|lifecycle_listener|lifecycle_service_client|
 |----------------|------------------|------------------------|
-|```$ lifecycle_talker```| ```$ lifecycle_listener```|```$ lifecycle_service_client```|
+|```$ ros2 run lifecycle lifecycle_talker```| ```$ ros2 run lifecycle lifecycle_listener```|```$ ros2 run lifecycle lifecycle_service_client```|
 |[![asciicast](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t.png)](https://asciinema.org/a/e0f11qvpberltp8r1w04wzw9t)|[![asciicast](https://asciinema.org/a/442pjcu729t3vsld7n225orl7.png)](https://asciinema.org/a/442pjcu729t3vsld7n225orl7)|[![asciicast](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5.png)](https://asciinema.org/a/6o20wbnhx6tk3y2hr5dk8fwm5)|
 
 If we look at the output of the `lifecycle_talker`, we notice that nothing seems to happen. And this does make sense, since every node starts as `unconfigured`. The lifecycle_talker is not configured yet and in our example, no publishers and timers are created yet.
@@ -132,7 +132,7 @@ At the same time, every lifecycle node has by default 5 different communication 
 ### lifecycle_service_client_py.py
 The `lifecycle_service_client` application is a fixed order script for this demo purpose only. I explains the use and the API calls made for this lifecycle implementation, but may be inconvenient to use otherwise. For this reason, we implemented a separate python script, which lets you dynamically change states or various nodes.
 ```
-python3 `which lifecycle_service_client_py.py`
+$ ros2 run lifecycle lifecycle_service_client_py.py
 usage: lifecycle_service_client_py.py [-h]
                                       [--change-state-args {configure,cleanup,shutdown,activate,deactivate}]
                                       {change_state,get_state,get_available_states,get_available_transitions}
@@ -140,12 +140,12 @@ usage: lifecycle_service_client_py.py [-h]
 ```
 In the case you want to get the current state of the `lc_talker` node, you'd call:
 ```
-$ python3 `which lifecycle_service_client_py.py` get_state lc_talker
+$ ros2 run lifecycle lifecycle_service_client_py.py get_state lc_talker
 lc_talker is in state unconfigured(1)
 ```
 The next step would be to execute a state change:
 ```
-$ python3 `which lifecycle_service_client_py.py` change_state --change-state-args configure lc_talker
+$ ros2 run lifecycle lifecycle_service_client_py.py -- change_state --change-state-args configure lc_talker
 ```
 
 ## Outlook
