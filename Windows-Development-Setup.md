@@ -261,15 +261,16 @@ You can run the built examples by opening a new `cmd.exe` sourcing the `local_se
 
 ```
 > call install\local_setup.bat
-> install\bin\talker
+> ros2 run demo_nodes_py talker
 ```
 
 In a separate shell you can do the same, but instead run the `listener`:
 
 ```
 > call install\local_setup.bat
-> install\bin\listener
+> ros2 run demo_nodes_py listener
 ```
+For more explanations see the [Python Programming](Python-Programming) demo or [other tutorials](https://github.com/ros2/ros2/wiki/Tutorials)
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
 
