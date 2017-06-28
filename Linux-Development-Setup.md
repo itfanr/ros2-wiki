@@ -37,7 +37,7 @@ sudo apt-get install git wget
 sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool python3-yaml libtinyxml-dev libeigen3-dev
 # dependencies for testing
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
-sudo pip3 install flake8 flake8-import-order
+sudo pip3 install flake8 flake8-import-order argcomplete
 # dependencies for FastRTPS
 sudo apt-get install libasio-dev libtinyxml2-dev
 ```
