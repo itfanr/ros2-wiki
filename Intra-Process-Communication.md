@@ -120,7 +120,7 @@ The "consumer" node is a bit simpler, you can see its implementation in the `Con
 The expectation is that the producer will print out an address and value and the consumer will print out a matching address and value.
 This demonstrates that intra process communication is indeed working and unnecessary copies are avoided, at least for simple graphs.
 
-Let's run the demo by executing the `two_node_pipeline` executable (don't forget to source the setup file first):
+Let's run the demo by executing `ros2 run intra_process_demo two_node_pipeline` executable (don't forget to source the setup file first):
 
 ```
 $ ros2 run intra_process_demo two_node_pipeline
