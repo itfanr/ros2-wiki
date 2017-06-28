@@ -15,7 +15,8 @@ We are testing with VS2015 Update 3. You can get it from here: https://www.visua
 2017 is newer but is known to have some issues that have not been resolved.
 
 Windows 8.1:
-Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`. In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
+Press the windows key and type `visual studio tools`, which should find a folder called "Visual Studio Tools". Or type `cmd`.
+In that folder there will be a shortcut called "VS2015 x64 Native Tools Command Prompt".
 Right click on this shortcut and select "Run as administrator".
 
 Windows 10:
@@ -59,13 +60,15 @@ Then CMake 3.5 or higher
 > choco install -y cmake
 ```
 
-You will need to append the CMake bin folder `C:\Program Files\CMake\bin` to the PATH (you can do this by clicking the Windows icon, typing "Environment Variables", then clicking on "Edit the system environment variables".  In the resulting dialog, click "Environment Variables", the click "Path" on the bottom pane, then click "Edit" and add the path).
+You will need to append the CMake bin folder `C:\Program Files\CMake\bin` to the PATH (you can do this by clicking the Windows icon, typing "Environment Variables", then clicking on "Edit the system environment variables".
+In the resulting dialog, click "Environment Variables", the click "Path" on the bottom pane, then click "Edit" and add the path).
 
 You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, and `cmake`.
 
 ### Installing Boost (only for beta-1 and older)
 
-Up until beta-1, FastRTPS required boost as a dependency. To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/) We test with [this binary](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe).
+Up until beta-1, FastRTPS required boost as a dependency.
+To install it grab the appropriate installer from SourceForge [here](http://sourceforge.net/projects/boost/files/boost-binaries/1.61.0/) We test with [this binary](http://downloads.sourceforge.net/project/boost/boost-binaries/1.61.0/boost_1_61_0-msvc-14.0-64.exe).
 
 The installer will by default install itself into `C:\local` 
 
@@ -75,7 +78,8 @@ BOOST_ROOT=C:\local\boost_1_61_0
 BOOST_LIBRARYDIR=C:\local\boost_1_61_0\lib64-msvc-14.0
 ```
 
-You will also need to make sure the Boost DLLs are listed in the PATH environment variable. For example,
+You will also need to make sure the Boost DLLs are listed in the PATH environment variable.
+For example,
 
 ```
 PATH=C:\local\boost_1_61_0\lib64-msvc-14.0
@@ -100,7 +104,8 @@ Also, you should install `curl`:
 ```
 
 ### Install dependencies
-In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies. In order to ease the manual installation process, we provide the necessary chocolatey packages.
+In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies.
+In order to ease the manual installation process, we provide the necessary chocolatey packages.
 
 Please download these packages from [this](https://github.com/ros2/choco-packages/releases/latest) GitHub repository. 
  * asio.1.10.6.nupkg
@@ -215,13 +220,16 @@ You'll also need a DDS Vendor available for ROS to build against.
 There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
 The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
 
-If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS. After installing use the RTI Launcher to load your license file. Then for any shell that you open and want to user RTI programs run something like the following command before building ROS 2:
+If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS.
+After installing use the RTI Launcher to load your license file.
+Then for any shell that you open and want to user RTI programs run something like the following command before building ROS 2:
 
 ```
 call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
 ```
 
-where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS. The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
+where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS.
+The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
 
 Otherwise, ROS 2 will default to using eProsima's Fast-RTPS as the middleware.
 
