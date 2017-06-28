@@ -6,19 +6,11 @@ This guide is about how to setup a development environment for ROS2 on Windows.
 Until beta-1 we supported Windows 8.1 and Windows 10.
 As of beta-2 only Windows 10 is supported.
 
-First you'll need Visual Studio 14.0 2015 Update 3 installed. With Visual C++ selected during the installation (It is not selected by default in Community Edition)
-
-### Install Chocolatey
-
-Chocolatey is a package manager for Windows, install it by follow their installation instructions:
-
-https://chocolatey.org/
-
-You'll use Chocolatey to install some other developer tools.
-
 ### Installing Visual Studio
 
-We have tested with VS2015 Update 3. You can get it from here: https://www.visualstudio.com/vs/older-downloads/ with an MSDN account or Free Dev Essential account.
+First you'll need Visual Studio 14.0 2015 Update 3 installed. With Visual C++ selected during the installation (It is not selected by default in Community Edition)
+
+We are testing with VS2015 Update 3. You can get it from here: https://www.visualstudio.com/vs/older-downloads/ with an MSDN account or Free Dev Essential account.
 
 2017 is newer but is known to have some issues that have not been resolved.
 
@@ -34,6 +26,15 @@ Anytime you are doing anything you should use this command prompt so that, for e
 
 It is probably worth right clicking on the shortcut, selecting properties, then advanced and checking the run as administrator box so that it always opens as administrator.
 Then you can right click it again and say pin to taskbar so it's easy to get to.
+
+
+### Install Chocolatey
+
+Chocolatey is a package manager for Windows, install it by follow their installation instructions:
+
+https://chocolatey.org/
+
+You'll use Chocolatey to install some other developer tools.
 
 ### Installing some dependencies
 
