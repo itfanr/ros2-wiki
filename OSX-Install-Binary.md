@@ -14,7 +14,7 @@ You need the following things installed before installing ROS 2.
   * Follow installation instructions at http://brew.sh/
   * *Optional*: Check that `brew` is happy with your system configuration by running:
 
-            brew doctor
+         brew doctor
       Fix any problems that it identifies.
  1. Add some extra sources of software for `brew`:
 
