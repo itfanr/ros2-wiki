@@ -243,6 +243,8 @@ You can additionally build the tests by adding the `--build-tests` option:
 
 ### Testing and Running
 
+Note that the first time you run any executable you will have to allow access to the network through a Windows Firewall popup.
+
 You can run the tests using this command:
 
 ```
