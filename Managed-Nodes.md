@@ -116,7 +116,7 @@ Every child of LifecycleNodes have a set of callbacks provided. These callbacks 
 * ```rcl_lifecycle_ret_t on_cleanup(const rclcpp_lifecycle::State & previous_state)```
 * ```rcl_lifecycle_ret_t on_shutdown(const rclcpp_lifecycle::State & previous_state)```
 
-All these callbacks have a positive default return value (```return RCL_LIFECYCLE_RET_OK```). This allows that a lifecycle node can change its state even though no explicit callback function was overwritten. 
+All these callbacks have a positive default return value (```return RCL_LIFECYCLE_RET_OK```). This allows a lifecycle node to change its state even though no explicit callback function was overwritten. 
 There is one other callback function for error handling. Whenever a state transition throws an uncaught exception, we call ```on_error```. 
 * ```rcl_lifecycle_ret_t on_error(const rclcpp_lifecycle::State & previous_state)```
 
