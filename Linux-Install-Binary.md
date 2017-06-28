@@ -20,7 +20,6 @@ Open splice removed since it's not currently supported. Leaving commented to mak
 1. Install runtime dependencies and wget:
 
         sudo apt-get update && sudo apt-get install -q -y \
-            libboost-thread-dev \
             libopencv-core2.4v5 \
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
@@ -33,7 +32,10 @@ Open splice removed since it's not currently supported. Leaving commented to mak
             python3-setuptools \
             wget
 
-Note: `libboost-thread-dev` can probably be removed or be made optional in the release after beta-1.
+1.  If you are installing beta-1 or older, you also need boost:
+
+        sudo apt-get update && sudo apt-get install -q -y \
+            libboost-thread-dev
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
