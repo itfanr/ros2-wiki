@@ -35,3 +35,9 @@ apt-get install ros-r2b2-*
 ```
 source /opt/ros/r2b2/setup.bash
 ```
+
+If you have installed the Python package `argcomplete` you can source the following file to get completion for command line tools like `ros2`:
+
+```
+source /opt/ros/r2b2/share/ros2cli/environment/ros2-argcomplete.bash
+```
