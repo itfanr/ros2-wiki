@@ -18,7 +18,6 @@ This is a list of the features targeted for development in the future.
   - map_server
   - joystick_driver
   - Kobuki driver
-  - robot_pose_ekf or robot_localization
 - Support via the ROS <--> ROS2 bridge:
   - rosbag
   - rviz
@@ -39,6 +38,7 @@ Additions and changes to the following feature list will occur as Beta 2 progres
 - parameters in C
 - ros_control, perception, depth camera 
 - move_base
+- robot_pose_ekf or robot_localization
 - Command line static remapping
 - Command line parameters and parameters from a yaml file
 - New documentation platform deployed
