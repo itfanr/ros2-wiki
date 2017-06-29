@@ -87,15 +87,18 @@ You should now be able to download the sources associated with the new repositor
 #### _Linux/OS X_
 ```
 vcs import src < ros2.repos
+vcs pull src
 ```
 
 #### _Windows_
 ```
 # CMD
 > vcs import src < ros2.repos
+> vcs pull src
 
 # PowerShell
 > vcs import --input ros2.repos src
+> vcs pull src
 ```
 
 ## Rebuild your workspace
