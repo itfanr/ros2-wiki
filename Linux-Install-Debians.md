@@ -10,17 +10,17 @@ Resources:
 ## Setup Sources
 
 To install the Debian packages you will need to add our Debian repository to your apt sources.
-Do so like this:
-
-```
-echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.list.d/ros2-latest.list
-```
-
-And then you will need to authorize our gpg key with apt like this:
+First you will need to authorize our gpg key with apt like this:
 
 ```
 apt update && apt install curl
 curl http://repo.ros2.org/repos.key | apt-key add -
+```
+
+And then add the repository to your sources list:
+
+```
+echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.list.d/ros2-latest.list
 ```
 
 ## Install ROS 2 packages
