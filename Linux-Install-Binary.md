@@ -2,6 +2,8 @@
 
 This page explains how to install ROS 2 on Linux from a pre-built binary package.
 
+As of Beta 2 there are also [[Debian packages|Linux-Install-Debians]] for Ubuntu Xenial available.
+
 ## System Requirements
 
 We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit x86 (no binaries available yet for ARM or 32-bit x86).
