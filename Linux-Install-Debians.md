@@ -1,22 +1,15 @@
 # Installing ROS2 via Debian Packages
 
-For Beta 2 we have started rolling debian packages. They are in a temporary repository for testing.
+For Beta 2 we have started rolling Debian packages. They are in a temporary repository for testing.
 
-Resources: 
+Resources:
  - [Jenkins Instance](http://build.ros2.org/)
  - [Repositories](http://repo.ros2.org)
  - Status Pages ([amd64](http://repo.ros2.org/status_page/ros_r2b2_default.html), [arm64](http://repo.ros2.org/status_page/ros_r2b2_uxv8.html))
 
-## ROS sources
-
-Several of the demos reuse components from ROS1.
-To be able to install them please start by adding the ROS 1 sources as documented [here](http://wiki.ros.org/Installation/Ubuntu?distro=kinetic)
-
-If you're using Docker see the section with notes below.
-
 ## Setup Sources
 
-To install from debians you will need to add our debian repository to your apt sources.
+To install the Debian packages you will need to add our Debian repository to your apt sources.
 Do so like this:
 
 ```
@@ -26,19 +19,18 @@ echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.li
 And then you will need to authorize our gpg key with apt like this:
 
 ```
+apt update && apt install curl
 curl http://repo.ros2.org/repos.key | apt-key add -
 ```
 
-## Update
+## Install ROS 2 packages
+
+The following commands install all `ros-r2b2-*` package except `ros-r2b2-ros1-bridge` and `ros-r2b2-turtlebot2-*` since they require ROS 1 dependencies.
+See below for how to also install those.
 
 ```
-apt-get update
-```
-
-## Install 
-
-```
-apt-get install ros-r2b2-*
+apt update
+apt install `apt list ros-r2b2-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-r2b2-ros1-bridge -e ros-r2b2-turtlebot2- | tr "\n" " "`
 ```
 
 ## Environment setup
@@ -53,13 +45,17 @@ If you have installed the Python package `argcomplete` you can source the follow
 source /opt/ros/r2b2/share/ros2cli/environment/ros2-argcomplete.bash
 ```
 
-### Docker
+## Additional packages using ROS 1 packages
 
-Here are a few notes specific to Docker.
-Docker can be a great environment for testing things out.
+The `ros1_bridge` as well as the TurtleBot demos are using ROS 1 packages.
+To be able to install them please start by adding the ROS 1 sources as documented [here](http://wiki.ros.org/Installation/Ubuntu?distro=kinetic)
 
-- If you're using Docker from a very stripped image like `ubuntu:xenial` you will need to install core dependencies like `lsb-release`.
-  `apt-get update && apt-get install -y lsb-release curl
-- If you're using Docker for isolation you can use the image `ros:kinetic`. 
-Or if you'd like most of the ROS1 packages already installed for the demos `osrf/ros:kinetic-desktop`
+If you're using Docker for isolation you can start with the image `ros:kinetic` or `osrf/ros:kinetic-desktop`
 This will also avoid the need to setup the ROS sources as they will already be integrated.
+
+Now you can install the remaining packages:
+
+```
+apt update
+apt install ros-r2b2-ros1-bridge ros-r2b2-turtlebot2-*
+```
