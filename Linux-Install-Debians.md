@@ -20,7 +20,7 @@ To install from debians you will need to add our debian repository to your apt s
 Do so like this:
 
 ```
-echo "deb http://repo.ros2.org/ubuntu/testing $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros2-latest.list
+echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.list.d/ros2-latest.list
 ```
 
 And then you will need to authorize our gpg key with apt like this:
