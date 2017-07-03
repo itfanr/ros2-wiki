@@ -28,12 +28,12 @@ In the next step, we actually start the demo. We therefore execute the demo brin
 Terminal 3:
 ```
 source ~/ros2_ws/install/setup.bash
-python3 ~/ros2_ws/install/share/dummy_robot_bringup/launch/dummy_robot_bringup.py
+launch ~/ros2_ws/install/share/dummy_robot_bringup/launch/dummy_robot_bringup.py
 ```
 
 You should see some prints inside your terminal:
 ```
-python3 workspace/osrf/ros2_ws/install_isolated/dummy_robot_bringup/share/dummy_robot_bringup/launch/dummy_robot_bringup.py
+launch ~/ros2_ws/install/share/dummy_robot_bringup/launch/dummy_robot_bringup.py
 (0) pid 52556: ['dummy_laser'] (stderr > stdout, all > console)
 (1) pid 52557: ['dummy_map_server'] (stderr > stdout, all > console)
 (2) pid 52558: ['robot_state_publisher', '/Users/karsten/workspace/osrf/ros2_ws/src/ros2/demos/dummy_robot/dummy_robot_bringup/launch/single_rrbot.urdf'] (stderr > stdout, all > console)
