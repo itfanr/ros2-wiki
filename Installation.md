@@ -4,7 +4,9 @@
 
 We provide ROS 2 binary packages for the following platforms:
 
-* [[Linux|Linux-Install-Binary]]
+* Linux
+  * [[Debian packages|Linux-Install-Debians]]
+  * [["fat" archive|Linux-Install-Binary]]
 * [[OS X|OSX-Install-Binary]]
 * [[Windows|Windows-Install-Binary]]
 
