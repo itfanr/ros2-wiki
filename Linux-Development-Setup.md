@@ -121,13 +121,13 @@ In one terminal, source the setup file and then run a `talker`:
 ```
 . ~/ros2_ws/install/local_setup.bash
 # . ~/ros2_ws/install_isolated/local_setup.bash  # if you built in isolation, use this instead of the above line
-talker
+ros2 run demo_nodes_cpp talker
 ```
 In another terminal source the setup file and then run a `listener`:
 ```
 . ~/ros2_ws/install/local_setup.bash
 # . ~/ros2_ws/install_isolated/local_setup.bash  # if you built in isolation, use this instead of the above line
-listener
+ros2 run demo_nodes_py listener
 ```
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
 Hooray!
