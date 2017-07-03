@@ -13,14 +13,14 @@ To install the Debian packages you will need to add our Debian repository to you
 First you will need to authorize our gpg key with apt like this:
 
 ```
-apt update && apt install curl
-curl http://repo.ros2.org/repos.key | apt-key add -
+sudo apt update && sudo apt install curl
+curl http://repo.ros2.org/repos.key | sudo apt-key add -
 ```
 
 And then add the repository to your sources list:
 
 ```
-echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.list.d/ros2-latest.list
+sudo echo "deb http://repo.ros2.org/ubuntu/testing xenial main" > /etc/apt/sources.list.d/ros2-latest.list
 ```
 
 ## Install ROS 2 packages
@@ -29,8 +29,8 @@ The following commands install all `ros-r2b2-*` package except `ros-r2b2-ros1-br
 See below for how to also install those.
 
 ```
-apt update
-apt install `apt list ros-r2b2-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-r2b2-ros1-bridge -e ros-r2b2-turtlebot2- | tr "\n" " "`
+sudo apt update
+sudo apt install `apt list ros-r2b2-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-r2b2-ros1-bridge -e ros-r2b2-turtlebot2- | tr "\n" " "`
 ```
 
 ## Environment setup
@@ -56,6 +56,6 @@ This will also avoid the need to setup the ROS sources as they will already be i
 Now you can install the remaining packages:
 
 ```
-apt update
-apt install ros-r2b2-ros1-bridge ros-r2b2-turtlebot2-*
+sudo apt update
+sudo apt install ros-r2b2-ros1-bridge ros-r2b2-turtlebot2-*
 ```
