@@ -10,26 +10,8 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Beta 2 (July 7th, 2017)
-- ROS 2 native support for:
-  - Cartographer
-  - AMCL
-  - astra driver
-  - map_server
-  - joystick_driver
-  - Kobuki driver
-- Support via the ROS <--> ROS2 bridge:
-  - rosbag
-  - rviz
-- Released packages, at least Ubuntu
-- Namespaced topics and services
-- rostopic command line tool (not all verbs)
-- Logging API (rosconsole)
-- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
-- Debian packaging
-
 ### Beta 3 (September 13th, 2017)
-Additions and changes to the following feature list will occur as Beta 2 progresses.
+Additions and changes to the following feature list will occur as time progresses.
 
 - Windows and OSX packages
 - Provide catkin API through an ament package
