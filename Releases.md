@@ -2,6 +2,7 @@ A summary of releases of ROS 2 software is listed below. For more details about 
 
 | Release Overview | Date |
 | --- | --- |
+| [[beta2|beta2-Overview]] | soon |
 | [[beta1|beta1-Overview]] | 19 December 2016 |
 | [[alpha8|alpha8-Overview]] | 4 October 2016 |
 | [[alpha7|alpha7-Overview]] | 11 July 2016 |
@@ -16,6 +17,14 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 # New features of each release
+
+
+## [[beta2|beta2-Overview]]
+- Debian package for Ubuntu Xenial
+- Redesigned typesupport for single executables for multiple rmw impl.
+- Namespace support for topics
+- Command line tools
+- Macros for logging messages in C / C++
 
 
 ## [[beta1|beta1-Overview]]
