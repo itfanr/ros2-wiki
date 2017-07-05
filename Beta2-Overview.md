@@ -18,7 +18,7 @@ Improvements since the Beta 1 release:
 * A set of macros for logging messages in C / C++ (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
 
 New demo application:
-* [Turtlebot 2 demos](https://github.com/ros2/turtlebot2_demo) using the following repositories that have been (partially) converted to ROS 2:
+* [Turtlebot 2 demos](https://github.com/ros2/turtlebot2_demo) using the following repositories that have been (partially) converted to ROS 2 (Linux only):
   * [ros_astra_camera](https://github.com/ros2/ros_astra_camera.git)
   * [depthimage_to_laserscan](https://github.com/ros2/depthimage_to_laserscan.git)
   * [pcl_conversions](https://github.com/ros2/pcl_conversions.git)
@@ -29,6 +29,9 @@ New demo application:
   * [teleop_twist_keyboard](https://github.com/ros2/teleop_twist_keyboard.git)
   * [joystick_drivers](https://github.com/ros2/joystick_drivers.git)
   * [teleop_twist_joy](https://github.com/ros2/teleop_twist_joy.git)
+* [Dummy_robot demo](https://github.com/ros2/ros2/wiki/dummy-robot-demo):
+  * [robot_model](https://github.com/ros2/robot_model)
+  * [robot_state_publisher](https://github.com/ros2/robot_state_publisher)
 
 Selected features from previous Alpha/Beta releases (for the complete list, see the [[earlier release notes|Releases]]):
 * C++ and Python implementations of ROS 2 client libraries including APIs for:
