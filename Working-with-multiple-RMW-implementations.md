@@ -33,7 +33,7 @@ The ROS 2 C++ demos ([demo_nodes_cpp](https://github.com/ros2/demos/tree/master/
 By default these will use the default RMW implementation.
 To choose a different RMW implemenation you can set the environment variable `RMW_IMPLEMENTATION` to a specific implementation identifier, e.g.:
 
-- `RMW_IMPLEMENTATION=rmw_connext_cpp talker` which will run the talker demo with the C++ RMW implementation for Connext.
+- `RMW_IMPLEMENTATION=rmw_connext_cpp ros2 run demo_nodes_cpp talker` which will run the talker demo with the C++ RMW implementation for Connext.
 
 #### In beta 1 and earlier
 
@@ -51,14 +51,14 @@ The ROS 2 Python examples ([demo_nodes_py](https://github.com/ros2/demos/tree/ma
 For example, assuming that you have installed and setup your ROS 2 workspace, the following invocation will run the Python simple "talker" publisher demo with the default RMW implementation:
 
 ```bash
-talker_py
+ros2 run demo_nodes_py talker
 ```
 
 The same way as for C++ the RMW implementation can be chosen with the environment variable `RMW_IMPLEMENTATION`, e.g.:
 
 ```bash
 export RMW_IMPLEMENTATION=rmw_connext_cpp
-talker_py
+ros2 run demo_nodes_py talker
 ```
 #### In beta 1 and earlier
 
