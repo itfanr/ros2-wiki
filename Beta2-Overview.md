@@ -1,4 +1,4 @@
-### Beta 2 (codename r2d2; soon)
+### Beta 2 (codename r2b2; soon)
 
 Welcome to the latest release of ROS 2 software! We hope that you try it out and provide feedback.
 
