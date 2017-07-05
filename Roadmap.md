@@ -25,6 +25,7 @@ This is a list of the features targeted for development in the future.
 - Namespaced topics and services
 - rostopic command line tool (not all verbs)
 - Logging API (rosconsole)
+- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
 
 ### Beta 3 (September 13th, 2017)
 Additions and changes to the following feature list will occur as Beta 2 progresses.
@@ -54,7 +55,6 @@ The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progres
 - FastRTPS performance with larger data like the image demo
 
 #### New features (in no specific order)
-- Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
 - Complete Python API with execution model
 - Support services with Connext in C / Python
 - Exposure of DDS implementation-specific symbols to users
