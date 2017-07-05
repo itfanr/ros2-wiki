@@ -10,15 +10,15 @@ We provide both binary packages and instructions for how to compile from source 
 ### Features
 
 Improvements since the Beta 1 release:
+* DDS_Security support (aka SROS2, see [sros2](https://github.com/ros2/sros2))
 * Debian packages for Ubuntu Xenial (see [[Debian install instructions|Linux-Install-Debians]]).
 * Typesupport has been redesigned so that you only build a single executable and can choose one of the available RMW implementations by setting an environment variable (see [[documentation|Working-with-multiple-RMW-implementations]]).
 * Namespace support for nodes and topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
-* A set of command line tools all starting with `ros2` (see [ros2cli](https://github.com/ros2/ros2cli) repository).
+* A set of command line tools using the extensible `ros2` invocation (see [ros2cli](https://github.com/ros2/ros2cli) repository).
 * A set of macros for logging messages in C / C++ (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
-* DDS_Security support (aka SROS2, see [sros2](https://github.com/ros2/sros2))
 
 New demo application:
-* [Turtlebot 2 demo](https://github.com/ros2/turtlebot2_demo) using the following repositories which have been (partially) converted to ROS 2:
+* [Turtlebot 2 demos](https://github.com/ros2/turtlebot2_demo) using the following repositories that have been (partially) converted to ROS 2:
   * [ros_astra_camera](https://github.com/ros2/ros_astra_camera.git)
   * [depthimage_to_laserscan](https://github.com/ros2/depthimage_to_laserscan.git)
   * [pcl_conversions](https://github.com/ros2/pcl_conversions.git)
@@ -39,7 +39,7 @@ Selected features from previous Alpha/Beta releases (for the complete list, see 
 * Support for interoperability between multiple DDS/RTPS implementations
   * eProsima FastRTPS is our default implementation, and is included in the binary packages
   * RTI Connext is supported: build from source to try it out
-  * We initially supported PrismTech OpenSplice but decided to drop it for now
+  * We initially supported PrismTech OpenSplice but support for it is currently on hold
 * A graph API for network events
 * Distributed discovery
 * Realtime safe code paths for publish and subscribe with compatible DDS implementation (only Connext at the moment)
@@ -55,4 +55,4 @@ Selected features from previous Alpha/Beta releases (for the complete list, see 
 Known issues:
 * We’re tracking issues in various repositories, but the main entry point is the [ros2/ros2 issue tracker](https://github.com/ros2/ros2/issues)
 * We’d like to highlight a [known issue](https://github.com/ros2/rmw_connext/issues/234) that we are looking into which doesn't allow two topics with the same base name but different namespaces to have a different type when using `rmw_connext_cpp`.
-* Services with long responses are not working with Fast-RTPS. the fix, while not being part of beta2, is available upstream so you can work around this issue by building from source using Fast-RTPS master branch.
+* Services with long responses are not working with Fast-RTPS. The fix, while not being part of beta2, is available upstream so you can work around this issue by building from source using Fast-RTPS master branch.
