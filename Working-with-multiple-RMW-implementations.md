@@ -5,8 +5,7 @@ This page explains the default RMW implementation and how to specify an alternat
 You should have already read the [[DDS and ROS middleware implementations]] page.
 
 ## Multiple RMW implementations
-The ROS 2 binary releases only support one implementation at a time.
-The supported implementation is indicated in their file name.
+The current ROS 2 binary releases only support one implementation at a time (FastRTPS, indicated by their file name) since none of the other supported RMW implementations can be distributed freely.
 
 While the ROS 2 binary releases only include one RMW implementation each, a ROS 2 workspace that has been built from source may build and install multiple RMW implementations simultaneously.
 While the core ROS 2 code is being compiled, any RMW implementation that is found will be built if the relevant DDS implementation has been installed properly and the relevant environment variables configured.
@@ -19,7 +18,8 @@ A list of supported inter-vendor communication configurations is forthcoming.
 If a ROS 2 workspace has multiple RMW implementations, the default RMW implementation is currently selected as Fast RTPS if it's available.
 If the Fast RTPS RMW implementation is not installed, the RMW implementation with the first RMW implementation identifier in alphabetical order will be used.
 The implementation identifier is the name of the ROS package that provides the RMW implementation, e.g. `rmw_fastrtps_cpp`.
-For example, if both `rmw_opensplice_cpp` and `rmw_connext_cpp` ROS packages are installed, `rmw_connext_cpp` would be the default. If `rmw_fastrtps_cpp` is ever installed, it would be the default.
+For example, if both `rmw_opensplice_cpp` and `rmw_connext_cpp` ROS packages are installed, `rmw_connext_cpp` would be the default.
+If `rmw_fastrtps_cpp` is ever installed, it would be the default.
 See below for how to specify which RMW implementation is to be used when running the ROS 2 examples.
 
 *Note:* for ROS 2 alpha releases up to and including alpha 8, only the 'alphabetical order' rule explained above is used, and so the RMW implementation for Fast RTPS does not have any explicit priority over other RMW implementations.
