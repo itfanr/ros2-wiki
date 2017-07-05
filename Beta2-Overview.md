@@ -14,7 +14,7 @@ Improvements since the Beta 1 release:
 * Typesupport has been redesigned so that you only build a single executable and can choose one of the available RMW implementations by setting an environment variable (see [[documentation|Working-with-multiple-RMW-implementations]]).
 * Namespace support for topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
 * A set of command line tools all starting with `ros2` (see [ros2cli](https://github.com/ros2/ros2cli) repository).
-* A set of macros for logging messages (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
+* A set of macros for logging messages in C / C++ (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
 
 New demo application:
 * [Turtlebot 2 demo](https://github.com/ros2/turtlebot2_demo) using the following repositories which have been (partially) converted to ROS 2:
