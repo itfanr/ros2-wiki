@@ -55,20 +55,20 @@ In the first shell:
 
 In the second shell (see [talker](https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp) source code):
 
-        ros2 run composition api_composition_cli composition composition::Talker
+        ros2 run composition api_composition_cli -- composition composition::Talker
 
 Now the first shell should show a message that the component was loaded as well as repeated message for publishing a message.
 
 Another command in the second shell (see [listener](https://github.com/ros2/demos/blob/master/composition/src/listener_component.cpp) source code):
 
-        ros2 run composition api_composition_cli composition composition::Listener
+        ros2 run composition api_composition_cli -- composition composition::Listener
 
 Now the first shell should show repeated output for each received message.
 
 > The demo uses hardcoded topic names and therefore you can't run `api_composition` twice.
 > But in general it would be possible to run to separate container processes and load the talker and listener into separate ones and they would still communicate with each other.
 
-### Run-time composition using ROS services (1.) with a  server and client
+### Run-time composition using ROS services (1.) with a server and client
 
 The example with a server and a client is very similar.
 
@@ -78,8 +78,8 @@ In the first shell:
 
 In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code):
 
-        ros2 run composition api_composition_cli composition composition::Server
-        ros2 run composition api_composition_cli composition composition::Client
+        ros2 run composition api_composition_cli -- composition composition::Server
+        ros2 run composition api_composition_cli -- composition composition::Client
 
 In this case the client sends a request to the server, the server processes the request and replies with a response, and the client prints the received response.
 
