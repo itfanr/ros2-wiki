@@ -140,7 +140,7 @@ usage: lifecycle_service_client_py.py [-h]
 ```
 In the case you want to get the current state of the `lc_talker` node, you'd call:
 ```
-$ ros2 run lifecycle lifecycle_service_client_py.py get_state lc_talker
+$ ros2 run lifecycle lifecycle_service_client_py.py -- get_state lc_talker
 lc_talker is in state unconfigured(1)
 ```
 The next step would be to execute a state change:
