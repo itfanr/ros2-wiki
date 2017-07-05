@@ -1,14 +1,14 @@
 # ROS 2 Feature Status
 
-The features listed below are available in the current ROS 2 alpha release.
-Unless otherwise specified, the features are available for all supported platforms (Ubuntu 16.04, OS X 10.10+, Windows 10), DDS implementations (eProsima Fast RTPS and RTI Connext) and programming language client libraries (C++ and Python).
+The features listed below are available in the current ROS 2 beta release.
+Unless otherwise specified, the features are available for all supported platforms (Ubuntu 16.04, OS X 10.12.x, Windows 10), DDS implementations (eProsima Fast RTPS and RTI Connext) and programming language client libraries (C++ and Python).
 For planned future development, see the [[Roadmap]].
 
 | Functionality | Link | Fine print |
 | --- | --- | --- |
 | Discovery, transport and serialization over DDS | [Article](http://design.ros2.org/articles/ros_on_dds.html) | |
-| Support for multiple DDS implementations | [[Tutorial|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS and RTI Connext are supported. |
-| Common core client library that is wrapped by language-specific libraries. | [[Tutorial|ROS 2 Client Libraries]] | |
+| Support for multiple DDS implementations, chosen at runtime | [[Tutorial|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS and RTI Connext are supported. |
+| Common core client library that is wrapped by language-specific libraries | [[Tutorial|ROS 2 Client Libraries]] | |
 | Publish/subscribe over topics | [Sample code](https://github.com/ros2/examples) | Namespaces not yet implemented ([design article](http://design.ros2.org/articles/topic_and_service_names.html)). |
 | Clients and services | [Sample code](https://github.com/ros2/examples) | Python support experimental. |
 | Set/retrieve parameters | [Sample code](https://github.com/ros2/demos/tree/release-beta1/demo_nodes_cpp) | Parameters not yet available in `rcl`/Python. |
@@ -17,5 +17,8 @@ For planned future development, see the [[Roadmap]].
 | Inter- and intra-process communication using the same API | [[Demo|Intra-Process-Communication]] | Currently only in C++. |
 | Composition of node components at compile-, link- or `dlopen`-time | [[Demo|Composition]] | Currently only in C++. |
 | Support for nodes with managed lifecycles | [[Demo|Managed-Nodes]] | Currently only in C++. |
+| Command-line introspection tools using an extensible framework | [[Docs|https://github.com/ros2/ros2cli]] | |
+| Namespace support for nodes and topics | [[Article|http://design.ros2.org/articles/topic_and_service_names.html]] | |
+| Demos of an all-ROS 2 mobile robot | [[Demo|https://github.com/ros2/turtlebot2_demo]] | |
 | Preliminary support for real-time code | [[Demo|Real-Time-Programming]], [[demo|Allocator-Template-Tutorial]] | Linux only. Not available for Fast RTPS. |
 | Preliminary support for "bare-metal" microcontrollers | [Wiki](https://github.com/ros2/freertps/wiki)| |
