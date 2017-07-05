@@ -14,7 +14,7 @@ Improvements since the Beta 1 release:
 * Debian packages for Ubuntu Xenial (see [[Debian install instructions|Linux-Install-Debians]]).
 * Typesupport has been redesigned so that you only build a single executable and can choose one of the available RMW implementations by setting an environment variable (see [[documentation|Working-with-multiple-RMW-implementations]]).
 * Namespace support for nodes and topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
-* A set of command line tools using the extensible `ros2` invocation (see [ros2cli](https://github.com/ros2/ros2cli) repository).
+* A set of command-line tools using the extensible `ros2` command (see [tutorial](https://github.com/ros2/ros2/wiki/Introspection-with-command-line-tools)).
 * A set of macros for logging messages in C / C++ (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
 
 New demo application:
