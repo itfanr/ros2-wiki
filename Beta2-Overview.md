@@ -10,7 +10,7 @@ We provide both binary packages and instructions for how to compile from source 
 ### Features
 
 Improvements since the Beta 1 release:
-* Debian packages for Ubuntu Xenial (see [[install instructions|Linux-Install-Debians]]).
+* Debian packages for Ubuntu Xenial (see [[Debian install instructions|Linux-Install-Debians]]).
 * Typesupport has been redesigned so that you only build a single executable and can choose one of the available RMW implementations by setting an environment variable (see [[documentation|Working-with-multiple-RMW-implementations]]).
 * Namespace support for topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
 * A set of command line tools all starting with `ros2` (see [ros2cli](https://github.com/ros2/ros2cli) repository).
