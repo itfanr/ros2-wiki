@@ -9,7 +9,7 @@ The ROS 2 binary releases only support one implementation at a time.
 The supported implementation is indicated in their file name.
 
 While the ROS 2 binary releases only include one RMW implementation each, a ROS 2 workspace that has been built from source may build and install multiple RMW implementations simultaneously.
-While the core ROS 2 code is being compiled, any RMW implementation that is found will be built if the relevant DDS implementation has been installed properly.
+While the core ROS 2 code is being compiled, any RMW implementation that is found will be built if the relevant DDS implementation has been installed properly and the relevant environment variables configured.
 For example, if the code for the [RMW package for Fast RTPS](https://github.com/ros2/rmw_fastrtps_cpp) is in the workspace, it will be built if a Fast RTPS installation can also be found.
 For many cases you will find that nodes using different RMW implementations are able to communicate, however this is not true under all circumstances.
 A list of supported inter-vendor communication configurations is forthcoming.
@@ -25,7 +25,12 @@ See below for how to specify which RMW implementation is to be used when running
 *Note:* for ROS 2 alpha releases up to and including alpha 8, only the 'alphabetical order' rule explained above is used, and so the RMW implementation for Fast RTPS does not have any explicit priority over other RMW implementations.
 
 ## Specifying RMW implementations
-To have multiple RMW implementations available for use, you must have built from source.
+
+---
+
+To have multiple RMW implementations available for use you must have built from source (see above).
+
+---
 
 ### C++
 
