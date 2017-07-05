@@ -9,6 +9,7 @@
 ## ROS 2 Tutorials
 * [[Installation from binary and source, all platforms|Installation]]
 * [[Using ament to build a custom package|Ament-Tutorial]]
+* [[Introspection with command-line tools|Introspection-with-command-line-tools]]
 * [[Working with multiple RMW implementations]]
 * [[Composing multiple nodes in a single process|Composition]]
 * [[Defining custom interfaces (msg/srv)]]
