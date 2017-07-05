@@ -26,6 +26,7 @@ This is a list of the features targeted for development in the future.
 - rostopic command line tool (not all verbs)
 - Logging API (rosconsole)
 - Run-time DDS implementation choice, avoid having to build N variations of all libraries / executables
+- Debian packaging
 
 ### Beta 3 (September 13th, 2017)
 Additions and changes to the following feature list will occur as Beta 2 progresses.
@@ -89,7 +90,7 @@ The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progres
 #### Infrastructure
 
 - Automatic API documentation generation
-- Debian packaging, Windows packaging
+- Windows packaging
 
 ### Reducing Technical Debt
 
