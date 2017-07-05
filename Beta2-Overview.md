@@ -1,10 +1,10 @@
-### Beta 2 (codename r2b2; soon)
+### Beta 2 (codename r2b2; July 2017)
 
 Welcome to the latest release of ROS 2 software! We hope that you try it out and provide feedback.
 
 ### Supported Platforms
 
-We support ROS 2 Beta 2 on three platforms: Ubuntu 16.04 (Xenial), Mac OS X 10.12 (Sierra), and Windows 8.1 and 10.
+We support ROS 2 Beta 2 on three platforms: Ubuntu 16.04 (Xenial), Mac OS X 10.12 (Sierra), and Windows 10.
 We provide both binary packages and instructions for how to compile from source for all 3 platforms (see [install instructions](Installation) as well as [documentation](http://docs.ros2.org/beta2/)).
 
 ### Features
@@ -12,9 +12,10 @@ We provide both binary packages and instructions for how to compile from source 
 Improvements since the Beta 1 release:
 * Debian packages for Ubuntu Xenial (see [[Debian install instructions|Linux-Install-Debians]]).
 * Typesupport has been redesigned so that you only build a single executable and can choose one of the available RMW implementations by setting an environment variable (see [[documentation|Working-with-multiple-RMW-implementations]]).
-* Namespace support for topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
+* Namespace support for nodes and topics (see [design article](http://design.ros2.org/articles/topic_and_service_names.html), see known issues below).
 * A set of command line tools all starting with `ros2` (see [ros2cli](https://github.com/ros2/ros2cli) repository).
 * A set of macros for logging messages in C / C++ (see API docs of [rcutils](http://docs.ros2.org/beta2/api/rcutils/index.html)).
+* DDS_Security support (aka SROS2, see [sros2](https://github.com/ros2/sros2))
 
 New demo application:
 * [Turtlebot 2 demo](https://github.com/ros2/turtlebot2_demo) using the following repositories which have been (partially) converted to ROS 2:
