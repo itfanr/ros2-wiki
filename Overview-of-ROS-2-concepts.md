@@ -46,7 +46,7 @@ Nodes will only establish connections with other nodes if they have compatible [
 ## Example: talker-listener
 In one terminal, start a node (written in C++) that will publish messages on a topic.
 ```
-ros2 run demo_nodes_cp talker
+ros2 run demo_nodes_cpp talker
 ```
 
 In another terminal, start a second node (written in Python) that will subscribe to messages on the same topic.
