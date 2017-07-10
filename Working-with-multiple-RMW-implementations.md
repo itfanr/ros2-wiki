@@ -84,3 +84,13 @@ You can do this by specifying the `--force-cmake-configure` flag on your next wo
 
 It is possible to run into a problem when "rebuilding" the workspace with an additional RMW implementation using the `--force-cmake-configure` option where the build complains about the default RMW implementation changing.
 To resolve this, you can either set the default implementation to what is was before with the `RMW_IMPLEMENTATION` CMake argument or you can delete the build folder for packages that complain and continue the build with `--start-with <package name>`.
+
+## Troubleshooting
+
+### Ensuring use of a particular RMW implementation
+
+If you want to be certain that a particular RMW implementation is being used, you can set the `RCL_ASSERT_RMW_ID_MATCHES` environment variable, which will only allow nodes to be created with that RMW implementation.
+
+```
+RCL_ASSERT_RMW_ID_MATCHES=rmw_connext_cpp RMW_IMPLEMENTATION=rmw_connext_cpp ros2 run demo_nodes_cpp talker
+```
