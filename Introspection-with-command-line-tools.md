@@ -11,6 +11,12 @@ To see all available sub-commands run:
 ros2 --help
 ```
 
+_Note that passing arguments to a node run with `ros2 run` currently requires passing `--` before the node arguments, e.g.:_
+
+```
+ros2 run demo_nodes_cpp talker -- -t chatter2
+```
+
 ## Example
 
 To produce the typical talker-listener example using command-line tools, the `topic` sub-command can be used to publish and echo messages on a topic.
