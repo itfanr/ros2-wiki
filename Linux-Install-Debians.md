@@ -20,7 +20,7 @@ curl http://repo.ros2.org/repos.key | sudo apt-key add -
 And then add the repository to your sources list:
 
 ```
-sudo echo "deb http://repo.ros2.org/ubuntu/main xenial main" > /etc/apt/sources.list.d/ros2-latest.list
+sudo sh -c 'echo "deb http://repo.ros2.org/ubuntu/main xenial main" > /etc/apt/sources.list.d/ros2-latest.list'
 ```
 
 ## Install ROS 2 packages
