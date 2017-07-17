@@ -99,7 +99,7 @@ int32[] samples [-200, -100, 0, 100, 200]
 ```
 Note:
 - string values must be defined in single `'` or double quotes `"`
-- currently string values are not excaped
+- currently string values are not escaped
 
 ### 2.2 Constants
 Each constant definition is like a field description with a default value, except that this value can never be changed programatically. This value assignment is indicated by use of an equal '=' sign, e.g.
