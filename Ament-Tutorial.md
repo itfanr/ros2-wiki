@@ -92,8 +92,8 @@ When using more than one workspace you will still source the `setup.*` files to 
 With the environment sourced you can now run executables built by ament.
 
 ```bash
-listener &
-talker
+ros2 run demo_nodes_cpp listener &
+ros2 run demo_nodes_cpp talker
 ```
 
 And you will see the numbers incrementing.
