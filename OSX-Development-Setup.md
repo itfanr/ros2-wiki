@@ -30,12 +30,7 @@ You need the following things installed to build ROS 2:
         brew install python3 wget cmake cppcheck tinyxml eigen pcre
 
         # install dependencies for Fast-RTPS if you are using it
-        brew install asio
-        # Fast-RTPS also needs tinyxml2, but for now it requires a slightly older version
-        # tracking issue: https://github.com/ros2/build_cop/issues/39
-        brew uninstall --force tinyxml2
-        brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/196dee239038f34b2bbe8ca2f183ec78a5a53ce2/Formula/tinyxml2.rb
-        brew pin tinyxml2
+        brew install asio tinyxml2
 
         brew install opencv
 
