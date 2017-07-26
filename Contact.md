@@ -14,7 +14,10 @@ If you'd like to contact us privately (e.g., if your question contains informati
 If you need help with troubleshooting your system, please first check [this Discourse category](http://discourse.ros.org/c/ng-ros) to see if others have come across similar issues, otherwise start a new post of your own.
 
 ## Opening issues
-If you identify bugs, feel free to open an issue in the appropriate repository tracker.
+If you identify bugs, you can open an issue to notify the ROS team.
+Before opening an issue, check if other users have reported similar issues by searching across the ros2 and ament Github organizations: [example search query](https://github.com/search?type=Issues&q=user%3Aros2+user%3Aament+my+error+output).
+
+If it has not been reported, feel free to open an issue in the appropriate repository tracker.
 If it's not clear which tracker to use for a particular issue, file it in the [ros2/ros2 repository](https://github.com/ros2/ros2/issues) and we'll have a look at it.
 When filing an issue, please make sure to:
 
