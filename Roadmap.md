@@ -13,23 +13,23 @@ This is a list of the features targeted for development in the future.
 ### Beta 3 (September 13th, 2017)
 Additions and changes to the following feature list will occur as time progresses.
 
-- Windows and OSX packages
-- Provide catkin API through an ament package
-- rclcpp::Time
-- rviz and rosbag native in ROS2
-- Actions in ROS2
-- rosparam
-- parameters in C
-- ros_control, perception, depth camera 
-- move_base
-- robot_pose_ekf or robot_localization
-- Command line static remapping
-- Command line parameters and parameters from a yaml file
-- New documentation platform deployed
+- Parameters in C
+- Feature parity in Python with execution model, wait-for-service, ros2 param
+- Time: simtime, C++, Python
+- Progress on migration plan, consider use of catkin API shim
+- IDL file format, consider desired features, suitability of existing formats
+- ros_control
+- buildfarm: upstream ROS 2 spec. changes, one machine deployment, CI/devel/PR jobs
+
+- Exposure of DDS implementation-specific symbols to users
+- Expose logging macros in Python
+- rviz native in ROS2
+- Support more DDS / RTPS implementations:
+  - OpenSplice
 
 ### Version 1.0 (Dec. 13th, 2017)
 
-The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progress.
+The feature list for version 1.0 will be filled out as Beta 3 progresses.
 
 ### Future
 
@@ -38,9 +38,12 @@ The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progres
 - FastRTPS performance with larger data like the image demo
 
 #### New features (in no specific order)
-- Complete Python API with execution model
+- rosbag native in ROS2
+- Logging configuration, C++ streams
+- Command line static remapping
+- Command line parameters and parameters from a yaml file
+- Actions in ROS2
 - Support services with Connext in C / Python
-- Exposure of DDS implementation-specific symbols to users
 - Support for non-ASCII strings in messages / services
 - Support DDS-Security specification
 - Launch system using life-cycle and orchestration
@@ -64,15 +67,16 @@ The feature list for version 1.0 will be filled out as Beta 2 and Beta 3 progres
 - Implement rclc
 - Support more DDS / RTPS implementations:
   - Connext dynamic
-  - OpenSplice
   - freertps: https://github.com/ros2/freertps
   - RTI's micro implementation
 - Gazebo support
+- robot_pose_ekf or robot_localization
+- move_base
 
 #### Infrastructure
 
-- Automatic API documentation generation
-- Windows packaging
+- New documentation platform deployed
+- Windows and OSX packages
 
 ### Reducing Technical Debt
 
