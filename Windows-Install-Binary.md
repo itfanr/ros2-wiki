@@ -60,9 +60,9 @@ The installer will install itself by default into `C:\local`. You will then need
 
 Some of the examples require OpenCV to be installed. You can download a precompiled version of OpenCV from:
 
-https://github.com/ros2/ros2/releases/download/release-alpha1/opencv-2.4.11-win-vs2015-x64.zip
+https://github.com/ros2/ros2/releases/download/release-beta2/opencv-2.4.13.2-vc14.VS2015.zip
 
-Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.11-win-vs2015-x64\build\x64\vc14\bin`
+Since you are using a precompiled ROS version, we have to tell it where to find the OpenCV libraries. Assuming you were extracting OpenCV to `c:\dev\` you have to extend the `PATH` variable to `c:\dev\opencv-2.4.13.2-vc14.VS2015\x64\vc14\bin`
 
 ### Install dependencies
 There are a few dependencies not available in the Chocolatey package database. In order to ease the manual installation process, we provide the necessary Chocolatey packages.
