@@ -72,6 +72,15 @@ The feature list for version 1.0 will be filled out as Beta 3 progresses.
 - Gazebo support
 - robot_pose_ekf or robot_localization
 - move_base
+- security improvements:
+  - more granularity in security configuration (allow authentication only, authentication and encryption, etc)
+  - extend security to services, not only topics
+  - integrate DDS-Security logging plugin (unified way to aggregate security events and report them to the users through a ROS interface)
+  - key storage security (right now, keys are just stored in the filesystem)
+  - more user friendly interface (make it easier to specify security config). Maybe a Qt GUI? This GUI could also assist in distributing keys somehow.
+  - A way to say "please secure this running system" with some UI that would auto-generate keys and policies for everything that is currently running.
+  - Map security features onto any other implementation that supports them.
+  - If there are hardware-specific features for securing keys or accelerating encryption/signing messages, that could be interesting to add to DDS/RTPS implementations that don't use it already.
 
 #### Infrastructure
 
