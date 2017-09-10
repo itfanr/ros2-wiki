@@ -39,7 +39,7 @@ For details of the current features, see [[Features]].
 See the [[Roadmap]] for details on the planned upcoming features for ROS 2.
 
 ## Where to find more information
-There are various articles on the design of ROS 2 at design.ros2.org, such as: [_Why ROS 2.0?_](http://design.ros2.org/articles/why_ros2.html), [_ROS on DDS_](http://design.ros2.org/articles/ros_on_dds.html), and [_Changes between ROS 1 and ROS 2_](http://design.ros2.org/articles/changes.html).
+There are various articles on the design of ROS 2 at [design.ros2.org](http://design.ros2.org), such as: [_Why ROS 2.0?_](http://design.ros2.org/articles/why_ros2.html), [_ROS on DDS_](http://design.ros2.org/articles/ros_on_dds.html), and [_Changes between ROS 1 and ROS 2_](http://design.ros2.org/articles/changes.html).
 
 The code for ROS 2 is open source and broken into various repositories. You can find the code for most of the repositories on the [ros2 github organization](https://github.com/ros2).
 
