@@ -43,6 +43,8 @@ There are various articles on the design of ROS 2 at [design.ros2.org](http://de
 
 The code for ROS 2 is open source and broken into various repositories. You can find the code for most of the repositories on the [ros2 github organization](https://github.com/ros2).
 
+[docs.ros2.org/beta2](http://docs.ros2.org/beta2/index.html#) contains current, as of Beta 2, details about ROS 2 internal design and organisation.
+
 The following [ROSCon](http://roscon.ros.org) talks have been given on ROS 2 and provide information about the workings of ROS 2 and various demos:
 
 | Title | Type | Links |
