@@ -30,7 +30,7 @@ If you already have a paid version of Visual Studio 2015 (Professional, Enterpri
 
 Microsoft provides a free of charge version of Visual Studio 2015, named Community, which can be used to build applications that use ROS2:
 
-https://www.visualstudio.com/products/visual-studio-community-vs
+https://www.visualstudio.com/vs/older-downloads/
 
 Make sure that the Visual C++ features are installed. First choose 'Custom installation':
 
