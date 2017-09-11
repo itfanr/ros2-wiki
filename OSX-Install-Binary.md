@@ -4,7 +4,7 @@ This page explains how to install ROS 2 on OS X from a pre-built binary package.
 
 ## System requirements
 
-We support OS X Yosemite (10.11.x and 10.12.x).
+We support OS X El Capitan and Sierra (10.11.x and 10.12.x).
 
 ## Installing prerequisites
 
