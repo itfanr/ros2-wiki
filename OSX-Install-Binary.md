@@ -31,9 +31,7 @@ You need the following things installed before installing ROS 2.
         brew install tinyxml eigen pcre
 
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
-        # We're disabling python support in opencv to avoid a dependency on numpy,
-        # which in turn will want to build gcc 5.2.0, which takes a long time.
-        brew install homebrew/science/opencv --without-python
+        brew install opencv
 
  1. Install additional runtime dependencies for command-line tools:
 
