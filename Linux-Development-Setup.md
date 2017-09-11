@@ -33,7 +33,9 @@ sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev li
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # Install argcomplete for command-line tab completion from the ROS2 tools.
 # Install from pip rather than from apt-get because of a bug in the Ubuntu 16.04 version of argcomplete:
-sudo pip3 install argcomplete flake8 flake8-import-order
+sudo pip3 install argcomplete
+# additional testing dependencies from pip (because not available on ubuntu 16.04)
+sudo pip3 install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes
 # dependencies for FastRTPS
 sudo apt-get install libasio-dev libtinyxml2-dev
 ```

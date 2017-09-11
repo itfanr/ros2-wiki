@@ -36,7 +36,7 @@ You need the following things installed to build ROS 2:
 
 1. Use `python3 -m pip` (just `pip` may install Python3 or Python2) to install more stuff:
 
-        python3 -m pip install empy setuptools nose vcstool pep8 pydocstyle pyflakes pyyaml flake8 mock coverage argcomplete
+        python3 -m pip install argcomplete coverage empy flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes mock nose pep8 pydocstyle pyflakes pyyaml setuptools vcstool
 
 1. *Optional*: if you want to build the ROS 1<->2 bridge, then you must also install ROS 1:
 

@@ -142,7 +142,7 @@ Next install testing tools like `Nose` and others:
 Next install linters and checkers like `flake8` and others:
 
 ```
-> pip install flake8 pep8 pydocstyle pyflakes
+> pip install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pep8 pydocstyle pyflakes
 ```
 
 Also install `trollius` now so that it uses the wheel rather than trying to install from source:
