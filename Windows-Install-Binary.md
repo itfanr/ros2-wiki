@@ -84,7 +84,7 @@ Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages
 You must also install `pip` and one python package, `yaml`:
 
 ```
-python3 -m pip install -U pyyaml setuptools
+python -m pip install -U pyyaml setuptools
 ```
  
 ## Downloading ROS 2
