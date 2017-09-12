@@ -23,7 +23,7 @@ You should see repeated output similar to this:
 ~~~
 At time 0.0
 - Translation: [1.000, 2.000, 3.000]
-- Rotation: in Quaternion [0.843, -0.475, -0.076, 0.240]
+- Rotation: in Quaternion [-0.475, -0.076, 0.240, 0.843]
 ~~~
 
 Note that `tf2_echo` is reporting the rotation as a quaternion as opposed to roll, pitch, and yaw.
