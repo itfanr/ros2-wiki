@@ -73,14 +73,14 @@ The ROS 2.0 build will automatically build support for vendors that have been in
 
 By default we include eProsima's FastRTPS in the workspace and it is the default middleware. Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
-<!-- commenting out opensplice as we're not currently supporting it
-By default we will demonstrate installing PrismTech OpenSplice using Debian packages built by OSRF.
+As of Beta 3 using PrismTech OpenSplice is also supoorted again.
+On Linux you can use a Debian package built by OSRF.
 
 
 #### PrismTech OpenSplice Debian Packages built by OSRF
 
 
-Get an additional debian repository:
+Get an additional Debian repository:
 
 ```
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
@@ -89,10 +89,8 @@ sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83D
 
 ```
 sudo apt-get update
-sudo apt-get install libopensplice64  # from packages.osrfoundation.org
+sudo apt-get install libopensplice67  # from packages.osrfoundation.org
 ```
-
--->
 
 ### Build the prototype using the bootstrap script from ament_tools
 
@@ -157,8 +155,7 @@ Instead multiple binaries were being provided.
 For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_connext_cpp`.
 That way you can ensure you're using the right vendor for each binary by including the suffix when you run the program.
 
-<!-- opensplice not currently supported hiding the instructions.
-#### PrismTech OpenSplice
+#### PrismTech OpenSplice (version 6.7 or higher)
 
 Choose one of the following options for PrismTech OpenSplice.
 
@@ -166,7 +163,7 @@ Choose one of the following options for PrismTech OpenSplice.
 
 ```
 sudo apt-get update
-sudo apt-get install libopensplice64  # from packages.osrfoundation.org
+sudo apt-get install libopensplice67  # from packages.osrfoundation.org
 ```
 
 Add this to your `~/.bashrc`
@@ -177,7 +174,7 @@ export OSPL_URI=file:///usr/etc/opensplice/config/ospl.xml
 
 ##### Official binary packages from PrismTech
 
-Install the packages provided by [OpenSplice](http://www.prismtech.com/dds-community/software-downloads) (we currently use 6.4.1p2).
+Install the packages provided by [OpenSplice](https://github.com/PrismTech/opensplice/releases/tag/OSPL_V6_7_170912OSS_RELEASE) (we require at least version 6.7.170912).
 Remember to replace `@@INSTALLDIR@@` with the path where you unpacked the OpenSplice distribution.
 Then, source the ROS `setup.bash` file, and finally, source the `release.com` file in the root of the OpenSplice distribution to set the `OSPL_HOME` environment variable appropriately.
 After that, your shell is ready to run ROS2 binaries with the official OpenSplice distribution.
@@ -191,7 +188,6 @@ export PTECH_LICENSE_FILE=path/to/prismtech.lic
 ##### Building OpenSplice from source
 
 If you build OpenSplice from source, be sure to remember to following the INSTALL.txt instructions and manually replace the @@INSTALLDIR@@ placeholder in the OpenSplice install/HDE/x86_64.linux/release.com
--->
 
 #### RTI Connext (version 5.2 or higher)
 

@@ -214,12 +214,25 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
-There is currently support for RTI's Connext DDS, and eProsima FastRTPS.
+There is currently support for eProsima FastRTPS, PrismTech's OpenSplice, and RTI's Connext DDS.
 The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
+
+#### PrismTech OpenSplice
+
+If you would like to also build against PrismTech OpenSplice, you will need to first download the latest version of [OpenSplice 6.7](https://github.com/PrismTech/opensplice/releases/tag/OSPL_V6_7_170912OSS_RELEASE) (we require at least version 6.7.170912).
+Then for any shell that you open and want to use OpenSplice run something like the following command before building and running ROS 2:
+
+```
+call "C:\opensplice67\HDE\x86_64.win64\release.bat"
+```
+
+where the exact paths may need to be slightly altered depending on where you selected to install OpenSplice.
+
+#### RTI Connext
 
 If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS.
 After installing use the RTI Launcher to load your license file.
-Then for any shell that you open and want to user RTI programs run something like the following command before building ROS 2:
+Then for any shell that you open and want to use RTI programs run something like the following command before building and running ROS 2:
 
 ```
 call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"

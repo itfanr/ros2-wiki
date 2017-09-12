@@ -12,13 +12,6 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
 
 ## Installing prerequisites
 
-<!-- 1. Install the OSRF sources for DDS via debian package:
-        sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-        sudo bash -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
-
-Open splice removed since it's not currently supported. Leaving commented to make it easier to restore in the future. 
-            libopensplice64 \
--->
 1. Install runtime dependencies and wget:
 
         sudo apt-get update && sudo apt-get install -q -y \
@@ -45,6 +38,17 @@ Open splice removed since it's not currently supported. Leaving commented to mak
 
 1. *Optional*: if you want to use the ROS 1<->2 bridge, then you must also install ROS 1.
   Follow the normal install instructions: http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+1. *Optional*: install a Debian package of PrismTech OpenSplice built by OSRF:
+
+        sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
+        sudo bash -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
+        sudo apt-get update && sudo apt-get install -q -y \
+            libopensplice67
+
+  To use OpenSplice you need to set the environment variable `RMW_IMPLEMENATION` accordingly (otherwise it will default to use FastRTPS):
+
+        export RMW_IMPLEMENATION=rmw_opensplice_cpp
 
 ## Downloading ROS 2
 
