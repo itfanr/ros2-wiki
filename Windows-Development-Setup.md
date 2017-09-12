@@ -228,9 +228,10 @@ call "C:\opensplice67\HDE\x86_64.win64\release.bat"
 
 where the exact paths may need to be slightly altered depending on where you selected to install OpenSplice.
 
-#### RTI Connext
+#### RTI Connext 5.2.3
 
 If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS.
+[Use this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Win64VS2015.exe) to download Connext 5.2.3 for 64 bit Windows.
 After installing use the RTI Launcher to load your license file.
 Then for any shell that you open and want to use RTI programs run something like the following command before building and running ROS 2:
 
