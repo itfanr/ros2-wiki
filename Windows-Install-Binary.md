@@ -109,14 +109,14 @@ Before running an example, you need to `source` the ROS 2 setup file. Start a co
 
 ```
 > call C:\dev\ros2\local_setup.bat
-> talker
+> ros2 run demo_nodes_cpp talker
 ```
 
 Start another command shell and run a listener:
 
 ```
 > call C:\dev\ros2\local_setup.bat
-> listener
+> ros2 run demo_nodes_py listener
 ```
 
 You should see the `talker` saying that it's `Publishing` messages and the `listener` saying `I heard` those messages.
