@@ -24,6 +24,15 @@ Open a Command Prompt and type the following to install Python via Chocolatey:
 > choco install -y python
 ```
 
+### Install OpenSSL
+
+Download an OpenSLL installer from [this page](https://slproweb.com/products/Win32OpenSSL.html). Scroll to the bottom of and download *Win64 OpenSSL v1.0.2*. Don't download the Win32 or Light versions.
+
+Run the installer with default parameters. Then, define environment variables (the following commands assume you used the default installation directory):
+
+- `setx -m OPENSSL_CONF C:\OpenSSL-Win64\bin\openssl.cfg`
+- Add `C:\OpenSSL-Win64\bin\` to your PATH
+
 ### Install Visual Studio Community 2015
 
 If you already have a paid version of Visual Studio 2015 (Professional, Enterprise), skip this step.
