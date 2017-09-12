@@ -15,7 +15,7 @@ If you're looking for information on ROS 1 (i.e., ROS as it has existed for seve
 See [[the installation page|Installation]].
 
 ## Tutorials
-ROS 2 is under heavy development and all releases are currently "alpha"-prefixed.
+ROS 2 is under heavy development and releases are currently "beta"-prefixed.
 You should not expect to switch from ROS 1 to ROS 2 today, but you can check out the [[the tutorials page|Tutorials]] page to see a range of examples of what the system can do in its current state.
 
 ## Contributing
@@ -30,7 +30,7 @@ The goal of the ROS 2 project is to adapt to these changes, leveraging what is g
 There's a full article on the motivation of ROS 2 [here](http://design.ros2.org/articles/why_ros2.html).
 
 ## Current status
-Alpha releases for ROS 2 are currently being made on a ~6 week cadence to give community members an opportunity to provide feedback on the system.
+ROS 2 is currently releasing beta versions every few months to give community members an opportunity to provide feedback on the system.
 At a high level, ROS 2 development has widely focused on laying the groundwork for supporting multiple DDS middleware implementations, multiple operating systems, multiple programming languages and co-existence with systems running ROS 1.
 For details of the current features, see [[Features]].
 
