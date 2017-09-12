@@ -32,10 +32,6 @@ or if you're on Windows **cmd*:
 ```
 call <path to ROS 2 install space>/local_setup.bat
 ```
-or if you're on Windows **PowerShell*:
-```
-<path to ROS 2 install space>/local_setup.bat
-```
 
 Then run:
 
