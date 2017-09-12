@@ -178,6 +178,16 @@ You will also need to add the OpenCV bin directory (in this case `C:\opencv\x64\
 
 You will need to open a new command prompt for this environment variable to take effect.
 
+### Install OpenSSL
+
+Download an OpenSLL installer from [this page](https://slproweb.com/products/Win32OpenSSL.html). Scroll to the bottom of and download *Win64 OpenSSL v1.0.2*. Don't download the Win32 or Light versions.
+
+Run the installer with default parameters. Then, define environment variables (the following commands assume you used the default installation directory):
+
+- `setx -m OPENSSL_CONF C:\OpenSSL-Win64\bin\openssl.cfg`
+- Add `C:\OpenSSL-Win64\bin\` to your PATH
+
+
 ### Getting the Source Code
 
 Now that we have the development tools we can get the ROS 2 source code.
