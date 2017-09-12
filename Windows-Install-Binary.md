@@ -26,7 +26,7 @@ Open a Command Prompt and type the following to install Python via Chocolatey:
 
 ### Install OpenSSL
 
-Download an OpenSLL installer from [this page](https://slproweb.com/products/Win32OpenSSL.html). Scroll to the bottom of and download *Win64 OpenSSL v1.0.2*. Don't download the Win32 or Light versions.
+Download an OpenSSL installer from [this page](https://slproweb.com/products/Win32OpenSSL.html). Scroll to the bottom of and download *Win64 OpenSSL v1.0.2*. Don't download the Win32 or Light versions.
 
 Run the installer with default parameters. Then, define environment variables (the following commands assume you used the default installation directory):
 
