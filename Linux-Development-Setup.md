@@ -73,23 +73,18 @@ The ROS 2.0 build will automatically build support for vendors that have been in
 
 By default we include eProsima's FastRTPS in the workspace and it is the default middleware. Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
-As of Beta 3 using PrismTech OpenSplice is also supoorted again.
+As of Beta 3 using PrismTech OpenSplice is also supported again.
 On Linux you can use a Debian package built by OSRF.
 
 
 #### PrismTech OpenSplice Debian Packages built by OSRF
 
 
-Get an additional Debian repository:
-
-```
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-latest.list'
-sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys D2486D2DD83DB69272AFE98867170598AF249743
-```
+Set up the ROS 2 repository by following [Setup Sources](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources) section of [this guide](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources).
 
 ```
 sudo apt-get update
-sudo apt-get install libopensplice67  # from packages.osrfoundation.org
+sudo apt-get install libopensplice67  # from repo.ros2.org
 ```
 
 ### Build the prototype using the bootstrap script from ament_tools
@@ -163,7 +158,7 @@ Choose one of the following options for PrismTech OpenSplice.
 
 ```
 sudo apt-get update
-sudo apt-get install libopensplice67  # from packages.osrfoundation.org
+sudo apt-get install libopensplice67  # from repo.ros2.org
 ```
 
 Add this to your `~/.bashrc`
