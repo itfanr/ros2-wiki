@@ -93,3 +93,14 @@ In the shell call (see [source code](https://github.com/ros2/demos/blob/master/c
         ros2 run composition manual_composition
 
 This should show repeated messages from both pairs, the talker and the listener as well as the server and the client.
+
+### Run-time composition using dlopen
+
+This demo presents an alternative to 1. by creating a generic container process and pass it explicitly the libraries to load without using ROS interfaces.
+The process will open each library and create one instance of each "rclcpp::Node" class in the library [source code](https://github.com/ros2/demos/blob/master/composition/src/dlopen_composition.cpp)).
+
+In the shell call:
+
+        ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.so `ros2 pkg prefix composition`/lib/liblistener_component.so
+
+Now the shell should show repeated output for each sent and received message.
