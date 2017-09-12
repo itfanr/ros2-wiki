@@ -1,3 +1,6 @@
+**INCOMPLETE: this is a draft of an upcoming tutorial for creating and using custom ROS interfaces.**
+**Disclaimer: The code provided is to support the explanation, it is likely outdated and should not be expected to compile as is**
+
 # Introduction to msg and srv
 
 * msg: msg files are simple text files that describe the fields of a ROS message. They are used to generate source code for messages in different languages.
@@ -38,10 +41,10 @@ For more information about how to create msg and srv files please refer to [[Abo
 
 **NOTE:** only ament_cmake packages can generate messages currently (not ament_python packages).
 
-For this tutorial we will use the packages stored in the [rosidl_tutorials repository](https://github.com/ros2/tutorials/tree/master/rosidl_tutorials)
+For this tutorial we will use the packages stored in the [rosidl_tutorials repository](https://github.com/ros2/tutorials/tree/rosidl_tutorials/rosidl_tutorials)
 ```
 cd ~/ros2_overlway_ws/src
-git clone https://github.com/ros2/tutorials.git
+git clone -b rosidl_tutorials https://github.com/ros2/tutorials.git
 cd rosidl_tutorials/rosidl_tutorials_msgs
 ```
 ## Creating a msg file
@@ -124,7 +127,7 @@ float64 sum
 ```
 
 Declare the service in the `CMakeLists.txt`:
-```
+```cmake
 set(srv_files
   "srv/AddTwoFloats.srv")
 ```
