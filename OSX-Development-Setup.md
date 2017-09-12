@@ -48,33 +48,6 @@ You need the following things installed to build ROS 2:
 
     Otherwise, just follow the normal instructions, then source the resulting `install_isolated/setup.bash` before proceeding here to build ROS 2.
 
-## Optional: Build with OpenSplice
-
-To build opensplice you will need:
-
- 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation, but that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
-  * Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-  * Accept the license terms and download the "Mac OS X x64" version of the `.dmg` file.
-  * Install from the `.dmg`.
-  * *Optional*: check that you have a `jni.h` and that your version of `java` is 1.8:
-
-            $ find /Library/Java | grep jni.h
-            /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/include/jni.h
-            $ java -version
-            java version "1.8.0_60"
-            Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
-            Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
-
- 1. Add the OSRF Homebrew tap:
-
-        brew tap osrf/ros2
-
- 1. Install OpenSplice:
-
-        brew install opensplice
-
-**TODO: Extend these instructions for other DDS implementations, starting with RTI Connext.**
-
 ## Get the ROS 2 code
 
 Create a workspace and clone all repos:
@@ -85,6 +58,18 @@ Create a workspace and clone all repos:
     vcs import src < ros2.repos
 
 This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
+
+
+## Optional: Install additional DDS vendors
+
+ROS 2.0 builds on top of DDS.
+It is compatible with [[multiple DDS or RTPS (the DDS wire protocol) vendors|DDS-and-ROS-middleware-implementations]].
+The repositories you downloaded for ROS 2.0 includes eProsima's Fast RTPS, which is the only bundled vendor.
+If you would like to use one of the other vendors you will need to install their software separately before building.
+The ROS 2.0 build will automatically build support for vendors that have been installed and sourced correctly.
+
+By default we include eProsima's FastRTPS in the workspace and it is the default middleware.
+Detailed instructions for installing other DDS vendors are provided in the "Alternative DDS sources" section below.
 
 ## Build the ROS 2 code
 
@@ -113,6 +98,32 @@ Hooray!
 ## Maintain your source checkout
 
 For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
+
+## Alternative DDS sources
+
+The demos will attempt to build against any detected DDS vendor.
+The only bundled vendor is eProsima's Fast RTPS, which is included in the default set of sources for ROS 2.0.
+If you would like to switch out the vendor below are the instructions.
+When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
+
+When multiple vendors are present, you can choose the used RMW implementation by setting the the environment variable `RMW_IMPLEMENTATION` to the package providing the RMW implementation.
+See [[Working with multiple RMW implementations|Working-with-multiple-RMW-implementations]] for more details.
+
+### RTI Connext (5.2.3)
+
+You can install the OS X package of Connext version 5.2.3 provided by RTI [from this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Darwin15clang7.0.dmg).
+
+You also need a Java runtime installed to run the RTI code generator, which you can get [here](https://support.apple.com/kb/DL1572?locale=en_US).
+
+After installing, run RTI launcher and point it to your license file.
+
+Source the setup file to set the `NDDSHOME` environment variable before building your workspace:
+
+```
+source /Applications/rti_connext_dds-5.2.3/resource/scripts/rtisetenv_x64Darwin15clang7.0.bash
+```
+
+You may need to increase shared memory resources following https://community.rti.com/kb/osx510.
 
 ## Troubleshooting
 
