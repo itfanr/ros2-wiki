@@ -136,6 +136,8 @@ To build opensplice you will need:
 -->
 ### RTI Connext (5.2.3)
 
+To use RTI Connext you will need to have obtained a license from RTI.
+
 You can install the OS X package of Connext version 5.2.3 provided by RTI [from this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Darwin15clang7.0.dmg).
 
 You also need a Java runtime installed to run the RTI code generator, which you can get [here](https://support.apple.com/kb/DL1572?locale=en_US).
