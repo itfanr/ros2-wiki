@@ -33,6 +33,9 @@ You need the following things installed before installing ROS 2.
         # OpenCV isn't a dependency of ROS 2, but it used by some demos.
         brew install opencv
 
+        # install OpenSSL for DDS-Security
+        brew install openssl
+
  1. Install additional runtime dependencies for command-line tools:
 
         python3 -m pip install pyyaml setuptools argcomplete
