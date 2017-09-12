@@ -99,8 +99,16 @@ This should show repeated messages from both pairs, the talker and the listener 
 This demo presents an alternative to 1. by creating a generic container process and pass it explicitly the libraries to load without using ROS interfaces.
 The process will open each library and create one instance of each "rclcpp::Node" class in the library [source code](https://github.com/ros2/demos/blob/master/composition/src/dlopen_composition.cpp)).
 
-In the shell call:
+**Linux** In the shell call:
 
         ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.so `ros2 pkg prefix composition`/lib/liblistener_component.so
+
+**Windows** In cmd.exe call
+
+        ros2 pkg prefix composition
+
+to get the path to where composition is installed. Then call
+
+        ros2 run composition dlopen_composition -- <path_to_composition_install>\bin\talker_component.dll <path_to_composition_install>\bin\listener_component.dll
 
 Now the shell should show repeated output for each sent and received message.
