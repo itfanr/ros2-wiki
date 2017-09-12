@@ -80,7 +80,7 @@ On Linux you can use a Debian package built by OSRF.
 #### PrismTech OpenSplice Debian Packages built by OSRF
 
 
-Set up the ROS 2 repository by following [Setup Sources](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources) section of [this guide](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources).
+Set up the ROS 2 repository by following the [Setup Sources](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources) section of [this guide](https://github.com/ros2/ros2/wiki/Linux-Install-Debians#setup-sources).
 
 ```
 sudo apt-get update
