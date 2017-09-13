@@ -1,44 +1,60 @@
-This page tries to capture the process we go through to make a new alpha release of ROS 2:
+This page tries to capture the process we go through to make a new beta release of ROS 2.
+
+We usually don't branch before a release but "freeze" the used branch.
+During the testing phase make sure that no unwanted changes are being commited to that branch.
+Iteratively test either using the artifacts produced by the packaging jobs or from-source builds and make necessary changes.
+Once the current state it ready to be released follow these steps:
 
 - Get a fresh copy of all repositories using the master [`ros2.repos` file](https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos)
   - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos | vcs import ./src`
-- Create a `.repos` file with the exact commit hashes you have checked out locally
-  - `vcs export --exact ./src > release-alpha4.repos` (adjust file name appropriately)
-- Run a packaging job using this new `.repos` file
-  - First upload it somewhere (like gist.github.com)
-  - Then create a packaging job for each platform and put the url of the hosted `.repos` file in the `CI_ROS2_REPOS_URL` field
-- When they finish download the artifact files (from the three platforms) they produce from the Jenkins Job page
-- Test the artifacts by extracting them and following the from binary install instructions on the wiki
-  - https://github.com/ros2/ros2/wiki/Installation#binary-packages
-  - If it doesn't work, fix it and start the process over :stuck_out_tongue:
-- Since it works, add a tag on all the repositories for this alpha release using vcstool. Note that for this step to work without requiring lots of password typing, you either need a `~/.netrc` file with your credentials, or you need to change the github URLs in the `.repos` file to use ssh instead of https.
-  - `vcs custom ./src --args tag release-alpha4` (adjust the tag name appropriately)
-  - If we ever have something other than `git` repositories we'll need to use the `--git` and `--hg` (for example) arguments separately
-- Update the `release-latest` tag on all repositories
-  - `vcs custom ./src --args tag -f release-latest`
-- Push new tags for all ROS 2-specific repositories (we'll track the non ROS 2 repos with commit hashes):
-  - `vcs custom ./src/ros2 --args push --tags -f`
-  - `vcs custom ./src/ament/ament_cmake --args push --tags -f`
-  - `vcs custom ./src/ament/ament_index --args push --tags -f`
-  - `vcs custom ./src/ament/ament_lint --args push --tags -f`
-  - `vcs custom ./src/ament/ament_package --args push --tags -f`
-  - `vcs custom ./src/ament/ament_tools --args push --tags -f`
-  - `vcs custom ./src/ament/gmock_vendor --args push --tags -f`
-  - `vcs custom ./src/ament/gtest_vendor --args push --tags -f`
-  - `vcs custom ./src/ament/uncrustify --args push --tags -f`
-- Rename each artifact file (an archive file) as `ros2-alpha<alpha number>-package-<platform>.<ext>`
-  - E.g. `ros2-alpha4-package-linux.tar.bz2`
-- Create a tag on the ros2/ros2 repository called `release-alpha#` and put the new `.repos` file in the root
-  - Clone ros2/ros2 to the master branch
-  - Replace the `ros2.repos` file's content with that of the one you created above
-  - Commit it with a message like the tag name, e.g. `release-alpha4`
-  - Tag it with `git tag release-alpha4` and `git tag -f release-latest` push both with `git push --tags -f`
-- Create a new release on the "Releases" section of ros2/ros2 using this new tag: https://github.com/ros2/ros2/releases
-  - Use the title `ROS 2 Alpha # release` (matching the style of previous releases)
+
+- Update the version number in (most) packages (excluding the ones which have their own numbering scheme).
+  - Commit and push these changes: `vcs custom ./src --args commit -m "beta N" -a`, `vcs custom ./src --args push`
+
+
+- Create a `.repos` file with the exact commit hashes you have checked out locally:
+  - `vcs export --exact ./src > hashes.repos`
+
+- CreateTag (most) repositories using `vcstool`
+  - For some repositories we are not creating ROS 2 specific tags but use the hashes instead:
+    - `ament/osrf_pycommon`
+    - `eProsima/Fast-CDR`
+    - `eProsima/Fast-RTPS`
+    - `ros/class_loader`
+    - `ros/console_bridge`
+    - Remove the above repositories for now: `rm -fr src/ament/osrf_pycommon src/eProsima src/ros`
+  - Note that for this step to work without requiring lots of password typing, you either need a `~/.netrc` file with your credentials, or you need to change the github URLs in the `.repos` file to use ssh instead of https.
+  - Create the release tag:
+    - `vcs custom ./src --args tag release-betaN` (adjust the tag name appropriately)
+    - If we ever have something other than `git` repositories we'll need to use the `--git` and `--hg` (for example) arguments separately.
+  - Update the `release-latest` tag on all repositories:
+    - `vcs custom ./src --args tag -f release-latest`
+  - Push tags (using force to overwrite existing latest tags):
+    - `vcs custom ./src --args push --tags -f`
+
+- Create new `.repos` file:
+  - `cp hashes.repos tags.repos`
+  - Edit `tags.repos` and replace the version attribute for all repositories (except the ones skipped before) with `release-betaN` (adjust the tag name appropriately)
+
+- Run some packaging job using this new `.repos` file
+  - First upload `tags.repos` somewhere (e.g. gist.github.com).
+  - Then trigger a packaging job for each platform and use the url of the hosted `.repos` file in the `CI_ROS2_REPOS_URL` field.
+  - Rename each artifact file (an archive file) as `ros2-beta<beta-number>-package-<platform><rmw-impl>-<opt-arch>.<ext>`
+    - E.g. `ros2-beta2-package-linux-fastrtps-x86_64.tar.bz2`
+
+- Create a tag on the `ros2/ros2` repository called `release-betaN` with the new `.repos` file:
+  - Clone `ros2/ros2` to the master branch.
+  - Replace the `ros2.repos` file's content with that of the `tags.repos` file created above.
+  - Commit it with a message like the tag name, e.g. `release-betaN` (adjust the tag name appropriately).
+  - Tag it with `git tag release-betaN` (adjust the tag name appropriately) and `git tag -f release-latest` push both with `git push --tags -f`.
+
+- Create a new release in the [Releases](https://github.com/ros2/ros2/releases) section of `ros2/ros2` using this new tag:
+  - Use the title `ROS 2 Beta N release` (matching the style of previous releases)
 - Upload the renamed artifacts to the Release on GitHub using the web interface:
-  - E.g. https://github.com/ros2/ros2/releases/edit/release-alpha3
-- Create an overview page for the alpha release, e.g. https://github.com/ros2/ros2/wiki/Alpha3-Overview
+  - E.g. https://github.com/ros2/ros2/releases/edit/release-beta2
+- Create an overview page for the beta release, e.g. https://github.com/ros2/ros2/wiki/Beta2-Overview
 - Update the releases page to point to it: https://github.com/ros2/ros2/wiki/Releases
 - Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
 - Update the link on the home page: https://github.com/ros2/ros2/wiki
-- Draft and send an email to the ng sig about that release
+- Run the documentation generation and upload and link the results from http://docs.ros2.org/
+- Draft and send an announcement to discourse about that release
