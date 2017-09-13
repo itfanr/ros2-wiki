@@ -10,26 +10,9 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Beta 3 (September 13th, 2017)
-Additions and changes to the following feature list will occur as time progresses.
+### Next release (Dec. 13th, 2017)
 
-- Parameters in C
-- Feature parity in Python with execution model, wait-for-service, ros2 param
-- Time: simtime, C++, Python
-- Progress on migration plan, consider use of catkin API shim
-- IDL file format, consider desired features, suitability of existing formats
-- ros_control
-- buildfarm: upstream ROS 2 spec. changes, one machine deployment, CI/devel/PR jobs
-
-- Exposure of DDS implementation-specific symbols to users
-- Expose logging macros in Python
-- rviz native in ROS2
-- Support more DDS / RTPS implementations:
-  - OpenSplice
-
-### Version 1.0 (Dec. 13th, 2017)
-
-The feature list for version 1.0 will be filled out as Beta 3 progresses.
+The feature list for the next version will be filled out shortly after the Beta 3 release.
 
 ### Future
 
@@ -38,6 +21,13 @@ The feature list for version 1.0 will be filled out as Beta 3 progresses.
 - FastRTPS performance with larger data like the image demo
 
 #### New features (in no specific order)
+- Parameters in C
+- Feature parity in Python with wait-for-service, ros2 param
+- Time: simtime, C++, Python
+- Progress on migration plan, consider use of catkin API shim
+- IDL file format, consider desired features, suitability of existing formats
+- buildfarm: one machine deployment, CI/devel/PR jobs
+- rviz native in ROS2
 - rosbag native in ROS2
 - Logging configuration, C++ streams
 - Command line static remapping

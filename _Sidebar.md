@@ -1,5 +1,5 @@
 * [[Home]]
-* [[Beta2 Release Overview|Beta2-Overview]]
+* [[Beta3 Release Overview|Beta3-Overview]]
 * [[Features]]
 * [[All Releases|Releases]]
 * [[Installation]]

@@ -1,7 +1,10 @@
-A summary of releases of ROS 2 software is listed below. For more details about each release, see the corresponding release overview. For convenience the key features of each release are repeated on this page.
+A summary of releases of ROS 2 software is listed below.
+For more details about each release, see the corresponding release overview.
+For convenience the key features of each release are repeated on this page.
 
 | Release Overview | Date |
 | --- | --- |
+| [[beta3|beta3-Overview]] | 13 September 2017 |
 | [[beta2|beta2-Overview]] | 5 July 2017 |
 | [[beta1|beta1-Overview]] | 19 December 2016 |
 | [[alpha8|alpha8-Overview]] | 4 October 2016 |
@@ -17,6 +20,16 @@ Notes on how an alpha release is made: [[Release-Howto]]
 
 
 # New features of each release
+
+
+## [[beta3|beta3-Overview]]
+- Execution model in Python, many fixes to memory management in Python C extension
+- Experimental rewrite of [ros_control](https://github.com/ros2/ros2_control)
+- Exposure of DDS implementation-specific symbols to users (for FastRTPS and Connext)
+- Logging API in Python
+- Fixed several memory leaks and race conditions in various packages
+- Readded support for OpenSplice (on Linux and Windows atm) provided by PrismTech
+- Use bloom (without patches) to make ROS 2 releases
 
 
 ## [[beta2|beta2-Overview]]
