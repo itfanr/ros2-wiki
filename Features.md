@@ -9,7 +9,7 @@ For planned future development, see the [[Roadmap]].
 | Discovery, transport and serialization over DDS | [Article](http://design.ros2.org/articles/ros_on_dds.html) | |
 | Support for multiple DDS implementations, chosen at runtime | [[Tutorial|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS and RTI Connext are supported. |
 | Common core client library that is wrapped by language-specific libraries | [[Tutorial|ROS 2 Client Libraries]] | |
-| Publish/subscribe over topics | [Sample code](https://github.com/ros2/examples) | Namespaces not yet implemented ([design article](http://design.ros2.org/articles/topic_and_service_names.html)). |
+| Publish/subscribe over topics | [Sample code](https://github.com/ros2/examples) | [Namespacing limitation for Connext.](https://github.com/ros2/rmw_connext/issues/234) |
 | Clients and services | [Sample code](https://github.com/ros2/examples) | Python support experimental. |
 | Set/retrieve parameters | [Sample code](https://github.com/ros2/demos/tree/release-beta1/demo_nodes_cpp) | Parameters not yet available in `rcl`/Python. |
 | ROS 1 - ROS 2 communication bridge | [Tutorial](https://github.com/ros2/ros1_bridge/blob/master/README.md) | Only for topics and services, not yet available for actions. |
