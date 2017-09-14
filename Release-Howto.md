@@ -15,7 +15,7 @@ Once the current state it ready to be released follow these steps:
 - Create a `.repos` file with the exact commit hashes you have checked out locally:
   - `vcs export --exact ./src > hashes.repos`
 
-- CreateTag (most) repositories using `vcstool`
+- Tag (most) repositories using `vcstool`
   - For some repositories we are not creating ROS 2 specific tags but use the hashes instead:
     - `ament/osrf_pycommon`
     - `eProsima/Fast-CDR`
@@ -35,6 +35,9 @@ Once the current state it ready to be released follow these steps:
 - Create new `.repos` file:
   - `cp hashes.repos tags.repos`
   - Edit `tags.repos` and replace the version attribute for all repositories (except the ones skipped before) with `release-betaN` (adjust the tag name appropriately)
+
+- Repeat the tagging and `.repos` file generation for the [`turtlebot2_demo.repos` file](https://github.com/ros2/turtlebot2_demo/blob/release-latest/turtlebot2_demo.repos)
+  - At beta3, only the turtlebot2_demo repo had packages that needed their version bumped, and no repos used a fixed hash instead of the release tag.
 
 - Run some packaging job using this new `.repos` file
   - First upload `tags.repos` somewhere (e.g. gist.github.com).
