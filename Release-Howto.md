@@ -60,5 +60,5 @@ Once the current state it ready to be released follow these steps:
 - Update the [Features page](https://github.com/ros2/ros2/wiki/Features) if appropriate
 - Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
 - Update the link on the home page: https://github.com/ros2/ros2/wiki
-- Run the documentation generation and upload and link the results from http://docs.ros2.org/
+- [Run the documentation generation](https://github.com/ros2/docs.ros2.org/tree/doc_gen) and upload and link the results from http://docs.ros2.org/
 - Draft and send an announcement to discourse about that release
