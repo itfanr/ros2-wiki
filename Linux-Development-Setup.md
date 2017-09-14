@@ -150,7 +150,7 @@ Instead multiple binaries were being provided.
 For example, the `talker` binary will use the "default" vendor, but for each vendor there will also be a vendor specific binary for `talker`, e.g. `talker__rmw_connext_cpp`.
 That way you can ensure you're using the right vendor for each binary by including the suffix when you run the program.
 
-#### PrismTech OpenSplice (version 6.7 or higher)
+#### PrismTech OpenSplice (version 6.7.170912 or higher)
 
 Choose one of the following options for PrismTech OpenSplice.
 

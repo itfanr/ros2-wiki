@@ -219,7 +219,7 @@ The source distribution of ROS 2 includes FastRTPS, so it will always build unle
 
 #### PrismTech OpenSplice
 
-If you would like to also build against PrismTech OpenSplice, you will need to first download the latest version of [OpenSplice 6.7](https://github.com/PrismTech/opensplice/releases/tag/OSPL_V6_7_170912OSS_RELEASE) (we require at least version 6.7.170912).
+If you would like to also build against PrismTech OpenSplice, you will need to first download the latest version of [OpenSplice 6.7.170912](https://github.com/PrismTech/opensplice/releases/tag/OSPL_V6_7_170912OSS_RELEASE) (we require at least version 6.7.170912).
 Then for any shell that you open and want to use OpenSplice run something like the following command before building and running ROS 2:
 
 ```
