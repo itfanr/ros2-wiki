@@ -57,6 +57,7 @@ Once the current state it ready to be released follow these steps:
   - E.g. https://github.com/ros2/ros2/releases/edit/release-beta2
 - Create an overview page for the beta release, e.g. https://github.com/ros2/ros2/wiki/Beta2-Overview
 - Update the releases page to point to it: https://github.com/ros2/ros2/wiki/Releases
+- Update the [Features page](https://github.com/ros2/ros2/wiki/Features) if appropriate
 - Edit the side bar to point to the latest overview: https://github.com/ros2/ros2/wiki/_Sidebar/_edit
 - Update the link on the home page: https://github.com/ros2/ros2/wiki
 - Run the documentation generation and upload and link the results from http://docs.ros2.org/
