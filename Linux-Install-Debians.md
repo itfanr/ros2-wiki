@@ -1,6 +1,6 @@
 # Installing ROS2 via Debian Packages
 
-As of Beta 2 we are rolling Debian packages.
+As of Beta 2 we are building Debian packages for Ubuntu Xenial.
 They are in a temporary repository for testing.
 The following links and instructions reference the latest release - currently Beta 3.
 
