@@ -10,9 +10,20 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Next release (Dec. 13th, 2017)
+### Next release (Dec. 8th, 2017)
 
-The feature list for the next version will be filled out shortly after the Beta 3 release.
+The following items are in progress.
+After finishing in-progress items additional tasks might be pulled from the future list.
+
+- rviz native in ROS2
+- Parameters in C
+- Feature parity in Python with wait-for-service, ros2 param
+- Time: simtime, C++, Python
+- Different initialization options for message data structures in C / C++
+- Logging configuration
+- Command line static remapping
+- Expose matched publisher / subscriber count
+- buildfarm: one machine deployment
 
 ### Future
 
@@ -20,24 +31,24 @@ The feature list for the next version will be filled out shortly after the Beta 
 
 - FastRTPS performance with larger data like the image demo
 
-#### New features (in no specific order)
-- Parameters in C
-- Feature parity in Python with wait-for-service, ros2 param
-- Time: simtime, C++, Python
-- Progress on migration plan, consider use of catkin API shim
+#### Design / Concept (in no specific order)
+
+- Progress on migration plan, how to deal with dependencies in the manifest?
 - IDL file format, consider desired features, suitability of existing formats
-- buildfarm: one machine deployment, CI/devel/PR jobs
-- rviz native in ROS2
+- Support for non-ASCII strings in messages / services
+
+#### New features (in no specific order)
+
+- revert from using DDS partitions to separators in the topic name
+- buildfarm: CI/devel/PR jobs, fat packages / archives
 - rosbag native in ROS2
-- Logging configuration, C++ streams
-- Command line static remapping
+- Logging C++ streams
 - Command line parameters and parameters from a yaml file
 - Actions in ROS2
-- Support services with Connext in C / Python
-- Support for non-ASCII strings in messages / services
-- Support DDS-Security specification
-- Launch system using life-cycle and orchestration
 - Add pre-emption for services
+- Provide standard way to create and use components
+- Support services with Connext in C / Python
+- Launch system using life-cycle and orchestration
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Static remapping
@@ -46,7 +57,6 @@ The feature list for the next version will be filled out shortly after the Beta 
   - Remapping and aliasing through a Service interface
 - Type masquerading
   - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
-- Finish intra-process making it thread-safe
 - Expand on real-time safety
   - With FastRTPS
   - For services, clients, and parameters
@@ -77,7 +87,7 @@ The feature list for the next version will be filled out shortly after the Beta 
 - New documentation platform deployed
 - Windows and OSX packages
 
-### Reducing Technical Debt
+#### Reducing Technical Debt
 
 - Fix flaky tests.
 - Synchronize / reconcile design docs with the implementation.
