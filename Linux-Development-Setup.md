@@ -139,7 +139,7 @@ The only bundled vendor is eProsima's Fast RTPS, which is included in the defaul
 If you would like to switch out the vendor below are the instructions.
 When you run the build make sure that your chosen DDS vendor(s) are exposed in your environment.
 
-When multiple vendors are present, you can choose the used RMW implementation by setting the the environment variable `RMW_IMPLEMENTATION` to the package providing the RMW implementation.
+When multiple vendors are present, you can choose the used RMW implementation by setting the environment variable `RMW_IMPLEMENTATION` to the package providing the RMW implementation.
 If the environment variable is not set the "default" vendor will be used (for now this is `rmw_fastrtps_cpp` if available, otherwise the first in alphabetical order).
 For example, the `talker` binary will use the "default" vendor, but it can be invoked with different vendors, e.g. `RMW_IMPLEMENTATION=rmw_connext_cpp talker`.
 
