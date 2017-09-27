@@ -39,13 +39,8 @@ cd ~/ros2_ws
 The basic structure in `~/ros2_ws`:
 
 ```bash
-build/
-install/
-ros2.repos
 src/
 ```
-
-The sources `ros2.repos` should reside in `~/ros2_ws` already. If not they can be added...
 
 ## Add some sources
 
