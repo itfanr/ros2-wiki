@@ -56,6 +56,18 @@ The directory structure in `~/ros2_ws` after adding sources:
 ```bash
 ros2.repos
 src/
+  ament/
+    ament_cmake/
+    ament_index/
+    ament_lint/
+    ament_package/
+    ament_tools/
+    ..
+  eProsima/
+  ros/
+  ros2/
+    ament_cmake_ros/
+    ..
 ```
 
 ## Run the build
