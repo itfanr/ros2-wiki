@@ -51,6 +51,13 @@ wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
 
+The directory structure in `~/ros2_ws` after adding sources:
+
+```bash
+ros2.repos
+src/
+```
+
 ## Run the build
 
 Since this is a bootstrap environment we need to call ament.py by its full path.
