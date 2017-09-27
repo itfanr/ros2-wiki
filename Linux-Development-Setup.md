@@ -2,7 +2,7 @@
 
 ## System Requirements
 
-We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04). While not being actively tested these instructions should also work for later Ubuntu as well as Debian Stretch.
+We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit (until alpha 6 we supported Trusty Tahr 14.04).  These instructions should also work for later Ubuntu as well as Debian stretch, though these are not actively tested.  Fedora 26 also works if you follow [[alternate|Fedora-Development-Setup]] instructions, though it is not actively tested or supported.
 
 Make sure that you have a locale set which supports `UTF-8` We test with the following settings.
 If you are in a minimal environment such as a docker containers the locale may be set to something minimal like POSIX.
