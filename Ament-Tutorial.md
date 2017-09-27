@@ -36,6 +36,17 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 ```
 
+The basic structure in `~/ros2_ws`:
+
+```bash
+build/
+install/
+ros2.repos
+src/
+```
+
+The sources `ros2.repos` should reside in `~/ros2_ws` already. If not they can be added...
+
 ## Add some sources
 
 To start off we need to setup an underlay without any of ROS2 installed.
