@@ -36,10 +36,13 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 ```
 
-The basic structure in `~/ros2_ws`:
+This is the directory structure of `~/ros2_ws` that you can expect at this point:
 
-```bash
-src/
+```
+.
+└── src
+
+1 directory, 0 files
 ```
 
 ## Add some sources
@@ -51,23 +54,34 @@ wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos
 vcs import ~/ros2_ws/src < ros2.repos
 ```
 
-The directory structure in `~/ros2_ws` after adding sources:
+This is the directory structure of `~/ros2_ws` that you can expect after adding sources (note the exact structure and number of directories/files may change over time):
 
-```bash
-ros2.repos
-src/
-  ament/
-    ament_cmake/
-    ament_index/
-    ament_lint/
-    ament_package/
-    ament_tools/
-    ..
-  eProsima/
-  ros/
-  ros2/
-    ament_cmake_ros/
-    ..
+```
+.
+├── ros2.repos
+└── src
+    ├── ament
+    │   ├── ament_cmake
+    │   ├── ament_index
+    |   ...
+    │   ├── osrf_pycommon
+    │   └── uncrustify
+    ├── eProsima
+    │   ├── Fast-CDR
+    │   └── Fast-RTPS
+    ├── ros
+    │   ├── class_loader
+    │   └── console_bridge
+    └── ros2
+        ├── ament_cmake_ros
+        ├── common_interfaces
+        ├── demos
+        ...
+        ├── urdfdom
+        ├── urdfdom_headers
+        └── vision_opencv
+
+51 directories, 1 file
 ```
 
 ## Run the build
