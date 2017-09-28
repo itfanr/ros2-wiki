@@ -204,7 +204,7 @@ Every so often the router reboots. The mac machines usually don’t reconnect to
 - How to setup the Jenkins master:
   - https://github.com/ros2/ros2/wiki/CI-Server-Setup
 - How to setup Linux Jenkins nodes:
-  - TODO
+  - https://github.com/ros2/ros2/wiki/Set-up-a-new-Linux-CI-node
 - How to setup a macOS Jenkins node:
   - https://docs.google.com/a/osrfoundation.org/document/d/1J_8O7Q7eiixC-axyjP_bVpZSALyhn67Y1K_-SAw5eh0/edit?usp=sharing
   - TODO make this a wiki page
