@@ -10,14 +10,14 @@ We support OS X El Capitan and Sierra (10.11.x and 10.12.x).
 
 You need the following things installed before installing ROS 2.
 
- 1. **brew** *(needed to install more stuff; you probably already have this)*:
-  * Follow installation instructions at http://brew.sh/
-  * *Optional*: Check that `brew` is happy with your system configuration by running:
+- **brew** *(needed to install more stuff; you probably already have this)*:
+  - Follow installation instructions at http://brew.sh/
+  - *Optional*: Check that `brew` is happy with your system configuration by running:
 
          brew doctor
       Fix any problems that it identifies.
 
- 1. Use `brew` to install more stuff:
+- Use `brew` to install more stuff:
 
         brew install python3
 
@@ -33,7 +33,7 @@ You need the following things installed before installing ROS 2.
         # install OpenSSL for DDS-Security
         brew install openssl
 
- 1. Install additional runtime dependencies for command-line tools:
+- Install additional runtime dependencies for command-line tools:
 
         python3 -m pip install pyyaml setuptools argcomplete
 
