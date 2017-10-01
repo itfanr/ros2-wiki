@@ -16,10 +16,7 @@ You need the following things installed before installing ROS 2.
 
          brew doctor
       Fix any problems that it identifies.
- 1. Add some extra sources of software for `brew`:
 
-        brew tap osrf/ros2
-        brew tap ros/deps
  1. Use `brew` to install more stuff:
 
         brew install python3
