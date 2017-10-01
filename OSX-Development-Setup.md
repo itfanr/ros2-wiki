@@ -22,7 +22,6 @@ You need the following things installed to build ROS 2:
 
 1. Add some extra sources of software for `brew`:
 
-        brew tap homebrew/science
         brew tap ros/deps
 
 1. Use `brew` to install more stuff:
