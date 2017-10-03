@@ -10,6 +10,12 @@ However, some older versions like 10.11.x and 10.10.x are known to work as well.
 
 You need the following things installed to build ROS 2:
 
+1. **Xcode**
+    * If you don't already have it installed, install Xcode and the Command Line Tools:
+    ```
+    xcode-select --install
+    ```
+
 1. **brew** *(needed to install more stuff; you probably already have this)*:
     * Follow installation instructions at http://brew.sh/
     * *Optional*: Check that `brew` is happy with your system configuration by running:
