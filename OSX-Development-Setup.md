@@ -49,9 +49,6 @@ You need the following things installed to build ROS 2:
 
     Otherwise, just follow the normal instructions, then source the resulting `install_isolated/setup.bash` before proceeding here to build ROS 2.
 
-## Disable System Integrity Protection (SIP)
-So that SIP doesn't prevent us from extending the `DYLD_LIBRARY_PATH`, you'll need to disable it [following these instructions](https://developer.apple.com/library/content/documentation/Security/Conceptual/System_Integrity_Protection_Guide/ConfiguringSystemIntegrityProtection/ConfiguringSystemIntegrityProtection.html).
-
 ## Get the ROS 2 code
 
 Create a workspace and clone all repos:
