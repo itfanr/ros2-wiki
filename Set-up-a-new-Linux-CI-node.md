@@ -6,7 +6,7 @@ In short, use the company AWS account to launch an instance running based off th
 * **AMI:** Ubuntu 16.04
 * **Region:** N. California us-west-1a
 * **Type:** c4.large
-* **Storage:** EBS only 50GB
+* **Storage:** EBS 1TB
 * **Security Group:** `ROS 2 Jenkins Build Machines`
 * **Key pair:** Create a new pair with a descriptive name like `ci_ros2_linux_4`
   * Make sure to save it with the other credentials so others can access this machine
