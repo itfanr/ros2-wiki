@@ -22,7 +22,7 @@ New demo application:
 * [HSR demo](https://github.com/ruffsl/hsr_demo)
   * Remote control a HSR robot using a ROS 2 joystick controller
   * Running the `ros1_bridge` in a Docker container on the HSR (since the robot is running ROS 1 on Ubuntu Trusty)
-  * Run a ROS 2 development version of [rviz](https://github.com/ros2/rviz) to visualize sensor data from the robot etc.
+  * Run a ROS 2 development version of [rviz](https://github.com/ros2/rviz) to visualize sensor data from the robot etc. (see [video](https://vimeo.com/237016358))
 
 Selected features from previous Alpha/Beta releases (for the complete list, see the [[earlier release notes|Releases]]):
 * C++ and Python implementations of ROS 2 client libraries including APIs for:
