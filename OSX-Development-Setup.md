@@ -159,6 +159,19 @@ You may need to increase shared memory resources following https://community.rti
 
 ## Troubleshooting
 
+### Library not loaded; image not found
+
+If you are seeing library loading issues at runtime (either running tests or running nodes), such as the following:
+
+```
+ImportError: dlopen(.../ros2_install/ros2-osx/lib/python3.6/site-packages/rclpy/_rclpy.cpython-36m-darwin.so, 2): Library not loaded: @rpath/librcl_interfaces__rosidl_typesupport_c.dylib
+  Referenced from: .../ros2_install/ros2-osx/lib/python3.6/site-packages/rclpy/_rclpy.cpython-36m-darwin.so
+  Reason: image not found
+```
+
+then you probably have System Integrity Protection enabled.
+See "Disable System Integrity Protection (SIP)" above for how instructions on how to disable it.
+
 ### Missing symbol when opencv (and therefore libjpeg, libtiff, and libpng) are installed with Homebrew
 
 If you have opencv installed you might get this:
