@@ -54,6 +54,8 @@ Then Python 3.5 or higher:
 > choco install -y python
 ```
 
+Add ```<PATH\TO\PYTHON>\Scripts``` to your PATH if choco's installer has not done it for you already.  
+
 Then CMake 3.5 or higher
 
 ```
