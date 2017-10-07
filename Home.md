@@ -45,6 +45,8 @@ The code for ROS 2 is open source and broken into various repositories. You can 
 
 [docs.ros2.org/beta2](http://docs.ros2.org/beta2/index.html#) contains current, as of Beta 2, details about ROS 2 internal design and organisation.
 
+[awesome-ros2](https://github.com/fkromer/awesome-ros2) is a "cheat sheet" style quick reference for ROS 2 packages and resources which will get (hopefully) listed on the [curated list of awesome lists](https://github.com/sindresorhus/awesome) to help GitHub users to get to know ROS 2.
+
 The following [ROSCon](http://roscon.ros.org) talks have been given on ROS 2 and provide information about the workings of ROS 2 and various demos:
 
 | Title | Type | Links |
