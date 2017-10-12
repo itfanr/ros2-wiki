@@ -62,7 +62,10 @@ wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs-import src < ros2.repos
 ```
 If you are using a bleeding edge distro, maybe would be necessary to use:
+
 `wget https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos`
+
+
 This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
 
 ### Install one or more DDS implementations
