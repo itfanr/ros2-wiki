@@ -62,9 +62,7 @@ wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs-import src < ros2.repos
 ```
 
-> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do.
-
-This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
+> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
 
 ### Install one or more DDS implementations
 
@@ -131,9 +129,6 @@ You should see the `talker` saying that it's `Publishing` messages and the `list
 Hooray!
 
 See the [demos](Tutorials) for other things to try.
-
-### Maintain your Source Checkout
-For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
 
 ### Alternative DDS sources
 
