@@ -17,9 +17,9 @@ For planned future development, see the [[Roadmap]].
 | Inter- and intra-process communication using the same API | [[Demo|Intra-Process-Communication]] | Currently only in C++. |
 | Composition of node components at compile-, link- or `dlopen`-time | [[Demo|Composition]] | Currently only in C++. |
 | Support for nodes with managed lifecycles | [[Demo|Managed-Nodes]] | Currently only in C++. |
-| DDS-Security support | [[Demo|https://github.com/ros2/sros2]] | |
+| DDS-Security support | [Demo](https://github.com/ros2/sros2) | |
 | Command-line introspection tools using an extensible framework | [[Tutorial|Introspection-with-command-line-tools]] | |
-| Namespace support for nodes and topics | [[Article|http://design.ros2.org/articles/topic_and_service_names.html]] | |
-| Demos of an all-ROS 2 mobile robot | [[Demo|https://github.com/ros2/turtlebot2_demo]] | |
+| Namespace support for nodes and topics | [Article](http://design.ros2.org/articles/topic_and_service_names.html) | |
+| Demos of an all-ROS 2 mobile robot | [Demo](https://github.com/ros2/turtlebot2_demo) | |
 | Preliminary support for real-time code | [[Demo|Real-Time-Programming]], [[demo|Allocator-Template-Tutorial]] | Linux only. Not available for Fast RTPS. |
 | Preliminary support for "bare-metal" microcontrollers | [Wiki](https://github.com/ros2/freertps/wiki)| |
