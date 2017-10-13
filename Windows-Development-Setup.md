@@ -201,7 +201,7 @@ Get the `ros2.repos` file which defines the repositories to clone from:
 > curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 ```
 
-This will get the code for the latest ROS 2 release. If you want the code from a particular release or from the development branches, see [this page](Maintaining-a-Source-Checkout).
+> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
 
 Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
 
@@ -301,10 +301,6 @@ The demos will attempt to build against any detected DDS vendor.
 The only bundled vendor is eProsima's Fast RTPS, which is included in the default set of sources for ROS 2.0.
 To build for other vendors, make sure that your chosen DDS vendor(s) are exposed in your environment when you run the build.
 If you would like to change which vendor is being used see: [Working with Multiple RMW Implementations](https://github.com/ros2/ros2/wiki/Working-with-multiple-RMW-implementations)
-
-### Maintaining your Source Checkout
-
-For information on how to keep your source checkout up-to-date, see [Maintaining a Source Checkout](Maintaining-a-Source-Checkout).
 
 ## Troubleshooting
 
