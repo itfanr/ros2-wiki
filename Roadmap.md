@@ -10,7 +10,7 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Next release (Dec. 8th, 2017)
+### Next release (Dec. 8th, 2017) - first non-beta release
 
 The following items are in progress.
 After finishing in-progress items additional tasks might be pulled from the future list.
