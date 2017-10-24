@@ -16,7 +16,7 @@ For planned future development, see the [[Roadmap]].
 | Quality of service settings for handling non-ideal networks | [[Demo|Quality-Of-Service]] | |
 | Inter- and intra-process communication using the same API | [[Demo|Intra-Process-Communication]] | Currently only in C++. |
 | Composition of node components at compile-, link- or `dlopen`-time | [[Demo|Composition]] | Currently only in C++. |
-| Support for nodes with managed lifecycles | [[Demo|Managed-Nodes]] | Currently only in C++. |
+| Support for nodes with managed lifecycles | [Demo](https://github.com/ros2/ros2/wiki/Managed-Nodes) | Currently only in C++. |
 | DDS-Security support | [Demo](https://github.com/ros2/sros2) | |
 | Command-line introspection tools using an extensible framework | [[Tutorial|Introspection-with-command-line-tools]] | |
 | Namespace support for nodes and topics | [Article](http://design.ros2.org/articles/topic_and_service_names.html) | |
