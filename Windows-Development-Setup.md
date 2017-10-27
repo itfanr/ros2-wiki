@@ -44,14 +44,14 @@ Next we can actually install some dependencies.
 First install git:
 
 ```
-> choco install -y git
+choco install -y git
 ```
 If you are on Windows 8, you will need to append the git bin folder `C:\Program Files\Git\bin` to the PATH (this is not necessary on Windows 10).
 
 Then Python 3.5 or higher:
 
 ```
-> choco install -y python
+choco install -y python
 ```
 
 Add ```<PATH\TO\PYTHON>\Scripts``` to your PATH if choco's installer has not done it for you already.  
@@ -59,7 +59,7 @@ Add ```<PATH\TO\PYTHON>\Scripts``` to your PATH if choco's installer has not don
 Then CMake 3.5 or higher
 
 ```
-> choco install -y cmake
+choco install -y cmake
 ```
 
 You will need to append the CMake bin folder `C:\Program Files\CMake\bin` to the PATH (you can do this by clicking the Windows icon, typing "Environment Variables", then clicking on "Edit the system environment variables".
@@ -94,7 +94,7 @@ Now we are ready to install some our tools that we use to help in developing ROS
 Let's start with `vcstool`:
 
 ```
-> pip install vcstool
+pip install vcstool
 ```
 
 You can test it out by just running `vcs` (you should be able to do this in the same cmd prompt).
@@ -102,7 +102,7 @@ You can test it out by just running `vcs` (you should be able to do this in the 
 Also, you should install `curl`:
 
 ```
-> choco install -y curl
+choco install -y curl
 ```
 
 ### Install dependencies
@@ -118,7 +118,7 @@ Please download these packages from [this](https://github.com/ros2/choco-package
 Once the these packages are downloaded, open an administrative shell and execute the following command:
 
 ```
-> choco install -y -s <PATH\TO\DOWNLOADS\> asio eigen tinyxml-usestl tinyxml2
+choco install -y -s <PATH\TO\DOWNLOADS\> asio eigen tinyxml-usestl tinyxml2
 ```
 
 Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages to.
@@ -126,37 +126,37 @@ Please replace `<PATH\TO\DOWNLOADS>` with the folder you downloaded the packages
 Next install the latest version of `setuptools` and `pip`:
 
 ```
-> pip install -U setuptools pip
+pip install -U setuptools pip
 ```
 
 Then you can continue installing other Python dependencies:
 
 ```
-> pip install EmPy pyyaml
+pip install EmPy pyyaml
 ```
 
 Next install testing tools like `Nose` and others:
 
 ```
-> pip install nose coverage mock
+pip install nose coverage mock
 ```
 
 Next install linters and checkers like `flake8` and others:
 
 ```
-> pip install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pep8 pydocstyle pyflakes
+pip install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pep8 pydocstyle pyflakes
 ```
 
 Also install `trollius` now so that it uses the wheel rather than trying to install from source:
 
 ```
-> pip install trollius
+pip install trollius
 ```
 
 Next install cppcheck:
 
 ```
-> choco install -y cppcheck
+choco install -y cppcheck
 ```
 
 You will need to add C:\Program Files\Cppcheck to the PATH.
@@ -187,18 +187,18 @@ Now that we have the development tools we can get the ROS 2 source code.
 First setup a development folder, I use `C:\dev\ros2`:
 
 ```
-> md \dev\ros2\src
-> cd \dev\ros2
+md \dev\ros2\src
+cd \dev\ros2
 ```
 
 Get the `ros2.repos` file which defines the repositories to clone from:
 
 ```
 # CMD
-> curl -sk https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
+curl -sk https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 
 # PowerShell
-> curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
+curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 ```
 
 > Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
@@ -207,10 +207,10 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 
 ```
 # CMD
-> vcs import src < ros2.repos
+vcs import src < ros2.repos
 
 # PowerShell
-> vcs import --input ros2.repos src
+vcs import --input ros2.repos src
 ```
 
 ### Getting a DDS Vendor
@@ -253,13 +253,23 @@ FastRTPS is bundled with the ROS 2 source and will always be built unless you pu
 To build the `\dev\ros2` folder tree:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py build
+python src\ament\ament_tools\scripts\ament.py build
+```
+
+For Debug build:
+
+```
+python_d src\ament\ament_tools\scripts\ament.py build --cmake-args -DCMAKE_BUILD_TYPE=Debug --
 ```
 
 You can additionally build the tests by adding the `--build-tests` option:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py build --build-tests
+python src\ament\ament_tools\scripts\ament.py build --build-tests
+```
+Dor Debug build:
+```
+python_d src\ament\ament_tools\scripts\ament.py build --build-tests --cmake-args -DCMAKE_BUILD_TYPE=Debug --
 ```
 
 ### Testing and Running
@@ -269,27 +279,27 @@ Note that the first time you run any executable you will have to allow access to
 You can run the tests using this command:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py test
+python src\ament\ament_tools\scripts\ament.py test
 ```
 
 Afterwards you can get a summary of the tests using this command:
 
 ```
-> python src\ament\ament_tools\scripts\ament.py test_results
+python src\ament\ament_tools\scripts\ament.py test_results
 ```
 
 You can run the built examples by opening a new `cmd.exe` sourcing the `local_setup.bat` file and then executing them directly, for example:
 
 ```
-> call install\local_setup.bat
-> ros2 run demo_nodes_py talker
+call install\local_setup.bat
+ros2 run demo_nodes_py talker
 ```
 
 In a separate shell you can do the same, but instead run the `listener`:
 
 ```
-> call install\local_setup.bat
-> ros2 run demo_nodes_py listener
+call install\local_setup.bat
+ros2 run demo_nodes_py listener
 ```
 For more explanations see the [Python Programming](Python-Programming) demo or [other tutorials](https://github.com/ros2/ros2/wiki/Tutorials)
 
@@ -306,7 +316,7 @@ If you would like to change which vendor is being used see: [Working with Multip
 
 ### CMake error setting modification time
 
-If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it it likely that an anti virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
+If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it it likely that an anti-virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
 
 ## Extra stuff for Debug mode
 
@@ -315,13 +325,13 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 * To be able to extract the Python source tarball, you can use PeaZip:
 
 ```
-> choco install -y peazip
+choco install -y peazip
 ```
 
 * You'll also need SVN, since some of the Python source-build dependencies are checked out via SVN:
 
 ```
-> choco install -y svn hg
+choco install -y svn hg
 ```
 
 * You'll need to quit and restart the command prompt after installing the above.
@@ -331,34 +341,34 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 * Now, build the Python source in debug mode from a Visual Studio command prompt:
 
 ```
-> cd C:\dev\Python-3.6.1\PCbuild
-> get_externals.bat
-> build.bat -p x64 -d
+cd C:\dev\Python-3.6.1\PCbuild
+get_externals.bat
+build.bat -p x64 -d
 ```
 
 * Finally, copy the build products into the Python36 installation directories, next to the Release-mode Python executable and DLL's:
 
 ```
-> cd C:\dev\Python-3.6.1\PCbuild\amd64
-> copy python_d.exe C:\Python36
-> copy python36_d.dll C:\Python36
-> copy python3_d.dll C:\Python36
-> copy python36_d.lib C:\Python36\libs
-> copy python3_d.lib C:\Python36\libs
-> for %I in (*_d.pyd) do copy %I C:\Python36\DLLs
+cd C:\dev\Python-3.6.1\PCbuild\amd64
+copy python_d.exe C:\Python36
+copy python36_d.dll C:\Python36
+copy python3_d.dll C:\Python36
+copy python36_d.lib C:\Python36\libs
+copy python3_d.lib C:\Python36\libs
+for %I in (*_d.pyd) do copy %I C:\Python36\DLLs
 ```
 
 * Now, from a fresh command prompt, make sure that `python_d` works:
 
 ```
-> python_d
-> import _ctypes
+python_d
+import _ctypes
 ```
 
 * To create executables python scripts(.exe), python_d should be used to invoke ament_tools
 
 ```
-> python_d src\ament\ament_tools\scripts\ament.py build 
+python_d src\ament\ament_tools\scripts\ament.py build 
 ```
 
 * Hooray, you're done!
