@@ -262,6 +262,9 @@ You can additionally build the tests by adding the `--build-tests` option:
 > python src\ament\ament_tools\scripts\ament.py build --build-tests
 ```
 
+Note, if you are doing a debug build use `python_d` instead of `python`.
+See: https://github.com/ros2/ros2/wiki/Windows-Development-Setup#extra-stuff-for-debug-mode for more info on running Python code in debug builds on Windows.
+
 ### Testing and Running
 
 Note that the first time you run any executable you will have to allow access to the network through a Windows Firewall popup.
