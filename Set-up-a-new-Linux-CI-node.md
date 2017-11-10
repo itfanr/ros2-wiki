@@ -41,7 +41,7 @@ In short, make sure the jenkins master can ssh into the new node and run docker.
     docker run hello-world
     ```
 1. As the jenkins user, add the master's public key to `authorized_keys`
-    1. SSH into the jenkins master and get the contents of the public key (id_rsa.pub)
+    1. SSH into the jenkins master and get the contents of the public key (probably at /var/lib/jenkins/.ssh/id_rsa.pub, or wherever the home directory of the jenkins user is)
     2. SSH into the new slave and add that key to the authorized keylist
     ```
     # on new slave
