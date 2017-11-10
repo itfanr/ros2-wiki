@@ -47,7 +47,9 @@ In short, make sure the jenkins master can ssh into the new node and run docker.
     # on new slave
     cd /home/jenkins/
     mkdir .ssh
+    chmod 700 .ssh
     touch .ssh/authorized_keys
+    chmod 600 .ssh/authorized_keys
     # Paste id_rsa.pub from the jenkins master into this file
     vim .ssh/authorized_keys
     ```
