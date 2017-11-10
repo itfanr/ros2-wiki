@@ -138,7 +138,7 @@ Then you can continue installing other Python dependencies:
 Next install testing tools like `Nose` and others:
 
 ```
-> pip install nose coverage mock
+> pip install nose coverage mock pytest pytest-cov pytest-runner
 ```
 
 Next install linters and checkers like `flake8` and others:

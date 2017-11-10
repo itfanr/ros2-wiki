@@ -378,7 +378,7 @@ All packages should have some level of tests.
 Tests can be broken down into three main categories, System tests, Integration tests, and Unit tests.
 
 Unit tests should always be in the package which is being tested and should make use of tools like `Mock` to try and test narrow parts of the code base in constructed scenarios.
-Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, mock, etc...
+Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, pytest, mock, etc...
 
 Integration tests can test interactions between parts of the code or between parts of the code and the system.
 They often test software interfaces in ways that we expect the user to use them.
