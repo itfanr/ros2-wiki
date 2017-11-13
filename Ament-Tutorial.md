@@ -196,10 +196,16 @@ A package such as [`demo_nodes_cpp`](https://github.com/ros2/examples/tree/maste
 
 ## Tips
 
-If you do not want to build a specific package place an empty file named `AMENT_IGNORE` in the directory and it will not be indexed.
+- If you do not want to build a specific package place an empty file named `AMENT_IGNORE` in the directory and it will not be indexed.
 
-"Catch all" options like --cmake-args should be placed after other options, or delimited with '--':
+    "Catch all" options like --cmake-args should be placed after other options, or delimited with '--':
 
 ```bash
 ament build . --force-cmake-configure --cmake-args -DCMAKE_BUILD_TYPE=Debug -- --ament-cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+<br>
+
+- If you want to run a single particular test from a package:
+```
+ament test --only-packages YOUR_PKG_NAME --ctest-args -R YOUR_TEST_IN_PKG
 ```
