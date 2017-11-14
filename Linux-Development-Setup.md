@@ -28,14 +28,14 @@ Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't colli
 ```
 sudo apt-get update
 sudo apt-get install git wget
-sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-pytest python3-setuptools python3-vcstool python3-yaml libtinyxml-dev libeigen3-dev
+sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-setuptools python3-vcstool python3-yaml libtinyxml-dev libeigen3-dev
 # dependencies for testing
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # Install argcomplete for command-line tab completion from the ROS2 tools.
 # Install from pip rather than from apt-get because of a bug in the Ubuntu 16.04 version of argcomplete:
 sudo pip3 install argcomplete
 # additional testing dependencies from pip (because not available on ubuntu 16.04)
-sudo pip3 install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pytest-cov pytest-runner
+sudo pip3 install flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pytest pytest-cov pytest-runner
 # dependencies for FastRTPS
 sudo apt-get install libasio-dev libtinyxml2-dev
 ```
