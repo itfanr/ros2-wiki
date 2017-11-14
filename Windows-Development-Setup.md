@@ -132,7 +132,7 @@ Next install the latest version of `setuptools` and `pip`:
 Then you can continue installing other Python dependencies:
 
 ```
-> pip install EmPy pyyaml
+> pip install EmPy pyparsing pyyaml
 ```
 
 Next install testing tools like `Nose` and others:
