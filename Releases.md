@@ -4,17 +4,17 @@ For convenience the key features of each release are repeated on this page.
 
 | Release Overview | Date |
 | --- | --- |
-| [[beta3|beta3-Overview]] | 13 September 2017 |
-| [[beta2|beta2-Overview]] | 5 July 2017 |
-| [[beta1|beta1-Overview]] | 19 December 2016 |
-| [[alpha8|alpha8-Overview]] | 4 October 2016 |
-| [[alpha7|alpha7-Overview]] | 11 July 2016 |
-| [[alpha6|alpha6-Overview]] | 1 June 2016 |
-| [[alpha5|alpha5-Overview]] | 5 April 2016 |
-| [[alpha4|alpha4-Overview]] | 17 February 2016 |
-| [[alpha3|alpha3-Overview]] | 18 December 2015 |
-| [[alpha2|alpha2-Overview]] | 3 November 2015 |
-| [[alpha1|alpha1-Overview]] | 31 August 2015 |
+| [[beta3\|beta3-Overview]] | 13 September 2017 |
+| [[beta2\|beta2-Overview]] | 5 July 2017 |
+| [[beta1\|beta1-Overview]] | 19 December 2016 |
+| [[alpha8\|alpha8-Overview]] | 4 October 2016 |
+| [[alpha7\|alpha7-Overview]] | 11 July 2016 |
+| [[alpha6\|alpha6-Overview]] | 1 June 2016 |
+| [[alpha5\|alpha5-Overview]] | 5 April 2016 |
+| [[alpha4\|alpha4-Overview]] | 17 February 2016 |
+| [[alpha3\|alpha3-Overview]] | 18 December 2015 |
+| [[alpha2\|alpha2-Overview]] | 3 November 2015 |
+| [[alpha1\|alpha1-Overview]] | 31 August 2015 |
 
 Notes on how an alpha release is made: [[Release-Howto]]
 
