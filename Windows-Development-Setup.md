@@ -328,13 +328,13 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 
 * You'll need to quit and restart the command prompt after installing the above.
-* Get and extract the Python 3.6.1 source from the `tgz`:
-  * https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
-  * To keep these instructions concise, please extract it to `C:\dev\Python-3.6.1`
+* Get and extract the Python 3.6.3 source from the `tgz`:
+  * https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
+  * To keep these instructions concise, please extract it to `C:\dev\Python-3.6.3`
 * Now, build the Python source in debug mode from a Visual Studio command prompt:
 
 ```
-> cd C:\dev\Python-3.6.1\PCbuild
+> cd C:\dev\Python-3.6.3\PCbuild
 > get_externals.bat
 > build.bat -p x64 -d
 ```
@@ -342,13 +342,13 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 * Finally, copy the build products into the Python36 installation directories, next to the Release-mode Python executable and DLL's:
 
 ```
-> cd C:\dev\Python-3.6.1\PCbuild\amd64
-> copy python_d.exe C:\Python36
-> copy python36_d.dll C:\Python36
-> copy python3_d.dll C:\Python36
-> copy python36_d.lib C:\Python36\libs
-> copy python3_d.lib C:\Python36\libs
-> for %I in (*_d.pyd) do copy %I C:\Python36\DLLs
+> cd C:\dev\Python-3.6.3\PCbuild\amd64
+> copy python_d.exe C:\Python36 /Y
+> copy python36_d.dll C:\Python36 /Y
+> copy python3_d.dll C:\Python36 /Y
+> copy python36_d.lib C:\Python36\libs /Y
+> copy python3_d.lib C:\Python36\libs /Y
+> for %I in (*_d.pyd) do copy %I C:\Python36\DLLs /Y
 ```
 
 * Now, from a fresh command prompt, make sure that `python_d` works:
