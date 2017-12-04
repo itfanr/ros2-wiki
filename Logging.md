@@ -30,7 +30,7 @@ When the level of logger "abc" is changed, all of its descendants (e.g. "abc.def
 
 <!-- the `rclcpp` documentation won't include logging until we make a new doc dump -->
 In C++:
-- See the [logging demo]() for example usage.
+- See the [logging demo](Logging-and-logger-configuration) for example usage.
 - See the [`rclcpp` documentation]() for an extensive list of functionality.
 
 In Python:
@@ -52,7 +52,7 @@ logger.set_level(rclpy.logging.LoggingSeverity.DEBUG)
 rclpy.logging.set_logger_level('logger_name', rclpy.logging.LoggingSeverity.DEBUG)
 ```
 
-The [logging demo]() provides an example of manually exposing a service so that loggers can be configured externally; in the future we expect runtime configuration capabilities of loggers to be exposed automatically.
+The [logging demo](Logging-and-logger-configuration) provides an example of manually exposing a service so that loggers can be configured externally; in the future we expect runtime configuration capabilities of loggers to be exposed automatically.
 
 ## Console output configuration
 
