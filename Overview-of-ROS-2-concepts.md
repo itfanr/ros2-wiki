@@ -15,7 +15,7 @@ ROS nodes use a ROS client library to communicate with other nodes.
 Nodes can publish or subscribe to a Topic.
 Nodes can also provide or use a Service.
 There are configurable Parameters associated with a node.
-Connections between nodes is established through a distributed discovery process.
+Connections between nodes are established through a distributed discovery process.
 Nodes may be located in the same process, in different processes, or on different machines.
 These concepts will be described in more detail in the sections that follow.
 
