@@ -59,5 +59,5 @@ The [logging demo](Logging-and-logger-configuration) provides an example of manu
 <!-- the rcutils docs won't mention this env var until we make a new doc dump -->
 By default, console output will be formatted to include the message severity, logger name, and the message.
 Information such as the file name, function name and line number of the log call are also available.
-Custom console output format can be configured with the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable: see the [`rcutils` documentation for details]().
+Custom console output format can be configured with the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable: see the [`rcutils` documentation for details](https://github.com/ros2/rcutils/blob/b804084ff0eac312f11c51849f4a5fcdaa4f153f/include/rcutils/logging.h#L49..L62).
 As `rclpy` and `rclcpp` both use `rcutils` for logging, this will effect all Python and C++ nodes.
