@@ -35,10 +35,10 @@ You need the following things installed to build ROS 2:
 
         brew install opencv
 
-1. Install qt
+1. Install rviz dependencies
 
         # install depepndencies for Rviz
-        brew install qt
+        brew install qt freetype
 
         # Add the Qt directoy to the CMAKE_PREFIX_PATH
         export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH;/usr/local/opt/qt
