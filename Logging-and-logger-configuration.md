@@ -74,3 +74,13 @@ Shell 2:
 ros2 service call /config_logger logging_demo/ConfigLogger "{logger_name: '', level: DEBUG}"
 ```
 You should see debug output from any previously unset loggers in the process start to appear, including from the ROS 2 core.
+
+## Console output formatting
+
+If you would like more or less verbose formatting, you can use [the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable](Logging#console-output-configuration).
+For example, to additionally get the location of the log calls, stop the demo and restart it with the environment variable set:
+```
+RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity}] [{name}]: {message} ({function_name}() at {file_name}:{line_number})" ros2 run logging_demo logging_demo_main
+```
+
+You should see the function name, filename and line number printed with each message.
