@@ -192,7 +192,7 @@ It's expected to add support for more [build types](https://github.com/ament/ame
 
 An example of an `ament_python` build is the [`ament_tools` package](https://github.com/ament/ament_tools), where the setup.py is the primary entry point for building.
 
-A package such as [`demo_nodes_cpp`](https://github.com/ros2/examples/tree/master/demo_nodes_cpp) uses the `ament_cmake` build type, and uses CMake as the build tool.
+A package such as [`demo_nodes_cpp`](https://github.com/ros2/demos/tree/master/demo_nodes_cpp) uses the `ament_cmake` build type, and uses CMake as the build tool.
 
 ## Tips
 
