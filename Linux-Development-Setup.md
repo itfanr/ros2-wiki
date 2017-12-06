@@ -28,7 +28,7 @@ Install GCC, G++ CMake, Python 3 EmPy package (custom packages which don't colli
 ```
 sudo apt-get update
 sudo apt-get install git wget
-sudo apt-get install build-essential cppcheck cmake libopencv-dev libpoco-dev libpocofoundation9v5 libpocofoundation9v5-dbg python-empy python3-dev python3-empy python3-nose python3-pip python3-pyparsing python3-setuptools python3-vcstool python3-yaml libtinyxml-dev libeigen3-dev
+sudo apt-get install build-essential cppcheck cmake libopencv-dev python-empy python3-dev python3-empy python3-nose python3-pip python3-pyparsing python3-setuptools python3-vcstool python3-yaml libtinyxml-dev libeigen3-dev
 # dependencies for testing
 sudo apt-get install clang-format pydocstyle pyflakes python3-coverage python3-mock python3-pep8 uncrustify
 # Install argcomplete for command-line tab completion from the ROS2 tools.
@@ -43,14 +43,20 @@ sudo apt-get install libasio-dev libtinyxml2-dev
 If you are compiling **beta-1 or older** you also need to install boost for Fast-RTPS
 ```
 sudo apt-get install libboost-chrono-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-system-dev libboost-thread-dev
+
 ```
 <!--
 Keeping these because we can't remember if they were required for Jessie or for another reason. Are very likely not needed at all
 ```
-# dependencies for turtlebot demo ? 
+# dependencies for turtlebot demo ?
 sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev
 ```
 -->
+```
+# dependencies for RViz
+sudo apt-get install libcurl4-openssl-dev libqt5core5a libqt5gui5 libqt5opengl5 libqt5widgets5 libxaw7-dev libgles2-mesa-dev libglu1-mesa-dev qtbase5-dev
+```
+
 ### Get ROS 2.0 code
 
 Create a workspace and clone all repos:

@@ -35,6 +35,9 @@ You need the following things installed to build ROS 2:
 
         brew install opencv
 
+        # install depepndencies for Rviz
+        brew install qt
+
 1. Use `python3 -m pip` (just `pip` may install Python3 or Python2) to install more stuff:
 
         python3 -m pip install argcomplete coverage empy flake8 flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes mock nose pep8 pydocstyle pyflakes pyparsing pytest pytest-cov pytest-runner pyyaml setuptools vcstool
