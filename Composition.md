@@ -103,6 +103,10 @@ The process will open each library and create one instance of each "rclcpp::Node
 
         ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.so `ros2 pkg prefix composition`/lib/liblistener_component.so
 
+**OSX** In the shell call:
+
+        ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.dylib `ros2 pkg prefix composition`/lib/liblistener_component.dylib
+
 **Windows** In cmd.exe call
 
         ros2 pkg prefix composition
