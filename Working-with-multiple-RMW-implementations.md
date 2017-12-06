@@ -89,6 +89,18 @@ To resolve this, you can either set the default implementation to what is was be
 
 ### Ensuring use of a particular RMW implementation
 
+#### ROS 2 Ardent and later
+
+If the `RMW_IMPLEMENTATION` environment variable is set to an RMW implementation for which support is not installed, you will see an error message similar to the following:
+```
+Expected RMW implementation identifier of 'rmw_connext_cpp' but instead found 'rmw_fastrtps_cpp', exiting with 102.
+```
+
+If this occurs, double check that your ROS 2 installation includes support for the RMW implementation that you have specified in the `RMW_IMPLEMENTATION` environment variable.
+
+#### ROS 2 beta 2 and later
+
+In ROS 2 beta 2 / beta 3, specifying an invalid RMW implementation does not cause an error if support for only one implementation is installed.
 If you want to be certain that a particular RMW implementation is being used, you can set the `RCL_ASSERT_RMW_ID_MATCHES` environment variable, which will only allow nodes to be created with that RMW implementation.
 
 ```
