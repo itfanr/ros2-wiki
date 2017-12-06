@@ -18,11 +18,18 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
             libopencv-core2.4v5 \
             libhighgui2.4 \
             libopencv-imgproc2.4v5 \
-            libpocofoundation9v5 \
             libasio-dev \
             libeigen3-dev \
             libtinyxml-dev \
             libtinyxml2-dev \
+            libcurl4-openssl-dev \
+            libqt5core5a \
+            libqt5gui5 \
+            libqt5opengl5 \
+            libqt5widgets5 \
+            libxaw7-dev \
+            libgles2-mesa-dev \
+            libglu1-mesa-dev \
             python3-yaml \
             python3-setuptools \
             wget
