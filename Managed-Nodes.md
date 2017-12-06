@@ -150,7 +150,7 @@ $ ros2 run lifecycle lifecycle_service_client_py.py -- change_state --change-sta
 
 All of the above commands are nothing else than calling the lifecycle node's services. With that being said, we can also call these services directly with the ros2 command line interface:
 ```
-$ ros2 service call /lc_talker/get_state lifecycle_msgs/GetState "{node_name: lc_talker}"
+$ ros2 service call --once /lc_talker/get_state lifecycle_msgs/GetState "{node_name: lc_talker}"
 requester: making request: lifecycle_msgs.srv.GetState_Request(node_name='lc_talker')
 
 response:
@@ -158,7 +158,7 @@ lifecycle_msgs.srv.GetState_Response(current_state=lifecycle_msgs.msg.State(id=1
 ```
 In order to trigger a transition, we call the `change_state` service
 ```
-$ ros2 service call /lc_talker/change_state lifecycle_msgs/ChangeState "{node_name: lc_talker, transition: {id: 2}}"
+$ ros2 service call --once /lc_talker/change_state lifecycle_msgs/ChangeState "{node_name: lc_talker, transition: {id: 2}}"
 requester: making request: lifecycle_msgs.srv.ChangeState_Request(node_name='lc_talker', transition=lifecycle_msgs.msg.Transition(id=2, label=''))
 
 response:
