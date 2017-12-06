@@ -28,10 +28,9 @@ When the level of logger "abc" is changed, all of its descendants (e.g. "abc.def
 
 ## Logging usage
 
-<!-- the `rclcpp` documentation won't include logging until we make a new doc dump -->
 In C++:
 - See the [logging demo](Logging-and-logger-configuration) for example usage.
-- See the [`rclcpp` documentation]() for an extensive list of functionality.
+- See the [`rclcpp` documentation](http://docs.ros2.org/ardent/api/rclcpp/logging_8hpp.html) for an extensive list of functionality.
 
 In Python:
 - See the [`rclpy` tests](https://github.com/ros2/rclpy/blob/master/rclpy/test/test_logging.py) for example usage.
@@ -56,8 +55,7 @@ The [logging demo](Logging-and-logger-configuration) provides an example of manu
 
 ## Console output configuration
 
-<!-- the rcutils docs won't mention this env var until we make a new doc dump -->
 By default, console output will be formatted to include the message severity, logger name, and the message.
 Information such as the file name, function name and line number of the log call are also available.
-Custom console output format can be configured with the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable: see the [`rcutils` documentation for details](https://github.com/ros2/rcutils/blob/b804084ff0eac312f11c51849f4a5fcdaa4f153f/include/rcutils/logging.h#L49..L62).
+Custom console output format can be configured with the `RCUTILS_CONSOLE_OUTPUT_FORMAT` environment variable: see the [`rcutils` documentation for details](http://docs.ros2.org/ardent/api/rcutils/logging_8h.html#a27340ac73188b1cf8d9cb96d86c76694).
 As `rclpy` and `rclcpp` both use `rcutils` for logging, this will effect all Python and C++ nodes.
