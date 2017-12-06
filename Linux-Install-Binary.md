@@ -30,8 +30,9 @@ Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
             libxaw7-dev \
             libgles2-mesa-dev \
             libglu1-mesa-dev \
-            python3-yaml \
+            python3-pip \
             python3-setuptools \
+            python3-yaml \
             wget
 
 1.  If you are installing beta-1 or older, you also need boost:
