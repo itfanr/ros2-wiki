@@ -85,7 +85,7 @@ The `dummy_joint_states` node is publishing fake joint state data. As we are pub
 
 The robot_state_publisher is doing the actual interesting work. It parses the given URDF file, extracts the robot model and listens to the incoming joint states. With this information, it publishes TF values for our robot which we then bridge and finally visualize in RViz.
 
-### Experimental
+## Experimental
 
 Starting from Ardent Apalone, we provide a first version of RViz2. This allows you to visualize your robot natively and solely in a ROS2 environment, without any bridging. Please be aware, that this is currently work in progress and will be constantly updated.
 
