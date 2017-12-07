@@ -97,6 +97,6 @@ $ rviz2_app
 
 This opens RViz2. Assuming you have your dummy_robot_bringup still launched, you can now add the TF display plugin and configure your global frame to `world`. Once you did that, you should see a similar picture:
 
-![](https://imgur.com/a/p0Qdg)
+![](https://i.imgur.com/pCFDTCv.png)
 
 Hooray!
