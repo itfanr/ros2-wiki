@@ -59,6 +59,7 @@ launch ~/ros2_ws/install/share/dummy_robot_bringup/launch/dummy_robot_bringup.py
 ```
 
 If you now open in a next terminal your RViz, you'll see your robot. 🎉 
+
 Terminal 4:
 ```
 source /opt/ros/kinetic/setup.bash
