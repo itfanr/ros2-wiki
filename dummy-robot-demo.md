@@ -84,3 +84,17 @@ The first two packages are relatively simple. The `dummy_map_server` constantly 
 The `dummy_joint_states` node is publishing fake joint state data. As we are publishing a simple RRbot with only two joints, this node publishes joint states values for these two joints.
 
 The robot_state_publisher is doing the actual interesting work. It parses the given URDF file, extracts the robot model and listens to the incoming joint states. With this information, it publishes TF values for our robot which we then bridge and finally visualize in RViz.
+
+### Experimental
+
+Starting from Ardent Apalone, we provide a first version of RViz2. This allows you to visualize your robot natively and solely in a ROS2 environment, without any bridging. Please be aware, that this is currently work in progress and will be constantly updated.
+
+In order to visualize the TF of your robot, simply launch RViz2.
+
+```
+$ rviz2_app
+```
+
+This opens RViz2. Assuming you have your dummy_robot_bringup still launched, you can now add the TF display plugin and configure your global frame to `world`. Once you did that, you should see a similar picture:
+![](https://imgur.com/a/p0Qdg)
+
