@@ -51,17 +51,17 @@ The executables from the [composition](https://github.com/ros2/demos/tree/master
 
 In the first shell:
 
-        ros2 run composition api_composition
+    ros2 run composition api_composition
 
 In the second shell (see [talker](https://github.com/ros2/demos/blob/master/composition/src/talker_component.cpp) source code):
 
-        ros2 run composition api_composition_cli -- composition composition::Talker
+    ros2 run composition api_composition_cli -- composition composition::Talker
 
 Now the first shell should show a message that the component was loaded as well as repeated message for publishing a message.
 
 Another command in the second shell (see [listener](https://github.com/ros2/demos/blob/master/composition/src/listener_component.cpp) source code):
 
-        ros2 run composition api_composition_cli -- composition composition::Listener
+    ros2 run composition api_composition_cli -- composition composition::Listener
 
 Now the first shell should show repeated output for each received message.
 
@@ -74,12 +74,12 @@ The example with a server and a client is very similar.
 
 In the first shell:
 
-        ros2 run composition api_composition
+    ros2 run composition api_composition
 
 In the second shell (see [server](https://github.com/ros2/demos/blob/master/composition/src/server_component.cpp) and [client](https://github.com/ros2/demos/blob/master/composition/src/client_component.cpp) source code):
 
-        ros2 run composition api_composition_cli -- composition composition::Server
-        ros2 run composition api_composition_cli -- composition composition::Client
+    ros2 run composition api_composition_cli -- composition composition::Server
+    ros2 run composition api_composition_cli -- composition composition::Client
 
 In this case the client sends a request to the server, the server processes the request and replies with a response, and the client prints the received response.
 
@@ -90,7 +90,7 @@ The executable contains all four components from above: talker and listener as w
 
 In the shell call (see [source code](https://github.com/ros2/demos/blob/master/composition/src/manual_composition.cpp)):
 
-        ros2 run composition manual_composition
+    ros2 run composition manual_composition
 
 This should show repeated messages from both pairs, the talker and the listener as well as the server and the client.
 
@@ -101,18 +101,18 @@ The process will open each library and create one instance of each "rclcpp::Node
 
 **Linux** In the shell call:
 
-        ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.so `ros2 pkg prefix composition`/lib/liblistener_component.so
+    ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.so `ros2 pkg prefix composition`/lib/liblistener_component.so
 
 **OSX** In the shell call:
 
-        ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.dylib `ros2 pkg prefix composition`/lib/liblistener_component.dylib
+    ros2 run composition dlopen_composition -- `ros2 pkg prefix composition`/lib/libtalker_component.dylib `ros2 pkg prefix composition`/lib/liblistener_component.dylib
 
 **Windows** In cmd.exe call
 
-        ros2 pkg prefix composition
+    ros2 pkg prefix composition
 
 to get the path to where composition is installed. Then call
 
-        ros2 run composition dlopen_composition -- <path_to_composition_install>\bin\talker_component.dll <path_to_composition_install>\bin\listener_component.dll
+    ros2 run composition dlopen_composition -- <path_to_composition_install>\bin\talker_component.dll <path_to_composition_install>\bin\listener_component.dll
 
 Now the shell should show repeated output for each sent and received message.
