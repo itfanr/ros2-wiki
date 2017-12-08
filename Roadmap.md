@@ -20,38 +20,52 @@ The feature list for this release will be filled out after the *Ardent* release.
 
 #### Design / Concept
 
-- Revise IDL file format, consider desired features, suitability of existing formats
-- Reconsider 1-to-1 mapping of ROS nodes to DDS participants
+- Revise IDL file format, consider desired features (grouping, comments, etc.), suitability of existing formats like `IDL 4.2`
 - Support for non-ASCII strings in messages / services
 - Progress on migration plan
+- Reconsider 1-to-1 mapping of ROS nodes to DDS participants
 - Reconsider mapping of namespaces to DDS partitions
+- Python-based launch with stable API, introspectable, optional XML frontend
+- Make `ament_cmake` available in ROS 1 and/or `catkin` available in ROS 2
 
-### Infrastructure
+#### Infrastructure and tools
 
-- Support for `devel`, `pull request`, and `doc` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
-- Platform for documentation, allow easy contributions as well as optionally facilitate a review process
-- Buildfarm: CI/devel/PR jobs, fat packages / archives, one-machine deployment for automated testing
-- Windows and MacOS packages
+- Building
+  - Work towards a [[universal build tool|http://design.ros2.org/articles/build_tool.html]]
+  - Support for `devel` and `pull request` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
+  - Support to generate "fat" packages / archives
+  - Windows and Mac OS packages
+- Release
+  - Allow releasing packages into ROS 2 using ready-to-use tools
+- Documentation
+  - Platform for documentation (like wiki.ros.org), allow easy contributions as well as optionally facilitate a review process
+  - Support for `doc` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
+  - Consider consolidating with design.ros.org
+  - Provide three different kind of content:
+    - "demos" to show features and cover them with tests
+    - "examples" to show a simple/minimalistic usage which might have multiple ways to do something
+    - "tutorials" which contain more comments and anchors for the wiki (teaching one recommended way)
 
 #### New features
 
-- Parameters in C and Python
-- ROS Time concepts in Python
-- Logging configuration
-- Expose matched publisher / subscriber count
-- rosbag native in ROS2
-- Logging C++ streams
+- Expose matched publisher / subscriber count (rather then only based on the topic name)
+- Actions in ROS 2
+  - Add pre-emption for services
+- Feature parity accross languages
+  - Parameters in C and Python
+  - ROS Time concepts in Python
+- rosbag native in ROS 2
+- Minor logging improvements
+  - Configuration specified in a file
+  - C++ stream operators
 - Command line parameters and parameters from a yaml file
-- Actions in ROS2
-- Add pre-emption for services
 - Provide standard way to create and use components
 - Launch system using life-cycle and orchestration
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
-- Static remapping
-  - a la ROS Names: http://wiki.ros.org/Names
-- Dynamic remapping
-  - Remapping and aliasing through a Service interface
+- Remapping
+  - Static remapping, a la ROS Names: http://wiki.ros.org/Names
+  - Dynamic remapping and aliasing through a Service interface
 - Type masquerading
   - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
 - Expand on real-time safety
@@ -61,10 +75,9 @@ The feature list for this release will be filled out after the *Ardent* release.
   - Expose more quality of service parameters related to real-time performance
   - Real-time-safe intra-process messaging
 - Multi-robot supporting features and demos
-- Implement rclc
+- Implement C client library `rclc`
 - Support more DDS / RTPS implementations:
   - Connext dynamic
-  - freertps: https://github.com/ros2/freertps
   - RTI's micro implementation
 - Gazebo support
 - robot_pose_ekf or robot_localization
