@@ -56,16 +56,29 @@ So that SIP doesn't prevent processes from inheriting dynamic linker environment
         cd ~/ros2_install
         tar xf ~/Downloads/ros2-package-osx-x86_64.tar.bz2
 
+- If you downloaded a package that includes support for OpenSplice, you will need to install OpenSplice as it is not included in the package itself.
+Download the latest release from https://github.com/ADLINK-IST/opensplice/releases and unpack it.
+
+## Set up the ROS 2 environment
+
+Source the ROS 2 setup file:
+
+    . ~/ros2_install/ros2-osx/setup.bash
+
+If you downloaded a release with OpenSplice support you must additionally source the OpenSplice setup file.
+Only do this **after** you have sourced the ROS 2 one:
+
+    . <path_to_opensplice>/x86_64.darwin10_clang/release.com
+
+
 ## Try some examples
 
-In one terminal, source the setup file and then run a `talker`:
+In one terminal, set up the ROS 2 environment as described above and then run a `talker`:
 
-    . ~/ros2_install/ros2-osx/setup.bash
     ros2 run demo_nodes_cpp talker
 
-In another terminal source the setup file and then run a `listener`:
+In another terminal, set up the ROS 2 environment and then run a `listener`:
 
-    . ~/ros2_install/ros2-osx/setup.bash
     ros2 run demo_nodes_cpp listener
 
 _For Beta 1 releases and earlier, invoke the executables directly by calling "`talker`" and "`listener`"._
