@@ -31,6 +31,7 @@
 * [Use the rclpy API to write ROS 2 programs in Python](Python-Programming)
 * [Use the robot state publisher to publish joint states and TF](dummy-robot-demo)
 * [Use DDS-Security](https://github.com/ros2/sros2/blob/master/README.md)
+* [Logging and logger configuration](Logging-and-logger-configuration)
 
 
 ## ROS 2 Examples
