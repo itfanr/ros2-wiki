@@ -225,7 +225,7 @@ Next you can use `vcs` to import the repositories listed in the `ros2.repos` fil
 ### Getting a DDS Vendor
 
 You'll also need a DDS Vendor available for ROS to build against.
-There is currently support for eProsima FastRTPS, PrismTech's OpenSplice, and RTI's Connext DDS.
+There is currently support for eProsima FastRTPS, Adlink's OpenSplice, and RTI's Connext DDS.
 The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
 
 #### Adlink OpenSplice
