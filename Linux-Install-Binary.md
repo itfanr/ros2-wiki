@@ -6,7 +6,7 @@ As of Beta 2 there are also [[Debian packages|Linux-Install-Debians]] for Ubuntu
 
 ## System Requirements
 
-We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit x86 (no binaries available yet for ARM or 32-bit x86).
+We support Ubuntu Linux Xenial Xerus 16.04 on 64-bit x86 and 64-bit ARM.
 
 Note: alpha versions 6 and earlier supported Ubuntu Trusty Tahr 14.04.
 
