@@ -8,7 +8,7 @@ Here's how to try it out. In each shell, be sure to start by sourcing the ROS 2 
 
 First run the [static_transform_publisher](http://wiki.ros.org/tf2_ros#static_transform_publisher) to generate `tf2` data:
 
-    ros2 run tf2_ros static_transform_publisher -- 1 2 3 0.5 0.1 -1.0 foo bar
+    ros2 run tf2_ros static_transform_publisher 1 2 3 0.5 0.1 -1.0 foo bar
 
 That tool will publish a static transform from the parent frame `foo` to the child frame `bar` with (X, Y, Z) translation (1, 2, 3) and (roll, pitch, yaw) rotation (0.5, 0.1, -1.0).
 
@@ -16,7 +16,7 @@ That tool will publish a static transform from the parent frame `foo` to the chi
 
 Now we can check whether it's possible to receive that transform data with `tf2_echo`:
 
-    ros2 run tf2_ros tf2_echo -- foo bar
+    ros2 run tf2_ros tf2_echo foo bar
 
 You should see repeated output similar to this:
 

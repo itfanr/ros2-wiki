@@ -140,12 +140,12 @@ usage: lifecycle_service_client_py.py [-h]
 ```
 In the case you want to get the current state of the `lc_talker` node, you'd call:
 ```
-$ ros2 run lifecycle lifecycle_service_client_py.py -- get_state lc_talker
+$ ros2 run lifecycle lifecycle_service_client_py.py get_state lc_talker
 lc_talker is in state unconfigured(1)
 ```
 The next step would be to execute a state change:
 ```
-$ ros2 run lifecycle lifecycle_service_client_py.py -- change_state --change-state-args configure lc_talker
+$ ros2 run lifecycle lifecycle_service_client_py.py change_state --change-state-args configure lc_talker
 ```
 
 All of the above commands are nothing else than calling the lifecycle node's services. With that being said, we can also call these services directly with the ros2 command line interface:
