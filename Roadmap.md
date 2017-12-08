@@ -27,6 +27,10 @@ After finishing in-progress items additional tasks might be pulled from the futu
 
 ### Future
 
+#### Fix known limitations
+
+- FastRTPS performance with larger data like the image demo
+
 #### Design / Concept (in no specific order)
 
 - Progress on migration plan, how to deal with dependencies in the manifest?
