@@ -36,6 +36,7 @@ The feature list for this release will be filled out after the *Ardent* release.
   - Support to generate "fat" packages / archives
   - Windows and Mac OS packages
 - Release
+  - Future releases of ROS 2 (as of summer 2018) will likely target the next Ubuntu LTS 18.04
   - Allow releasing packages into ROS 2 using ready-to-use tools
 - Documentation
   - Platform for documentation (like wiki.ros.org), allow easy contributions as well as optionally facilitate a review process
