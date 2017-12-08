@@ -1,13 +1,13 @@
 # ROS 2 Feature Status
 
 The features listed below are available in the current ROS 2 release.
-Unless otherwise specified, the features are available for all supported platforms (Ubuntu 16.04, OS X 10.12.x, Windows 10), DDS implementations (eProsima Fast RTPS and RTI Connext) and programming language client libraries (C++ and Python).
+Unless otherwise specified, the features are available for all supported platforms (Ubuntu 16.04, OS X 10.12.x, Windows 10), DDS implementations (eProsima Fast RTPS, RTI Connext and PrismTech Opensplice) and programming language client libraries (C++ and Python).
 For planned future development, see the [[Roadmap]].
 
 | Functionality | Link | Fine print |
 | --- | --- | --- |
 | Discovery, transport and serialization over DDS | [Article](http://design.ros2.org/articles/ros_on_dds.html) | |
-| Support for multiple DDS implementations, chosen at runtime | [[Tutorial\|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS and RTI Connext are fully supported. |
+| Support for multiple DDS implementations, chosen at runtime | [[Tutorial\|DDS-and-ROS-middleware-implementations]] | Currently eProsima Fast RTPS, RTI Connext and PrismTech Opensplice are fully supported. |
 | Common core client library that is wrapped by language-specific libraries | [[Tutorial\|ROS 2 Client Libraries]] | |
 | Publish/subscribe over topics | [Sample code](https://github.com/ros2/examples) | [Namespacing limitation for Connext.](https://github.com/ros2/rmw_connext/issues/234) |
 | Clients and services | [Sample code](https://github.com/ros2/examples) | Python support experimental. |
