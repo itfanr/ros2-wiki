@@ -94,7 +94,7 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 
 ## Try some examples
 
-In a clean new terminal, source the setup file (this will automatically set up the environment for any RMW vendors that support was built for) and then run a `talker`:
+In a clean new terminal, source the setup file (this will automatically set up the environment for any DDS vendors that support was built for) and then run a `talker`:
 
     . ~/ros2_ws/install/setup.bash
     ros2 run demo_nodes_cpp talker
