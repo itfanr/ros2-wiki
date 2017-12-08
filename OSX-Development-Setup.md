@@ -94,7 +94,7 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 
 ## Try some examples
 
-In one terminal, source the setup file and then run a `talker`:
+In a clean new terminal, source the setup file (this will automatically set up the environment for any RMW vendors that support was built for) and then run a `talker`:
 
     . ~/ros2_ws/install/setup.bash
     ros2 run demo_nodes_cpp talker
@@ -117,31 +117,16 @@ When you run the build make sure that your chosen DDS vendor(s) are exposed in y
 When multiple vendors are present, you can choose the used RMW implementation by setting the the environment variable `RMW_IMPLEMENTATION` to the package providing the RMW implementation.
 See [[Working with multiple RMW implementations|Working-with-multiple-RMW-implementations]] for more details.
 
-<!-- commenting because opensplice 4.7 has not been released for osx
-### PrismTech OpenSplice
+### Adlink OpenSplice (6.7)
 
-To build opensplice you will need:
+To install OpenSplice, download the latest release from https://github.com/ADLINK-IST/opensplice/releases and unpack it.
 
- 1. **Java Development Kit (JDK)** *(currently required to compile the OpenSplice DDS implementation, but that requirement might go away in the future, e.g., if we disable building their Java bindings)*:
-  * Go to http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-  * Accept the license terms and download the "Mac OS X x64" version of the `.dmg` file.
-  * Install from the `.dmg`.
-  * *Optional*: check that you have a `jni.h` and that your version of `java` is 1.8:
+Source the `release.com` file provided to set up the environment before building your ROS 2 workspace, e.g.:
 
-            $ find /Library/Java | grep jni.h
-            /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/include/jni.h
-            $ java -version
-            java version "1.8.0_60"
-            Java(TM) SE Runtime Environment (build 1.8.0_60-b27)
-           Java HotSpot(TM) 64-Bit Server VM (build 25.60-b23, mixed mode)
+```
+source <path_to_opensplice>/x86_64.darwin10_clang/release.com
+```
 
- 1. Add the OSRF Homebrew tap:
-
-        brew tap osrf/ros2
- 1. Install OpenSplice:
-
-        brew install opensplice
--->
 ### RTI Connext (5.2.3)
 
 To use RTI Connext you will need to have obtained a license from RTI.
