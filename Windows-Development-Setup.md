@@ -228,10 +228,10 @@ You'll also need a DDS Vendor available for ROS to build against.
 There is currently support for eProsima FastRTPS, PrismTech's OpenSplice, and RTI's Connext DDS.
 The source distribution of ROS 2 includes FastRTPS, so it will always build unless explicitly ignored.
 
-#### PrismTech OpenSplice
+#### Adlink OpenSplice
 
-If you would like to also build against PrismTech OpenSplice, you will need to first download the latest version of [OpenSplice 6.7.171127](https://github.com/ADLINK-IST/opensplice/releases/tag/OSPL_V6_7_171127OSS_RELEASE) (we require at least version 6.7.170912).
-Then for any shell that you open and want to use OpenSplice run something like the following command before building and running ROS 2:
+If you would like to also build against OpenSplice, you will need to first download the latest version of [OpenSplice 6.7.171127](https://github.com/ADLINK-IST/opensplice/releases/tag/OSPL_V6_7_171127OSS_RELEASE) (we require at least version 6.7.170912).
+Then run something like the following command before building ROS 2, to set up the OpenSplice environment:
 
 ```
 call "C:\opensplice67\HDE\x86_64.win64\release.bat"
@@ -244,7 +244,7 @@ where the exact paths may need to be slightly altered depending on where you sel
 If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS.
 [Use this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Win64VS2015.exe) to download Connext 5.2.3 for 64 bit Windows.
 After installing use the RTI Launcher to load your license file.
-Then for any shell that you open and want to use RTI programs run something like the following command before building and running ROS 2:
+Then before building ROS 2, set up the Connext environment:
 
 ```
 call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
@@ -253,7 +253,7 @@ call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64
 where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS.
 The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
 
-Otherwise, ROS 2 will default to using eProsima's Fast-RTPS as the middleware.
+If you don't install any additional DDS vendors, ROS 2 will default to using eProsima's Fast-RTPS as the middleware.
 
 ### Building the ROS 2 Code
 
@@ -290,7 +290,9 @@ Afterwards you can get a summary of the tests using this command:
 > python src\ament\ament_tools\scripts\ament.py test_results
 ```
 
-You can run the built examples by opening a new `cmd.exe` sourcing the `local_setup.bat` file and then executing them directly, for example:
+To run the examples, first open a clean new `cmd.exe` and set up the workspace.
+This is done by sourcing the `local_setup.bat` file, which will automatically set up the environment for any DDS vendors that support was built for.
+Then execute the examples, e.g.:
 
 ```
 > call install\local_setup.bat
@@ -303,6 +305,7 @@ In a separate shell you can do the same, but instead run the `listener`:
 > call install\local_setup.bat
 > ros2 run demo_nodes_py listener
 ```
+
 For more explanations see the [Python Programming](Python-Programming) demo or [other tutorials](https://github.com/ros2/ros2/wiki/Tutorials)
 
 Note: it is not recommended to build in the same cmd prompt that you've sourced the `local_setup.bat`.
