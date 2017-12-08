@@ -14,6 +14,8 @@ This is a list of the features targeted for development in the future.
 
 The feature list for this release will be filled out after the *Ardent* release.
 
+- ...<to be filled>...
+
 ### Future (in no specific order)
 
 #### Design / Concept
