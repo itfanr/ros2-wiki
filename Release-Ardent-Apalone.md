@@ -41,7 +41,7 @@ For a more detailed description please see the [[Features]] page.
 
 Improvements since the Beta 3 release:
 - `rviz`
-- Different initialization options for message data structures in C / C++
+- Different initialization options for message data structures in C++
 - Logging API improvements, now also used in the demos
 - Time support in C++ with different clocks
 - wait-for-service support in the Python client library
