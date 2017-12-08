@@ -34,7 +34,7 @@ You need the following things installed before installing ROS 2.
         brew install openssl
 
         # install Qt for RViz
-        brew install qt freetype
+        brew install qt freetype assimp
 
 - Install additional runtime dependencies for command-line tools:
 
