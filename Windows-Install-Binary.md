@@ -55,7 +55,8 @@ Ensure that the correct features will be installed:
 
 ### Getting a DDS Vendor
 
-The binary package bundles eProsima FastRTPS as the middleware. To use another DDS vendor, you will need to [build from source](Windows-Development-Setup).
+The binary package bundles eProsima FastRTPS and Adlink OpenSplice as the middleware options.
+To use another DDS vendor, you will need to [build from source](Windows-Development-Setup).
 
 #### eProsima FastRTPS & Boost (only for beta-1 and older releases)
 
@@ -64,6 +65,11 @@ FastRTPS requires boost as a dependency. To install it, grab the appropriate ins
 The installer will install itself by default into `C:\local`. You will then need to add the following system environment variables for ROS to find the libraries.
 
 `PATH=C:\local\boost_1_61_0\lib64-msvc-14.0`
+
+#### Adlink OpenSplice
+
+If you want to use OpenSplice, you will need to [download the latest version](https://github.com/ADLINK-IST/opensplice/releases/tag/OSPL_V6_7_171127OSS_RELEASE) (we require at least version 6.7.170912).
+Extract it but don't do anything else at this point.
 
 ### Install OpenCV
 
@@ -103,19 +109,33 @@ python -m pip install -U pyyaml setuptools
   * Note: there may be more than one binary download option which might cause the file name to differ.
 * Unpack the zip file somewhere (we'll assume `C:\dev\ros2`).
 
-## Try some examples
 
-Before running an example, you need to `source` the ROS 2 setup file. Start a command shell, then run a talker:
+## Set up the ROS 2 environment
+
+Start a command shell and source the ROS 2 setup file to set up the workspace:
 
 ```
 > call C:\dev\ros2\local_setup.bat
+```
+
+If you downloaded a release with OpenSplice support and want to use it as a middleware you must additionally source the OpenSplice setup file.
+Only do this **after** you have sourced the ROS 2 one:
+
+```
+> call "C:\opensplice67\HDE\x86_64.win64\release.bat"
+```
+
+## Try some examples
+
+In a command shell, set up the ROS 2 environment as described above and then run a `talker`:
+
+```
 > ros2 run demo_nodes_cpp talker
 ```
 
-Start another command shell and run a listener:
+Start another command shell and run a `listener`:
 
 ```
-> call C:\dev\ros2\local_setup.bat
 > ros2 run demo_nodes_py listener
 ```
 
