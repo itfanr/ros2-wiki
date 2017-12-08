@@ -10,44 +10,39 @@ This is a list of the features targeted for development in the future.
 
 *Subject to change.*
 
-### Next release (Dec. 8th, 2017) - first non-beta release
+### Next release (Summer 2018)
 
-The following items are in progress.
-After finishing in-progress items additional tasks might be pulled from the future list.
+The feature list for this release will be filled out after the *Ardent* release.
 
-- rviz native in ROS2
-- Parameters in C
-- Feature parity in Python with wait-for-service, ros2 param
-- Time: simtime, C++, Python
-- Different initialization options for message data structures in C / C++
-- Logging configuration
-- Command line static remapping
-- Expose matched publisher / subscriber count
-- buildfarm: one machine deployment
+### Future (in no specific order)
 
-### Future
+#### Design / Concept
 
-#### Fix known limitations
-
-- FastRTPS performance with larger data like the image demo
-
-#### Design / Concept (in no specific order)
-
-- Progress on migration plan, how to deal with dependencies in the manifest?
-- IDL file format, consider desired features, suitability of existing formats
+- Revise IDL file format, consider desired features, suitability of existing formats
+- Reconsider 1-to-1 mapping of ROS nodes to DDS participants
 - Support for non-ASCII strings in messages / services
+- Progress on migration plan
+- Reconsider mapping of namespaces to DDS partitions
 
-#### New features (in no specific order)
+### Infrastructure
 
-- revert from using DDS partitions to separators in the topic name
-- buildfarm: CI/devel/PR jobs, fat packages / archives
+- Support for `devel`, `pull request`, and `doc` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
+- Platform for documentation, allow easy contributions as well as optionally facilitate a review process
+- Buildfarm: CI/devel/PR jobs, fat packages / archives, one-machine deployment for automated testing
+- Windows and MacOS packages
+
+#### New features
+
+- Parameters in C and Python
+- ROS Time concepts in Python
+- Logging configuration
+- Expose matched publisher / subscriber count
 - rosbag native in ROS2
 - Logging C++ streams
 - Command line parameters and parameters from a yaml file
 - Actions in ROS2
 - Add pre-emption for services
 - Provide standard way to create and use components
-- Support services with Connext in C / Python
 - Launch system using life-cycle and orchestration
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
@@ -82,14 +77,10 @@ After finishing in-progress items additional tasks might be pulled from the futu
   - Map security features onto any other implementation that supports them.
   - If there are hardware-specific features for securing keys or accelerating encryption/signing messages, that could be interesting to add to DDS/RTPS implementations that don't use it already.
 
-#### Infrastructure
-
-- New documentation platform deployed
-- Windows and OSX packages
-
 #### Reducing Technical Debt
 
 - Fix flaky tests.
+- API review
 - Synchronize / reconcile design docs with the implementation.
   - Pre-release retrospective review (APIs, docs, etc.)
 - Address / classify pending tickets
