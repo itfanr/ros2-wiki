@@ -20,11 +20,11 @@ For example, here is a list of functionality that can typically be accessed thro
 Most of the functionality found in a client library is not specific to the programming language of the client library.
 For example, the behavior of parameters and the logic of namespaces should ideally be the same across all programming languages.
 Because of this, rather than implementing the common functionality from scratch, client libraries make use of a common core ROS Client Library (RCL) interface that implements logic and behavior of ROS concepts that is not language-specific.
-As a result, client libraries only need to wrap common the functionality in the RCL with foreign function interfaces.
+As a result, client libraries only need to wrap the common functionality in the RCL with foreign function interfaces.
 This keeps client libraries thinner and easier to develop.
 For this reason the common RCL functionality is exposed with C interfaces as the C language is typically the easiest language for client libraries to wrap.
 
-In addition to making the client libraries light-weight, an advantage of having the common core is that the behavior between the languages is more consistent.
+In addition to making the client libraries light-weight, an advantage of having the common core is that the behavior between languages is more consistent.
 If any changes are made to the logic/behavior of the functionality in the core RCL -- namespaces, for example -- all client libraries that use the RCL will have these changes reflected.
 Furthermore, having the common core means that maintaining multiple client libraries becomes less work when it comes to bug fixes.
 
@@ -50,4 +50,4 @@ This allows for the ROS 1 Python client library to be implemented purely in Pyth
 However, naming conventions and behaviors are not always consistent between client libraries, bug fixes have to be done in multiple places, and there is a lot of functionality that has only ever been implemented in one client library (e.g. UDPROS).
 
 ## Summary
-By utilizing the common core ROS client library, client libraries written in a variety of programming languages are easier to write and have more consistent behaviour.
+By utilizing the common core ROS client library, client libraries written in a variety of programming languages are easier to write and have more consistent behavior.
