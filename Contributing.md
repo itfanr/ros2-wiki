@@ -35,6 +35,6 @@ If your proposal involves changes to the APIs, it is especially recommended that
 
 ### Submitting your code changes
 
-Code contributions should be made via pull requests to the [the appropriate ros2 repositories](https://github.com/ros2).
+Code contributions should be made via pull requests to [the appropriate ros2 repositories](https://github.com/ros2).
 
-We ask all contributors to follow the practices explained in the [[the developer guide|Developer-Guide]].
+We ask all contributors to follow the practices explained in [[the developer guide|Developer-Guide]].
