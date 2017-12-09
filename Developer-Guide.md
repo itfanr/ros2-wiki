@@ -437,7 +437,7 @@ The filesystem layout of packages and repositories should follow the same conven
 - `CMakeLists.txt`: only ROS packages which use CMake
 - `setup.py`: only ROS packages which use Python code only
 - `README.md`: README which can be rendered on Github as a landing page for the project
-  - This can be as short or detailed as is convenient, but it should atleast link to project documentation
+  - This can be as short or detailed as is convenient, but it should at least link to project documentation
   - Consider putting a CI or code coverage tag in this readme
   - It can also be `.rst` or anything else that Github supports
 - `LICENSE`: A copy of the license or licenses for this package
