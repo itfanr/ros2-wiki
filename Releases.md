@@ -3,6 +3,7 @@ For more details about each release, see the corresponding release overview.
 
 | Release Overview | Date |
 | --- | --- |
+| [[Ardent Apalone\|Release-Ardent-Overview]] | 8 December 2017 |
 | [[beta3\|beta3-Overview]] | 13 September 2017 |
 | [[beta2\|beta2-Overview]] | 5 July 2017 |
 | [[beta1\|beta1-Overview]] | 19 December 2016 |
