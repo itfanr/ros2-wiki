@@ -48,5 +48,5 @@ Selected features from previous Alpha/Beta releases (for the complete list, see 
 
 Known issues:
 * On Windows Python launch files might hang when trying to abort using `Ctrl-C` (see [issue](https://github.com/ros2/launch/issues/64)). In order to continue using the shell which is blocked by the hanging command you might want to end the hanging Python process using the process monitor.
-* OpenSplice support is atm not available for MacOS. Also [access to native handles](https://github.com/ros2/rmw_opensplice/issues/182) is not yet implemented.
+* OpenSplice support is currently not available for MacOS. Also [access to native handles](https://github.com/ros2/rmw_opensplice/issues/182) is not yet implemented.
 * Using Connext it is currently not allowed for two topics with the same base name but different namespaces to have a different type (see [issue](https://github.com/ros2/rmw_connext/issues/234))..
