@@ -44,7 +44,7 @@ The durability policy combined with a depth of 1 provides functionality similar 
 Profiles allow developers to focus on their applications without worrying about every QoS setting possible.
 A QoS profile defines a set of policies that are expected to go well together for a particular use case.
 
-The curently-defined QoS profiles are:
+The currently-defined QoS profiles are:
 - Default QoS settings for publishers and subscribers
 
   In order to make the transition from ROS 1 to ROS 2, exercising a similar network behavior is desirable.
@@ -82,7 +82,7 @@ While ROS 2 provides some QoS profiles for common use cases, the use of policies
 **Note:** This section refers to publisher and subscribers but the content applies to service servers and clients in the same manner.
 
 QoS profiles may be configured for publishers and subscribers independently.
-A connection between a publisher and a subscriber is only made if the pair have compatible QoS profiles.
+A connection between a publisher and a subscriber is only made if the pair has compatible QoS profiles.
 QoS profile compatibility is determined based on a "Request vs Offerer" model, wherein connections are only made if the requested policy of the subscriber is not more stringent than the that of the publisher.
 The stricter of the two policies will be the one used for the connection.
 
@@ -108,4 +108,4 @@ _Compatibility of QoS reliability profiles:_
 | Reliable | Reliable | Yes | Reliable |
 
 In order for a connection to be made, all of the policies that affect compatibility must be compatible.
-That is, even if a publisher-subscriber pair have compatible reliability QoS profiles, if they have incompatible durability QoS profiles a connection will not be made, and vice-versa.
+That is, even if a publisher-subscriber pair has compatible reliability QoS profiles, if they have incompatible durability QoS profiles a connection will not be made, and vice-versa.
