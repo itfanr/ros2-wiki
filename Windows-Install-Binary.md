@@ -10,7 +10,7 @@ As of beta-2 only Windows 10 is supported.
 
 ### Install Chocolatey
 
-Chocolatey is a package manager for Windows, install it by follow their installation instructions:
+Chocolatey is a package manager for Windows, install it by following their installation instructions:
 
 https://chocolatey.org/
 
@@ -88,7 +88,7 @@ Please download these packages from [this](https://github.com/ros2/choco-package
  * tinyxml-usestl.2.6.2.nupkg
  * tinyxml2.4.1.0.nupkg
 
-Once the these packages are downloaded, open an administrative shell and execute the following command:
+Once these packages are downloaded, open an administrative shell and execute the following command:
 
 ```
 > choco install -y -s <PATH\TO\DOWNLOADS\> asio eigen tinyxml-usestl tinyxml2
@@ -144,5 +144,5 @@ Hooray!
 
 
 ### Troubleshooting
-* If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as opencv are located inside your `PATH` variable.
+* If at one point your example would not start because of missing dll's, please verify that all libraries from external dependencies such as OpenCV are located inside your `PATH` variable.
 * If you forget to call the `local_setup.bat` file from your terminal, the demo programs will most likely crash immediately.
