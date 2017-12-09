@@ -31,7 +31,7 @@ Then you can right click it again and say pin to taskbar so it's easy to get to.
 
 ### Install Chocolatey
 
-Chocolatey is a package manager for Windows, install it by follow their installation instructions:
+Chocolatey is a package manager for Windows, install it by following their installation instructions:
 
 https://chocolatey.org/
 
@@ -115,7 +115,7 @@ Please download these packages from [this](https://github.com/ros2/choco-package
  * tinyxml-usestl.2.6.2.nupkg
  * tinyxml2.4.1.0.nupkg
 
-Once the these packages are downloaded, open an administrative shell and execute the following command:
+Once these packages are downloaded, open an administrative shell and execute the following command:
 
 ```
 > choco install -y -s <PATH\TO\DOWNLOADS\> asio eigen tinyxml-usestl tinyxml2
@@ -210,7 +210,7 @@ Get the `ros2.repos` file which defines the repositories to clone from:
 > curl https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos -o ros2.repos
 ```
 
-> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
+> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the URL above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
 
 Next you can use `vcs` to import the repositories listed in the `ros2.repos` file:
 
@@ -321,7 +321,7 @@ If you would like to change which vendor is being used see: [Working with Multip
 
 ### CMake error setting modification time
 
-If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it it likely that an anti virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
+If you run into the CMake error `file INSTALL cannot set modification time on ...` when installing files it is likely that an anti virus software or Windows Defender are interfering with the build. E.g. for Windows Defender you can list the workspace location to be excluded to prevent it from scanning those files.
 
 ## Extra stuff for Debug mode
 
