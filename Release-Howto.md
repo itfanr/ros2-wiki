@@ -3,7 +3,7 @@ This page tries to capture the process we go through to make a new beta release 
 We usually don't branch before a release but "freeze" the used branch.
 During the testing phase make sure that no unwanted changes are being committed to that branch.
 Iteratively test either using the artifacts produced by the packaging jobs or from-source builds and make necessary changes.
-Once the current state it ready to be released follow these steps:
+Once the current state is ready to be released, follow these steps:
 
 - Get a fresh copy of all repositories using the master [`ros2.repos` file](https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos)
   - `curl https://raw.githubusercontent.com/ros2/ros2/master/ros2.repos | vcs import ./src`
