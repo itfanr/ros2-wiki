@@ -1,5 +1,5 @@
 * [[Home]]
-* [[Beta3 Release Overview|Beta3-Overview]]
+* [[Ardent Apalone Release Overview|Release-Ardent-Overview]]
 * [[All Releases|Releases]]
 * [[Features]]
 * [[Installation]]
