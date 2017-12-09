@@ -42,17 +42,17 @@ The feature list for this release will be filled out after the *Ardent* release.
   - Platform for documentation (like wiki.ros.org), allow easy contributions as well as optionally facilitate a review process
   - Support for `doc` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
   - Consider consolidating with design.ros.org
-  - Provide three different kind of content:
+  - Provide three different kinds of content:
     - "demos" to show features and cover them with tests
     - "examples" to show a simple/minimalistic usage which might have multiple ways to do something
     - "tutorials" which contain more comments and anchors for the wiki (teaching one recommended way)
 
 #### New features
 
-- Expose matched publisher / subscriber count (rather then only based on the topic name)
+- Expose matched publisher / subscriber count (rather than only based on the topic name)
 - Actions in ROS 2
   - Add pre-emption for services
-- Feature parity accross languages
+- Feature parity across languages
   - Parameters in C and Python
   - ROS Time concepts in Python
 - rosbag native in ROS 2
