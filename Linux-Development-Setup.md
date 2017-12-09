@@ -68,7 +68,7 @@ wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
 vcs-import src < ros2.repos
 ```
 
-> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the url above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
+> Note: if you want to get all of the latest bug fixes then you can try the "tip" of development by replacing `release-latest` in the URL above with `master`. The `release-latest` is preferred by default because it goes through more rigorous testing on release than changes to master do. See also [Maintaining a Source Checkout](https://github.com/ros2/ros2/wiki/Maintaining-a-Source-Checkout).
 
 ### Install one or more DDS implementations
 
@@ -106,7 +106,7 @@ src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
 Note: if you are having trouble compiling all examples and this is preventing you from completing a successful build, you can use `AMENT_IGNORE` in the same manner as [`CATKIN_IGNORE`](https://github.com/ros-infrastructure/rep/blob/master/rep-0128.rst) to ignore the subtree or remove the folder from the workspace.
-Take for instance: you would like to avoid installing the large opencv library.
+Take for instance: you would like to avoid installing the large OpenCV library.
 Well then simply `$ touch AMENT_IGNORE` in the `cam2image` demo directory to leave it out of the build process.
 
 Optionally build all packages in isolation:
@@ -178,7 +178,7 @@ Remember to replace `@@INSTALLDIR@@` with the path where you unpacked the OpenSp
 Then, source the ROS `setup.bash` file, and finally, source the `release.com` file in the root of the OpenSplice distribution to set the `OSPL_HOME` environment variable appropriately.
 After that, your shell is ready to run ROS2 binaries with the official OpenSplice distribution.
 
-You may also need to add the following line to you `.bashrc` file:
+You may also need to add the following line to your `.bashrc` file:
 
 ```
 export PTECH_LICENSE_FILE=path/to/prismtech.lic
@@ -229,7 +229,7 @@ Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be
 
 ## Alternate compilers
 
-Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger CMake configuration (by using `--force-cmake-config` or by deleting the packages you want affected), CMake will reconfigure and use the different compiler.
+Using a different compiler besides gcc to compile ROS 2 is easy. If you set the environment variables `CC` and `CXX` to executables for a working C and C++ compiler, respectively, and retrigger CMake configuration (by using `--force-cmake-config` or by deleting the packages you want to be affected), CMake will reconfigure and use the different compiler.
 
 ### Clang
 
@@ -253,7 +253,7 @@ If you experience an ICE when trying to compile on a memory constrained platform
 ### Out of memory
 
 The `ros1_bridge` in its current form requires 4Gb of free RAM to compile.
-If you don't have that amount of RAM available it's suggested to use `AMENT_IGNORE` in that folder and skip it's compilation.
+If you don't have that amount of RAM available it's suggested to use `AMENT_IGNORE` in that folder and skip its compilation.
 
 ### Multiple Host Interference
 
