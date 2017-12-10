@@ -92,7 +92,7 @@ Starting from Ardent Apalone, we provide a first version of RViz2. This allows y
 In order to visualize the TF of your robot, simply launch RViz2.
 
 ```
-$ rviz2_app
+$ rviz2
 ```
 
 This opens RViz2. Assuming you have your dummy_robot_bringup still launched, you can now add the TF display plugin and configure your global frame to `world`. Once you did that, you should see a similar picture:
