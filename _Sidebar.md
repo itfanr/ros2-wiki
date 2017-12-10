@@ -1,5 +1,5 @@
 * [[Home]]
-* [[Ardent Apalone Release Overview|Release-Ardent-Overview]]
+* [[Ardent Apalone Release Overview|Release-Ardent-Apalone]]
 * [[All Releases|Releases]]
 * [[Features]]
 * [[Installation]]
