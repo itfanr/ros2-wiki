@@ -2,12 +2,12 @@
 
 As of Beta 2 we are building Debian packages for Ubuntu Xenial.
 They are in a temporary repository for testing.
-The following links and instructions reference the latest release - currently Beta 3.
+The following links and instructions reference the latest release - currently ardent.
 
 Resources:
  - [Jenkins Instance](http://build.ros2.org/)
  - [Repositories](http://repo.ros2.org)
- - Status Pages ([amd64](http://repo.ros2.org/status_page/ros_r2b3_default.html), [arm64](http://repo.ros2.org/status_page/ros_r2b3_uxv8.html))
+ - Status Pages ([amd64](http://repo.ros2.org/status_page/ros_ardent_default.html), [arm64](http://repo.ros2.org/status_page/ros_ardent_uxv8.html))
 
 ## Setup Sources
 
@@ -22,29 +22,29 @@ curl http://repo.ros2.org/repos.key | sudo apt-key add -
 And then add the repository to your sources list:
 
 ```
-sudo sh -c 'echo "deb http://repo.ros2.org/ubuntu/main xenial main" > /etc/apt/sources.list.d/ros2-latest.list'
+sudo sh -c 'echo "deb [arch=amd64,arm64] http://repo.ros2.org/ubuntu/main xenial main" > /etc/apt/sources.list.d/ros2-latest.list'
 ```
 
 ## Install ROS 2 packages
 
-The following commands install all `ros-r2b3-*` package except `ros-r2b3-ros1-bridge` and `ros-r2b3-turtlebot2-*` since they require ROS 1 dependencies.
+The following commands install all `ros-ardent-*` package except `ros-ardent-ros1-bridge` and `ros-ardent-turtlebot2-*` since they require ROS 1 dependencies.
 See below for how to also install those.
 
 ```
 sudo apt update
-sudo apt install `apt list ros-r2b3-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-r2b3-ros1-bridge -e ros-r2b3-turtlebot2- | tr "\n" " "`
+sudo apt install `apt list ros-ardent-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-ardent-ros1-bridge -e ros-ardent-turtlebot2- | tr "\n" " "`
 ```
 
 ## Environment setup
 
 ```
-source /opt/ros/r2b3/setup.bash
+source /opt/ros/ardent/setup.bash
 ```
 
 If you have installed the Python package `argcomplete` (version 0.8.5 or higher) you can source the following file to get completion for command line tools like `ros2`:
 
 ```
-source /opt/ros/r2b3/share/ros2cli/environment/ros2-argcomplete.bash
+source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
 ```
 
 ## Choose RMW implementation
@@ -64,5 +64,5 @@ Now you can install the remaining packages:
 
 ```
 sudo apt update
-sudo apt install ros-r2b3-ros1-bridge ros-r2b3-turtlebot2-*
+sudo apt install ros-ardent-ros1-bridge ros-ardent-turtlebot2-*
 ```
