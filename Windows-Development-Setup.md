@@ -239,19 +239,18 @@ call "C:\opensplice67\HDE\x86_64.win64\release.bat"
 
 where the exact paths may need to be slightly altered depending on where you selected to install OpenSplice.
 
-#### RTI Connext 5.2.3
+#### RTI Connext 5.3
 
-If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS.
-[Use this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Win64VS2015.exe) to download Connext 5.2.3 for 64 bit Windows.
-After installing use the RTI Launcher to load your license file.
+If you would like to also build against RTI Connext, you will need to first visit the RTI website and obtain a license (evaluation or purchased) for RTI Connext DDS as well as the installer via their [downloads page](https://www.rti.com/downloads).
+After installing, use the RTI Launcher to load your license file.
 Then before building ROS 2, set up the Connext environment:
 
 ```
-call "C:\Program Files\rti_connext_dds-5.2.3\resource\scripts\rtisetenv_x64Win64VS2015.bat"
+call "C:\Program Files\rti_connext_dds-5.3.0\resource\scripts\rtisetenv_x64Win64VS2015.bat"
 ```
 
-where the exact paths may need to be slightly altered depending on where you selected to install RTI Connext DDS.
-The path above is the current default path as of version 5.2.3, but will change as the version numbers increment in the future.
+Note that this path might need to be slightly altered depending on where you selected to install RTI Connext DDS.
+The path above is the current default path as of version 5.3.0, but will change as the version numbers increment in the future.
 
 If you don't install any additional DDS vendors, ROS 2 will default to using eProsima's Fast-RTPS as the middleware.
 
