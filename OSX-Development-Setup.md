@@ -127,11 +127,11 @@ Source the `release.com` file provided to set up the environment before building
 source <path_to_opensplice>/x86_64.darwin10_clang/release.com
 ```
 
-### RTI Connext (5.2.3)
+### RTI Connext (5.3)
 
 To use RTI Connext you will need to have obtained a license from RTI.
 
-You can install the OS X package of Connext version 5.2.3 provided by RTI [from this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Darwin15clang7.0.dmg).
+You can install the OS X package of Connext version 5.3 provided by RTI from their [downloads page](https://www.rti.com/downloads).
 
 You also need a Java runtime installed to run the RTI code generator, which you can get [here](https://support.apple.com/kb/DL1572?locale=en_US).
 
@@ -140,7 +140,7 @@ After installing, run RTI launcher and point it to your license file.
 Source the setup file to set the `NDDSHOME` environment variable before building your workspace:
 
 ```
-source /Applications/rti_connext_dds-5.2.3/resource/scripts/rtisetenv_x64Darwin15clang7.0.bash
+source /Applications/rti_connext_dds-5.3.0/resource/scripts/rtisetenv_x64Darwin15clang7.0.bash
 ```
 
 You may need to increase shared memory resources following https://community.rti.com/kb/osx510.
