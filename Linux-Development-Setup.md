@@ -188,7 +188,7 @@ export PTECH_LICENSE_FILE=path/to/prismtech.lic
 
 If you build OpenSplice from source, be sure to remember to following the INSTALL.txt instructions and manually replace the @@INSTALLDIR@@ placeholder in the OpenSplice install/HDE/x86_64.linux/release.com
 
-#### RTI Connext (version 5.2.3)
+#### RTI Connext (version 5.3)
 
 To use RTI Connext you will need to have obtained a license from RTI.
 Add the following line to your `.bashrc` file pointing to your copy of the license.
@@ -203,29 +203,20 @@ You also need a Java runtime installed to run the RTI code generator:
 sudo apt-get install openjdk-7-jre
 ```
 
-Choose one of the following options for RTI Connext.
+Finally, you can install the Connext 5.3 package for Linux provided by RTI from their [downloads page](https://www.rti.com/downloads).
 
-##### Official binary packages from RTI
+After downloading, use `chmod +x` on the `.run` executable and then execute it.
+Note that if you're installing to a system directory use `sudo` as well.
 
-You can install the Connext 5.2.3 package for Linux provided by RTI from [this link](http://s3.amazonaws.com/RTI/Bundles/5.2.3/Evaluation/rti_connext_dds-5.2.3-eval-x64Linux3gcc4.8.2.run).
-
-After downloading `chmod +x` on the .run the executable and execute.
-(If you're installing to a system directory use `sudo`.)
-
-The default location is `~/rti_connext_dds-5.2.3`
+The default location is `~/rti_connext_dds-5.3.0`
 
 Source the setup file to set the `NDDSHOME` environment variable.
 
 ```
-source ~/rti_connext_dds-5.2.3/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
+source ~/rti_connext_dds-5.3.0/resource/scripts/rtisetenv_x64Linux3gcc4.8.2.bash
 ```
 
-##### Debian packages built by OSRF
-
-These packages are not public due to pending license questions.
-If you have been granted access, you can download the three Debian packages of the latest release from https://github.com/osrf/rticonnextdds-src/releases and install them using `dpkg -i`.
-
-Note, if you have trouble `wget`'ing those `.deb` files, remember you have to be logged in because it is a private repo for now.
+Now you can build as normal and support for RTI will be built as well.
 
 ## Alternate compilers
 
