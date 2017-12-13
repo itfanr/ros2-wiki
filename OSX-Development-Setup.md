@@ -41,7 +41,7 @@ You need the following things installed to build ROS 2:
         brew install qt freetype assimp
 
         # Add the Qt directory to the CMAKE_PREFIX_PATH
-        export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH;/usr/local/opt/qt
+        export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/usr/local/opt/qt
 
 1. Use `python3 -m pip` (just `pip` may install Python3 or Python2) to install more stuff:
 
