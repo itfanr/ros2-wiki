@@ -49,7 +49,7 @@ source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
 
 ## Choose RMW implementation
 
-By default the RMW implementation `FastRPTS` is being used.
+By default the RMW implementation `FastRTPS` is being used.
 By setting the environment variable `RMW_IMPLEMENTATION=rmw_opensplice_cpp` you can switch to use OpenSplice instead.
 
 ## Additional packages using ROS 1 packages
