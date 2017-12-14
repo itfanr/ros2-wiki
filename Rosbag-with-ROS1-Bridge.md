@@ -30,7 +30,7 @@ Then we'll run the ROS 1 <=> ROS 2 `dynamic_bridge` with the `--bridge-all-topic
 # . ~/ros_catkin_ws/install_isolated/setup.bash
 . <workspace-with-bridge>/install/setup.bash
 export ROS_MASTER_URI=http://localhost:11311
-dynamic_bridge --bridge-all-topics
+ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 ```
 
 Remember to replace `<workspace-with-bridge>` with the path to where you either extracted the ROS 2 binary or where you built ROS 2 from source.
@@ -170,7 +170,7 @@ so
 # . ~/ros_catkin_ws/install_isolated/setup.bash
 . <workspace-with-bridge>/install/setup.bash
 export ROS_MASTER_URI=http://localhost:11311
-dynamic_bridge --bridge-all-topics
+ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
 ```
 
 Then play the bag data back with `rosbag play` in another new shell, using the `--loop` option so that we don't have to keep restarting it for short bags:

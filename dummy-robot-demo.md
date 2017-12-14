@@ -18,7 +18,7 @@ Terminal 2:
 ```
 source ~/ros2_ws/install/setup.bash
 source /opt/ros/kinetic/setup.bash
-dynamic_bridge --bridge-all-2to1-topics
+ros2 run ros1_bridge dynamic_bridge --bridge-all-2to1-topics
 ```
 
 Up to this point, we didn't launch anything special. We launched our ROS1 core and enabled to ROS1 bridge for forwarding all incoming ROS2 topics into the ROS1 ecosystem.
