@@ -32,7 +32,7 @@ See below for how to also install those.
 
 ```
 sudo apt update
-sudo apt install `apt list ros-ardent-* 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-ardent-ros1-bridge -e ros-ardent-turtlebot2- | tr "\n" " "`
+sudo apt install `apt list "ros-ardent-*" 2> /dev/null | grep "/" | awk -F/ '{print $1}' | grep -v -e ros-ardent-ros1-bridge -e ros-ardent-turtlebot2- | tr "\n" " "`
 ```
 
 ## Environment setup
