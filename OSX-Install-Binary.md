@@ -22,7 +22,11 @@ You need the following things installed before installing ROS 2.
         brew install python3
 
         # install asio and tinyxml2 for Fast-RTPS
-        brew install asio tinyxml2
+        brew install asio
+        # ardent was compiled and released using tinyxml2 5.0.1
+        brew uninstall --force tinyxml2
+        brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/0b3ee2f67043af1b4270096c13350420e3290399/Formula/tinyxml2.rb
+        brew pin tinyxml2
 
         # install dependencies for robot state publisher
         brew install tinyxml eigen pcre
