@@ -94,7 +94,12 @@ Detailed instructions for installing other DDS vendors are provided in the "Alte
 Run the `ament` tool to build everything (more on using `ament` in [[this tutorial|Ament-Tutorial]]):
 
     cd ~/ros2_ws/
-    src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
+    src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install 
+
+You might need to append 
+
+    --cmake-args -DEPROSIMA_BUILD=ON 
+If you run into AIOS_NOT_FOUND problem
 
 ## Try some examples
 
