@@ -99,7 +99,8 @@ Run the `ament` tool to build everything (more on using `ament` in [[this tutori
 You might need to append 
 
     --cmake-args -DEPROSIMA_BUILD=ON 
-If you run into AIOS_NOT_FOUND problem
+if you run into AIOS_INCLUDE_DIR not found problem.
+
 
 ## Try some examples
 
