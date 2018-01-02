@@ -41,7 +41,7 @@ For a more detailed description please see the [[Features]] page.
 
 Improvements since the Beta 3 release:
 - `rviz`
-- Different initialization options for message data structures in C++
+- Different initialization options for message data structures in C++ (see [design doc](http://design.ros2.org/articles/generated_interfaces_cpp.html#constructors))
 - Logging API improvements, now also used in the demos
 - Time support in C++ with different clocks
 - wait-for-service support in the Python client library
