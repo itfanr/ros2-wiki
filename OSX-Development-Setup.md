@@ -170,6 +170,19 @@ ImportError: dlopen(.../ros2_install/ros2-osx/lib/python3.6/site-packages/rclpy/
 then you probably have System Integrity Protection enabled.
 See "Disable System Integrity Protection (SIP)" above for how instructions on how to disable it.
 
+### Qt build errors e.g. `unknown type name 'Q_ENUM'`
+
+If you see build errors related to Qt, e.g.:
+```
+In file included from /usr/local/opt/qt/lib/QtGui.framework/Headers/qguiapplication.h:46:
+/usr/local/opt/qt/lib/QtGui.framework/Headers/qinputmethod.h:87:5: error: 
+      unknown type name 'Q_ENUM'
+    Q_ENUM(Action)
+    ^
+```
+
+you may be using qt4 instead of qt5: see https://github.com/ros2/ros2/issues/441
+
 ### Missing symbol when opencv (and therefore libjpeg, libtiff, and libpng) are installed with Homebrew
 
 If you have opencv installed you might get this:
