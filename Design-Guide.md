@@ -74,3 +74,44 @@ mechanism) and prioritize the last frame.
 ```
 
 [ROS2 Fine Tuning](https://roscon.ros.org/2017/presentations/ROSCon%202017%20ROS2%20Fine%20Tuning.pdf)
+
+# FastRTPS Reliable Video Streaming
+
+**Context**
+
+You want to transfer video streams in unreliable network settings.
+
+**Solution**
+
+Use a reliable communication mechanism. Use fast response by writer and reader.
+
+**Implementation**
+
+* configure "reliable" reliability mechanism
+* configure NACK reponse delay and suppression duration of writer to 0
+* configure heartbeat response delay of reader to 0
+
+```
+<reliability>
+  <kind>RELIABLE</kind>
+</reliability>
+
+# writer
+<times>
+  <nackResponseDelay>
+    <durationbyname>ZERO</durationbyname>
+  </nackResponseDelay>
+  <nackSupressionDuration>
+    <durationbyname>ZERO</durationbyname>
+  </nackSupressionDuration>
+</times>
+
+# reader
+<times>
+  <heartbeatResponseDelay>
+    <durationbyname>ZERO</durationbyname>
+  </heartbeatResponseDelay>
+</times>
+```
+
+[ROS2 Fine Tuning](https://roscon.ros.org/2017/presentations/ROSCon%202017%20ROS2%20Fine%20Tuning.pdf)
