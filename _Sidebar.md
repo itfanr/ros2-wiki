@@ -8,5 +8,6 @@
 * [[Contact]]
 * [[Contributing]]
 * [[Developer Guide|Developer-Guide]]
+* [[Design Guide|Design-Guide]]
 * [[Quality Guide|Quality-Guide]]
 * [[Migration Guide|Migration-guide]]
