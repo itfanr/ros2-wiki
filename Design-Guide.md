@@ -39,3 +39,38 @@ use Asynchronous publication mode:
 ```
 
 [ROS2 Fine Tuning](https://roscon.ros.org/2017/presentations/ROSCon%202017%20ROS2%20Fine%20Tuning.pdf)
+
+# FastRTPS Best Effort Video Streaming
+
+**Context**
+
+You want to transfer video streams and provide up to date data. It is ok to loose
+some packages.
+
+**Problem**
+
+Acknowledged data transmission mechanisms prevent from beeing able to provide
+up to data packages.
+
+**Solution**
+
+Use "best effort" communication (instead of the usual acknowledgement based
+mechanism) and prioritize the last frame.
+
+**Implementation**
+
+* configure "best effort" reliability mechanism
+* configure Quality of service history to keep last frame
+
+```
+<reliability>
+  <kind>BEST_EFFORT</kind>
+</reliability>
+
+<historyQos>
+  <kind>KEEP_LAST</kind>
+  <depth>1</depth>
+</historyQos>
+```
+
+[ROS2 Fine Tuning](https://roscon.ros.org/2017/presentations/ROSCon%202017%20ROS2%20Fine%20Tuning.pdf)
