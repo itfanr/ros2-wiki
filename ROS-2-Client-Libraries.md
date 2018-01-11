@@ -15,6 +15,18 @@ For example, here is a list of functionality that can typically be accessed thro
 - Threading model
 - Intra-process communication
 
+## Supported client libraries
+
+The C++ client library (`rclcpp`) and the Python client library (`rclpy`) are both client libraries which utilize common functionality in the RCL.
+
+While the C++ and Python client libraries are maintained by the core ROS 2 team, members of the ROS 2 community have created additional client libraries:
+
+- [JVM and Android](https://github.com/esteve/ros2_java)
+- [Objective C and iOS](https://github.com/esteve/ros2_objc)
+- [C#](https://github.com/firesurfer/rclcs)
+- [Swift](https://github.com/younata/rclSwift)
+- [Node.js](https://www.npmjs.com/package/rclnodejs)
+
 
 ## Common functionality: the RCL
 Most of the functionality found in a client library is not specific to the programming language of the client library.
@@ -35,11 +47,6 @@ Furthermore, having the common core means that maintaining multiple client libra
 Client library concepts that require language-specific features/properties are not implemented in the RCL but instead are implemented in each client library. 
 For example, threading models used by “spin” functions will have implementations that are specific to the language of the client library.
 
-## Supported client libraries
-
-The C++ client library (`rclcpp`) and the Python client library (`rclpy`) are both client libraries which utilize common functionality in the RCL.
-
-While the C++ and Python client libraries are maintained by the core ROS 2 team, members of the ROS 2 community have created client libraries for Java, C# and Swift programming languages.
 
 ## Demo
 For a walkthrough of the message exchange between a publisher using `rclpy` and a subscriber using `rclcpp`, we encourage you to watch [this ROSCon talk](https://vimeo.com/187696091) starting at 17:25 [(here are the slides)](http://roscon.ros.org/2016/presentations/ROSCon%202016%20-%20ROS%202%20Update.pdf).
