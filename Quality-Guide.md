@@ -12,6 +12,11 @@ This section tries to give guidance about how to improve the software quality of
 - Organizational considerations to improve software quality (an organizations structure and processes, etc.).
 - Infrastructural considerations which go beyond a single repository (overall continuous integration infrastructure, etc.)
 
+**Relation to other sections of this wiki:**
+
+- The [Design Guide](https://github.com/ros2/ros2/wiki/Design-Guide) summarizes design patterns for ROS2 packages. As quality is highly impacted by Design it is a good idea to have a loot into there before.
+- The [Developer Guide](https://github.com/ros2/ros2/wiki/Developer-Guide) explains what to consider when contributing to ROS2 packages w.r.t. to contribution workflow (organizational), coding conventions, documentation considerations, etc. All these consideration may have an impact on single or several quality attributes.
+
 ## Patterns
 
 * Static code analysis
