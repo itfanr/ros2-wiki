@@ -14,7 +14,13 @@ This is a list of the features targeted for development in the future.
 
 The feature list for this release will be filled out after the *Ardent* release.
 
-- ...<to be filled>...
+- Command line parameters and parameters from a yaml file
+- Static remapping, a la ROS Names: http://wiki.ros.org/Names
+- Launch system using components and life-cycle
+- rosbag native in ROS 2
+- Reconsider mapping of namespaces to DDS partitions
+
+Additional items can be added during the cycle if the progress and/or resources permit.
 
 ### Future (in no specific order)
 
@@ -24,7 +30,6 @@ The feature list for this release will be filled out after the *Ardent* release.
 - Support for non-ASCII strings in messages / services
 - Progress on migration plan
 - Reconsider 1-to-1 mapping of ROS nodes to DDS participants
-- Reconsider mapping of namespaces to DDS partitions
 - Python-based launch with stable API, introspectable, optional XML frontend
 - Make `ament_cmake` available in ROS 1 and/or `catkin` available in ROS 2
 
@@ -55,17 +60,13 @@ The feature list for this release will be filled out after the *Ardent* release.
 - Feature parity across languages
   - Parameters in C and Python
   - ROS Time concepts in Python
-- rosbag native in ROS 2
 - Minor logging improvements
   - Configuration specified in a file
   - C++ stream operators
-- Command line parameters and parameters from a yaml file
 - Provide standard way to create and use components
-- Launch system using life-cycle and orchestration
 - Additional Graph API features
   - a la ROS 1 Master API: http://wiki.ros.org/ROS/Master_API
 - Remapping
-  - Static remapping, a la ROS Names: http://wiki.ros.org/Names
   - Dynamic remapping and aliasing through a Service interface
 - Type masquerading
   - a la ROS 1's message traits: http://wiki.ros.org/roscpp/Overview/MessagesSerializationAndAdaptingTypes
