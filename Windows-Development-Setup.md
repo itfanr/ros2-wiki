@@ -71,7 +71,7 @@ Then install `patch`:
 > choco install -y patch
 ```
 
-You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, `cmake`, and `patch.exe`.
+You may need to close the cmd prompt and open a new one, but at this point you should be able to run `git`, `python`, `cmake`, and `patch.exe --version`.
 
 ### Installing Boost (only for beta-1 and older)
 
