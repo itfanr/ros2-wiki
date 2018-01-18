@@ -175,7 +175,7 @@ You can download a precompiled version of OpenCV from:
 - Visual Studio 2015:
   - https://github.com/ros2/ros2/releases/download/release-beta2/opencv-2.4.13.2-vc14.VS2015.zip
 - Visual Studio 2017:
-  - https://github.com/ros2/ros2/releases/download/release-beta1/opencv-2.4.13.2-vc15.zip
+  - https://github.com/ros2/ros2/releases/download/release-beta1/opencv-2.4.13.2-vc15update.zip
 
 Assuming you unpacked it to `C:\opencv`, type the following on a Command Prompt (requires Admin privileges):
 
