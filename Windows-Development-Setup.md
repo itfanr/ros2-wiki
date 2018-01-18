@@ -112,6 +112,7 @@ Also, you should install `curl`:
 ```
 
 ### Install dependencies
+
 In order to install the packages for the robot state publisher correctly, you need to install a few external dependencies.
 In order to ease the manual installation process, we provide the necessary chocolatey packages.
 
@@ -194,6 +195,32 @@ Run the installer with default parameters. Then, define environment variables (t
 
 - `setx -m OPENSSL_CONF C:\OpenSSL-Win64\bin\openssl.cfg`
 - Add `C:\OpenSSL-Win64\bin\` to your PATH
+
+### Install Qt5
+
+This section is only required if you are building rviz, but it comes with our default set of sources, so if you don't know, then assume you are building it.
+
+First get the installer from Qt's website:
+
+https://www.qt.io/download
+
+Select the Open Source version and then the `Qt Online Installer for Windows`.
+
+Run the installer and install Qt5.
+We recommend you install it to the default location of `C:\Qt`, but if you choose somewhere else, make sure to update the paths below accordingly.
+When selecting what to install, the only thing you absolutely need is the `MSVC 2015 64-bit` option under the `Qt` -> `Qt 5.10.0` tree.
+We're using `5.10.0` as of the writing of this document and that's what we recommend since that's all we test on Windows, but later version will probably work too.
+You may also want to go ahead and install the `MSVC 2017 64-bit` too if you'd like to use Visual Studio 2017 (we have only experimental support for this right now).
+After that, the default settings are fine.
+
+Finally, set the `Qt5_DIR` environment variable in the `cmd.exe` where you intend to build so that CMake can find it:
+
+```
+> set Qt5_DIR=C:\Qt\5.10.0\msvc2015_64
+: You could set it permanently with `setx -m Qt5_DIR C:\Qt\5.10.0\msvc2015_64` instead, but that requires Administrator.
+```
+
+Note, this path might change based on which MSVC version you're using or if you installed it to a different directory.
 
 ### Getting the Source Code
 
