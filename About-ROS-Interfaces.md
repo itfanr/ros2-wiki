@@ -118,7 +118,7 @@ Note: Constants names have to be UPPERCASE
 
 
 ## 3. Service Description Specification
-Messages description are defined in `.srv` files in the `srv/` directory of a ROS package.
+Services description are defined in `.srv` files in the `srv/` directory of a ROS package.
 
 A service description file consists of a request and a response msg type, separated by '---'. Any two .msg files concatenated together with a '---' are a legal service description.
 
