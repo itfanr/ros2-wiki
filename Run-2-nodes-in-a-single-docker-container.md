@@ -4,7 +4,7 @@ Pull the ROS2 docker image with tag "ardent-basic".
 
 Run the image in a container in interactive mode.
 
-    $ docker run -it osrf/ros2:ardent-basic /bin/bash
+    $ docker run -it osrf/ros2:ardent-basic
     root@<container-id>:/#
 
 Your best friend is the `ros2` command line help now.
