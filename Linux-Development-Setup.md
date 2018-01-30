@@ -64,7 +64,7 @@ Create a workspace and clone all repos:
 ```
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
-wget https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
+wget https://raw.githubusercontent.com/ros2/ros2/ardent/ros2.repos
 vcs-import src < ros2.repos
 ```
 
