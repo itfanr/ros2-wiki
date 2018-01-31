@@ -21,7 +21,8 @@ If you are becoming the next build cop or build farmer you should:
 - Make sure you are "watching" this GitHub repository:
   - https://github.com/ros2/build_cop
 - Talk with the previous build cop or build farmer about on-going issues
-- Update the description of the main view on Jenkins to the current date and your name: http://ci.ros2.org/
+- Update the description of the main view on Jenkins to the current date and your name:
+  - http://ci.ros2.org/
 
 ## Retirement
 
