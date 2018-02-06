@@ -22,6 +22,7 @@
 ### Docker
 
 * [Run 2 nodes in a single docker container](Run-2-nodes-in-a-single-docker-container)
+* [Run 2 nodes in two separate docker containers](Run-2-nodes-in-two-separate-docker-containers)
 
 ## ROS 2 Demos
 * [Use quality-of-service settings to handle lossy networks](Quality-Of-Service)
