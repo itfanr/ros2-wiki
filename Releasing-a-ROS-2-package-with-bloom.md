@@ -1,6 +1,9 @@
 ## Required tool versions
 
-*ardent*: `bloom` >= 0.6.2, `catkin_pkg` >= 0.4.0
+For ROS 2 *ardent*:
+
+* `bloom` >= 0.6.2
+* `catkin_pkg` >= 0.4.0
 
 ## Setting up the environment
 
@@ -8,8 +11,7 @@ ROS 2 uses a forked rosdistro index located at https://github.com/ros2/rosdistro
 You can configure bloom to use it by setting the `ROSDISTRO_INDEX_URL` environment variable.
 
 ```
-ROSDISTRO_INDEX_URL='https://raw.githubusercontent.com/ros2/rosdistro/ros2/index.yaml'
-export ROSDISTRO_INDEX_URL
+export ROSDISTRO_INDEX_URL='https://raw.githubusercontent.com/ros2/rosdistro/ros2/index.yaml'
 ```
 
 ## Running bloom
