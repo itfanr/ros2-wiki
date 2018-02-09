@@ -46,6 +46,7 @@ First install git:
 ```
 > choco install -y git
 ```
+
 If you are on Windows 8, you will need to append the git bin folder `C:\Program Files\Git\bin` to the PATH (this is not necessary on Windows 10).
 
 Then Python 3.5 or higher:
@@ -372,13 +373,17 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 ```
 
 * You'll need to quit and restart the command prompt after installing the above.
-* Get and extract the Python 3.6.3 source from the `tgz`:
-  * https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
-  * To keep these instructions concise, please extract it to `C:\dev\Python-3.6.3`
+* Get and extract the Python 3.6.4 source from the `tgz`:
+  * https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+  * To keep these instructions concise, please extract it to `C:\dev\Python-3.6.4`
+* Next you'll have to patch the python build files for Windows:
+  * https://bugs.python.org/issue32423
+  * https://github.com/isuruf/cpython/commit/9432a2c7f63b3bb55e8066e91eade81321154476
+    * use this diff as a guide on what to change
 * Now, build the Python source in debug mode from a Visual Studio command prompt:
 
 ```
-> cd C:\dev\Python-3.6.3\PCbuild
+> cd C:\dev\Python-3.6.4\PCbuild
 > get_externals.bat
 > build.bat -p x64 -d
 ```
@@ -386,7 +391,7 @@ If you want to be able to run all the tests in Debug mode, you'll need to instal
 * Finally, copy the build products into the Python36 installation directories, next to the Release-mode Python executable and DLL's:
 
 ```
-> cd C:\dev\Python-3.6.3\PCbuild\amd64
+> cd C:\dev\Python-3.6.4\PCbuild\amd64
 > copy python_d.exe C:\Python36 /Y
 > copy python36_d.dll C:\Python36 /Y
 > copy python3_d.dll C:\Python36 /Y
