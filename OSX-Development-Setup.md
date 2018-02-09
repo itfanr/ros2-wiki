@@ -12,6 +12,7 @@ You need the following things installed to build ROS 2:
 
 1. **Xcode**
     * If you don't already have it installed, install Xcode and the Command Line Tools:
+
     ```
     xcode-select --install
     ```
@@ -31,11 +32,7 @@ You need the following things installed to build ROS 2:
         brew install python3 wget cmake cppcheck tinyxml eigen pcre
 
         # install dependencies for Fast-RTPS if you are using it
-        brew install asio
-        # ardent was compiled and released using tinyxml2 5.0.1
-        brew uninstall --force tinyxml2
-        brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/0b3ee2f67043af1b4270096c13350420e3290399/Formula/tinyxml2.rb
-        brew pin tinyxml2
+        brew install asio tinyxml2
 
         brew install opencv
 
