@@ -31,6 +31,40 @@ This section tries to give guidance about how to improve the software quality of
 * ROS2 node unit test
   * (generic use cases of `launch` based tests)
 
+## Dynamic analysis (data races & deadlocks)
+
+**Context:**
+
+* You are developing/debugging your multithreaded C++ production code.
+* You use pthreads or C++11 threading + llvm libc++ (in case of ThreadSanatizer).
+* You do not use Libc/libstdc++ static linking (in case of ThreadSanatizer).
+* You do not build non-position-independent executables (in case of ThreadSanatizer).
+
+**Problem:**
+
+* Data races and deadlocks can lead to critical bugs.
+* Data races and deadlocks cannot be detected using static analysis (reason: limitation of static analysis).
+* Data races and deadlocks must not show up during development debugging / testing (reason: usually not all possible control paths through production code exercised).
+
+**Solution:**
+
+* Use a dynamic analysis tool which focuses on finding data races and deadlocks (here clang ThreadSanatizer).
+
+**Implementation:**
+
+* Compile and link the production code with clang using the option `-fsanitize=thread` (this instruments the production code).
+* In case different production code shall be executed during anaylsis consider conditional compilation e.g. [ThreadSanatizers _has_feature(thread_sanitizer)](https://clang.llvm.org/docs/ThreadSanitizer.html#has-feature-thread-sanitizer).
+* In case some code shall not be instrumented consider [ThreadSanatizers _/_attribute_/_((no_sanitize("thread")))](https://clang.llvm.org/docs/ThreadSanitizer.html#attribute-no-sanitize-thread).
+* In case some files shall not be instrumented consider file or function level exclusion [ThreadSanatizers blacklisting](https://clang.llvm.org/docs/ThreadSanitizer.html#blacklist), more specific: [ThreadSanatizers Sanitizer Special Case List](https://clang.llvm.org/docs/SanitizerSpecialCaseList.html) or with [ThreadSanatizers no_sanitize("thread")](https://clang.llvm.org/docs/ThreadSanitizer.html#blacklist) and use the option `--fsanitize-blacklist`.
+
+**Resulting context:**
+
+* Higher chance to find data races and deadlocks in production code before deploying it.
+* Analysis result may lack reliability, tool in beta phase stage (in case of ThreadSanatizer).
+* Overhead due to production code instrumentation (maintenance of separate branches for instrumented/not instrumented production code, etc.).
+* Instrumented code needs more memory per thread (in case of ThreadSanatizer).
+* Instrumented code maps a lot virtual address space (in case of ThreadSanatizer).
+
 ## Code coverage analysis
 
 **Context**
