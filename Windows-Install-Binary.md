@@ -108,7 +108,7 @@ python -m pip install -U pyyaml setuptools
 * Download the latest package for Windows, e.g., `ros2-package-windows-AMD64.zip`.
   * Note: there may be more than one binary download option which might cause the file name to differ.
 * Unpack the zip file somewhere (we'll assume `C:\dev\ros2`).
-
+  * Note: There seems to be an issue where extracting the zip file with 7zip causes RViz to crash on startup. Extract the zip file using the Windows explorer to prevent this.
 
 ## Set up the ROS 2 environment
 
