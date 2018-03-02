@@ -60,8 +60,10 @@ Additional items can be added during the cycle if the progress and/or resources 
 - Feature parity across languages
   - Parameters in C and Python
   - ROS Time concepts in Python
-- Minor logging improvements
+- Logging improvements
   - Configuration specified in a file
+  - Log to file
+  - Log to `rosout` topic
   - C++ stream operators
 - Provide standard way to create and use components
 - Additional Graph API features
