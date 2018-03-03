@@ -11,7 +11,7 @@ Join us there and participate in the conversation.
 If you'd like to contact us privately (e.g., if your question contains information sensitive to your organization or project), you can email us directly at `ros@osrfoundation.org`.
 
 ## Troubleshooting
-If you need help with troubleshooting your system, please first check [this Discourse category](http://discourse.ros.org/c/ng-ros) to see if others have come across similar issues, otherwise start a new post of your own.
+If you need help with troubleshooting your system, please first check [ROS Answers](https://answers.ros.org) to see if others have come across similar issues, otherwise ask a new questions on ROS Answers making sure to include at least the `ros2` tag and the rosdistro version you are running, e.g. `ardent`.
 
 ## Opening issues
 If you identify bugs, you can open an issue to notify the ROS team.

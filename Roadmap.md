@@ -2,7 +2,8 @@
 
 For more information on the design of ROS 2 please see [design.ros2.org](http://design.ros2.org).
 The core code for ROS 2 is on the [ros2 github organization](https://github.com/ros2).
-The Discourse forum/mailing list for discussing ROS 2 is [ng-ros](https://discourse.ros.org/c/ng-ros).
+The Discourse forum/mailing list for discussing ROS 2 design is [ng-ros](https://discourse.ros.org/c/ng-ros).
+Questions should be asked on [ROS answers](https://answers.ros.org), make sure to include at least the `ros2` tag and the rosdistro version you are running, e.g. `ardent`.
 
 ## Planned upcoming releases
 
