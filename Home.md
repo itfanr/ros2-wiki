@@ -42,7 +42,7 @@ You can find the code for most of the repositories on the [ros2 github organizat
 
 [docs.ros2.org](http://docs.ros2.org) contains current details about ROS 2 internal design and organization.
 
-[awesome-ros2](https://github.com/fkromer/awesome-ros2) is a "cheat sheet" style quick reference for ROS 2 packages and resources which will get (hopefully) listed on the [curated list of awesome lists](https://github.com/sindresorhus/awesome) to help GitHub users to get to know ROS 2.
+[awesome-ros2](https://fkromer.github.io/awesome-ros2) is a "cheat sheet" style quick reference for ROS 2 packages and resources which will get (hopefully) listed on the [curated list of awesome lists](https://github.com/sindresorhus/awesome) to help GitHub users to get to know ROS 2.
 
 The following [ROSCon](http://roscon.ros.org) talks have been given on ROS 2 and provide information about the workings of ROS 2 and various demos:
 
