@@ -44,11 +44,15 @@ source /opt/ros/ardent/setup.bash
 ## Command line completion
 
 Install argcomplete from pip for argument completion. Note that the version available through apt-get in Ubuntu 16.04 (Xenial) will not work due to a bug in argcomplete:
+
 ```
 sudo apt install python3-pip
 sudo pip3 install argcomplete
+
 ```
+
 If you have installed the Python package `argcomplete` (version 0.8.5 or higher) you can source the following file to get completion for command line tools like `ros2`:
+
 ```
 source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
 ```
