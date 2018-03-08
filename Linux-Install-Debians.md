@@ -41,19 +41,19 @@ sudo apt install `apt list "ros-ardent-*" 2> /dev/null | grep "/" | awk -F/ '{pr
 source /opt/ros/ardent/setup.bash
 ```
 
-## Command line completion
+If you have installed the Python package `argcomplete` (version 0.8.5 or higher, see below for Xenial instructions) you can source the following file to get completion for command line tools like `ros2`:
 
-Install argcomplete from pip for argument completion. Note that the version available through apt-get in Ubuntu 16.04 (Xenial) will not work due to a bug in argcomplete:
+```
+source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
+```
+
+### (optional) Install argcomplete >= 0.8.5 on Ubuntu 16.04
+
+If you need to install `argcomplete` on Ubuntu 16.04 (Xenial), you'll need to use pip, because the version available through `apt-get` will not work due to a bug in that version of `argcomplete`:
 
 ```
 sudo apt install python3-pip
 sudo pip3 install argcomplete
-```
-
-If you have installed the Python package `argcomplete` (version 0.8.5 or higher) you can source the following file to get completion for command line tools like `ros2`:
-
-```
-source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
 ```
 
 ## Choose RMW implementation
