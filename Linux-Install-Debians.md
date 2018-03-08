@@ -48,7 +48,6 @@ Install argcomplete from pip for argument completion. Note that the version avai
 ```
 sudo apt install python3-pip
 sudo pip3 install argcomplete
-
 ```
 
 If you have installed the Python package `argcomplete` (version 0.8.5 or higher) you can source the following file to get completion for command line tools like `ros2`:
