@@ -182,7 +182,7 @@ Now this overlay is on top of the existing overlay so you'll find that `which ta
 
 If you source `~/ros2_overlay_ws/install/local_setup.bash` it will change to refer to talker in the overlay.
 
-If you are returning with a new terminal to your development and want to pick up developing on your overlay you can simply source `~/ros2_overlay_ws/setup.bash` which will source all parent workspaces environments automatically.
+If you are returning with a new terminal to your development and want to pick up developing on your overlay you can simply source `~/ros2_overlay_ws/install/setup.bash` which will source all parent workspaces environments automatically.
 
 ## Create your own package
 
