@@ -22,6 +22,7 @@ This section tries to give guidance about how to improve the software quality of
 * Static code analysis
   * Static code analysis using a single tool
   * Static code analysis using multiple tools complementary
+  * Static code analysis as part of the ament package build
 * Dynamic code analysis
 * ROS2 library test
   * (referencing of generic unit test patterns like from [xUnitPatterns](http://xunitpatterns.com/Book%20Outline%20Diagrams.html) with references to C++ gtest+gmock/Python unittest implementations)
@@ -30,6 +31,65 @@ This section tries to give guidance about how to improve the software quality of
   * Code coverage analysis
 * ROS2 node unit test
   * (generic use cases of `launch` based tests)
+
+## Static code analysis as part of the ament package build
+
+**Context**:
+
+* You have developed your C++ production code.
+* You have created a ROS2 package with build support with `ament`.
+
+**Problem**:
+
+* Library level static code analysis is not run as part of the package build procedure.
+* Library level static code analysis needs to be executed manually.
+* Risk of forgetting to execute library level static code analysis before building
+  a new package version.
+
+**Solution**:
+
+* Use the integration capabilities of `ament` to execute static code analysis as
+  part of the package build procedure.
+
+**Implementation**:
+
+* Insert into the packages `CMakeLists.txt` file.
+
+```
+...
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+  ...
+endif()
+...
+```
+
+* Insert the `ament_lint` test dependencies into the packages `package.yml` file.
+
+```
+...
+<package format="2">
+  ...
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  ...
+</package>
+```
+
+**Examples**:
+
+* `rclcpp`:
+  * [rclcpp/rclcpp/CMakeLists.txt](https://github.com/ros2/rclcpp/blob/master/rclcpp/CMakeLists.txt)
+  * [rclcpp/rclcpp/package.xml](https://github.com/ros2/rclcpp/blob/master/rclcpp/package.xml)
+* `rclcpp_lifecycle`:
+  * [rclcpp/rclcpp_lifecycle/CMakeLists.txt](https://github.com/ros2/rclcpp/blob/master/rclcpp_lifecycle/CMakeLists.txt)
+  * [rclcpp/rclcpp_lifecycle/package.xml](https://github.com/ros2/rclcpp/blob/master/rclcpp_lifecycle/package.xml)
+
+**Resulting context**:
+
+* The static code analysis tools supported by `ament` are run as part of the package build.
+* Static code analysis tools not supported by `ament` need to be executed separately.
 
 ## Dynamic analysis (data races & deadlocks)
 
