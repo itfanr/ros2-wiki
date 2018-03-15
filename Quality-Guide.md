@@ -65,7 +65,7 @@ endif()
 ...
 ```
 
-* Insert the `ament_lint` test dependencies into the packages `package.yml` file.
+* Insert the `ament_lint` test dependencies into the packages `package.xml` file.
 
 ```
 ...
