@@ -98,7 +98,7 @@ Since there is no `devel` space in ament and it requires installing each package
 This allows the installed files to be changed by changing the files in the `source` space (e.g. Python files or other not compiled resourced) for faster iteration.
 
 ```bash
-src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install --cmake-args -DEPROSIMA_BUILD=ON
+src/ament/ament_tools/scripts/ament.py build --build-tests --symlink-install
 ```
 
 ## Run the tests
