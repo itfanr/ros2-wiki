@@ -3,7 +3,7 @@ Intel® Robotics Open Source Project (Intel® ROS Project) to enable the object 
 
 ## Key Projects
 We will work on below ROS2 projects and publish source code at https://github.com/intel/ gradually.
-*  ROS2 RealSense Camera: ROS2 package for Intel® RealSense™ D400 serial cameras
+*  [ROS2 RealSense Camera](https://github.com/intel/ros2_intel_realsense): ROS2 package for Intel® RealSense™ D400 serial cameras
 *  ROS2 Movidius NCS: ROS2 package for object detection with Intel® Movidius™ Neural Computing Stick (NCS).
 *  ROS2 Object Analytics: ROS2 package for object detection, tracking and 2D/3D localization.
 *  ROS2 Object Messages: ROS2 messages for object.
