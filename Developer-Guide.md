@@ -156,12 +156,20 @@ We will use the Google C++ Style Guide, with some modifications:
 
 https://google.github.io/styleguide/cppguide.html
 
+#### Line Length
+
 - Line Length: our maximum line length is 100 characters.
+
+#### Access Control
+
 - Access Control: drop requirement for all class members to be private and therefore require accessors
   - rationale: this is overly constraining for user API design
   - we should prefer private members, only making them public when they are needed
   - we should consider using accessors before choosing to allow direct member access
   - we should have a good reason for allowing direct member access, other than because it is convenient for us
+
+#### Exceptions
+
 - Exceptions are allowed
   - rationale: this is a new code base, so the legacy argument doesn't apply to us
   - rationale: for user facing API's it is more idiomatic C++ to have exceptions
@@ -169,27 +177,53 @@ https://google.github.io/styleguide/cppguide.html
 - We should consider avoiding Exceptions if we intend to wrap the resulting API in C
   - rationale: it will make it easier to wrap in C
   - rationale: most of our dependencies in code we intend to wrap in C do not use exceptions anyways
+
+#### Function-like Objects
+
 - No restrictions on Lambda's or `std::function` or `std::bind`
+
+#### Boost
+
 - Boost should be avoided until absolutely required
+
+#### Comments and Doc Comments
+
 - Use `///` and `/** */` comments for _documentation_ purposes and `//` style comments for notes and general comments
   - Class and Function comments should use `///` and `/** */` style comments
   - rationale: these are recommended for Doxygen and Sphinx in C/C++
   - rationale: mixing `/* */` and `//` is convenient for block commenting out code which contains comments
   - Descriptions of how the code works or notes within classes and functions should use `//` style comments
+
+#### Pointer Syntax Alignment
+
 - Use `char * c;` instead of `char* c;` or `char *c;` because of this scenario `char* c, *d, *e;`
+
+#### Class Privacy Keywords
+
 - Do not put 1 space before `public:`, `private:`, or `protected:`, it is more consistent for all indentions to be a multiple of 2
   - rationale: most editors don't like indentions which are not a multiple of the (soft) tab size
   - Use zero spaces before `public:`, `private:`, or `protected:`, or 2 spaces
   - If you use 2 spaces before, indent other class statements by 2 additional spaces
   - Prefer zero spaces, i.e. `public:`, `private:`, or `protected:` in the same column as the class
+
+#### Nested Templates
+
 - Never add whitespace to nested templates
   - Prefer `set<list<string>>` (C++11 feature) to `set<list<string> >` or `set< list<string> >`
+
+#### Always Use Braces
+
 - Always use braces following `if`, `else`, `do`, `while`, and `for`, even when the body is a single line.
   - rationale: less opportunity for visual ambiguity and for complications due to use of macros in the body
+
+#### Open Versus Cuddled Braces
+
 - Use open braces for `function`, `class`, and `struct` definitions, but cuddle braces on `if`, `else`, `while`, `for`, etc...
   - Exception: when an `if` (or `while`, etc.) condition is long enough to require line-wrapping, then use an open brace (i.e., don't cuddle).
 - When a function call cannot fit on one line, wrap at the open parenthesis (not in between arguments) and start them on the next line with a 2-space indent.  Continue with the 2-space indent on subsequent lines for more arguments.  (Note that the [Google guide](https://google.github.io/styleguide/cppguide.html#Function_Calls) is internally contradictory on this point.)
   - Same goes for `if` (and `while`, etc.) conditions that are too long to fit on one line.
+
+##### Examples
 
 This is OK:
 
@@ -286,6 +320,8 @@ MyClass::MyClass(int var)
   ...
 }
 ```
+
+#### Linters
 
 Most of these styles and restrictions can be checked with a combination of Google's [cpplint.py](http://google-styleguide.googlecode.com/svn/trunk/cpplint/) and [clang-format](http://clang.llvm.org/docs/ClangFormat.html), though we may need to modify them slightly for our above changes.
 Editor integration for `cpplint.py`:
