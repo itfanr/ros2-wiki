@@ -118,7 +118,7 @@ Start a command shell and source the ROS 2 setup file to set up the workspace:
 > call C:\dev\ros2\local_setup.bat
 ```
 
-If you downloaded a release with OpenSplice support and want to use it as a middleware you must additionally source the OpenSplice setup file.
+If you downloaded a release with OpenSplice support and want to use it as a middleware you must additionally source the OpenSplice setup file (the previous command, if nothing else went wrong, will output "The system cannot find the path specified." exactly once).
 Only do this **after** you have sourced the ROS 2 one:
 
 ```
