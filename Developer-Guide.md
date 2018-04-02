@@ -160,6 +160,13 @@ https://google.github.io/styleguide/cppguide.html
 
 - Line Length: our maximum line length is 100 characters.
 
+#### Variable Naming
+
+- Global variables: use lowercase with underscores prefixed with `g_`
+  - rationale: keep variable naming case consistent across the project
+  - rationale: easy to tell the scope of a variable at a glance
+  - consistency across languages
+
 #### Access Control
 
 - Access Control: drop requirement for all class members to be private and therefore require accessors
