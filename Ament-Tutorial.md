@@ -168,8 +168,8 @@ cd ~/ros2_overlay_ws/src
 And to get started we'll overlay the [ros2/examples repository](https://github.com/ros2/examples):
 
 ```bash
-# If you know you're using the "master" branch of all repositories in the underlay,
-# you can get the latest version of the ros2/examples repository too with this command:
+# If you know that you're using the latest branch of all repositories in the underlay,
+# you can get the latest version of the ros2/examples repository as well, with this command:
 #   git clone https://github.com/ros2/examples.git
 # Otherwise, clone it from the one you already have cloned in the underlay source code:
 git clone ~/ros2_ws/src/ros2/examples
