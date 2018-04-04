@@ -178,6 +178,13 @@ cd ~/ros2_overlay_ws
 ament build --cmake-args -DCMAKE_BUILD_TYPE=Debug
 ```
 
+If the build fails you may need to checkout the same commit for examples.git as the one in the underlay, for example:
+
+```bash
+cd ~/ros2_overlay_ws/src
+git checkout c501af0ddaaa92e4
+```
+
 Now this overlay is on top of the existing overlay so you'll find that `which talker` currently refers to the one from the underlay.
 
 If you source `~/ros2_overlay_ws/install/local_setup.bash` it will change to refer to talker in the overlay.
