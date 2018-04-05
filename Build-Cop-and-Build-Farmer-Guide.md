@@ -101,6 +101,8 @@ In each case different actions should be taken by the build cop:
 - You can search for PRs merged between two dates with, e.g.:
   - https://github.com/search?utf8=%E2%9C%93&q=user%3Aament+user%3Aros2+merged%3A%222017-04-17T22%3A00%3A00-08%3A00+..+2017-04-18T23%3A30%3A00-08%3A00%22&type=Issues
   - (note that FastRTPS and other external repos won’t appear)
+- To get the exact list of code that changed, generate a diff between the output of `vcs export --exact` between two builds.
+  - This is particularly useful for external repos such as FastRTPS where old commits may get pushed to the master branch overnight, and are difficult to spot in the GitHub UI.
 - Times displayed at the top of jenkins jobs are in UTC. You can convert the times with e.g.:
   - https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=when+it's+9:25:12+PM+UTC+time+pst
 
