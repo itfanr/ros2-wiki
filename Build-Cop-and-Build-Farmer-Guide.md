@@ -105,6 +105,9 @@ In each case different actions should be taken by the build cop:
   - This is particularly useful for external repos such as FastRTPS where old commits may get pushed to the master branch overnight, and are difficult to spot in the GitHub UI.
 - Times displayed at the top of jenkins jobs are in UTC. You can convert the times with e.g.:
   - https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=when+it's+9:25:12+PM+UTC+time+pst
+- If linter failures occur overnight it is usually because of a new version of a linter.
+  - Create a diff of the last `pip freeze` output of two builds to see which versions changed.
+  - If it's a regression in a dependency you can pin the older version temporarily, see [this PR for an example](https://github.com/ros2/ci/pull/129).
 
 ## Build Farmer
 
