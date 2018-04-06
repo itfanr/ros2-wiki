@@ -26,3 +26,15 @@ MISRA publishes a set of guidelines for both C and C++ that define a subset of t
 ## Why is this important to ROS2 users?
 
 As robotics and autonomy grow, especially in the field of self-driving cars, users of ROS will need to be able to determine if the software is able to be used in a safety-critical environment. With suitable guidance and modification, it is expected that ROS2 could be integrated as part of a MISRA compliant system. This would enable users of ROS2 to take their work through multiple stages of the software lifecyce, from prototype through production.
+
+## Claiming Compliance
+
+From: [MISRA Compliance:2016](https://www.misra.org.uk/Publications/tabid/57/Default.aspx#label-comp)
+
+> In order for a claim of MISRA compliance to have meaning, it is necessary to establish:
+> * Exactly which guidelines are being applied;
+> * The effectiveness of the enforcement methods;
+> * The extent to which deviations have been used;
+> * Use of a disciplined software development process;
+> * The status of any components developed outside of the project.
+
