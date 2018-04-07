@@ -22,7 +22,7 @@ Don’t worry if you are not sure if your response is correct - simply say so an
 
 ### Setting up your development environment
 
-To get started, you'll want to install from source; follow [[the source installation instructions|Installation#building-from-source]] for your platform.
+To get started, you'll want to install from source; follow [the source installation instructions](Installation#building-from-source.md) for your platform.
 
 ### What to work on
 
@@ -37,4 +37,4 @@ If your proposal involves changes to the APIs, it is especially recommended that
 
 Code contributions should be made via pull requests to [the appropriate ros2 repositories](https://github.com/ros2).
 
-We ask all contributors to follow the practices explained in [[the developer guide|Developer-Guide]].
+We ask all contributors to follow the practices explained in [the developer guide](Developer-Guide.md).
