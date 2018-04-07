@@ -35,7 +35,7 @@ Binary packages as well as instructions for how to compile from source are provi
 - HSR demo [see Beta 3](Beta3-Overview)
 - Turtlebot demo [see Beta 2](Beta2-Overview)
 
-For a more detailed description please see the [[Features]] page.
+For a more detailed description please see the [Features](Features.md) page.
 
 #### Changes since Beta 3 release
 
