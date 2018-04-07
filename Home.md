@@ -12,7 +12,7 @@ If you're looking for information on ROS 1 (i.e., ROS as it has existed for seve
 **Before you proceed here, please read the [[features page|Features]] to get an idea of what is in the current ROS 2 release.**
 
 ## Installation
-See [[the installation page|Installation]].
+See [the installation page](Installation.md).
 
 ## Tutorials and Features
 ROS 2 is under heavy development.
