@@ -24,10 +24,10 @@ ROS 2 is currently planning to release new versions every six month (which is tw
 See the [Roadmap](Roadmap.md) for details on the planned upcoming features for ROS 2.
 
 ## Contributing
-See [[the contributing page|Contributing]] and [[the developer guide|Developer-Guide]] for details on how to contribute to ROS 2 developments.
+See [the contributing page](Contributing.md) and [the developer guide](Developer-Guide.md) for details on how to contribute to ROS 2 developments.
 
 ## Reporting problems and asking questions
-See [[the contact page|Contact]].
+See [the contact page](Contact.md).
 
 # About ROS 2
 Since ROS was started in 2007, a lot has changed in the robotics and ROS community.
