@@ -37,7 +37,7 @@ Additional items can be added during the cycle if the progress and/or resources 
 #### Infrastructure and tools
 
 - Building
-  - Work towards a [[universal build tool|http://design.ros2.org/articles/build_tool.html]]
+  - Work towards a [universal build tool](http://design.ros2.org/articles/build_tool.html)
   - Support for `devel` and `pull request` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
   - Support to generate "fat" packages / archives
   - Windows and Mac OS packages
