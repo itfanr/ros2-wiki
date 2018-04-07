@@ -28,4 +28,4 @@ When filing an issue, please make sure to:
 
 
 Pull requests are welcome for any of [the ros2 repositories](https://github.com/ros2) to suggest specific code changes!
-See [[Contributing]] for more details on how to contribute.
+See [Contributing](Contributing.md) for more details on how to contribute.

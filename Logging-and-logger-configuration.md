@@ -1,6 +1,6 @@
 # Logging and logger configuration demo
 
-See [the logging page](Logging) for details on available functionality.
+See [the logging page](Logging.md) for details on available functionality.
 
 In this demo, different types of log calls are shown and the severity level of different loggers is configured locally and externally.
 
