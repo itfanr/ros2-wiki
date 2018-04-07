@@ -9,4 +9,4 @@ For more details about each release, see the corresponding release overview.
 | [[beta1\|beta1-Overview]] | 19 December 2016 |
 | [[alpha1-8\|alpha-Overview]] | 31 August 2015 - 4 October 2016 |
 
-Notes on how a release is made: [[Release-Howto]]
+Notes on how a release is made: [Release-Howto](Release-Howto.md)
