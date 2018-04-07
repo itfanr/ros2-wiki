@@ -21,7 +21,7 @@ For details of the current features, see [Features](Features.md).
 
 ## What's ahead
 ROS 2 is currently planning to release new versions every six month (which is twice as often as ROS 1) to give the community members an opportunity to provide early feedback on the evolving system.
-See the [[Roadmap]] for details on the planned upcoming features for ROS 2.
+See the [Roadmap](Roadmap.md) for details on the planned upcoming features for ROS 2.
 
 ## Contributing
 See [[the contributing page|Contributing]] and [[the developer guide|Developer-Guide]] for details on how to contribute to ROS 2 developments.
