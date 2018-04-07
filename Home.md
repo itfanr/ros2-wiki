@@ -17,7 +17,7 @@ See [the installation page](Installation.md).
 ## Tutorials and Features
 ROS 2 is under heavy development.
 You can check out the [[tutorials page|Tutorials]] to see a range of examples of what the system can do in its current state, if it fits your project *today* depending on the exact requirement.
-For details of the current features, see [[Features]].
+For details of the current features, see [Features](Features.md).
 
 ## What's ahead
 ROS 2 is currently planning to release new versions every six month (which is twice as often as ROS 1) to give the community members an opportunity to provide early feedback on the evolving system.
