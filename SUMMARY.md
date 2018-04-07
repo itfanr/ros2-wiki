@@ -1,6 +1,6 @@
 * [Home](Home.md)
-* [Ardent Apalone Release Overview](Release-Ardent-Apalone)
-* [All Releases](Releases)
+* [Ardent Apalone Release Overview](Release-Ardent-Apalone.md)
+* [All Releases](Releases.md)
 * [Features](Features.md)
 * [Installation](Installation.md)
 * [Tutorials](Tutorials.md)
