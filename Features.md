@@ -18,7 +18,7 @@ For planned future development, see the [[Roadmap]].
 | Composition of node components at compile-, link- or `dlopen`-time | [Demo](Composition.md) | Currently only in C++. |
 | Support for nodes with managed lifecycles | [Demo](https://github.com/ros2/ros2/wiki/Managed-Nodes) | Currently only in C++. |
 | DDS-Security support | [Demo](https://github.com/ros2/sros2) | |
-| Command-line introspection tools using an extensible framework | [[Tutorial\|Introspection-with-command-line-tools]] | |
+| Command-line introspection tools using an extensible framework | [Tutorial](Introspection-with-command-line-tools.md) | |
 | Namespace support for nodes and topics | [Article](http://design.ros2.org/articles/topic_and_service_names.html) | |
 | Demos of an all-ROS 2 mobile robot | [Demo](https://github.com/ros2/turtlebot2_demo) | |
 | Preliminary support for real-time code | [Demo](Real-Time-Programming.md), [demo](Allocator-Template-Tutorial.md) | Linux only. Not available for Fast RTPS. |
