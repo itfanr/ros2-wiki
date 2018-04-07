@@ -8,7 +8,7 @@ Welcome to the latest release of ROS 2 software!  We hope that you try it out an
 
 ### Changes to supported DDS vendors
 
-ROS 2 supports multiple middleware implementations (see [[this page|DDS-and-ROS-middleware-implementations]] for more details).
+ROS 2 supports multiple middleware implementations (see [this page](DDS-and-ROS-middleware-implementations.md) for more details).
 Until Alpha 8, ROS 2 was supporting ROS middleware implementations for eProsima's Fast RTPS, RTI's Connext and PrismTech's OpenSplice.
 To streamline our efforts, as of Alpha 8, Fast RTPS and Connext (static) will be supported, with Fast RTPS ([now Apache 2.0-licensed](http://www.eprosima.com/index.php/company-all/news/61-eprosima-goes-apache)) shipped as the default.
 
@@ -28,7 +28,7 @@ The improvements included in this release are:
 - Fixed various bugs with the previous alpha release
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha7 release (code name *Glue Gun*; July 2016)
@@ -54,7 +54,7 @@ The major features included in this release are:
   - See: https://github.com/ros2/turtlebot2_demo
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha6 release (code name *Fastener*; June 2016)
@@ -83,7 +83,7 @@ The major features included in this release are:
   - Strings
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha5 release (code name *Epoxy*; April 2016)
@@ -107,7 +107,7 @@ The major features included in this release are:
 - Added 32-bit and 64-bit ARM as experimentally supported platforms.
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha4 release (code name *Duct tape*; February 2016)
@@ -171,7 +171,7 @@ The major features included in this release are:
   - New concept of extensible "time sources" for ROS Time, the default time source will be like ROS 1 (implementation pending)
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha4 release (code name *Duct tape*; February 2016)
@@ -235,7 +235,7 @@ The major features included in this release are:
   - New concept of extensible "time sources" for ROS Time, the default time source will be like ROS 1 (implementation pending)
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha3 release (code name *Cement*; December 2015)
@@ -307,7 +307,7 @@ The major features included in this release are:
 - A partial port of tf2 including the core libraries and core command line tools. 
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha2 release (code name *Baling wire*; October 2015)
@@ -371,7 +371,7 @@ The major features included in this release are:
 - FreeRTPS improvements
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).
 
 
 ## ROS 2 alpha1 release (code name *Anchor*; August 2015)
@@ -435,11 +435,11 @@ The major features included in this release are:
 - Support [multiple DDS vendors](http://design.ros2.org/articles/ros_on_dds.html#vendors-and-licensing)
 - Support messaging primitives: topics (publish / subscribe), services (request / response), and parameters
 - Support Linux (Ubuntu Trusty), OS X (Yosemite) and Windows (8)
-- [[Use quality-of-service settings to handle lossy networks|Quality-Of-Service]]
-- [[Communicate inter-process or intra-process with the same API|Intra-Process-Communication]]
-- [[Write real-time safe code that uses the ROS 2 APIs|Real-Time-Programming]]
+- [Use quality-of-service settings to handle lossy networks](Quality-Of-Service.md)
+- [Communicate inter-process or intra-process with the same API](Intra-Process-Communication.md)
+- [Write real-time safe code that uses the ROS 2 APIs](Real-Time-Programming.md)
 - [Run ROS 2 on "bare-metal" microcontrollers (no operating system)](https://github.com/ros2/freertps/wiki)
-- [[Bridge communication between ROS 1 and ROS 2|https://github.com/ros2/ros1_bridge/blob/master/README.md]]
+- [Bridge communication between ROS 1 and ROS 2](https://github.com/ros2/ros1_bridge/blob/master/README.md)
 
 Pretty much anything not listed above is not included in this release.
-The next steps are described in the [[Roadmap]].
+The next steps are described in the [Roadmap](Roadmap.md).

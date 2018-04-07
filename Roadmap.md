@@ -38,7 +38,7 @@ Additional items can be added during the cycle if the progress and/or resources 
 
 - Building
   - Work towards a [universal build tool](http://design.ros2.org/articles/build_tool.html)
-  - Support for `devel` and `pull request` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
+  - Support for `devel` and `pull request` jobs on the [ROS 2 buildfarm](http://build.ros2.org)
   - Support to generate "fat" packages / archives
   - Windows and Mac OS packages
 - Release
@@ -46,7 +46,7 @@ Additional items can be added during the cycle if the progress and/or resources 
   - Allow releasing packages into ROS 2 using ready-to-use tools
 - Documentation
   - Platform for documentation (like wiki.ros.org), allow easy contributions as well as optionally facilitate a review process
-  - Support for `doc` jobs on the [[ROS 2 buildfarm|http://build.ros2.org]]
+  - Support for `doc` jobs on the [ROS 2 buildfarm](http://build.ros2.org)
   - Consider consolidating with design.ros.org
   - Provide three different kinds of content:
     - "demos" to show features and cover them with tests
