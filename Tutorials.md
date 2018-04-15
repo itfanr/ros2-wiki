@@ -1,10 +1,10 @@
 ## About ROS 2
 
-* \[Overview of ROS 2 concepts\]\(Overview-of-ROS-2-concepts.md.md\)
-* \[DDS and ROS middleware implementations\]\(DDS-and-ROS-middleware-implementations.md.md\)
-* \[ROS 2 Client Libraries\]\(ROS-2-Client-Libraries.md.md\)
-* \[About ROS interfaces\]\(About-ROS-Interfaces.md.md\)
-* \[About Quality of Service Settings\]\(About-Quality-of-Service-Settings.md.md\)
+* \[Overview of ROS 2 concepts\]\(Overview-of-ROS-2-concepts.md\)
+* \[DDS and ROS middleware implementations\]\(DDS-and-ROS-middleware-implementations.md\)
+* \[ROS 2 Client Libraries\]\(ROS-2-Client-Libraries.md\)
+* \[About ROS interfaces\]\(About-ROS-Interfacesmd\)
+* \[About Quality of Service Settings\]\(About-Quality-of-Service-Settings.md\)
 
 ## ROS 2 Tutorials
 
